@@ -1,0 +1,49 @@
+/* ─── 1. INTRO ─── */
+#service-intro { padding: 120px var(--px) 60px; background: var(--bg); }
+.si-top {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: start; margin-bottom: 60px;
+}
+.si-h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700; font-size: clamp(32px, 4vw, 48px);
+  color: var(--white); line-height: 1.1; letter-spacing: -1.5px;
+}
+.si-right { display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
+.si-body { font-size: 16px; color: var(--muted); line-height: 1.7; }
+.si-img-wrap {
+  width: 100%; height: 500px;
+  background: var(--bg3); border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ─── 2. FEATURES ─── */
+#service-features { padding: 60px var(--px); background: var(--bg); }
+.sf-h3 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 40px; color: var(--white); letter-spacing: -0.5px; }
+.sf-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.sf-item { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.sf-icon { width: 32px; height: 32px; stroke: var(--white); fill: none; stroke-width: 1.5; margin-bottom: 8px; }
+.sf-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; color: var(--white); }
+.sf-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* ─── 3. GALLERY ─── */
+#project-gallery { padding: 60px var(--px) 120px; background: var(--bg); }
+.pg-h3 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 40px; color: var(--white); letter-spacing: -0.5px; }
+.pg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.pg-img { width: 100%; aspect-ratio: 16/9; border-radius: 16px; background: var(--bg3); }
+
+/* ─── 4. REVIEW ─── */
+#service-reviews { background: var(--card); padding: 120px var(--px); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.sr-h3 { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 56px; color: var(--white); letter-spacing: -0.5px; text-align: left;}
+
+/* ─── 5. RELATED ─── */
+#service-related { padding: 120px var(--px); background: var(--bg); text-align: center; }
+
+@media (max-width: 900px) {
+  .si-top { grid-template-columns: 1fr; gap: 40px; }
+  .sf-grid { grid-template-columns: 1fr 1fr; }
+  .pg-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .sf-grid { grid-template-columns: 1fr; }
+}

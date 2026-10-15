@@ -1,0 +1,67 @@
+import { FadeIn } from '../ui/FadeIn';
+
+export default function CallToAction() {
+  const stats = [
+    { num: "40% +", label: "Average bounce rate reduction on core product flows." },
+    { num: "10x", label: "Increase in developer handoff speed via design systems." },
+    { num: "100%", label: "WCAG & ADA accessibility compliance on all components." }
+  ];
+
+  return (
+    <section className="bg-[var(--bg)] py-[120px] px-[var(--px)] relative overflow-hidden">
+      {/* Background overlay */}
+      <div className="absolute inset-0 bg-[var(--bg3)] opacity-35 pointer-events-none"></div>
+
+      <div className="max-w-[779px] mx-auto text-center relative z-10">
+        <FadeIn>
+          <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">
+            Get Started Now
+          </div>
+        </FadeIn>
+        
+        <FadeIn delay={0.1}>
+          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5">
+            Transform Your Digital Experience
+          </h2>
+        </FadeIn>
+        
+        <FadeIn delay={0.2}>
+          <p className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
+            Ready to elevate your product? I partner with startups and enterprises to design experiences that convert, retain, and genuinely delight users at every touchpoint.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.3}>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-[40px] mb-[60px]">
+            {stats.map((stat, idx) => (
+              <div key={idx} className="flex items-start gap-[14px]">
+                <div className="w-[26px] h-[26px] rounded-full bg-[var(--green)] shrink-0 mt-1 flex items-center justify-center">
+                  <svg viewBox="0 0 12 12" className="w-[12px] h-[12px] stroke-black fill-none stroke-[2.5]" style={{ strokeLinecap: 'round', strokeLinejoin: 'round' }}>
+                    <polyline points="2 6 5 9 10 3"/>
+                  </svg>
+                </div>
+                <div className="text-left">
+                  <div className="font-['DM_Sans'] text-[24px] font-normal text-[var(--white)] leading-[1.3] mb-1">{stat.num}</div>
+                  <div className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] w-[146px]">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.4}>
+          <div className="flex justify-center gap-[18px] flex-wrap mb-[24px]">
+            <a href="mailto:hello@chinonsoezeigbo.com" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-colors hover:bg-[var(--blue-dk)] no-underline">
+              Contact Me
+            </a>
+
+          </div>
+          <div className="flex items-center justify-center gap-[10px] font-['Inter_Tight'] text-[14px] text-[var(--muted)]">
+            <span className="text-[16px] text-[var(--green)]">⚡</span>
+            <span>Let's make something great together!</span>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}

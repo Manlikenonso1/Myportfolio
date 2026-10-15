@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinonso Ezeigbo — UI/UX Designer</title>
+  <link rel="stylesheet" href="/src/service-details.css"/>
+  <meta name="description" content="Portfolio of Chinonso Ezeigbo, a UI/UX Designer with 5+ years of experience creating clear, beautiful, and deeply human digital experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mob" id="mob">
+  <button class="mob-x" onclick="cM()">✕</button>
+  <a href="index.html"           onclick="cM()">Home</a>
+  <a href="about.html"           onclick="cM()">About Us</a>
+  <a href="services.html"        onclick="cM()">Services</a>
+  <a href="projects.html"  onclick="cM()">Work</a>
+  <a href="pricing.html"  onclick="cM()">Pricing</a>
+  <a href="contact.html"       onclick="cM()">Contact</a>
+</div>
+
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-container">
+    <a class="nav-logo" href="index.html">Chinonso <strong>Ezeigbo</strong><span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#cta">Get In Touch</a>
+    <div class="hamburger" onclick="oM()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+
+
+<!-- PAGE HEADER -->
+<section id="page-header" style="background: var(--bg); position: relative; overflow: hidden; padding: 180px var(--px) 100px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+  <div style="position: absolute; inset: 0; background: var(--bg3); opacity: .45; pointer-events: none;"></div>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 60px; line-height: 1.3; color: var(--white); position: relative; z-index: 1;">Service Details</h1>
+  <div style="display: flex; align-items: center; gap: 20px; font-family: 'DM Sans', sans-serif; font-size: 18px; color: var(--muted); position: relative; z-index: 1;">
+    <a href="index.html" style="color:var(--muted);text-decoration:none;">Home</a>
+    <div style="width: 1px; height: 14px; background: var(--muted);"></div>
+    <span>Service Details</span>
+  </div>
+</section>
+
+<!-- 1. INTRO -->
+<section id="service-intro">
+  <div class="wrap">
+    <div class="si-top fu">
+      <h2 class="si-h2">In-Depth User Research</h2>
+      <div class="si-right">
+        <p class="si-body">We start by understanding your goals, user needs, and business objectives to ensure exact alignment. Through interviews and data analysis, we uncover the hidden pain points that matter most to your users.</p>
+        <p class="si-body">With a clear strategic foundation, our creative direction is driven by real-world insight rather than just assumptions. We aim for clarity and precision in everything we build.</p>
+        <a class="btn-primary" href="mailto:hello@chinonsoezeigbo.com">Schedule a Consultation</a>
+      </div>
+    </div>
+    <div class="si-img-wrap fu d1">
+      <img src="/research.jpg" style="width:100%; height:100%; object-fit:cover;" alt="User Research" />
+    </div>
+  </div>
+</section>
+
+<!-- 2. FEATURES -->
+<section id="service-features">
+  <div class="wrap">
+    <h3 class="sf-h3 fu">Feature</h3>
+    <div class="sf-grid">
+      <div class="sf-item fu">
+        <svg class="sf-icon" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        <div class="sf-title">Comprehensive Analysis</div>
+        <div class="sf-desc">Detailed insights into user behavior and market competition to formulate strong foundations.</div>
+      </div>
+      <div class="sf-item fu d1">
+        <svg class="sf-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div class="sf-title">Quality Testing</div>
+        <div class="sf-desc">Rigorous QA testing through every phase to guarantee zero defects and high performance.</div>
+      </div>
+      <div class="sf-item fu d2">
+        <svg class="sf-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        <div class="sf-title">System Development</div>
+        <div class="sf-desc">Building robust, scalable architectures intended for sustainable long-term business growth.</div>
+      </div>
+      <div class="sf-item fu d3">
+        <svg class="sf-icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <div class="sf-title">Usability Testing</div>
+        <div class="sf-desc">Iterative checks with real users to ensure the interface is frictionless and perfectly intuitive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. GALLERY -->
+<section id="project-gallery">
+  <div class="wrap">
+    <h3 class="pg-h3 fu">Project Gallery</h3>
+    <div class="pg-grid">
+      <div class="pg-img fu"><img src="/gallery1.jpg" style="width:100%; height:100%; object-fit:cover; border-radius: 16px; opacity:0; transition: opacity .3s;" onload="this.style.opacity=1" /></div>
+      <div class="pg-img fu d1"><img src="/gallery2.jpg" style="width:100%; height:100%; object-fit:cover; border-radius: 16px; opacity:0; transition: opacity .3s;" onload="this.style.opacity=1" /></div>
+      <div class="pg-img fu"><img src="/gallery3.jpg" style="width:100%; height:100%; object-fit:cover; border-radius: 16px; opacity:0; transition: opacity .3s;" onload="this.style.opacity=1" /></div>
+      <div class="pg-img fu d1"><img src="/gallery4.jpg" style="width:100%; height:100%; object-fit:cover; border-radius: 16px; opacity:0; transition: opacity .3s;" onload="this.style.opacity=1" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. REVIEW -->
+<section id="service-reviews">
+  <div class="wrap">
+    <h3 class="sr-h3 fu">Review</h3>
+    <div class="testi-grid">
+      <div class="tc fu">
+        <div class="tc-top">
+          <img class="tc-av" src="/avatar2.jpg" id="avatar-2" alt="Terence Wiegand" style="object-fit:cover; opacity:0;" onload="this.style.opacity=1" />
+          <div>
+            <div class="tc-name">Terence Wiegand</div>
+            <div class="tc-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="tc-text">The level of attention to detail and creative thinking brought to my startup was unparalleled. Truly a master at UI/UX strategy.</p>
+        <div class="tc-date">24-10-2023</div>
+      </div>
+      <div class="tc fu d1">
+        <div class="tc-top">
+          <img class="tc-av" src="/avatar3.jpg" id="avatar-3" alt="Dianne Renner" style="object-fit:cover; opacity:0;" onload="this.style.opacity=1" />
+          <div>
+            <div class="tc-name">Dianne Renner</div>
+            <div class="tc-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="tc-text">Working together was a seamless experience. Our user engagement metrics went up by 40% after the redesign. Highly recommended!</p>
+        <div class="tc-date">24-10-2023</div>
+      </div>
+      <div class="tc fu d2">
+        <div class="tc-top">
+          <img class="tc-av" src="/avatar4.jpg" id="avatar-4" alt="Shannon Pollich" style="object-fit:cover; opacity:0;" onload="this.style.opacity=1" />
+          <div>
+            <div class="tc-name">Shannon Pollich</div>
+            <div class="tc-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="tc-text">If you need someone who understands both business goals and deeply human, aesthetic design, this is exactly the talent you want.</p>
+        <div class="tc-date">24-10-2023</div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- 5. RELATED -->
+<section id="service-related">
+  <div class="wrap">
+    <div class="sec-eyebrow fu">Other Services</div>
+    <h2 class="sec-h2 fu d1" style="margin-bottom: 24px;">Tailored Solutions for Your<br>Design Needs</h2>
+    <p class="sec-body fu d2" style="margin-bottom: 60px;">I help startups and established companies create user-centred digital experiences that look great and perform even better.</p>
+    
+    <div class="svc-row">
+      <!-- Card 2 — Wireframing (pink) -->
+      <div class="svc-card-pink fu">
+        <div class="svc-card-pink-top">
+          <div class="svc-num">(002)</div>
+          <div class="svc-title">Wireframing &amp; Prototyping</div>
+          <p class="svc-desc">From rough sketches to high-fidelity interactive prototypes — I bring ideas to life before a single line of code is written.</p>
+        </div>
+        <div class="svc-card-pink-img">🎨</div>
+      </div>
+
+      <!-- Card 3 — UX Strategy (dark) -->
+      <div class="svc-card-dark fu d1">
+        <div class="svc-card-dark-main">
+          <div class="svc-num">(003)</div>
+          <div class="svc-title">UX Strategy</div>
+          <div class="svc-arrow-circle">
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </div>
+        </div>
+        <div class="svc-card-dark-cta">
+          <p>Need a design direction that aligns with your business goals? Let's map it out.</p>
+          <a class="btn-primary" href="#" style="white-space:nowrap;padding:12px 20px;font-size:14px;">All Services</a>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-logo" href="#hero">Chinonso<span>.</span></a>
+      <div class="footer-socials">
+        <a class="footer-social" href="#" title="Facebook">f</a>
+        <a class="footer-social" href="#" title="Twitter">𝕏</a>
+        <a class="footer-social" href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+        <a class="footer-social" href="mailto:hello@chinonsoezeigbo.com" title="Email">@</a>
+      </div>
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services">UI/UX Design</a>
+          <a href="#services">Prototyping</a>
+          <a href="#services">Responsive Design</a>
+          <a href="#services">User Research</a>
+          <a href="#services">Usability Testing</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <a href="#">Blog</a>
+          <a href="#">Case Studies</a>
+          <a href="#">Design Tools</a>
+          <a href="help-center.html#faq">FAQs</a>
+          <a href="#">Portfolio</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <div class="footer-links">
+          <a href="help-center.html">Help Center</a>
+          <a href="#">Documentation</a>
+          <a href="#">Tutorials</a>
+          <a href="#">Community Forum</a>
+          <a href="#">Feedback</a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <div class="footer-col-title">Newsletter</div>
+        <p>Stay updated on design trends, tips, and project insights. No spam, ever.</p>
+        <div class="footer-email-row">
+          <input class="footer-email-input" type="email" placeholder="Email"/>
+          <button class="footer-submit">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Copyright © 2024 Chinonso Ezeigbo &nbsp;|&nbsp; Design by Chinonso</span>
+      <div class="footer-bottom-links">
+        <a href="#">Term of use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // Nav shrink + active link
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.classList.toggle('scrolled', scrollY > 80);
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href) return;
+      let id = href;
+      
+      // If it's a link to the current page's anchors
+      if (href.startsWith('index.html#')) {
+        id = href.replace('index.html', '');
+      } else if (href === 'index.html' || href === 'index.html#hero') {
+        id = '#hero';
+      }
+      
+      if (!id.startsWith('#')) return;
+      
+      const sec = document.querySelector(id);
+      if (sec) {
+        const r = sec.getBoundingClientRect();
+        a.classList.toggle('active', r.top <= 120 && r.bottom > 120);
+      }
+    });
+  }, { passive: true });
+
+  // Mobile menu
+  window.oM = function() { document.getElementById('mob').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  window.cM = function() { document.getElementById('mob').classList.remove('open'); document.body.style.overflow = ''; }
+
+  // Scroll reveal
+  const obs = new IntersectionObserver(
+    es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

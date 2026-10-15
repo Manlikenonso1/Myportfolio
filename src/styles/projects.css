@@ -1,0 +1,16 @@
+/* ─── FEATURED PROJECTS ─── */
+#featured-projects { background: var(--bg); padding: 0 var(--px) 120px; }
+.fp-h2 { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); margin-bottom: 60px; letter-spacing: -0.5px; }
+.fp-list { display: flex; flex-direction: column; gap: 80px; }
+.fp-row { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+.fp-row.rev { direction: rtl; }
+.fp-row.rev > * { direction: ltr; } 
+.fp-meta { max-width: 450px; }
+.fp-title { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: var(--white); margin-bottom: 24px; letter-spacing: -1px; }
+.fp-desc { font-size: 16px; color: var(--muted); line-height: 1.6; margin-bottom: 32px; }
+.fp-img { width: 100%; aspect-ratio: 4/3; border-radius: 16px; background: var(--bg3); overflow: hidden; }
+
+@media (max-width: 900px) {
+  .fp-row { grid-template-columns: 1fr; gap: 40px; }
+  .fp-row.rev { direction: ltr; }
+}
