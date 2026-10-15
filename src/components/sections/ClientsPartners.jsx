@@ -29,20 +29,27 @@ export default function ClientsPartners() {
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <div className="flex justify-center items-center flex-wrap gap-y-[36px] gap-x-[56px]">
+          <div className="flex justify-center items-center flex-wrap gap-y-[20px] gap-x-[12px]">
             {logos.map((logo, idx) =>
               logo.route ? (
                 <Link
                   key={idx}
                   to={logo.route}
-                  className="font-['DM_Sans'] font-bold text-[16px] text-white/20 tracking-[-0.3px] transition-colors hover:text-white/70"
+                  className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 font-['DM_Sans'] font-semibold text-[15px] text-white/70 tracking-tight transition-all duration-300 hover:bg-white hover:text-black hover:border-white hover:scale-105 hover:shadow-lg hover:shadow-white/10"
                 >
                   {logo.name}
+                  {/* Arrow icon — slides in on hover */}
+                  <svg
+                    className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
                 </Link>
               ) : (
                 <span
                   key={idx}
-                  className="font-['DM_Sans'] font-bold text-[16px] text-white/20 tracking-[-0.3px] cursor-default"
+                  className="inline-flex items-center px-5 py-2.5 rounded-full font-['DM_Sans'] font-semibold text-[15px] text-white/20 tracking-tight cursor-default"
                 >
                   {logo.name}
                 </span>
