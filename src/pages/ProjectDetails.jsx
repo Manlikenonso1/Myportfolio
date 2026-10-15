@@ -104,6 +104,57 @@ export default function ProjectDetails() {
         { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Nonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
         { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Nonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
       ]
+    },
+    'huntly': {
+      id: 'huntly',
+      title: "HuntlyAi",
+      type: "Product Design",
+      category: "AI Job Search & Application Tracker",
+      role: "Lead Product Designer",
+      heroImg: "/huntly-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "HuntlyAi is an intelligent application workspace designed to bring sanity and clarity to the modern job search. By centralizing application pipelines, Gmail follow-up reminders, and resume tracking into one organized dashboard, Huntly helps job seekers stay on top of every opportunity without the cognitive overload.",
+      objectives: "A job search is inherently fragmented across job boards, email inboxes, and multiple resume files. My objective was designing a calm, structured experience using an organic botanical color palette, clean table views, and automated status alerts that transform an overwhelming process into a clear daily action plan.",
+      reviews: [
+        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Nonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
+        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Nonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
+        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Nonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
+      ]
+    },
+    'huntly-ai': {
+      id: 'huntly',
+      title: "HuntlyAi",
+      type: "Product Design",
+      category: "AI Job Search & Application Tracker",
+      role: "Lead Product Designer",
+      heroImg: "/huntly-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "HuntlyAi is an intelligent application workspace designed to bring sanity and clarity to the modern job search. By centralizing application pipelines, Gmail follow-up reminders, and resume tracking into one organized dashboard, Huntly helps job seekers stay on top of every opportunity without the cognitive overload.",
+      objectives: "A job search is inherently fragmented across job boards, email inboxes, and multiple resume files. My objective was designing a calm, structured experience using an organic botanical color palette, clean table views, and automated status alerts that transform an overwhelming process into a clear daily action plan.",
+      reviews: [
+        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Nonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
+        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Nonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
+        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Nonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
+      ]
+    },
+    'huntlyai': {
+      id: 'huntly',
+      title: "HuntlyAi",
+      type: "Product Design",
+      category: "AI Job Search & Application Tracker",
+      role: "Lead Product Designer",
+      heroImg: "/huntly-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "HuntlyAi is an intelligent application workspace designed to bring sanity and clarity to the modern job search. By centralizing application pipelines, Gmail follow-up reminders, and resume tracking into one organized dashboard, Huntly helps job seekers stay on top of every opportunity without the cognitive overload.",
+      objectives: "A job search is inherently fragmented across job boards, email inboxes, and multiple resume files. My objective was designing a calm, structured experience using an organic botanical color palette, clean table views, and automated status alerts that transform an overwhelming process into a clear daily action plan.",
+      reviews: [
+        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Nonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
+        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Nonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
+        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Nonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
+      ]
     }
   };
 
@@ -154,7 +205,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : project.id === 'huntly' ? 'bg-[#102219]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;

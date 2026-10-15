@@ -47,12 +47,13 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">HuntlyAi</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Cook by Ugo</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Talstrike</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">cloudnet IQ labs</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
           </div>
         </FadeIn>
       </section>
@@ -90,6 +91,16 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.2}>
+              <Link to="/projects/huntly" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
+                <img src="/huntly-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="HuntlyAi Application Workspace" />
+                <div className="absolute bottom-10 left-10 z-20">
+                  <div className="px-4 py-1.5 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/30 text-emerald-200 text-[12px] font-medium tracking-wide mb-3 inline-block">AI Job Workspace</div>
+                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">HuntlyAi</h3>
+                </div>
+              </Link>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.2}>
               <Link to="/projects/cook-by-ugo" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
                 <img src="/cook-by-ugo-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Cook by Ugo Digital Experience" />
@@ -109,10 +120,10 @@ export default function Home() {
                 </div>
               </Link>
             </FadeIn>
-            <FadeIn direction="up" delay={0.4} className="md:col-span-2">
+            <FadeIn direction="up" delay={0.4}>
               <Link to="/projects/aptinfy" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/aptinfy-thumbnail.png" className="w-full aspect-[4/3] md:aspect-[21/9] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Aptinfy Logo Branding" />
+                <img src="/aptinfy-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Aptinfy Logo Branding" />
                 <div className="absolute bottom-10 left-10 z-20">
                   <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">Brand Identity</div>
                   <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Aptinfy</h3>

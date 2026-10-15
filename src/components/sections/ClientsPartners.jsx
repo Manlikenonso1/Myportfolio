@@ -3,12 +3,13 @@ import { FadeIn } from '../ui/FadeIn';
 export default function ClientsPartners() {
   const logos = [
     "Appsatile",
+    "HuntlyAi",
+    "LazyZone",
     "Cook by Ugo",
-    "Nikos Farm",
     "Talstrike",
     "cloudnet IQ labs",
-    "Aptinfy",
-    "LazyZone"
+    "Nikos Farm",
+    "Aptinfy"
   ];
 
   return (
