@@ -11,7 +11,6 @@ export default function ProjectDetails() {
       id: 'appsatile',
       title: "Appsatile",
       type: "Design System",
-      year: "2026",
       category: "Design Architecture",
       role: "Lead UI/UX Designer",
       heroImg: "/appsatile-thumbnail.png",
@@ -28,7 +27,6 @@ export default function ProjectDetails() {
       id: 'nikos-farm',
       title: "Nikos Farm",
       type: "E-Commerce",
-      year: "2026",
       category: "E-Commerce Interface",
       role: "Lead Product Designer",
       heroImg: "/nikos-farm-thumbnail.png",
@@ -45,7 +43,6 @@ export default function ProjectDetails() {
       id: 'aptinfy',
       title: "Aptinfy",
       type: "Logo & Brand Identity",
-      year: "2026",
       category: "Brand Design",
       role: "Lead Identity Designer",
       heroImg: "/aptinfy-thumbnail.png",
@@ -85,8 +82,8 @@ export default function ProjectDetails() {
         <FadeIn delay={0.1} className="flex flex-col md:flex-row md:items-end justify-between gap-10 border-b border-[var(--border)] pb-8 mb-12">
            <div className="flex flex-col md:flex-row gap-8 md:gap-16">
               <div>
-                 <div className="text-[12px] font-bold tracking-widest text-[#555] uppercase mb-1">Date</div>
-                 <div className="text-white font-medium">{project.year}</div>
+                 <div className="text-[12px] font-bold tracking-widest text-[#555] uppercase mb-1">Role</div>
+                 <div className="text-white font-medium">{project.role}</div>
               </div>
               <div>
                  <div className="text-[12px] font-bold tracking-widest text-[#555] uppercase mb-1">Category</div>

@@ -23,7 +23,7 @@ export default function Projects() {
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
                <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">2026 / Design System</div>
+                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Design System</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Appsatile</h3>
                </div>
                <Link to="/projects/appsatile" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
@@ -39,7 +39,7 @@ export default function Projects() {
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
                <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">2026 / E-Commerce</div>
+                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">E-Commerce</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Nikos Farm</h3>
                </div>
                <Link to="/projects/nikos-farm" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
@@ -55,7 +55,7 @@ export default function Projects() {
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
                <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">2026 / Brand Identity</div>
+                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Brand Identity</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Aptinfy</h3>
                </div>
                <Link to="/projects/aptinfy" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">

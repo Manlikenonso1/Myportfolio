@@ -16,7 +16,6 @@ export default function AppsatileCaseStudy() {
               <div className="flex items-center gap-4 mb-6">
                 <span className="px-4 py-1.5 rounded-full bg-[var(--blue)]/20 text-[var(--blue)] border border-[var(--blue)]/30 text-[12px] font-bold tracking-widest uppercase">Internal UI Kit</span>
                 <span className="text-white/40 text-[14px] font-medium tracking-widest">v 1.2</span>
-                <span className="text-white/40 text-[14px] font-medium tracking-widest">2026</span>
               </div>
               <h2 className="text-[clamp(48px,8vw,100px)] font-bold leading-[0.95] tracking-tight mb-8">
                 Design<br />System<br />
