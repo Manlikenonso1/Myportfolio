@@ -92,7 +92,7 @@ export default function Projects() {
                 </div>
                 <div>
                   <h4 className="font-['DM_Sans'] font-bold text-[20px] text-white">Chelsea Hardy</h4>
-                  <div className="text-[13px] text-[var(--muted)] mt-1">Lead Product Architect, Pinterest</div>
+                  <div className="text-[13px] text-[var(--muted)] mt-1">Lead Product Architect, Appsatile</div>
                   <div className="flex gap-1 text-[var(--green)] my-2">
                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -111,9 +111,9 @@ export default function Projects() {
         {/* Triple Small Cards Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
            {[
-             { name: "Theresa Webb", role: "Product Lead, Stripe", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
-             { name: "Cody Fisher", role: "VP of Engineering, Oculus", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." },
-             { name: "Bessie Cooper", role: "Design Director, Framer", text: "A fantastic interaction architect who understands both elegant aesthetics and hardcore developer workflows." }
+             { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
+             { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." },
+             { name: "Bessie Cooper", role: "Design Director, Huntyl", text: "A fantastic interaction architect who understands both elegant aesthetics and hardcore developer workflows." }
            ].map((quote, i) => (
              <FadeIn key={i} delay={i * 0.1}>
                 <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
@@ -144,16 +144,14 @@ export default function Projects() {
       <section className="py-[60px] border-y border-[var(--border)] bg-[#050505]">
         <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
           <div className="font-['DM_Sans'] text-[16px] font-bold text-white mb-6 w-full text-center">
-            Trusted by leading product teams
+            Clients & Collaborations
           </div>
-          <div className="flex justify-center flex-wrap gap-10 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 mt-4">
-             <div className="font-['Space_Grotesk'] font-bold text-[28px] tracking-tight text-white">stripe</div>
-             <div className="font-['Space_Grotesk'] font-bold text-[28px] tracking-tight text-white flex items-center">
-               <div className="w-6 h-6 mr-2 bg-white rounded-tr-full rounded-bl-full"></div>
-               pinterest
-             </div>
-             <div className="font-['Space_Grotesk'] font-bold text-[28px] tracking-tight text-white">amazon</div>
-             <div className="font-['Space_Grotesk'] font-bold text-[28px] tracking-tight text-white">hubspot</div>
+          <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 mt-4">
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Appsatile</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Nikos Farm</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Aptinfy</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Huntyl</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">LazyZone</div>
           </div>
         </FadeIn>
       </section>

@@ -4,19 +4,19 @@ const testimonials = [
   {
     quote: "Nonso completely transformed our conversion funnel. Over just six weeks, his systematic approach to our UX architecture reduced bounce rates by 40%. A truly strategic designer.",
     name: "Sarah Jenkins",
-    role: "VP of Product, Oculus",
+    role: "VP of Product, Appsatile",
     initials: "SJ"
   },
   {
     quote: "His eye for detail is unmatched. He didn't just give us a beautiful UI—he handed over a hyper-performant React architecture that our engineering team loved.",
     name: "David Chen",
-    role: "Engineering Manager, Stripe",
+    role: "Engineering Manager, Nikos Farm",
     initials: "DC"
   },
   {
     quote: "The hardest part of hiring a designer is finding someone who understands business mechanics. Nonso merges high-end visuals with strict business logic. Highly recommended.",
     name: "Emily Carter",
-    role: "Founding Partner, Vercel",
+    role: "Founding Partner, Aptinfy",
     initials: "EC"
   }
 ];

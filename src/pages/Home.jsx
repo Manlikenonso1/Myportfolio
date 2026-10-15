@@ -43,14 +43,14 @@ export default function Home() {
       <section className="py-16 border-y border-white/5 bg-[var(--bg)]/50 backdrop-blur-3xl overflow-hidden">
         <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
           <div className="text-[12px] font-medium tracking-[0.2em] uppercase text-white/30 mb-8 border-b border-white/10 pb-4 w-full text-center">
-            Trusted by forward-thinking teams
+            Selected Clients & Collaborations
           </div>
-          <div className="flex justify-center flex-wrap gap-10 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Oculus</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Stripe</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Vercel</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Figma</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Framer</div>
+          <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Huntyl</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
           </div>
         </FadeIn>
       </section>

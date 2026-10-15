@@ -2,14 +2,11 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function ClientsPartners() {
   const logos = [
-    "Stripe",
-    "Pinterest",
-    "Amazon",
-    "Vercel",
-    "Oculus",
-    "Figma",
-    "Framer",
-    "Hubspot"
+    "Appsatile",
+    "Nikos Farm",
+    "Aptinfy",
+    "Huntyl",
+    "LazyZone"
   ];
 
   return (
