@@ -48,6 +48,8 @@ export default function Home() {
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Cook by Ugo</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Talstrike</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">cloudnet IQ labs</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>

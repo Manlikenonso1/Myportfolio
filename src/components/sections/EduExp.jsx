@@ -16,19 +16,19 @@ export default function EduExp() {
 
   const experience = [
     {
-      title: "Lead Product Designer",
-      subtitle: "CoreLabs Venture Studio",
-      desc: "Leading design across fintech, SaaS, and healthtech projects. Building organized Figma design systems, simplifying user journeys, and collaborating directly with engineers to ship features."
+      title: "UI/UX Designer",
+      subtitle: "Appsatile Ltd · Gateshead, UK (Remote)",
+      desc: "Designed and built Appsatile's comprehensive SaaS design system and component libraries. Streamlined design-to-development handoffs and unified visual patterns across product suites."
     },
     {
-      title: "Senior Independent Designer",
-      subtitle: "Self-Employed Consultant",
-      desc: "Partnered with founders and product teams to design web and mobile apps from scratch, helping them clarify their product vision and launch on time."
+      title: "UI/UX Designer",
+      subtitle: "Talstrike · United States (Remote)",
+      desc: "Conducted in-depth user research, created wireframes, and designed intuitive user-centered interfaces for recruitment and talent workflows."
     },
     {
-      title: "UI/UX Design Intern",
-      subtitle: "Vanguard Technology Partners",
-      desc: "Worked alongside senior designers on wireframing, testing, and component specs. Helped redesign an onboarding flow that lifted new user activation by 24%."
+      title: "User Experience Designer",
+      subtitle: "cloudnet IQ labs",
+      desc: "Designed end-to-end user journeys, low-to-high fidelity wireframes, and interactive product prototypes, focusing on clear usability and intuitive navigation."
     }
   ];
 

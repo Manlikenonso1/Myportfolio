@@ -5,6 +5,8 @@ export default function ClientsPartners() {
     "Appsatile",
     "Cook by Ugo",
     "Nikos Farm",
+    "Talstrike",
+    "cloudnet IQ labs",
     "Aptinfy",
     "LazyZone"
   ];
