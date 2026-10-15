@@ -3,14 +3,14 @@ import { FadeIn } from '../ui/FadeIn';
 export default function EduExp() {
   const education = [
     {
-      title: "BFA in Communication Design",
-      subtitle: "Syracuse University School of Design",
-      desc: "Studied interaction design with an emphasis on visual communication, usability testing, and practical interface design."
+      title: "MSc in Cyber Security",
+      subtitle: "Aston University, Birmingham",
+      desc: "Specialized in digital system security, threat modeling, authentication flows, and building secure, user-friendly digital architectures."
     },
     {
-      title: "Interaction Design Specialist",
-      subtitle: "Interaction Design Foundation",
-      desc: "Deepened skills in user research methods, usability principles, and organizing intuitive layouts for complex applications."
+      title: "BSc in Computer Science",
+      subtitle: "Adeleke University, Nigeria",
+      desc: "Grounded in software engineering, computational logic, web development, and human-computer interaction fundamentals."
     }
   ];
 
