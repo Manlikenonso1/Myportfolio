@@ -36,16 +36,16 @@ export default function SkillsSection() {
           {col1.map((skill, idx) => (
             <div key={idx} className="flex flex-col gap-[14px]">
               <div className="flex justify-between items-center">
-                <span className="font-['DM_Sans'] text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
-                <span className="font-['DM_Sans'] text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
+                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
+                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
               </div>
-              <div className="h-[32px] bg-[var(--bg)] rounded-none overflow-hidden relative">
+              <div className="h-[14px] sm:h-[16px] w-full bg-white/10 rounded-full overflow-hidden relative border border-white/15 p-[2px] shadow-inner">
                 <motion.div 
-                  initial={{ width: 0 }}
+                  initial={{ width: "0%" }}
                   whileInView={{ width: `${skill.pct}%` }}
-                  viewport={{ once: true, margin: "-10%" }}
-                  transition={{ duration: 1.2, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full bg-[var(--tan)]"
+                  viewport={{ once: true, amount: 0.05 }}
+                  transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
+                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white shadow-[0_0_12px_rgba(208,201,185,0.5)]"
                 ></motion.div>
               </div>
             </div>
@@ -57,16 +57,16 @@ export default function SkillsSection() {
           {col2.map((skill, idx) => (
             <div key={idx} className="flex flex-col gap-[14px]">
               <div className="flex justify-between items-center">
-                <span className="font-['DM_Sans'] text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
-                <span className="font-['DM_Sans'] text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
+                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
+                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
               </div>
-              <div className="h-[32px] bg-[var(--bg)] rounded-none overflow-hidden relative">
+              <div className="h-[14px] sm:h-[16px] w-full bg-white/10 rounded-full overflow-hidden relative border border-white/15 p-[2px] shadow-inner">
                 <motion.div 
-                  initial={{ width: 0 }}
+                  initial={{ width: "0%" }}
                   whileInView={{ width: `${skill.pct}%` }}
-                  viewport={{ once: true, margin: "-10%" }}
-                  transition={{ duration: 1.2, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full bg-[var(--tan)]"
+                  viewport={{ once: true, amount: 0.05 }}
+                  transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
+                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white shadow-[0_0_12px_rgba(208,201,185,0.5)]"
                 ></motion.div>
               </div>
             </div>

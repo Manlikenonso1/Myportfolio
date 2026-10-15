@@ -27,7 +27,7 @@ export function FadeIn({ children, delay = 0, className, direction = "up", ...pr
         x: 0, 
         y: 0 
       }}
-      viewport={{ once: true, margin: "-10%" }}
+      viewport={{ once: true, amount: 0.05 }}
       transition={{ 
         duration: 0.7, 
         ease: [0.21, 0.47, 0.32, 0.98], // Custom cubic-bezier for a smooth organic feel
@@ -46,7 +46,7 @@ export function FadeInStagger({ children, staggerDelay = 0.1, className, ...prop
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-10%" }}
+      viewport={{ once: true, amount: 0.05 }}
       variants={{
         visible: {
           transition: {
