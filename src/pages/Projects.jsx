@@ -81,9 +81,9 @@ export default function Projects() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", text: "Nonso's ability to extract complex business requirements and translate them into a hyper-clean React workflow is unmatched. We saw instant ROI." },
-            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
-            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." }
+            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", text: "Nonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
+            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "Nonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
+            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "Nonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">

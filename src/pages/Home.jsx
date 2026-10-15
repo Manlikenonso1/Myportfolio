@@ -21,11 +21,11 @@ export default function Home() {
           </div>
 
           <h1 className="font-['DM_Sans'] text-[clamp(48px,8vw,110px)] font-bold leading-[1.0] tracking-[-0.03em] text-center max-w-[1000px] mb-10 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
-            Crafting digital products that feel almost magic.
+            Designing digital products that feel clean, sharp, and easy to use.
           </h1>
 
-          <p className="text-[18px] md:text-[22px] text-white/50 text-center max-w-[600px] leading-[1.6] mb-12 font-light">
-            I am a product designer obsessed with human behavior, building scalable interfaces that drastically improve retention and joy.
+          <p className="text-[18px] md:text-[22px] text-white/50 text-center max-w-[640px] leading-[1.6] mb-12 font-light">
+            I'm a UI/UX designer helping product teams turn complex ideas into simple, intuitive interfaces that users actually enjoy.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">
@@ -109,9 +109,9 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-center relative z-10">
           <FadeIn>
             <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 w-fit min-w-max text-[12px] font-medium tracking-widest text-white/50 uppercase mb-8">What I Do</div>
-            <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-bold tracking-tight text-white leading-[1.1] mb-6">Expertise built on empathy.</h2>
+            <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-bold tracking-tight text-white leading-[1.1] mb-6">Design that solves real problems.</h2>
             <p className="text-white/50 text-[18px] leading-[1.7] mb-10">
-              I don't just push pixels; I solve complex business logic. Every design decision is rigorously tested to ensure it aligns perfectly with user mental models.
+              Good design goes deeper than how a screen looks. I work with founders and engineering teams to understand how people actually use your product, removing confusion and building layouts that make sense.
             </p>
             <Link to="/about" className="inline-flex items-center gap-3 text-white font-semibold hover:text-[var(--blue)] transition-colors group">
               Learn more about me

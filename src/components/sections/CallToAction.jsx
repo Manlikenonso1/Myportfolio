@@ -2,9 +2,9 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function CallToAction() {
   const stats = [
-    { num: "40% +", label: "Average bounce rate reduction on core product flows." },
-    { num: "10x", label: "Increase in developer handoff speed via design systems." },
-    { num: "100%", label: "WCAG & ADA accessibility compliance on all components." }
+    { num: "40% +", label: "Drop in user drop-off across redesigned key flows." },
+    { num: "10x", label: "Faster development cycles with clear design systems." },
+    { num: "100%", label: "Accessible, responsive components tested for real use." }
   ];
 
   return (
@@ -15,19 +15,19 @@ export default function CallToAction() {
       <div className="max-w-[779px] mx-auto text-center relative z-10">
         <FadeIn>
           <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">
-            Get Started Now
+            Get In Touch
           </div>
         </FadeIn>
         
         <FadeIn delay={0.1}>
           <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5">
-            Transform Your Digital Experience
+            Let's Build Something Great Together
           </h2>
         </FadeIn>
         
         <FadeIn delay={0.2}>
           <p className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
-            Ready to elevate your product? I partner with startups and enterprises to design experiences that convert, retain, and genuinely delight users at every touchpoint.
+            Have an upcoming project, a product that needs a redesign, or want to build a design system? I'm currently open for new projects and consulting.
           </p>
         </FadeIn>
 

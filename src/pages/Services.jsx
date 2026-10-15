@@ -10,12 +10,12 @@ export default function Services() {
         <div className="absolute inset-0 bg-[var(--bg3)] opacity-45 pointer-events-none"></div>
         <div className="max-w-[1200px] mx-auto relative z-10 text-center">
           <FadeIn>
-            <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">Expertise</div>
+            <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">Services</div>
             <h1 className="font-['DM_Sans'] font-light text-[56px] leading-[1.3] text-[var(--white)] mx-auto mb-8 max-w-[1000px]">
-              Strategic UI/UX design focused on business performance.
+              Thoughtful design that helps your product grow.
             </h1>
-            <p className="text-[18px] text-white/50 leading-[1.8] max-w-[600px] mx-auto font-light">
-              I merge product strategy, clean user experience logic, and high-end visual design to build software that drives engagement and accelerates development.
+            <p className="text-[18px] text-white/50 leading-[1.8] max-w-[640px] mx-auto font-light">
+              I help product teams turn complex ideas into clean, user-friendly experiences—from user research and wireframes to complete design systems.
             </p>
           </FadeIn>
         </div>
@@ -32,7 +32,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">01</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Product Strategy & UI/UX Design</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    I translate complex business goals and user behaviors into intuitive digital interfaces. By mapping out comprehensive user journeys, refining hierarchy, and conducting thorough prototype testing, I build layouts that naturally reduce bounce rates and maximize user retention.
+                    I turn complicated workflows into clean, straightforward interfaces. By mapping out how users move through your app and testing key flows early, I build layouts that help people get things done without getting confused.
                   </p>
                   <Link to="/services/ux-strategy" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white text-black transition-colors">
                     Explore process
@@ -52,7 +52,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">02</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Design Systems & Brand Standards</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    To help your business scale, I build robust, WCAG-accessible component libraries in Figma, complete with typography matrices, robust color tokens, and responsive layouts. This ensures visual harmony across every screen and empowers your developers to build pixel-perfect products 10x faster.
+                    Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colors, fonts, and responsive components—giving your team a reliable blueprint that saves hours of development time.
                   </p>
                   <Link to="/services/design-systems" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white text-black transition-colors">
                     Explore process
@@ -72,7 +72,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">03</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Interactive Prototyping & Motion</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    Static mockups only tell half the story. I bridge the gap by designing custom micro-interactions, container transitions, and high-fidelity testable prototypes. This validates complex feature logic, secures stakeholder buy-in, and eliminates code waste before engineering starts.
+                    Static mockups don't show how an app actually feels to use. I design smooth transitions and realistic, clickable prototypes so your team can test the actual flow and get everyone aligned before building.
                   </p>
                   <Link to="/services/interactive-motion" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white text-black transition-colors">
                     Explore process

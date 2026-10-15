@@ -32,7 +32,7 @@ export default function Contact() {
               <FadeInStaggerItem className="flex flex-col gap-2">
                 <div className="text-[12px] font-bold tracking-widest text-white/30 uppercase">Office</div>
                 <div className="text-[18px] text-white/60 leading-[1.6] max-w-[300px]">
-                  For live consultations, connect with me by dropping an email in business hours.
+                  Available for remote work worldwide. Send an email and I'll usually get back to you within 24 hours.
                 </div>
               </FadeInStaggerItem>
             </FadeInStagger>
@@ -55,7 +55,7 @@ export default function Contact() {
 
               <div className="flex flex-col gap-2 mt-4">
                 <label className="text-[14px] text-white/50 pl-2">Project Details</label>
-                <textarea required rows="6" placeholder="Tell me about your vision, timeline, and budget..." className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/50 focus:ring-1 focus:ring-[var(--blue)]/50 transition-all font-light resize-none"></textarea>
+                <textarea required rows="6" placeholder="Tell me a bit about your project, goals, and timeline..." className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/50 focus:ring-1 focus:ring-[var(--blue)]/50 transition-all font-light resize-none"></textarea>
               </div>
 
               <button type="submit" className="mt-6 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300">
@@ -73,7 +73,7 @@ export default function Contact() {
           <FadeIn>
             <div className="text-center mb-20">
               <h2 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white mb-6">Frequently Asked Questions</h2>
-              <p className="text-white/50 text-[18px]">Everything you need to know about billing, timelines, and the process.</p>
+              <p className="text-white/50 text-[18px]">A few common questions about timelines, working together, and deliverables.</p>
             </div>
           </FadeIn>
 
@@ -91,7 +91,7 @@ export default function Contact() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    I offer comprehensive UI/UX design services, including user research, wireframing, prototyping, and high-fidelity interface design.
+                    I handle end-to-end product design: user research, wireframes, interactive prototypes, full UI design for web and mobile apps, and scalable design systems.
                   </div>
                 </details>
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
@@ -102,7 +102,7 @@ export default function Contact() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    I provide estimated timelines during my initial consultation.
+                    It depends on the scope. A focused landing page or small feature revamp usually takes 1–2 weeks, while a full product design or complete design system typically runs between 4 to 8 weeks. I'll provide an honest, clear timeline after we talk through what you need.
                   </div>
                 </details>
               </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    You will act as a key stakeholder. I require your insights during the Discovery phase and your feedback at specific review checkpoints to ensure we are perfectly aligned with your business goals.
+                    As involved as you want to be. Typically, we'll kick off with a deep dive into your goals, followed by weekly check-ins and shared Figma links so you can leave comments and watch progress happen in real time—no surprises.
                   </div>
                 </details>
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
@@ -131,7 +131,7 @@ export default function Contact() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    Yes, whenever appropriate, I integrate user interviews, heuristic evaluations, and competitive analysis to ground design decisions in actionable evidence rather than assumptions.
+                    Definitely. Good design shouldn't be based on guesswork. Depending on your project stage, I talk with real users, analyze competitors, and look at actual user paths to make sure we're building what people actually need.
                   </div>
                 </details>
               </div>

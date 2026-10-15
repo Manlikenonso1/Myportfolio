@@ -15,12 +15,12 @@ export default function ProjectDetails() {
       role: "Lead UI/UX Designer",
       heroImg: "/appsatile-thumbnail.png",
       liveLink: null,
-      overview: "At Appsatile, I spearheaded the creation and implementation of a comprehensive, scalable design system. The goal was to unify the visual language across all company products, ensuring a consistent user experience while massively accelerating developer velocity. This involved creating extensive component libraries, defining strict typography and color tokens, and documenting interaction guidelines.",
-      objectives: "The primary objective was to reduce design-to-development handoff time by 40% and eliminate visual inconsistencies across core applications. By establishing a single source of truth for all UI components, I empowered product teams to build faster and with higher confidence.",
+      overview: "I designed and built Appsatile's design system from the ground up to give their products a unified, modern look. By setting up clean reusable components, clear type and color tokens, and solid guidelines, we cut down back-and-forth between designers and engineers and sped up product shipping.",
+      objectives: "The goal was straightforward: remove design bottlenecks, eliminate visual inconsistencies across their apps, and give the engineering team a single source of truth they could build with quickly and confidently.",
       reviews: [
-        { name: "Jerome Bell", role: "VP of Product, Appsatile", text: "Nonso delivered a completely transformative design system architecture. It accelerated our frontend development cycle by 40%." },
-        { name: "Dianne Russell", role: "Engineering Director", text: "The systematic integration of Nonso's React and Figma libraries shaved weeks off development and bridged all handoff gaps." },
-        { name: "Shane Collier", role: "Co-Founder & CTO", text: "Absolute flawless systems execution. He manages structural token variables and visual logic with perfect precision." }
+        { name: "Jerome Bell", role: "VP of Product, Appsatile", text: "Nonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
+        { name: "Dianne Russell", role: "Engineering Director", text: "Nonso organized our Figma components and design tokens so clearly that our front-end team was able to build pages in half the usual time." },
+        { name: "Shane Collier", role: "Co-Founder & CTO", text: "He has an incredible eye for detail and structure. Working with his components made building and maintaining our screens a breeze." }
       ]
     },
     'nikos-farm': {
@@ -31,12 +31,12 @@ export default function ProjectDetails() {
       role: "Lead Product Designer",
       heroImg: "/nikos-farm-thumbnail.png",
       liveLink: null,
-      overview: "At Nikos Farm, I designed a premium, organic-focused e-commerce experience from the ground up. I built a user-friendly product grid, a glassmorphic sidebar shopping cart drawer, and a streamlined checkout flow to maximize customer conversions.",
-      objectives: "The primary objective was to lift mobile conversions by 32% and increase Average Order Value (AOV) by establishing structured volume-discount triggers. I focused on sensory visual design and frictionless cart interactions.",
+      overview: "For Nikos Farm, I designed an e-commerce experience tailored to organic produce buyers. I created a clean product browse experience, a slide-out cart drawer for quick edits, and a simple checkout flow that makes ordering fresh farm food easy.",
+      objectives: "The main focus was making mobile shopping fast and painless, highlighting farm-fresh photography, and encouraging higher order values with clear bundle discounts.",
       reviews: [
-        { name: "Niko Vane", role: "Owner & Founder, Nikos Farm", text: "Nonso completely reimagined how organic produce is sold online. The storefront is visually stunning, and customers keep praising the smooth checkout process." },
-        { name: "Clara Brooks", role: "Digital Director", text: "The glassmorphic shopping cart and discount triggers designed by Nonso led to an immediate 35% bump in average order value. A strategic masterpiece." },
-        { name: "Marcus Thorne", role: "Operations Lead", text: "The integrated admin crop and distribution dashboard has simplified our shipping logs. Stunning aesthetic combined with sheer functional power." }
+        { name: "Niko Vane", role: "Owner & Founder, Nikos Farm", text: "Nonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
+        { name: "Clara Brooks", role: "Digital Director", text: "The new cart experience and bundle recommendations made an immediate impact on our sales. It simply works." },
+        { name: "Marcus Thorne", role: "Operations Lead", text: "The order views and product management screens Nonso designed saved our fulfillment team hours every single day." }
       ]
     },
     'aptinfy': {
@@ -47,12 +47,12 @@ export default function ProjectDetails() {
       role: "Lead Identity Designer",
       heroImg: "/aptinfy-thumbnail.png",
       liveLink: null,
-      overview: "At Aptinfy, I designed a modern, geometric logo and a comprehensive visual brand identity. The logo mark blends modular connectivity with a clean, tech-focused emblem representing intelligence and secure data nodes. I established a vibrant purple-to-pink gradient system, premium dark-mode presentation templates, and systematic typography guidelines to create a high-fidelity visual experience.",
-      objectives: "The primary objective was to build a modern, high-tech logo mark that scales perfectly from a 16x16 pixel favicon to massive marketing billboards, while conveying trust, connectivity, and mathematical precision.",
+      overview: "For Aptinfy, I crafted a distinct brand identity and geometric logo. The mark brings together ideas of connectivity, intelligence, and secure tech infrastructure. Alongside the mark, I built a cohesive color palette, modern typography hierarchy, and branded templates for their marketing and product decks.",
+      objectives: "The goal was to create a bold, memorable identity that looks just as sharp as a 16px favicon in a browser tab as it does on a conference banner, projecting confidence and technical polish.",
       reviews: [
-        { name: "Sarah Jenkins", role: "VP of Product, Aptinfy", text: "Nonso's visual identity package completely transformed how our brand is perceived. The new logo is both futuristic and highly professional." },
-        { name: "Liam O'Connor", role: "Marketing Director", text: "The systematic color guidelines and visual assets Nonso provided made launching our product landing page a breeze." },
-        { name: "Bessie Cooper", role: "Creative Director", text: "A clean, mathematically balanced logo mark. The visual execution is absolutely flawless." }
+        { name: "Sarah Jenkins", role: "VP of Product, Aptinfy", text: "Nonso gave Aptinfy an identity that immediately resonated with our audience. The new mark feels both sharp and authentic." },
+        { name: "Liam O'Connor", role: "Marketing Director", text: "The brand guide and asset kit Nonso handed off made designing our landing pages and marketing collateral completely seamless." },
+        { name: "Bessie Cooper", role: "Creative Director", text: "A thoughtfully balanced mark with great attention to proportion and versatility. Fantastic work all around." }
       ]
     }
   };
@@ -91,7 +91,7 @@ export default function ProjectDetails() {
               </div>
               <div className="max-w-[400px]">
                  <div className="text-white font-['DM_Sans'] font-bold text-[24px] mb-2">{project.title}</div>
-                 <div className="text-[var(--muted)] text-[14px] leading-[1.6]">Comprehensive audit architecture across development.</div>
+                 <div className="text-[var(--muted)] text-[14px] leading-[1.6]">An in-depth look at the design decisions, user flow, and final interface.</div>
               </div>
            </div>
            
@@ -195,7 +195,7 @@ export default function ProjectDetails() {
               Interested in collaborating?
             </h2>
             <p className="text-[var(--muted)] text-[16px] leading-[1.6]">
-              Let's build something magical together. Get in touch to discuss your next project.
+              Have an upcoming project or need design help with an existing product? Let's chat.
             </p>
          </FadeIn>
 

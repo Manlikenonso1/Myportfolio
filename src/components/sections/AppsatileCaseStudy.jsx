@@ -24,7 +24,7 @@ export default function AppsatileCaseStudy() {
             </div>
             <div className="max-w-[400px]">
               <p className="text-[18px] md:text-[20px] text-white/50 leading-[1.6] font-light">
-                Raw, algorithmic purity. Built to scale across massive datasets while maintaining absolute visual consistency. A true single source of truth.
+                Built to scale cleanly across complex features while keeping screens cohesive. A reliable single source of truth for both design and engineering.
               </p>
             </div>
           </div>
@@ -101,8 +101,7 @@ export default function AppsatileCaseStudy() {
               <div className="text-white/50 text-[14px] tracking-widest uppercase mb-4">Font Family</div>
               <h3 className="text-[60px] md:text-[80px] font-bold leading-none mb-6">Inter</h3>
               <p className="text-white/50 leading-[1.6] mb-12">
-                A geometric neo-grotesque variable font designed for high legibility across dense data interfaces. 
-                Perfectly balanced x-height for readability at micro sizes.
+                A clean, highly readable typeface designed for modern digital screens. Crisp at small sizes and balanced across both headings and body text.
               </p>
               
               <div className="flex flex-col gap-6 border-l-2 border-white/10 pl-6">
@@ -144,7 +143,7 @@ export default function AppsatileCaseStudy() {
             <div>
               <h3 className="text-[32px] font-bold mb-6">Scale Base & Spatial Logic</h3>
               <p className="text-white/50 leading-[1.6] mb-12">
-                Built on a strict 4px grid system. Ensuring visual rhythm, vertical cadence, and mathematical predictability across all layout structures.
+                Structured around a 4px and 8px spacing scale, making layout spacing predictable, clean, and effortless for developers to implement.
               </p>
               
               <div className="grid grid-cols-2 gap-4">

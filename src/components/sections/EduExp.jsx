@@ -4,31 +4,31 @@ export default function EduExp() {
   const education = [
     {
       title: "BFA in Communication Design",
-      subtitle: "Syracuse University School of Design – 2017",
-      desc: "Graduated with honors in Interaction and Communication Design, focusing on cognitive user psychology, usability research, and modular system engineering."
+      subtitle: "Syracuse University School of Design",
+      desc: "Studied interaction design with an emphasis on visual communication, usability testing, and practical interface design."
     },
     {
       title: "Interaction Design Specialist",
-      subtitle: "Interaction Design Foundation – 2018",
-      desc: "Completed intensive postgraduate tracks covering behavioral science, complex layouts, systemic design audits, and quantitative/qualitative user research methodologies."
+      subtitle: "Interaction Design Foundation",
+      desc: "Deepened skills in user research methods, usability principles, and organizing intuitive layouts for complex applications."
     }
   ];
 
   const experience = [
     {
       title: "Lead Product Designer",
-      subtitle: "CoreLabs Venture Studio – 2019 - Present",
-      desc: "Architecting end-to-end design strategies for high-growth fintech, SaaS, and healthcare systems. Directing scalable Figma libraries, running intensive heuristic funnel audits, and leading cross-functional teams."
+      subtitle: "CoreLabs Venture Studio",
+      desc: "Leading design across fintech, SaaS, and healthtech projects. Building organized Figma design systems, simplifying user journeys, and collaborating directly with engineers to ship features."
     },
     {
       title: "Senior Independent Designer",
-      subtitle: "Self-Employed Consultant – 2017 - 2019",
-      desc: "Delivered conversion-focused digital designs for over 20 global startup clients. Built structural wireframes, visual brand languages, and responsive interface systems with proven commercial outcomes."
+      subtitle: "Self-Employed Consultant",
+      desc: "Partnered with founders and product teams to design web and mobile apps from scratch, helping them clarify their product vision and launch on time."
     },
     {
       title: "UI/UX Design Intern",
-      subtitle: "Vanguard Technology Partners – 2016",
-      desc: "Assisted senior product design teams in wireframing, heuristic testing, and interface asset management. Contributed to an onboarding flow redesign that improved user activation by 24%."
+      subtitle: "Vanguard Technology Partners",
+      desc: "Worked alongside senior designers on wireframing, testing, and component specs. Helped redesign an onboarding flow that lifted new user activation by 24%."
     }
   ];
 

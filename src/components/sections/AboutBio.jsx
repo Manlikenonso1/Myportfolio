@@ -18,14 +18,14 @@ export default function AboutBio() {
         <FadeIn delay={0.1}>
           <div className="flex flex-col">
             <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.3] text-[var(--white)] mb-5">
-              Designing Experiences with Purpose
+              Designing with purpose & clarity
             </h2>
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-[30px] w-full lg:w-[530px]">
-              I'm Chinonso Ezeigbo — a Senior UI/UX Designer specialized in creating structured design systems, intuitive product architectures, and high-performance digital interfaces. I blend behavioral research with high-fidelity visual craft to build products that deliver tangible commercial outcomes.
+              Hi, I'm Chinonso Ezeigbo. I'm a UI/UX designer who loves taking messy, complicated ideas and turning them into clean, easy-to-use digital products. Whether I'm designing a full design system from scratch or untangling a tricky checkout flow, my focus is always on making things feel simple for users and straightforward for engineers to build.
             </p>
             
             <div className="flex flex-wrap gap-5 mb-[30px] flex-col sm:flex-row">
-              {['Systems-Level Thinking', 'WCAG Accessibility First', 'High-Fidelity Prototyping', 'Developer-Ready Handover'].map((badge, idx) => (
+              {['Design Systems & Tokens', 'Accessible & Inclusive', 'Interactive Prototypes', 'Smooth Dev Handoff'].map((badge, idx) => (
                 <div key={idx} className="flex items-center gap-[12px] bg-[var(--card)] border border-[var(--border)] rounded-[8px] py-4 px-[22px] w-full sm:w-[270px] font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)]">
                   <span className="w-[18px] h-[18px] shrink-0 rounded-full bg-[var(--blue)] flex items-center justify-center">
                     <svg viewBox="0 0 12 12" className="w-[10px] h-[10px] stroke-white fill-none stroke-[2.5]" style={{ strokeLinecap: 'round', strokeLinejoin: 'round' }}>
@@ -38,8 +38,8 @@ export default function AboutBio() {
             </div>
             
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)] leading-[1.6]">
-              Let's work together to transform your vision into an outstanding user experience!{' '}
-              <a href="mailto:hello@chinonsoezeigbo.com" className="text-[var(--blue)] no-underline hover:underline">Get In Touch</a>
+              Have a project in mind or just want to chat design?{' '}
+              <a href="mailto:hello@chinonsoezeigbo.com" className="text-[var(--blue)] no-underline hover:underline">Let's talk</a>
             </p>
           </div>
         </FadeIn>

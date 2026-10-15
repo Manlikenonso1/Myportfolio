@@ -2,19 +2,19 @@ import { FadeIn } from '../ui/FadeIn';
 
 const testimonials = [
   {
-    quote: "Nonso completely transformed our conversion funnel. Over just six weeks, his systematic approach to our UX architecture reduced bounce rates by 40%. A truly strategic designer.",
+    quote: "Nonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
     name: "Sarah Jenkins",
     role: "VP of Product, Appsatile",
     initials: "SJ"
   },
   {
-    quote: "His eye for detail is unmatched. He didn't just give us a beautiful UI—he handed over a hyper-performant React architecture that our engineering team loved.",
+    quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups—he gave our engineering team clean components and clear specs that were a joy to build with.",
     name: "David Chen",
     role: "Engineering Manager, Nikos Farm",
     initials: "DC"
   },
   {
-    quote: "The hardest part of hiring a designer is finding someone who understands business mechanics. Nonso merges high-end visuals with strict business logic. Highly recommended.",
+    quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Nonso combines great aesthetics with practical thinking. Highly recommended.",
     name: "Emily Carter",
     role: "Founding Partner, Aptinfy",
     initials: "EC"
@@ -32,7 +32,7 @@ export default function Testimonials() {
             Words from partners
           </h2>
           <p className="text-[18px] text-[var(--muted)] max-w-[600px] mx-auto font-light">
-            I work closely with engineering teams and product managers to ensure the final product scales perfectly without friction.
+            Feedback from founders, product managers, and developers I've collaborated with.
           </p>
         </FadeIn>
 

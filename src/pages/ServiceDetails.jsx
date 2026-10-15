@@ -4,91 +4,91 @@ import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeI
 const serviceData = {
   'ux-strategy': {
     title: "Product Strategy & UI/UX Design",
-    headline: "Designing clear pathways, rooted in human behavior.",
-    eyebrow: "Product Strategy & UX Logic",
+    headline: "Designing clean, intuitive digital products people actually enjoy using.",
+    eyebrow: "Product Strategy & UX Design",
     image: "/service_ui_ux.png",
-    overview: "A beautiful application is worthless if users can't achieve their goals. My process aligns layout architecture, information hierarchy, and user expectations to drive business conversion.",
-    description: "My UX strategy is grounded in behavioral science. I trace user actions from their initial entry point through to successful conversions, systematically diagnosing friction points and optimizing steps.",
+    overview: "Good design is about more than making things look pretty. If people get confused or struggle to complete simple tasks, the product fails. I design clear, straightforward interfaces that guide users smoothly toward what they came to do.",
+    description: "I look at the whole picture—from the first screen someone lands on to the moment they finish what they set out to do. Along the way, I identify where people hesitate or drop off and simplify each step until the experience feels effortless.",
     phases: [
       {
         num: "01",
-        title: "Discovery & Funnel Auditing",
-        desc: "I review existing conversion drop-off points, analyze key competitors, map out user demographics, and draft analytical heuristic evaluations."
+        title: "Discovery & Research",
+        desc: "I start by understanding your audience and your goals. We look at where users get stuck today, what competitors are doing well, and what a winning experience needs to look like."
       },
       {
         num: "02",
-        title: "Information Architecture",
-        desc: "Structuring application layouts, cataloging core views, and designing high-level blueprints that outline how data flows seamlessly across screens."
+        title: "Structure & Flow",
+        desc: "Organizing the app's structure so navigation feels natural. We map out pages, menus, and user journeys before getting caught up in visual details."
       },
       {
         num: "03",
-        title: "High-Fidelity Wireframes",
-        desc: "Drafting structural wireframes to establish logical balance, check sizing ratios, and lock down screen priority before committing styling variables."
+        title: "Wireframes & Layouts",
+        desc: "Creating screen-by-screen layouts to test content priority, button placement, and overall balance so we are confident in the layout before finalizing colors and typography."
       },
       {
         num: "04",
-        title: "User Journey Validation",
-        desc: "Translating layouts into clickable flows to observe user behavior, validate layout assumptions, and ensure zero friction in critical pipelines."
+        title: "Interactive Prototyping",
+        desc: "Connecting screens into clickable prototypes to test the flow with real people, catch rough edges early, and validate decisions before writing code."
       }
     ]
   },
   'design-systems': {
     title: "Design Systems & Brand Standards",
-    headline: "Visual systems built to scale without friction.",
-    eyebrow: "Design Systems & Figma Architecture",
+    headline: "Consistent visual systems that help teams design and build faster.",
+    eyebrow: "Design Systems & Component Libraries",
     image: "/service_design_system.png",
-    overview: "Developing comprehensive, highly structured design components in Figma and code. I bridge the gap between creative visual designs and high-fidelity production engineering.",
-    description: "I build pixel-perfect Figma components complete with design tokens, variables, and automated auto-layouts. This guarantees that your engineering and design branches speak the exact same language.",
+    overview: "As products grow, keeping screens consistent and code clean gets harder. I build structured, reusable design systems in Figma and code so your team can roll out new features without reinventing the wheel each time.",
+    description: "Every button, form field, and color token is organized with clear rules and auto-layout. Designers and developers stay on the same page, handoffs become painless, and your product stays visually cohesive.",
     phases: [
       {
         num: "01",
-        title: "Visual Foundation Blueprint",
-        desc: "Establishing responsive grids, accessible typography scales, WCAG-compliant color matrices, and premium visual glassmorphism parameters."
+        title: "Core Foundations",
+        desc: "Setting up the essentials: responsive grids, accessible color palettes, readable type scales, and spacing rules that hold everything together."
       },
       {
         num: "02",
-        title: "Atomic Component Design",
-        desc: "Building atomic component elements (buttons, inputs, alerts, controls) in Figma with variables supporting dark/light mode toggles."
+        title: "Component Library",
+        desc: "Crafting flexible UI components—buttons, inputs, dropdowns, modal cards, and banners—with support for light and dark modes."
       },
       {
         num: "03",
-        title: "Design Token Mapping",
-        desc: "Translating color palettes, layout sizes, and fonts into structured JSON design tokens that sync seamlessly to CSS and React variables."
+        title: "Design Tokens & Variables",
+        desc: "Translating styles into structured tokens (colors, spacing, typography) that match your front-end code (CSS, Tailwind, or React variables)."
       },
       {
         num: "04",
-        title: "Developer Library Integration",
-        desc: "Documenting handoff specs, reviewing front-end styling structures, and setting up centralized token systems for instant UI updates."
+        title: "Documentation & Handoff",
+        desc: "Writing clear usage guidelines and component states so engineers know exactly how pieces fit together and when to use them."
       }
     ]
   },
   'interactive-motion': {
     title: "Interactive Prototyping & Motion",
-    headline: "A tactile software experience before writing code.",
-    eyebrow: "Micro-interactions & Interactive Flows",
+    headline: "Polished animations and prototypes that make products feel responsive and alive.",
+    eyebrow: "Prototyping & Motion Design",
     image: "/service_interactive_motion.png",
-    overview: "Making screens feel tactile, alive, and interactive. I choreograph transitions, micro-interactions, and high-fidelity user-testable mockups to prevent development waste.",
-    description: "Interaction design is the soul of premium software. I craft micro-gestures, state changes, page entries, and morphing cards that yield absolute delightful moments while using your app.",
+    overview: "The difference between a good product and a great one often comes down to how it feels to touch and click. I design smooth micro-interactions, transitions, and realistic prototypes that give software character.",
+    description: "From hover states and button taps to page transitions, subtle motion provides immediate feedback and guides user attention naturally, making the whole interface feel effortless.",
     phases: [
       {
         num: "01",
-        title: "Micro-gesture Mapping",
-        desc: "Detailing states for every element: active hovers, dynamic button clicks, loaded items, and contextual animations that respond instantly."
+        title: "Micro-Interactions",
+        desc: "Designing clear states for interactive elements—hovers, active presses, loading spinners, and success confirmations."
       },
       {
         num: "02",
-        title: "Layout Entry Transitions",
-        desc: "Creating elegant structural page entries, cascading list renders, glass accordion expansions, and interactive drawer slide overlays."
+        title: "Screen & Modal Transitions",
+        desc: "Adding smooth transitions when opening drawers, expanding accordions, switching tabs, or navigating between pages."
       },
       {
         num: "03",
-        title: "High-Fidelity Figma Prototype",
-        desc: "Assembling linkable user flows that act, look, and feel identical to built applications to test concepts directly with stakeholders."
+        title: "Interactive Prototypes",
+        desc: "Building clickable prototypes that behave like real software so stakeholders and users can experience flows before development begins."
       },
       {
         num: "04",
-        title: "React Motion Handoff",
-        desc: "Converting refined prototypes into hardware-accelerated CSS and Framer Motion code tokens, guaranteeing a perfect 60fps experience."
+        title: "Developer Handoff & Motion Specs",
+        desc: "Supplying exact easing curves, durations, and CSS/Framer Motion specs so developers can implement animations without guessing."
       }
     ]
   }
@@ -155,14 +155,14 @@ export default function ServiceDetails() {
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--blue)]/5 blur-[100px] rounded-full pointer-events-none"></div>
             <div className="relative z-10 max-w-[600px] mx-auto flex flex-col items-center">
               <h3 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-bold text-white mb-6 leading-tight">
-                Ready to deploy this process?
+                Ready to work together?
               </h3>
               <p className="text-[16px] md:text-[18px] text-white/50 leading-[1.6] mb-10 font-light">
-                Let's partner up to build something completely outstanding for your users and business metrics.
+                Tell me about your product, your goals, or what challenges you're facing. I'd love to help you build something great.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
                 <Link to="/contact" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
-                  Book a consultation
+                  Get in touch
                 </Link>
                 <Link to="/services" className="px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] border border-white/20 hover:bg-white/5 transition-colors duration-300">
                   Back to Services

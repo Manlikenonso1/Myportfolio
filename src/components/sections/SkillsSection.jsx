@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 export default function SkillsSection() {
   const col1 = [
-    { name: "User Interface (UI) Architecture", pct: 98 },
-    { name: "Product Strategy & UX Logic", pct: 86 },
-    { name: "High-Fidelity Prototyping", pct: 90 },
+    { name: "UI Design & Design Systems", pct: 98 },
+    { name: "Product Strategy & User Flows", pct: 88 },
+    { name: "Interactive Prototyping", pct: 92 },
   ];
   const col2 = [
-    { name: "Heuristic Funnel Auditing", pct: 86 },
-    { name: "Responsive Interface Systems", pct: 98 },
-    { name: "Micro-interactions & Motion", pct: 90 },
+    { name: "User Research & Usability Audits", pct: 86 },
+    { name: "Responsive Web & Mobile Design", pct: 98 },
+    { name: "Micro-interactions & Animation", pct: 90 },
   ];
 
   return (
@@ -18,13 +18,13 @@ export default function SkillsSection() {
       <FadeIn>
         <div className="text-center mb-[80px]">
           <div className="font-['DM_Sans'] text-[18px] font-normal tracking-[.08em] uppercase text-[var(--muted)] mb-5">
-            My Skills
+            Core Skills
           </div>
           <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.3] text-[var(--white)] max-w-[686px] mx-auto mb-5">
-            Key Expertise in UI/UX Excellence
+            What I bring to your team
           </h2>
-          <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[796px] mx-auto">
-            I combine deep user empathy with polished visual craft — from early-stage research and wireframing all the way through to refined, interactive prototypes ready for handoff.
+          <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[760px] mx-auto">
+            I take products from early concepts to launch-ready interfaces—covering user research, wireframes, design systems, and interactive prototypes.
           </p>
         </div>
       </FadeIn>
