@@ -8,9 +8,9 @@ export default function AboutBio() {
         <FadeIn>
           <div className="w-full max-w-[400px] lg:max-w-none lg:w-[510px] h-[513px] rounded-[15px] bg-[var(--tan)] overflow-hidden relative shrink-0 mx-auto lg:mx-0 shadow-2xl border border-white/10">
             <img 
-              src="/IMG_1741.jpeg" 
+              src="/profile.jpg" 
               alt="Chinonso Ezeigbo" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </FadeIn>
