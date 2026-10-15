@@ -49,7 +49,6 @@ export default function Home() {
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Huntyl</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
           </div>
         </FadeIn>

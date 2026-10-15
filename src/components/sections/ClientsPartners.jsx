@@ -5,7 +5,6 @@ export default function ClientsPartners() {
     "Appsatile",
     "Nikos Farm",
     "Aptinfy",
-    "Huntyl",
     "LazyZone"
   ];
 

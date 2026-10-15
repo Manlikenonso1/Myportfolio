@@ -113,7 +113,7 @@ export default function Projects() {
            {[
              { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
              { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." },
-             { name: "Bessie Cooper", role: "Design Director, Huntyl", text: "A fantastic interaction architect who understands both elegant aesthetics and hardcore developer workflows." }
+             { name: "Bessie Cooper", role: "Design Director, LazyZone", text: "A fantastic interaction architect who understands both elegant aesthetics and hardcore developer workflows." }
            ].map((quote, i) => (
              <FadeIn key={i} delay={i * 0.1}>
                 <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
@@ -150,7 +150,6 @@ export default function Projects() {
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Appsatile</div>
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Aptinfy</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Huntyl</div>
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">LazyZone</div>
           </div>
         </FadeIn>
