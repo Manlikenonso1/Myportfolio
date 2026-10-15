@@ -26,7 +26,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Design System</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Appsatile</h3>
                </div>
-               <Link to="/projects/appsatile" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/appsatile" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>
@@ -42,7 +42,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">AI Creator Suite & Web App</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">LazyZoneLabs</h3>
                </div>
-               <Link to="/projects/lazyzone" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/lazyzone" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>
@@ -58,7 +58,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">AI Job Search & Application Workspace</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">HuntlyAi</h3>
                </div>
-               <Link to="/projects/huntly" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/huntly" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>
@@ -74,7 +74,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">E-Commerce</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Nikos Farm</h3>
                </div>
-               <Link to="/projects/nikos-farm" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/nikos-farm" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>
@@ -90,7 +90,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Food & Hospitality</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Cook by Ugo</h3>
                </div>
-               <Link to="/projects/cook-by-ugo" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/cook-by-ugo" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>
@@ -106,7 +106,7 @@ export default function Projects() {
                  <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Brand Identity</div>
                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Aptinfy</h3>
                </div>
-               <Link to="/projects/aptinfy" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+               <Link to="/projects/aptinfy" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
                  View Case Study
                </Link>
             </div>

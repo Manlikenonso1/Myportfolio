@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="text-white/50 text-[18px] max-w-[400px] mb-10">
               I'm always looking for ambitious projects and great teams to build digital products with.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-transform duration-300">
+            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 hover:shadow-lg hover:shadow-white/10 transition-all duration-300">
               Get in touch
               <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center">
                  <svg className="w-3 h-3 stroke-black fill-none stroke-[2]" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -32,16 +32,16 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Social</h4>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors text-[15px]">Twitter</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors text-[15px]">LinkedIn</a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors text-[15px]">Github</a>
-              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white transition-colors text-[15px]">Dribbble</a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Twitter</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">LinkedIn</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Github</a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Dribbble</a>
             </div>
           </div>
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <Link to="/" className="font-['DM_Sans'] text-[20px] font-bold tracking-tight flex items-center gap-2">
+          <Link to="/" className="font-['DM_Sans'] text-[20px] font-bold tracking-tight flex items-center gap-2 hover:opacity-70 transition-opacity">
             Nonso.
           </Link>
           <div className="text-white/30 text-[14px]">

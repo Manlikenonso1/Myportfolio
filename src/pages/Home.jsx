@@ -29,10 +29,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">
-            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] text-center hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] text-center hover:scale-105 hover:shadow-xl hover:shadow-white/20 transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
               Start a project
             </Link>
-            <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 transition-colors duration-300">
+            <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 hover:scale-105 hover:border-white/40 transition-all duration-300">
               View my work
             </Link>
           </div>

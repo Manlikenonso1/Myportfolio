@@ -64,7 +64,7 @@ export default function Navbar() {
           className={`flex justify-between items-center rounded-3xl pointer-events-auto transition-shadow duration-500 border border-white/10 backdrop-blur-xl ${scrolled ? 'shadow-2xl shadow-blue-900/10' : ''}`}
         >
           {/* Logo */}
-          <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white z-10 flex items-center gap-1">
+          <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white z-10 flex items-center gap-1 hover:opacity-70 transition-opacity">
             Nonso.
           </Link>
 
@@ -82,12 +82,12 @@ export default function Navbar() {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Resume
             </a>
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 text-[14px] font-semibold transition-all">
+            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 hover:scale-105 text-[14px] font-semibold transition-all">
               Connect
             </Link>
           </div>
           {/* Mobile Hamburger Menu icon */}
-          <button onClick={toggleMenu} className="flex md:hidden flex-col gap-1.5 w-6 z-[201] pointer-events-auto">
+          <button onClick={toggleMenu} className="flex md:hidden flex-col gap-1.5 w-6 z-[201] pointer-events-auto hover:opacity-70 transition-opacity">
             <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
             <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? 'opacity-0' : ''}`}></span>
             <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>

@@ -38,6 +38,21 @@
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
   }
+
+  /* ── Global interactive baseline ── */
+  a, button, summary, [role="button"] {
+    cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease,
+                border-color 0.2s ease, opacity 0.2s ease,
+                transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
 @layer utilities {
