@@ -35,6 +35,22 @@ export default function Projects() {
             </Link>
           </FadeIn>
 
+          {/* LazyZoneLabs Showcase */}
+          <FadeIn direction="up">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
+               <div>
+                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">AI Creator Suite & Web App</div>
+                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">LazyZoneLabs</h3>
+               </div>
+               <Link to="/projects/lazyzone" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+                 View Case Study
+               </Link>
+            </div>
+            <Link to="/projects/lazyzone" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
+               <img src="/lazyzone-thumbnail.png" alt="LazyZoneLabs AI Creator Suite" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
+            </Link>
+          </FadeIn>
+
           {/* Nikos Farm Showcase */}
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
@@ -136,9 +152,12 @@ export default function Projects() {
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 mt-4">
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Appsatile</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Cook by Ugo</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">LazyZone</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Talstrike</div>
+             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">cloudnet IQ</div>
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Aptinfy</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">LazyZone</div>
           </div>
         </FadeIn>
       </section>

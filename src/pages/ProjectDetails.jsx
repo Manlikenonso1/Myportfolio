@@ -70,6 +70,40 @@ export default function ProjectDetails() {
         { name: "Amaka O.", role: "Operations Lead, Cook by Ugo", text: "The meal customization flow and cart drawer make order management effortless. He created an interface that feels authentic and looks world-class." },
         { name: "Liam Davies", role: "Digital Marketing Consultant", text: "A stunning food e-commerce experience. Nonso balanced expressive Nigerian branding with an intuitive, clean checkout journey." }
       ]
+    },
+    'lazyzone': {
+      id: 'lazyzone',
+      title: "LazyZoneLabs",
+      type: "Product & Interface Design",
+      category: "AI Creator Suite & Web App",
+      role: "Lead Product Designer",
+      heroImg: "/lazyzone-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "LazyZoneLabs is an all-in-one AI creator workspace uniting automated scriptwriting, realistic text-to-speech studio generation, and AI video clipping. I designed the complete end-to-end web application and dark-mode design system—giving creators high-leverage tools wrapped in a focused, distraction-free environment.",
+      objectives: "The core challenge was orchestrating three heavy creative workflows—writing, audio synthesis, and timeline video slicing—into one cohesive interface. I established a visual identity anchored by quiet charcoal surfaces and decisive red accents, stripping away friction so creators can focus on production.",
+      reviews: [
+        { name: "Devin Vance", role: "Co-Founder, LazyZoneLabs", text: "Nonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
+        { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Nonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
+        { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Nonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
+      ]
+    },
+    'lazyzonelab': {
+      id: 'lazyzone',
+      title: "LazyZoneLabs",
+      type: "Product & Interface Design",
+      category: "AI Creator Suite & Web App",
+      role: "Lead Product Designer",
+      heroImg: "/lazyzone-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "LazyZoneLabs is an all-in-one AI creator workspace uniting automated scriptwriting, realistic text-to-speech studio generation, and AI video clipping. I designed the complete end-to-end web application and dark-mode design system—giving creators high-leverage tools wrapped in a focused, distraction-free environment.",
+      objectives: "The core challenge was orchestrating three heavy creative workflows—writing, audio synthesis, and timeline video slicing—into one cohesive interface. I established a visual identity anchored by quiet charcoal surfaces and decisive red accents, stripping away friction so creators can focus on production.",
+      reviews: [
+        { name: "Devin Vance", role: "Co-Founder, LazyZoneLabs", text: "Nonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
+        { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Nonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
+        { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Nonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
+      ]
     }
   };
 
@@ -120,9 +154,9 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : 'bg-[#0d0f0d]'
           }`}>
-            {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => {
+            {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;
               
               if (prefix === 'appsatile' && num === 10) {
