@@ -54,6 +54,22 @@ export default function ProjectDetails() {
         { name: "Liam O'Connor", role: "Marketing Director", text: "The brand guide and asset kit Nonso handed off made designing our landing pages and marketing collateral completely seamless." },
         { name: "Bessie Cooper", role: "Creative Director", text: "A thoughtfully balanced mark with great attention to proportion and versatility. Fantastic work all around." }
       ]
+    },
+    'cook-by-ugo': {
+      id: 'cook-by-ugo',
+      title: "Cook by Ugo",
+      type: "Food & Hospitality",
+      category: "Restaurant & Ordering Experience",
+      role: "Lead UI/UX & Brand Designer",
+      heroImg: "/cook-by-ugo-thumbnail.png",
+      liveLink: null,
+      overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed a food-led digital brand identity and responsive ordering website—taking customers smoothly from browsing signature dishes to customizing meal spice levels, selecting delivery times, and completing checkout with ease.",
+      objectives: "The primary objective was translating the warmth of homemade West African dining into a modern digital experience. I focused on mouth-watering visual hierarchy, clear menu categories, and a frictionless mobile ordering flow that boosted direct takeout orders.",
+      reviews: [
+        { name: "Ugochukwu Nwosu", role: "Founder & Head Chef, Cook by Ugo", text: "Nonso captured the warmth and soul of our kitchen perfectly. Customers find the online ordering so simple, and our direct orders increased noticeably right after launch." },
+        { name: "Amaka O.", role: "Operations Lead, Cook by Ugo", text: "The meal customization flow and cart drawer make order management effortless. He created an interface that feels authentic and looks world-class." },
+        { name: "Liam Davies", role: "Digital Marketing Consultant", text: "A stunning food e-commerce experience. Nonso balanced expressive Nigerian branding with an intuitive, clean checkout journey." }
+      ]
     }
   };
 
@@ -104,7 +120,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;

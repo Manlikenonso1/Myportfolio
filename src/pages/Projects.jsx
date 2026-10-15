@@ -51,6 +51,22 @@ export default function Projects() {
             </Link>
           </FadeIn>
 
+          {/* Cook by Ugo Showcase */}
+          <FadeIn direction="up">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
+               <div>
+                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Food & Hospitality</div>
+                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Cook by Ugo</h3>
+               </div>
+               <Link to="/projects/cook-by-ugo" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black transition-colors w-fit">
+                 View Case Study
+               </Link>
+            </div>
+            <Link to="/projects/cook-by-ugo" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
+               <img src="/cook-by-ugo-thumbnail.png" alt="Cook by Ugo Digital Experience" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
+            </Link>
+          </FadeIn>
+
           {/* Aptinfy Showcase */}
           <FadeIn direction="up">
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">

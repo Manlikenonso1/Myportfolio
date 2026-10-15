@@ -47,6 +47,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
+             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Cook by Ugo</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
              <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
@@ -54,7 +55,7 @@ export default function Home() {
         </FadeIn>
       </section>
 
-      {/* 3. SELECTED WORK (APPSATILE & NIKOS FARM) */}
+      {/* 3. SELECTED WORK */}
       <section className="py-32 px-6">
         <div className="max-w-[1200px] mx-auto">
           <FadeIn className="flex justify-between items-end mb-16 border-b border-white/10 pb-8">
@@ -65,7 +66,7 @@ export default function Home() {
             </Link>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <FadeIn direction="up">
               <Link to="/projects/appsatile" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
@@ -77,6 +78,16 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.1}>
+              <Link to="/projects/cook-by-ugo" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
+                <img src="/cook-by-ugo-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Cook by Ugo Digital Experience" />
+                <div className="absolute bottom-10 left-10 z-20">
+                  <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">Food & Hospitality</div>
+                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Cook by Ugo</h3>
+                </div>
+              </Link>
+            </FadeIn>
+            <FadeIn direction="up" delay={0.2}>
               <Link to="/projects/nikos-farm" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
                 <img src="/nikos-farm-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Nikos Farm E-Commerce" />
@@ -86,7 +97,7 @@ export default function Home() {
                 </div>
               </Link>
             </FadeIn>
-            <FadeIn direction="up" delay={0.2}>
+            <FadeIn direction="up" delay={0.3}>
               <Link to="/projects/aptinfy" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
                 <img src="/aptinfy-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Aptinfy Logo Branding" />
