@@ -69,74 +69,46 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 5. TESTIMONIALS (Asymmetric Block) */}
+      {/* 5. TESTIMONIALS */}
       <section className="px-6 py-32 max-w-[1200px] mx-auto border-t border-[var(--border)]">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 items-stretch h-auto mb-6">
-          {/* Left Large Feature */}
-          <FadeIn direction="right" className="w-full h-full min-h-[400px] rounded-3xl bg-[var(--card)] border border-[var(--border)] overflow-hidden relative">
-             <img src="/gallery1.jpg" className="absolute inset-0 w-full h-full object-cover opacity-30 object-center mix-blend-overlay" alt="Testimonial BG" />
-             <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg2)] via-transparent to-transparent"></div>
-          </FadeIn>
-          
-          {/* Right Main Focus */}
-          <FadeIn direction="left" className="w-full h-full flex flex-col justify-center pl-0 lg:pl-12">
-             <div className="text-[14px] text-[var(--muted)] tracking-[0.2em] uppercase font-bold mb-6">Testimonials</div>
-              <h2 className="font-['DM_Sans'] text-[40px] md:text-[56px] font-bold text-white leading-[1.1] mb-12 tracking-tight">
-                Hear What They're Saying About Me
-              </h2>
-             
-             {/* Highlighted Quote Box */}
-             <div className="flex gap-6 items-start">
-                <div className="w-16 h-16 shrink-0 rounded bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center">
-                  <div className="text-[20px] text-white/30 font-bold">CH</div>
-                </div>
-                <div>
-                  <h4 className="font-['DM_Sans'] font-bold text-[20px] text-white">Chelsea Hardy</h4>
-                  <div className="text-[13px] text-[var(--muted)] mt-1">Lead Product Architect, Appsatile</div>
-                  <div className="flex gap-1 text-[var(--green)] my-2">
-                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                     <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  </div>
-                  <p className="text-[16px] text-[var(--muted)] font-light leading-[1.6]">
-                    "Nonso's ability to extract complex business requirements and translate them into a hyper-clean React workflow is unmatched. We saw instant ROI."
-                  </p>
-                </div>
-             </div>
-          </FadeIn>
-        </div>
+        <FadeIn className="text-center mb-16">
+          <div className="text-[14px] text-[var(--muted)] tracking-[0.2em] uppercase font-bold mb-4">Testimonials</div>
+          <h2 className="font-['DM_Sans'] text-[40px] md:text-[56px] font-bold text-white leading-[1.1] tracking-tight">
+            Hear What They're Saying About Me
+          </h2>
+        </FadeIn>
 
-        {/* Triple Small Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
-           {[
-             { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
-             { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." },
-             { name: "Bessie Cooper", role: "Design Director, LazyZone", text: "A fantastic interaction architect who understands both elegant aesthetics and hardcore developer workflows." }
-           ].map((quote, i) => (
-             <FadeIn key={i} delay={i * 0.1}>
-                <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
-                   <div className="flex gap-4 items-center mb-6">
-                     <div className="w-12 h-12 rounded bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
-                       {quote.name.split(' ').map(n=>n[0]).join('')}
-                     </div>
-                     <div>
-                       <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
-                       <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
-                       <div className="flex gap-1 text-[var(--green)] mt-2">
-                         <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                         <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                         <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                         <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                         <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", text: "Nonso's ability to extract complex business requirements and translate them into a hyper-clean React workflow is unmatched. We saw instant ROI." },
+            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "The delivery was significantly ahead of schedule and the design system's architecture was absolutely pristine." },
+            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "I highly recommend working with Nonso. He brings massive strategic system design insight to complex engineering cycles." }
+          ].map((quote, i) => (
+            <FadeIn key={i} delay={i * 0.1}>
+              <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">
+                <div>
+                  <div className="flex gap-4 items-center mb-6">
+                    <div className="w-12 h-12 rounded-full bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center font-bold text-white/40 text-[14px]">
+                      {quote.name.split(' ').map(n=>n[0]).join('')}
+                    </div>
+                    <div>
+                      <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
+                      <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
+                      <div className="flex gap-1 text-[var(--green)] mt-2">
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                       </div>
                     </div>
                   </div>
-                  <p className="text-[14px] text-white/50 leading-[1.6]">"{quote.text}"</p>
-               </div>
-             </FadeIn>
-           ))}
+                  <p className="text-[14px] text-white/60 leading-[1.6]">"{quote.text}"</p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
         </div>
       </section>
 
