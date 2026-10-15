@@ -46,14 +46,14 @@ export default function Home() {
             Selected Clients & Collaborations
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Appsatile</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">HuntlyAi</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">LazyZone</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Cook by Ugo</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Talstrike</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">cloudnet IQ labs</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Nikos Farm</div>
-             <div className="font-['DM_Sans'] font-bold text-[28px] tracking-tight">Aptinfy</div>
+             <Link to="/projects/appsatile"   className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">Appsatile</Link>
+             <Link to="/projects/huntly"       className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">HuntlyAi</Link>
+             <Link to="/projects/lazyzone"     className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">LazyZone</Link>
+             <Link to="/projects/cook-by-ugo"  className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">Cook by Ugo</Link>
+             <span className="font-['DM_Sans'] font-bold text-[28px] tracking-tight cursor-default">Talstrike</span>
+             <span className="font-['DM_Sans'] font-bold text-[28px] tracking-tight cursor-default">cloudnet IQ</span>
+             <Link to="/projects/nikos-farm"   className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">Nikos Farm</Link>
+             <Link to="/projects/aptinfy"      className="font-['DM_Sans'] font-bold text-[28px] tracking-tight hover:opacity-100 transition-opacity">Aptinfy</Link>
           </div>
         </FadeIn>
       </section>

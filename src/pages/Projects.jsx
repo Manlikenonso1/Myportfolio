@@ -167,14 +167,14 @@ export default function Projects() {
             Clients & Collaborations
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 opacity-40 grayscale hover:grayscale-0 transition-all duration-700 mt-4">
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Appsatile</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">HuntlyAi</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">LazyZone</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Cook by Ugo</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Talstrike</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">cloudnet IQ</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Nikos Farm</div>
-             <div className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white">Aptinfy</div>
+             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">Appsatile</Link>
+             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">HuntlyAi</Link>
+             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">LazyZone</Link>
+             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">Cook by Ugo</Link>
+             <span className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white cursor-default">Talstrike</span>
+             <span className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white cursor-default">cloudnet IQ</span>
+             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">Nikos Farm</Link>
+             <Link to="/projects/aptinfy"     className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white hover:opacity-100 transition-opacity">Aptinfy</Link>
           </div>
         </FadeIn>
       </section>
