@@ -8,7 +8,7 @@ const testimonials = [
     avatar: "/avatar1.jpg"
   },
   {
-    quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups—he gave our engineering team clean components and clear specs that were a joy to build with.",
+    quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups. He gave our engineering team clean components and clear specs that were a joy to build with.",
     name: "David Chen",
     role: "Engineering Manager, Nikos Farm",
     avatar: "/avatar2.jpg"

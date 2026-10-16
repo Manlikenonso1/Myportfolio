@@ -15,7 +15,7 @@ export default function Services() {
               Thoughtful design that helps your product grow.
             </h1>
             <p className="text-[18px] text-white/50 leading-[1.8] max-w-[640px] mx-auto font-light">
-              I help product teams turn complex ideas into clean, user-friendly experiences—from user research and wireframes to complete design systems.
+              I help product teams turn complex ideas into clean, user-friendly experiences, from user research and wireframes to complete design systems.
             </p>
           </FadeIn>
         </div>
@@ -52,7 +52,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">02</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Design Systems & Brand Standards</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colors, fonts, and responsive components—giving your team a reliable blueprint that saves hours of development time.
+                    Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colors, fonts, and responsive components, giving your team a reliable blueprint that saves hours of development time.
                   </p>
                   <Link to="/services/design-systems" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
                     Explore process
@@ -92,7 +92,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">04</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">User Research & Usability Audits</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows—so every design decision is grounded in real evidence, not guesswork.
+                    Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows so every design decision is grounded in real evidence, not guesswork.
                   </p>
                   <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
                     Request an audit
@@ -112,7 +112,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">05</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Developer Handoff & Accessibility</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in—so your dev team builds exactly what was designed, first time.
+                    Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in, so your dev team builds exactly what was designed, first time.
                   </p>
                   <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
                     Explore process

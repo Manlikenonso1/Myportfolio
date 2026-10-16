@@ -24,7 +24,7 @@ export default function SkillsSection() {
             What I bring to your team
           </h2>
           <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[760px] mx-auto">
-            I take products from early concepts to launch-ready interfaces—covering user research, wireframes, design systems, and interactive prototypes.
+            I take products from early concepts to launch-ready interfaces, covering user research, wireframes, design systems, and interactive prototypes.
           </p>
         </div>
       </FadeIn>

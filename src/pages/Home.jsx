@@ -25,7 +25,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[18px] md:text-[22px] text-white/50 text-center max-w-[640px] leading-[1.6] mb-12 font-light">
-            UI/UX designer with an MSc in Cyber Security — I build products that are not just intuitive, but trustworthy. Clean flows, airtight handoffs, real user thinking.
+            UI/UX designer with an MSc in Cyber Security. I build products that are not just intuitive, but trustworthy. Clean flows, airtight handoffs, real user thinking.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">

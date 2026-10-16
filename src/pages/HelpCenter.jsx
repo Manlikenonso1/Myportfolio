@@ -83,7 +83,7 @@ export default function HelpCenter() {
     <div className="hc-header fu">
       <div className="hc-eyebrow">HELP CENTER</div>
       <h2 className="hc-h2">Need Answers? I've Got You Covered</h2>
-      <p className="hc-p">Here's what working together looks like—from initial kickoff and day-to-day communication to final file handoffs and post-launch support.</p>
+      <p className="hc-p">Here's what working together looks like, from initial kickoff and day-to-day communication to final file handoffs and post-launch support.</p>
     </div>
     
     <div className="hc-grid">

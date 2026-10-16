@@ -120,7 +120,7 @@ export default function Contact() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    As involved as you want to be. Typically, we'll kick off with a deep dive into your goals, followed by weekly check-ins and shared Figma links so you can leave comments and watch progress happen in real time—no surprises.
+                    As involved as you want to be. Typically, we'll kick off with a deep dive into your goals, followed by weekly check-ins and shared Figma links so you can leave comments and watch progress happen in real time with complete transparency.
                   </div>
                 </details>
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">

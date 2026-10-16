@@ -8,7 +8,7 @@ const serviceData = {
     eyebrow: "Product Strategy & UX Design",
     image: "/service_ui_ux.png",
     overview: "Good design is about more than making things look pretty. If people get confused or struggle to complete simple tasks, the product fails. I design clear, straightforward interfaces that guide users smoothly toward what they came to do.",
-    description: "I look at the whole picture—from the first screen someone lands on to the moment they finish what they set out to do. Along the way, I identify where people hesitate or drop off and simplify each step until the experience feels effortless.",
+    description: "I look at the whole picture, from the first screen someone lands on to the moment they finish what they set out to do. Along the way, I identify where people hesitate or drop off and simplify each step until the experience feels effortless.",
     phases: [
       {
         num: "01",
@@ -48,7 +48,7 @@ const serviceData = {
       {
         num: "02",
         title: "Component Library",
-        desc: "Crafting flexible UI components—buttons, inputs, dropdowns, modal cards, and banners—with support for light and dark modes."
+        desc: "Crafting flexible UI components (buttons, inputs, dropdowns, modal cards, and banners) with support for light and dark modes."
       },
       {
         num: "03",
@@ -73,7 +73,7 @@ const serviceData = {
       {
         num: "01",
         title: "Micro-Interactions",
-        desc: "Designing clear states for interactive elements—hovers, active presses, loading spinners, and success confirmations."
+        desc: "Designing clear states for interactive elements: hovers, active presses, loading spinners, and success confirmations."
       },
       {
         num: "02",
