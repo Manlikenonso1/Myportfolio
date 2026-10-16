@@ -15,6 +15,7 @@ export default function ProjectDetails() {
       role: "Lead UI/UX Designer",
       heroImg: "/appsatile-thumbnail.png",
       liveLink: null,
+      sliceCount: 33,
       overview: "I designed and built Appsatile's design system from the ground up to give their products a unified, modern look. By setting up clean reusable components, clear type and color tokens, and solid guidelines, we cut down back-and-forth between designers and engineers and sped up product shipping.",
       objectives: "The goal was straightforward: remove design bottlenecks, eliminate visual inconsistencies across their apps, and give the engineering team a single source of truth they could build with quickly and confidently.",
       reviews: [
@@ -31,6 +32,7 @@ export default function ProjectDetails() {
       role: "Lead Product Designer",
       heroImg: "/nikos-farm-thumbnail.png",
       liveLink: null,
+      sliceCount: 11,
       overview: "For Nikos Farm, I designed an e-commerce experience tailored to organic produce buyers. I created a clean product browse experience, a slide-out cart drawer for quick edits, and a simple checkout flow that makes ordering fresh farm food easy.",
       objectives: "The main focus was making mobile shopping fast and painless, highlighting farm-fresh photography, and encouraging higher order values with clear bundle discounts.",
       reviews: [
@@ -47,6 +49,7 @@ export default function ProjectDetails() {
       role: "Lead Identity Designer",
       heroImg: "/aptinfy-thumbnail.png",
       liveLink: null,
+      sliceCount: 1,
       overview: "For Aptinfy, I crafted a distinct brand identity and geometric logo. The mark brings together ideas of connectivity, intelligence, and secure tech infrastructure. Alongside the mark, I built a cohesive color palette, modern typography hierarchy, and branded templates for their marketing and product decks.",
       objectives: "The goal was to create a bold, memorable identity that looks just as sharp as a 16px favicon in a browser tab as it does on a conference banner, projecting confidence and technical polish.",
       reviews: [
@@ -63,6 +66,7 @@ export default function ProjectDetails() {
       role: "Lead UI/UX & Brand Designer",
       heroImg: "/cook-by-ugo-thumbnail.png",
       liveLink: null,
+      sliceCount: 10,
       overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed a food-led digital brand identity and responsive ordering website—taking customers smoothly from browsing signature dishes to customizing meal spice levels, selecting delivery times, and completing checkout with ease.",
       objectives: "The primary objective was translating the warmth of homemade West African dining into a modern digital experience. I focused on mouth-watering visual hierarchy, clear menu categories, and a frictionless mobile ordering flow that boosted direct takeout orders.",
       reviews: [

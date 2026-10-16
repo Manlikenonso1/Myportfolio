@@ -5,19 +5,19 @@ const testimonials = [
     quote: "Nonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
     name: "Sarah Jenkins",
     role: "VP of Product, Appsatile",
-    initials: "SJ"
+    avatar: "/avatar1.jpg"
   },
   {
     quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups—he gave our engineering team clean components and clear specs that were a joy to build with.",
     name: "David Chen",
     role: "Engineering Manager, Nikos Farm",
-    initials: "DC"
+    avatar: "/avatar2.jpg"
   },
   {
     quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Nonso combines great aesthetics with practical thinking. Highly recommended.",
     name: "Emily Carter",
     role: "Founding Partner, Aptinfy",
-    initials: "EC"
+    avatar: "/avatar3.jpg"
   }
 ];
 
@@ -47,9 +47,11 @@ export default function Testimonials() {
                   </p>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[var(--bg)] border border-[var(--border)] flex items-center justify-center font-['DM_Sans'] font-bold text-[14px] text-[var(--tan)]">
-                    {t.initials}
-                  </div>
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="w-12 h-12 rounded-full object-cover border border-white/10"
+                  />
                   <div>
                     <div className="font-['DM_Sans'] font-bold text-[16px] text-white">{t.name}</div>
                     <div className="text-[12px] text-[var(--muted)] mt-1">{t.role}</div>

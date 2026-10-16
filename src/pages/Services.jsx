@@ -85,6 +85,46 @@ export default function Services() {
             </div>
           </FadeIn>
 
+          <FadeIn direction="up">
+            <div className="group relative p-[1px] rounded-[10px] bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+              <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
+                <div className="flex-1">
+                  <div className="text-[14px] font-medium text-white/40 mb-4">04</div>
+                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">User Research & Usability Audits</h3>
+                  <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
+                    Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows—so every design decision is grounded in real evidence, not guesswork.
+                  </p>
+                  <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
+                    Request an audit
+                  </Link>
+                </div>
+                <div className="w-full md:w-[400px] aspect-square rounded-2xl overflow-hidden relative border border-white/10">
+                   <img src="/service_ui_ux.png" alt="User Research" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn direction="up">
+            <div className="group relative p-[1px] rounded-[10px] bg-[var(--card)] border border-[var(--border)] overflow-hidden">
+              <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
+                <div className="flex-1">
+                  <div className="text-[14px] font-medium text-white/40 mb-4">05</div>
+                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Developer Handoff & Accessibility</h3>
+                  <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
+                    Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in—so your dev team builds exactly what was designed, first time.
+                  </p>
+                  <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
+                    Explore process
+                  </Link>
+                </div>
+                <div className="w-full md:w-[400px] aspect-square rounded-2xl overflow-hidden relative border border-white/10">
+                   <img src="/service_design_system.png" alt="Developer Handoff" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
         </div>
       </section>
 

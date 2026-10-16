@@ -18,14 +18,17 @@ export default function AboutBio() {
         <FadeIn delay={0.1}>
           <div className="flex flex-col">
             <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.3] text-[var(--white)] mb-5">
-              Designing with purpose & clarity
+              Designer who thinks like a security engineer.
             </h2>
+            <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-4 w-full lg:w-[530px]">
+              I'm Chinonso Ezeigbo — a UI/UX designer with an MSc in Cyber Security from Aston University. That dual background gives me something most designers don't have: I build products that aren't just beautiful, but trustworthy and resilient by design.
+            </p>
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-[30px] w-full lg:w-[530px]">
-              Hi, I'm Chinonso Ezeigbo. I'm a UI/UX designer who loves taking messy, complicated ideas and turning them into clean, easy-to-use digital products. Whether I'm designing a full design system from scratch or untangling a tricky checkout flow, my focus is always on making things feel simple for users and straightforward for engineers to build.
+              From SaaS design systems and AI workspace tools to e-commerce flows and brand identities — I've shipped across industries, working closely with founders and engineering teams to make complex ideas feel effortless to use.
             </p>
             
             <div className="flex flex-wrap gap-5 mb-[30px] flex-col sm:flex-row">
-              {['Design Systems & Tokens', 'Accessible & Inclusive', 'Interactive Prototypes', 'Smooth Dev Handoff'].map((badge, idx) => (
+              {['Design Systems & Tokens', 'WCAG Accessibility', 'Figma & Prototyping', 'Smooth Dev Handoff'].map((badge, idx) => (
                 <div key={idx} className="flex items-center gap-[12px] bg-[var(--card)] border border-[var(--border)] rounded-[8px] py-4 px-[22px] w-full sm:w-[270px] font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)]">
                   <span className="w-[18px] h-[18px] shrink-0 rounded-full bg-[var(--blue)] flex items-center justify-center">
                     <svg viewBox="0 0 12 12" className="w-[10px] h-[10px] stroke-white fill-none stroke-[2.5]" style={{ strokeLinecap: 'round', strokeLinejoin: 'round' }}>

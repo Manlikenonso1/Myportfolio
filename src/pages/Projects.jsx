@@ -129,17 +129,19 @@ export default function Projects() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", text: "Nonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
-            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", text: "Nonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
-            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", text: "Nonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
+            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", avatar: "/avatar1.jpg", text: "Nonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
+            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", avatar: "/avatar2.jpg", text: "Nonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
+            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", avatar: "/avatar3.jpg", text: "Nonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">
                 <div>
                   <div className="flex gap-4 items-center mb-6">
-                    <div className="w-12 h-12 rounded-full bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center font-bold text-white/40 text-[14px]">
-                      {quote.name.split(' ').map(n=>n[0]).join('')}
-                    </div>
+                    <img 
+                      src={quote.avatar} 
+                      alt={quote.name} 
+                      className="w-12 h-12 rounded-full object-cover border border-white/10" 
+                    />
                     <div>
                       <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
                       <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
