@@ -3,13 +3,11 @@ import { FadeIn } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import CallToAction from '../components/sections/CallToAction';
 import SEO from '../components/ui/SEO';
-import FloraPattern from '../components/ui/FloraPattern';
 
 export default function Projects() {
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
       <SEO title="Projects | Chinonso Ezeigbo" description="A collection of structured UI/UX case studies." />
-      <FloraPattern />
 
       {/* 1. HERO */}
       <PageHeader title="Projects" breadcrumbText="Work" />

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
-import FloraPattern from '../components/ui/FloraPattern';
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -244,8 +243,6 @@ export default function ProjectDetails() {
       <SEO title={`${project.title} | Case Study`} description={project.overview.slice(0, 150) + "..."} image={project.heroImg} />
       
       {/* Background Flora Patterns */}
-      <FloraPattern />
-
       {/* 1. HERO HEADER */}
       <section className="relative z-10 bg-[var(--bg3)] pt-32 pb-16 px-6 text-center border-b border-[var(--border)]">
         <FadeIn>

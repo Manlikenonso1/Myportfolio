@@ -2,13 +2,11 @@ import { Link } from 'react-router-dom';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 import Testimonials from '../components/sections/Testimonials';
-import FloraPattern from '../components/ui/FloraPattern';
 
 export default function Home() {
   return (
     <div className="w-full relative">
       <SEO title="Chinonso Ezeigbo | UI/UX Designer" description="Crafting digital products that feel almost magic." />
-      <FloraPattern />
       
       {/* 1. HERO - MASSIVE TYPOGRAPHY & MESH GLOW */}
       <section className="relative min-h-[100svh] flex flex-col justify-center items-center px-6 overflow-hidden bg-[var(--bg)]">
