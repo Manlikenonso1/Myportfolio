@@ -6,48 +6,110 @@
  * Sources:
  *   • art-nouveau-floral.svg — "Art Nouveau floral ornament by E. M. Lilien" (Wikimedia Commons)
  *   • floral-headpiece.svg  — "Art Nouveau French floral headpiece" (Wikimedia Commons)
+ *
+ * Fix: The SVGs have black fills. On a dark background we must invert them to white
+ * via CSS filter so they're actually visible. mix-blend-mode:screen makes black → invisible.
  */
 export default function FloraPattern({ className = "" }) {
+  // CSS filter that turns black SVG lines → white/cream so they show on dark bg
+  const floralFilter = "invert(1) brightness(0.7) sepia(0.3)";
+
   return (
     <div
       className={`pointer-events-none select-none absolute inset-0 overflow-hidden ${className}`}
       aria-hidden="true"
     >
-      {/* ── TOP-RIGHT: large vertical ornament cluster ── */}
+      {/* ── TOP-RIGHT: large ornament cluster ── */}
       <img
         src="/art-nouveau-floral.svg"
         alt=""
-        className="absolute -top-8 -right-16 w-[420px] md:w-[560px] rotate-[12deg] opacity-[0.07] mix-blend-screen"
         draggable="false"
+        style={{
+          position: "absolute",
+          top: "-40px",
+          right: "-60px",
+          width: "520px",
+          maxWidth: "45vw",
+          opacity: 0.13,
+          transform: "rotate(10deg)",
+          filter: floralFilter,
+        }}
       />
 
       {/* ── BOTTOM-LEFT: mirrored ornament ── */}
       <img
         src="/art-nouveau-floral.svg"
         alt=""
-        className="absolute bottom-[5%] -left-20 w-[380px] md:w-[500px] -rotate-[15deg] scale-x-[-1] opacity-[0.06] mix-blend-screen"
         draggable="false"
+        style={{
+          position: "absolute",
+          bottom: "4%",
+          left: "-60px",
+          width: "460px",
+          maxWidth: "40vw",
+          opacity: 0.10,
+          transform: "rotate(-14deg) scaleX(-1)",
+          filter: floralFilter,
+        }}
       />
 
-      {/* ── TOP: horizontal headpiece banner ── */}
+      {/* ── TOP-CENTRE: horizontal headpiece banner ── */}
       <img
         src="/floral-headpiece.svg"
         alt=""
-        className="absolute top-28 left-1/2 -translate-x-1/2 w-[600px] md:w-[900px] lg:w-[1100px] opacity-[0.065] mix-blend-screen"
         draggable="false"
+        style={{
+          position: "absolute",
+          top: "108px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "min(1100px, 95vw)",
+          opacity: 0.14,
+          filter: floralFilter,
+        }}
       />
 
-      {/* ── MID-PAGE: second headpiece inverted ── */}
+      {/* ── MID-PAGE: second headpiece, flipped ── */}
       <img
         src="/floral-headpiece.svg"
         alt=""
-        className="absolute top-[55%] left-1/2 -translate-x-1/2 w-[500px] md:w-[800px] rotate-180 opacity-[0.04] mix-blend-screen"
         draggable="false"
+        style={{
+          position: "absolute",
+          top: "52%",
+          left: "50%",
+          transform: "translateX(-50%) rotate(180deg)",
+          width: "min(900px, 90vw)",
+          opacity: 0.09,
+          filter: floralFilter,
+        }}
       />
 
-      {/* ── Subtle ambient glows to give warmth behind the flora ── */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(208,201,185,0.035)_0%,transparent_65%)] pointer-events-none" />
-      <div className="absolute bottom-[10%] left-0 w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(147,163,130,0.025)_0%,transparent_65%)] pointer-events-none" />
+      {/* ── Warm ambient glows ── */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          width: "600px",
+          height: "600px",
+          borderRadius: "9999px",
+          background: "radial-gradient(circle, rgba(208,201,185,0.05) 0%, transparent 65%)",
+          pointerEvents: "none",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: "10%",
+          left: 0,
+          width: "500px",
+          height: "500px",
+          borderRadius: "9999px",
+          background: "radial-gradient(circle, rgba(147,163,130,0.04) 0%, transparent 65%)",
+          pointerEvents: "none",
+        }}
+      />
     </div>
   );
 }
