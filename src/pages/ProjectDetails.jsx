@@ -51,7 +51,7 @@ export default function ProjectDetails() {
       category: "E-Commerce Interface",
       role: "Lead Product Designer",
       heroImg: "/nikos-farm-thumbnail.png",
-      liveLink: null,
+      liveLink: "https://nikosfarm.com/",
       sliceCount: 11,
       overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
       problem: "Over 70% of their shoppers were visiting on mobile, but nearly 7 out of 10 people were dropping out before finishing their order. The checkout took too many steps, produce availability was confusing, and customers weren't sure how fresh the food would actually be when it arrived.",
@@ -162,7 +162,7 @@ export default function ProjectDetails() {
       category: "AI Creator Suite & Web App",
       role: "Lead Product Designer",
       heroImg: "/lazyzone-thumbnail.png",
-      liveLink: null,
+      liveLink: "https://www.lazyzonelabs.com/",
       sliceCount: 10,
       overview: "LazyZoneLabs is an all-in-one AI tool for content creators who need to write scripts, generate realistic voiceovers, and edit video clips without jumping between different apps. I designed the complete web application interface from scratch.",
       problem: "Creators were juggling three separate subscription tools just to make one short-form video. The biggest design challenge was avoiding cognitive overload: packing writing prompts, audio waveforms, and video timelines into a single screen can easily become cluttered and intimidating.",
@@ -245,11 +245,13 @@ export default function ProjectDetails() {
       {/* 1. HERO HEADER */}
       <section className="bg-[var(--bg3)] pt-32 pb-16 px-6 text-center border-b border-[var(--border)]">
         <FadeIn>
-          <h1 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white tracking-tight mb-4">Project Details</h1>
+          <h1 className="font-['DM_Sans'] text-[32px] md:text-[52px] font-bold text-white tracking-tight mb-4">{project.title}</h1>
           <div className="flex items-center justify-center gap-2 text-[14px] text-[var(--muted)] font-['Inter_Tight']">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span>-</span>
-            <span className="text-white">Project Details</span>
+            <span className="text-white/30">/</span>
+            <Link to="/projects" className="hover:text-white transition-colors">Work</Link>
+            <span className="text-white/30">/</span>
+            <span className="text-white">{project.title}</span>
           </div>
         </FadeIn>
       </section>
@@ -272,11 +274,33 @@ export default function ProjectDetails() {
               </div>
            </div>
            
-           {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="shrink-0 px-8 py-3.5 rounded-[4px] bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[14px] font-bold transition-all shadow-[0_0_20px_rgba(57,123,251,0.2)]">
-                {project.liveLink.includes('figma.com') ? 'View Figma Prototype' : 'Visit Live Site'}
-              </a>
-           )}
+           <div className="flex flex-wrap items-center gap-3">
+             <Link 
+               to="/projects" 
+               className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
+             >
+               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                 <line x1="19" y1="12" x2="5" y2="12"></line>
+                 <polyline points="12 19 5 12 12 5"></polyline>
+               </svg>
+               <span>All Projects</span>
+             </Link>
+
+             {project.liveLink && (
+                <a 
+                  href={project.liveLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:scale-105 hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.25)]"
+                >
+                  <span>Visit Live Site</span>
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+             )}
+           </div>
         </FadeIn>
 
         {/* 3. CASE STUDY BRIEFING: CRITICAL THINKING & TRADE-OFFS */}
@@ -384,9 +408,23 @@ export default function ProjectDetails() {
           {/* Transition to Visual Walkthrough */}
           <div className="pt-10 border-t border-white/10 flex flex-col items-center text-center">
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual Walkthrough</div>
-            <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white">
+            <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white mb-4">
               Full Screens & Interaction Details
             </h3>
+            {project.liveLink && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-semibold text-[13px] hover:scale-105 hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+              >
+                <span>Visit Live Website</span>
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            )}
           </div>
 
         </div>
@@ -488,11 +526,25 @@ export default function ProjectDetails() {
             </p>
          </FadeIn>
 
-         <FadeIn delay={0.1} className="flex justify-center gap-4 mt-12 pb-12">
-            <Link to="/projects" className="px-10 py-4 rounded-[4px] border border-[var(--border)] text-white text-[16px] font-bold transition-all hover:bg-white hover:text-black">
-               Back to Projects
+         <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-4 mt-12 pb-12">
+            <Link to="/projects" className="px-8 py-4 rounded-full border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
+               ← Back to All Projects
             </Link>
-            <Link to="/contact" className="px-10 py-4 rounded-[4px] bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[16px] font-bold transition-all shadow-[0_0_20px_rgba(57,123,251,0.2)]">
+            {project.liveLink && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black text-[15px] font-bold transition-all hover:scale-105 shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+              >
+                 <span>Visit Live Site</span>
+                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                   <line x1="7" y1="17" x2="17" y2="7"></line>
+                   <polyline points="7 7 17 7 17 17"></polyline>
+                 </svg>
+              </a>
+            )}
+            <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all shadow-[0_0_20px_rgba(57,123,251,0.2)]">
                Get in Touch
             </Link>
          </FadeIn>
