@@ -3,11 +3,13 @@ import { FadeIn } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import CallToAction from '../components/sections/CallToAction';
 import SEO from '../components/ui/SEO';
+import FloraPattern from '../components/ui/FloraPattern';
 
 export default function Projects() {
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
       <SEO title="Projects | Chinonso Ezeigbo" description="A collection of structured UI/UX case studies." />
+      <FloraPattern />
 
       {/* 1. HERO */}
       <PageHeader title="Projects" breadcrumbText="Work" />
@@ -129,9 +131,9 @@ export default function Projects() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", avatar: "/avatar1.jpg", text: "Nonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
-            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", avatar: "/avatar2.jpg", text: "Nonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
-            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", avatar: "/avatar3.jpg", text: "Nonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
+            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", avatar: "/avatar1.jpg", text: "Chinonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
+            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", avatar: "/avatar2.jpg", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
+            { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", avatar: "/avatar3.jpg", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">

@@ -2,7 +2,7 @@ import { FadeIn } from '../ui/FadeIn';
 
 const testimonials = [
   {
-    quote: "Nonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
+    quote: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
     name: "Sarah Jenkins",
     role: "VP of Product, Appsatile",
     avatar: "/avatar1.jpg"
@@ -14,7 +14,7 @@ const testimonials = [
     avatar: "/avatar2.jpg"
   },
   {
-    quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Nonso combines great aesthetics with practical thinking. Highly recommended.",
+    quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended.",
     name: "Emily Carter",
     role: "Founding Partner, Aptinfy",
     avatar: "/avatar3.jpg"

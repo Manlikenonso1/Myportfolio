@@ -42,7 +42,7 @@ export default function Footer() {
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <Link to="/" className="font-['DM_Sans'] text-[20px] font-bold tracking-tight flex items-center gap-2 hover:opacity-70 transition-opacity">
-            Nonso.
+            Chinonso.
           </Link>
           <div className="text-white/30 text-[14px]">
             &copy; {new Date().getFullYear()} Chinonso Ezeigbo. Portfolio built with React.

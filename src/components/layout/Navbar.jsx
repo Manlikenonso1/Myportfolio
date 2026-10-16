@@ -65,7 +65,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white z-10 flex items-center gap-1 hover:opacity-70 transition-opacity">
-            Nonso.
+            Chinonso.
           </Link>
 
           {/* Desktop Links */}

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
+import FloraPattern from '../components/ui/FloraPattern';
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -39,8 +40,8 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Jerome Bell", role: "VP of Product, Appsatile", text: "Nonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
-        { name: "Dianne Russell", role: "Engineering Director", text: "Nonso organized our Figma components and design tokens so clearly that our front-end team was able to build pages in half the usual time." },
+        { name: "Jerome Bell", role: "VP of Product, Appsatile", text: "Chinonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
+        { name: "Dianne Russell", role: "Engineering Director", text: "Chinonso organized our Figma components and design tokens so clearly that our front-end team was able to build pages in half the usual time." },
         { name: "Shane Collier", role: "Co-Founder & CTO", text: "He has an incredible eye for detail and structure. Working with his components made building and maintaining our screens a breeze." }
       ]
     },
@@ -76,9 +77,9 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Niko Vane", role: "Owner & Founder, Nikos Farm", text: "Nonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
+        { name: "Niko Vane", role: "Owner & Founder, Nikos Farm", text: "Chinonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
         { name: "Clara Brooks", role: "Digital Director", text: "The new cart experience and bundle recommendations made an immediate impact on our sales. It simply works." },
-        { name: "Marcus Thorne", role: "Operations Lead", text: "The order views and product management screens Nonso designed saved our fulfillment team hours every single day." }
+        { name: "Marcus Thorne", role: "Operations Lead", text: "The order views and product management screens Chinonso designed saved our fulfillment team hours every single day." }
       ]
     },
     'aptinfy': {
@@ -113,8 +114,8 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Sarah Jenkins", role: "VP of Product, Aptinfy", text: "Nonso gave Aptinfy an identity that immediately resonated with our audience. The new mark feels both sharp and authentic." },
-        { name: "Liam O'Connor", role: "Marketing Director", text: "The brand guide and asset kit Nonso handed off made designing our landing pages and marketing collateral completely seamless." },
+        { name: "Sarah Jenkins", role: "VP of Product, Aptinfy", text: "Chinonso gave Aptinfy an identity that immediately resonated with our audience. The new mark feels both sharp and authentic." },
+        { name: "Liam O'Connor", role: "Marketing Director", text: "The brand guide and asset kit Chinonso handed off made designing our landing pages and marketing collateral completely seamless." },
         { name: "Bessie Cooper", role: "Creative Director", text: "A thoughtfully balanced mark with great attention to proportion and versatility. Fantastic work all around." }
       ]
     },
@@ -150,9 +151,9 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Ugochukwu Nwosu", role: "Founder & Head Chef, Cook by Ugo", text: "Nonso captured the warmth and soul of our kitchen perfectly. Customers find the online ordering so simple, and our direct orders increased noticeably right after launch." },
+        { name: "Ugochukwu Nwosu", role: "Founder & Head Chef, Cook by Ugo", text: "Chinonso captured the warmth and soul of our kitchen perfectly. Customers find the online ordering so simple, and our direct orders increased noticeably right after launch." },
         { name: "Amaka O.", role: "Operations Lead, Cook by Ugo", text: "The meal customization flow and cart drawer make order management effortless. He created an interface that feels authentic and looks world-class." },
-        { name: "Liam Davies", role: "Digital Marketing Consultant", text: "A stunning food e-commerce experience. Nonso balanced expressive Nigerian branding with an intuitive, clean checkout journey." }
+        { name: "Liam Davies", role: "Digital Marketing Consultant", text: "A stunning food e-commerce experience. Chinonso balanced expressive Nigerian branding with an intuitive, clean checkout journey." }
       ]
     },
     'lazyzone': {
@@ -187,9 +188,9 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Devin Vance", role: "Co-Founder, LazyZoneLabs", text: "Nonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
-        { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Nonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
-        { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Nonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
+        { name: "Devin Vance", role: "Co-Founder, LazyZoneLabs", text: "Chinonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
+        { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Chinonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
+        { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Chinonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
       ]
     },
     'huntly': {
@@ -224,9 +225,9 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Nonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
-        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Nonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
-        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Nonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
+        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Chinonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
+        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Chinonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
+        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Chinonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
       ]
     }
   };
@@ -239,11 +240,14 @@ export default function ProjectDetails() {
   const project = projectsData[id] || projectsData['appsatile'];
 
   return (
-    <div className="w-full relative bg-[#0a0a0a]">
+    <div className="w-full relative bg-[#0a0a0a] min-h-screen">
       <SEO title={`${project.title} | Case Study`} description={project.overview.slice(0, 150) + "..."} image={project.heroImg} />
       
+      {/* Background Flora Patterns */}
+      <FloraPattern />
+
       {/* 1. HERO HEADER */}
-      <section className="bg-[var(--bg3)] pt-32 pb-16 px-6 text-center border-b border-[var(--border)]">
+      <section className="relative z-10 bg-[var(--bg3)] pt-32 pb-16 px-6 text-center border-b border-[var(--border)]">
         <FadeIn>
           <h1 className="font-['DM_Sans'] text-[32px] md:text-[52px] font-bold text-white tracking-tight mb-4">{project.title}</h1>
           <div className="flex items-center justify-center gap-2 text-[14px] text-[var(--muted)] font-['Inter_Tight']">
@@ -256,25 +260,43 @@ export default function ProjectDetails() {
         </FadeIn>
       </section>
 
-      <section className="max-w-[1200px] mx-auto px-6 py-16">
-        {/* 2. META ROW */}
-        <FadeIn delay={0.1} className="flex flex-col md:flex-row md:items-end justify-between gap-10 border-b border-[var(--border)] pb-8 mb-12">
-           <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+      <section className="relative z-10 max-w-[1200px] mx-auto px-6 py-16">
+        {/* 2. META ROW & QUICK ACTIONS */}
+        <FadeIn delay={0.1} className="flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-white/10 pb-8 mb-12">
+           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
               <div>
-                 <div className="text-[12px] font-bold tracking-widest text-[#555] uppercase mb-1">Role</div>
-                 <div className="text-white font-medium">{project.role}</div>
+                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Category</div>
+                 <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-white font-medium text-[14px]">
+                   {project.category}
+                 </div>
               </div>
+
+              <div className="hidden sm:block w-px h-10 bg-white/10"></div>
+
               <div>
-                 <div className="text-[12px] font-bold tracking-widest text-[#555] uppercase mb-1">Category</div>
-                 <div className="text-white font-medium">{project.category}</div>
-              </div>
-              <div className="max-w-[400px]">
-                 <div className="text-white font-['DM_Sans'] font-bold text-[24px] mb-2">{project.title}</div>
-                 <div className="text-[var(--muted)] text-[14px] leading-[1.6]">An in-depth look at the design decisions, user flow, and final interface.</div>
+                 <div className="text-white font-['DM_Sans'] font-bold text-[24px] md:text-[28px] tracking-tight">{project.title}</div>
+                 <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">Comprehensive product case study & interactive screens.</div>
               </div>
            </div>
            
-           <div className="flex flex-wrap items-center gap-3">
+           <div className="flex flex-wrap items-center gap-3.5 pt-2 md:pt-0">
+             {project.liveLink && (
+                <a 
+                  href={project.liveLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:scale-105 hover:bg-white/95 transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+                >
+                  <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
+                  <span>Visit Live Site</span>
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+             )}
+
              <Link 
                to="/projects" 
                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
@@ -285,21 +307,6 @@ export default function ProjectDetails() {
                </svg>
                <span>All Projects</span>
              </Link>
-
-             {project.liveLink && (
-                <a 
-                  href={project.liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:scale-105 hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.25)]"
-                >
-                  <span>Visit Live Site</span>
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                    <polyline points="7 7 17 7 17 17"></polyline>
-                  </svg>
-                </a>
-             )}
            </div>
         </FadeIn>
 
