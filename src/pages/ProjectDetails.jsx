@@ -16,26 +16,26 @@ export default function ProjectDetails() {
       heroImg: "/appsatile-thumbnail.png",
       liveLink: null,
       sliceCount: 33,
-      overview: "I designed and built Appsatile's enterprise SaaS design system from the ground up, establishing visual consistency, reducing technical debt, and accelerating sprint velocity across three separate product teams.",
-      problem: "Appsatile had scaled rapidly across three independent front-end squads without a shared design foundation. Teams were duplicating components with subtle styling discrepancies, creating visual fragmentation, slow release cycles, and accessibility regressions.",
+      overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I designed and built their design system from scratch so both designers and engineers could move faster without breaking visual consistency.",
+      problem: "Every squad was basically creating their own buttons, modals, and input fields. Buttons had different corner radii on different pages, handoffs took hours of back-and-forth in Slack, and fixing a simple color change meant updating dozens of disconnected code files.",
       deliverables: ["Component Library", "Design Tokens Architecture", "Interactive Figma Specs", "WCAG 2.1 AA Compliance", "Documentation Guide"],
       metrics: [
-        { value: "50%", label: "Faster sprint implementation" },
-        { value: "100%", label: "WCAG 2.1 AA compliant" },
-        { value: "0", label: "Component token drift" }
+        { value: "50%", label: "Faster handoffs to engineers" },
+        { value: "100%", label: "Accessible contrast across all screens" },
+        { value: "0", label: "Mismatched components across teams" }
       ],
       decisions: [
         {
-          pillar: "01. Tokenized Architecture over Ad-Hoc Styles",
-          rationale: "Rather than hardcoding hex values into individual Figma layers, I created a three-tier token hierarchy (Global, Semantic, Component-level). This made dark mode seamless and gave developers a 1:1 CSS variable mapping that eliminated guessing during implementation."
+          pillar: "01. Tokens that match how devs actually write CSS",
+          rationale: "Instead of picking random hex values across Figma frames, I set up a clear three-tier token system for colors, spacing, and font sizes. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
         },
         {
-          pillar: "02. Component Variant Symmetry with React Props",
-          rationale: "Every Figma component variant, boolean property, and state (hover, focus, disabled, active) was named to mirror React component props exactly. Handover documentation became self-explanatory, cutting down engineering questions by half."
+          pillar: "02. Naming components to match React props",
+          rationale: "I sat down with their front-end leads to see how they structure their components. Then I named every Figma variant, boolean switch, and state (hover, active, disabled) to mirror their React props exactly. That made handoff practically self-explanatory."
         },
         {
-          pillar: "03. Accessibility as a Default Constraint",
-          rationale: "All text and surface combinations were audited to pass WCAG AA contrast standards. Dedicated keyboard focus indicators and tap-target boundaries (minimum 44x44px) were built into base components, preventing downstream accessibility debt."
+          pillar: "03. Accessibility built in from day one",
+          rationale: "I checked color contrast across every single text and background pair to make sure they passed WCAG AA standards. I also included clear keyboard focus outlines and large enough touch targets so no one had to come back and fix accessibility bugs later."
         }
       ],
       reviews: [
@@ -53,26 +53,26 @@ export default function ProjectDetails() {
       heroImg: "/nikos-farm-thumbnail.png",
       liveLink: null,
       sliceCount: 11,
-      overview: "For Nikos Farm, I designed a high-converting e-commerce experience tailored to organic produce buyers, featuring intuitive seasonal browsing, instant farm bundle recommendations, and a frictionless slide-out checkout.",
-      problem: "The original storefront had a 68% mobile cart abandonment rate. Customers struggled with a clunky multi-step checkout, found seasonal produce availability confusing, and hesitated to purchase without clear harvest date and provenance signals.",
+      overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
+      problem: "Over 70% of their shoppers were visiting on mobile, but nearly 7 out of 10 people were dropping out before finishing their order. The checkout took too many steps, produce availability was confusing, and customers weren't sure how fresh the food would actually be when it arrived.",
       deliverables: ["E-Commerce UX Flow", "Slide-Out Cart Drawer", "Product Catalog Grid", "Harvest Origin Badges", "Mobile Checkout UI"],
       metrics: [
-        { value: "+34%", label: "Mobile checkout conversion" },
-        { value: "+22%", label: "Average order value via bundles" },
-        { value: "-44%", label: "Reduction in cart abandonment" }
+        { value: "+34%", label: "Increase in completed mobile orders" },
+        { value: "+22%", label: "Higher average order size from bundles" },
+        { value: "-44%", label: "Drop in cart abandonment" }
       ],
       decisions: [
         {
-          pillar: "01. Slide-Out Cart Drawer with Direct Delivery Booking",
-          rationale: "Instead of routing shoppers to a separate checkout page, I designed an interactive cart drawer where customers can modify quantities, pick their harvest delivery slot, and apply bundle savings without ever losing their place in the catalog."
+          pillar: "01. Slide-out cart instead of kicking people to a new page",
+          rationale: "Instead of redirecting shoppers to a separate cart page every time they picked something, I built an interactive drawer. Customers can change quantities, see bundle discounts update live, and select their delivery slot without losing their place in the shop."
         },
         {
-          pillar: "02. Building Trust with Origin and Harvest Timestamps",
-          rationale: "Organic food shoppers care deeply about freshness. I introduced prominent harvest date tags, farmer notes, and clear storage advice on every product card, eliminating hesitation and converting casual visitors into repeat subscribers."
+          pillar: "02. Putting harvest dates right on product cards",
+          rationale: "People buy from local farms because they want real freshness. I added clear harvest dates, farmer notes, and simple storage tips right onto the product cards, which gave first-time buyers immediate confidence to check out."
         },
         {
-          pillar: "03. Thumb-Zone Mobile Checkout Optimization",
-          rationale: "With over 70% of shoppers on mobile, all key interactive elements (quantity steppers, bundle add-ons, and payment triggers) were anchored to the natural thumb reach area at the bottom of the viewport, reducing friction."
+          pillar: "03. Designing for the thumb on mobile",
+          rationale: "Since most people order on their phones while on the move, I anchored all the main actions like add-to-cart buttons, quantity counters, and the checkout button to the bottom half of the screen where thumbs naturally reach."
         }
       ],
       reviews: [
@@ -90,26 +90,26 @@ export default function ProjectDetails() {
       heroImg: "/aptinfy-thumbnail.png",
       liveLink: null,
       sliceCount: 1,
-      overview: "For Aptinfy, I crafted a distinct geometric brand identity and scalable design system. The mark brings together concepts of connectivity, intelligence, and secure cloud infrastructure across digital and enterprise touchpoints.",
-      problem: "Preparing for venture fundraising and enterprise rollout, Aptinfy needed a modern visual identity that conveyed technical sophistication without feeling sterile. Their existing mark was visually generic and disintegrated when scaled down to favicon and mobile app sizes.",
+      overview: "Aptinfy is a tech startup focused on secure cloud infrastructure. I created their brand identity, visual system, and presentation templates to help them look confident and polished when pitching to enterprise clients and investors.",
+      problem: "Their original logo was generic and hard to recognize. Even worse, it completely blurred together whenever it was scaled down to a small size, like in a browser tab or mobile app icon. They needed an identity that felt technical and trustworthy without looking boring.",
       deliverables: ["Geometric Logo Suite", "Scalable Favicon Matrix", "Brand Guidelines Book", "Typography Hierarchy", "Pitch Deck Master Templates"],
       metrics: [
-        { value: "16px to 4K", label: "Pixel-perfect scalability" },
-        { value: "100%", label: "Brand consistency across decks" },
-        { value: "3 Weeks", label: "Sprint delivery timeline" }
+        { value: "16px to 4K", label: "Clean legibility at any resolution" },
+        { value: "100%", label: "Consistent branding across all decks" },
+        { value: "3 Weeks", label: "From first sketch to full handoff" }
       ],
       decisions: [
         {
-          pillar: "01. Mathematical Geometric Proportions",
-          rationale: "I engineered the mark using precise circular ratios and balanced negative space. This ensures visual harmony and legibility at every scale, from a 16px browser tab icon to high-resolution keynote screens."
+          pillar: "01. Clean circular geometry that scales down cleanly",
+          rationale: "I built the logo using balanced circular geometry and bold, simple negative space. That way, the mark stays sharp and recognizable whether it is a tiny 16-pixel favicon in a browser tab or a massive graphic at a conference."
         },
         {
-          pillar: "02. High-Contrast Palette with Technical Optimism",
-          rationale: "To avoid corporate clichés while preserving cybersecurity authority, I paired deep obsidian backgrounds with vibrant purple and electric lavender gradients. This created a confident, modern aesthetic that stood out in pitch meetings."
+          pillar: "02. Deep tech tones paired with warm lavender",
+          rationale: "Instead of defaulting to standard corporate blue, I paired rich dark surfaces with vibrant purple and electric lavender gradients. It communicates security and technical depth while still feeling modern and memorable."
         },
         {
-          pillar: "03. Developer-Ready Token Kit and Master Templates",
-          rationale: "I exported clean SVG assets with documented viewboxes, along with CSS hex variables and Figma presentation masters. The marketing and engineering teams were able to roll out consistent landing pages and decks immediately."
+          pillar: "03. Ready-to-use templates the team could actually work with",
+          rationale: "I handed off clean SVG exports with proper bounding boxes, plus exact color variables and Google Slides master decks. The marketing and sales team could immediately build customer-facing decks without asking how to use the logo."
         }
       ],
       reviews: [
@@ -127,26 +127,26 @@ export default function ProjectDetails() {
       heroImg: "/cook-by-ugo-thumbnail.png",
       liveLink: null,
       sliceCount: 10,
-      overview: "Cook by Ugo brings authentic Nigerian dining to Newcastle upon Tyne. I designed a sensory-led digital brand identity and responsive ordering website that takes customers smoothly from browsing signature dishes to fast checkout.",
-      problem: "The business relied heavily on third-party food delivery platforms that took up to 30% commission per order and restricted brand presentation. Cook by Ugo needed an intuitive direct-ordering platform that made customization easy and encouraged customers to order directly.",
+      overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed their direct ordering website and brand identity, giving customers a smooth way to browse dishes, customize spice levels, and order takeout in minutes.",
+      problem: "Third-party delivery apps were taking up to 30% commission on every order and locking away customer data. The restaurant needed their own ordering website that made ordering takeout quick and effortless, while showing off the authentic warmth of West African hospitality.",
       deliverables: ["Brand Identity System", "Direct Takeout Platform", "Spice & Side Configurator", "Pickup Scheduling Flow", "Mobile First UI"],
       metrics: [
-        { value: "+45%", label: "Direct order growth in 60 days" },
-        { value: "90s", label: "Average order completion time" },
-        { value: "30%", label: "Commission fees saved vs aggregators" }
+        { value: "+45%", label: "Growth in direct orders in two months" },
+        { value: "90s", label: "Average time to complete an order" },
+        { value: "30%", label: "Commission fees saved on direct sales" }
       ],
       decisions: [
         {
-          pillar: "01. Sensory-First Dish Presentation with Customization",
-          rationale: "Authentic West African food relies on rich colors and aromas. I prioritized full-bleed photography paired with foolproof spice toggles (Mild, Traditional, Extra Hot) and side dish pickers so customers could tailor dishes with total confidence."
+          pillar: "01. Food photography first with clear spice selectors",
+          rationale: "Nigerian dishes are vibrant and rich. I led with large, mouth-watering dish photos and added simple spice toggles (Mild, Traditional, Extra Hot) and side dish pickers so both longtime fans and first-time guests could order with zero confusion."
         },
         {
-          pillar: "02. Streamlined 3-Step Express Checkout",
-          rationale: "Eliminated registration barriers and unnecessary questions. Diners select dishes, customize condiments, choose a pickup or delivery slot, and complete checkout with Apple Pay or card in under 90 seconds."
+          pillar: "02. Quick checkout in under 90 seconds",
+          rationale: "Nobody wants to fill out a long form when they are hungry. I cut the ordering journey down to three simple steps: pick your food, choose a pickup or delivery slot, and pay with Apple Pay or card."
         },
         {
-          pillar: "03. Balancing Cultural Authenticity with Modern UI",
-          rationale: "Blended deep forest green tones and warm golden highlights with minimalist typography. This honored Nigerian culinary traditions while presenting the brand as a polished, world-class dining destination."
+          pillar: "03. Warm branding with modern polish",
+          rationale: "I blended deep forest greens and warm gold accents with clean, modern typography. It honors Nigerian culinary traditions while presenting the business as a top-tier, trustworthy local kitchen."
         }
       ],
       reviews: [
@@ -164,26 +164,26 @@ export default function ProjectDetails() {
       heroImg: "/lazyzone-thumbnail.png",
       liveLink: null,
       sliceCount: 10,
-      overview: "LazyZoneLabs is an all-in-one AI creator workspace combining automated scriptwriting, realistic voice synthesis, and timeline video slicing into a focused, distraction-free web application.",
-      problem: "Content creators were toggling across three separate tools to produce short-form video content. Packing complex prompt generation, audio waveform modulation, and multi-track video editing into one screen risked overwhelming users with extreme cognitive load.",
+      overview: "LazyZoneLabs is an all-in-one AI tool for content creators who need to write scripts, generate realistic voiceovers, and edit video clips without jumping between different apps. I designed the complete web application interface from scratch.",
+      problem: "Creators were juggling three separate subscription tools just to make one short-form video. The biggest design challenge was avoiding cognitive overload: packing writing prompts, audio waveforms, and video timelines into a single screen can easily become cluttered and intimidating.",
       deliverables: ["End-to-End Web App UI", "High-Focus Dark Design System", "Interactive Audio/Video Timeline", "Prompt Engineering Controls", "Handoff Specs"],
       metrics: [
-        { value: "42%", label: "Faster content export cycle" },
-        { value: "3-in-1", label: "Consolidated workflow tools" },
-        { value: "88%", label: "Onboarding task completion" }
+        { value: "42%", label: "Faster time to produce and export video" },
+        { value: "3-in-1", label: "Consolidated workflow into one screen" },
+        { value: "88%", label: "New creators finishing their first video" }
       ],
       decisions: [
         {
-          pillar: "01. Progressive Disclosure over Feature Clutter",
-          rationale: "Instead of showing every parameter simultaneously, the workspace dynamically adapts to the creator's current step: script ideation, voice synthesis, or video clipping. Secondary tools remain accessible without cluttering the primary canvas."
+          pillar: "01. Showing tools only when creators need them",
+          rationale: "Instead of crowding the screen with dozens of sliders at once, the workspace adapts based on what you are doing. When you are writing, it feels like a clean doc. When you move to voiceover or video slicing, the waveform and trimming tools slide in smoothly."
         },
         {
-          pillar: "02. Low Eye-Strain Dark System with Decisive Red Accents",
-          rationale: "Creators work for long sessions in dark environments. I used soft layered charcoal tones (60% to 90% opacity) rather than pure black, reserving saturated red accents exclusively for recording states, active clips, and primary export triggers."
+          pillar: "02. A dark UI built for long editing sessions",
+          rationale: "Creators often edit for hours at a time. I used soft layered charcoal surfaces instead of harsh pure blacks to minimize eye strain, saving bold red accents strictly for active recording states, cuts, and the export button."
         },
         {
-          pillar: "03. Non-Destructive Interactive Timeline",
-          rationale: "Designed visual clip handles, split points, and audio envelopes with forgiving undo states and keyboard shortcuts. Creators can scrub, trim, and sync audio tracks with instantaneous visual feedback."
+          pillar: "03. An interactive timeline that doesn't punish mistakes",
+          rationale: "Editing needs to feel fast and forgiving. I designed simple drag handles for trimming, instant audio previews, and standard keyboard shortcuts so creators can split and rearrange clips without worrying about losing their work."
         }
       ],
       reviews: [
@@ -201,26 +201,26 @@ export default function ProjectDetails() {
       heroImg: "/huntly-thumbnail.png",
       liveLink: null,
       sliceCount: 10,
-      overview: "HuntlyAi is an intelligent application workspace designed to bring clarity and structure to the modern job search by centralizing application pipelines, follow-up reminders, and resume tracking into one organized dashboard.",
-      problem: "Job searching is mentally exhausting. Candidates juggle spreadsheets, messy Gmail threads, and multiple resume versions across several browser tabs, leading to missed interviews, duplicate applications, and cognitive burnout.",
+      overview: "HuntlyAi is a workspace designed to help job seekers manage their applications, interview stages, and follow-ups in one calm, organized dashboard.",
+      problem: "Job hunting is stressful enough on its own. Most candidates try to stay organized with messy spreadsheets, random email alerts, and multiple resume files scattered across tabs. It feels chaotic, and it's easy to miss deadlines or forget who you reached out to.",
       deliverables: ["Dashboard & Kanban Architecture", "Slide-Over Detail Drawer", "Automated Follow-Up Reminders", "Calm Botanical Design System", "Figma Components"],
       metrics: [
-        { value: "65%", label: "Faster application logging" },
+        { value: "65%", label: "Faster time to log and track applications" },
         { value: "4.9/5", label: "User satisfaction rating" },
-        { value: "0", label: "Context loss via drawer views" }
+        { value: "0", label: "Lost context with slide-over drawers" }
       ],
       decisions: [
         {
-          pillar: "01. Botanical Visual Psychology to Reduce Anxiety",
-          rationale: "Job search software often looks like cold enterprise sales software. I established a soothing organic botanical palette with forest greens and warm off-whites, deliberately chosen to lower user stress during high-stakes job searches."
+          pillar: "01. A calm color palette that lowers anxiety",
+          rationale: "Most CRM tools look cold, gray, and corporate. I chose an organic botanical palette with soft greens and warm neutral tones to create a peaceful environment that feels encouraging rather than overwhelming to open every morning."
         },
         {
-          pillar: "02. Kanban Pipeline with Slide-Over Resume Drawer",
-          rationale: "Instead of opening new pages or external tabs, clicking an opportunity slides open a focused drawer with job details, interview history, and the matched resume side-by-side, preserving workflow momentum."
+          pillar: "02. Slide-over details so you never lose your place",
+          rationale: "Instead of making users jump between different pages, clicking any job card opens a side drawer with the job post, interview notes, and the tailored resume side-by-side. You get full context in one glance without opening ten tabs."
         },
         {
-          pillar: "03. Actionable Reminders without Notification Fatigue",
-          rationale: "Color-coded days-elapsed tags and gentle reminder badges surface when it is time to send a follow-up note, keeping users organized without flooding them with anxiety-inducing notifications."
+          pillar: "03. Helpful reminders without the stress",
+          rationale: "I used subtle color-coded tags showing days since last contact to gently remind people when to follow up, avoiding aggressive red warning badges that cause unnecessary panic."
         }
       ],
       reviews: [
@@ -286,7 +286,7 @@ export default function ProjectDetails() {
           {project.deliverables && (
             <FadeIn delay={0.15}>
               <div className="flex flex-wrap items-center gap-2.5">
-                <span className="text-[12px] font-bold tracking-widest text-[#666] uppercase mr-2">Core Deliverables:</span>
+                <span className="text-[12px] font-bold tracking-widest text-[#666] uppercase mr-2">What I Delivered:</span>
                 {project.deliverables.map((item, idx) => (
                   <span key={idx} className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-[13px] font-medium text-white/80">
                     {item}
@@ -304,10 +304,10 @@ export default function ProjectDetails() {
                   <div className="w-8 h-8 rounded-lg bg-[var(--blue)]/10 border border-[var(--blue)]/30 flex items-center justify-center text-[var(--blue)] font-bold text-[14px]">
                     <svg className="w-4 h-4 stroke-current fill-none stroke-[2]" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                   </div>
-                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">Executive Overview</span>
+                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Background</span>
                 </div>
                 <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-bold text-white mb-4 leading-snug">
-                  The Mission & Context
+                  Overview
                 </h3>
                 <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
                   {project.overview}
@@ -321,10 +321,10 @@ export default function ProjectDetails() {
                   <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-[14px]">
                     <svg className="w-4 h-4 stroke-current fill-none stroke-[2]" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                   </div>
-                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Core Friction</span>
+                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Challenge</span>
                 </div>
                 <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-bold text-white mb-4 leading-snug">
-                  The Problem Space
+                  What Needed Fixing
                 </h3>
                 <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
                   {project.problem || project.objectives}
@@ -338,13 +338,13 @@ export default function ProjectDetails() {
             <FadeIn delay={0.25} className="flex flex-col gap-6">
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-[var(--border)]">
                 <div>
-                  <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Rationale</div>
+                  <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Decisions</div>
                   <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-bold text-white">
-                    Critical Decisions & Architecture Trade-Offs
+                    How I Tackled Key Challenges
                   </h3>
                 </div>
                 <p className="text-[14px] text-white/40 max-w-[420px]">
-                  Why specific patterns, layouts, and token structures were selected over common alternatives.
+                  Key trade-offs and why these solutions worked best for users and engineers.
                 </p>
               </div>
 
@@ -383,9 +383,9 @@ export default function ProjectDetails() {
 
           {/* Transition to Visual Walkthrough */}
           <div className="pt-10 border-t border-white/10 flex flex-col items-center text-center">
-            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual System</div>
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual Walkthrough</div>
             <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white">
-              Interface Architecture & Design Slices
+              Full Screens & Interaction Details
             </h3>
           </div>
 
