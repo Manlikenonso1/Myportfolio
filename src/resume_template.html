@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chinonso Ezeigbo - CV</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111827;
+      background: #ffffff;
+      line-height: 1.32;
+      font-size: 8.6pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    .header {
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .name {
+      font-size: 19pt;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      color: #0f172a;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .title-sub {
+      font-size: 9.8pt;
+      font-weight: 700;
+      color: #2563eb;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 10px;
+      font-size: 8.2pt;
+      color: #475569;
+    }
+
+    .contact-item a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+    .section {
+      margin-bottom: 7px;
+    }
+
+    .section-title {
+      font-size: 9.2pt;
+      font-weight: 800;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2px;
+      margin-bottom: 5px;
+    }
+
+    /* SUMMARY */
+    .summary-text {
+      color: #334155;
+      font-size: 8.4pt;
+      line-height: 1.34;
+      text-align: justify;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5px;
+      font-size: 8.2pt;
+    }
+
+    .skill-row {
+      display: flex;
+      gap: 4px;
+    }
+
+    .skill-label {
+      font-weight: 700;
+      color: #0f172a;
+      min-width: 135px;
+    }
+
+    .skill-desc {
+      color: #334155;
+      flex: 1;
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 6px;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1.5px;
+    }
+
+    .exp-role {
+      font-size: 8.9pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .exp-company {
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    .exp-meta {
+      font-size: 7.8pt;
+      color: #64748b;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .exp-bullets {
+      list-style-type: disc;
+      padding-left: 13px;
+    }
+
+    .exp-bullets li {
+      font-size: 8.1pt;
+      color: #334155;
+      margin-bottom: 1.5px;
+      line-height: 1.28;
+      text-align: justify;
+    }
+
+    .exp-bullets li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* CASE STUDIES */
+    .case-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* EDUCATION & CERTS */
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2px;
+      font-size: 8.2pt;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .edu-school {
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .edu-date {
+      color: #64748b;
+      font-size: 7.8pt;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cert-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 14px;
+      font-size: 7.8pt;
+      color: #334155;
+      padding-left: 13px;
+      list-style-type: disc;
+    }
+
+    .cert-grid li {
+      width: 48%;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="name">Chinonso Ezeigbo</h1>
+    <div class="title-sub">Lead UI/UX Designer & Product Architect</div>
+    <div class="contact-bar">
+      <span>Newcastle upon Tyne, UK</span>
+      <span>•</span>
+      <span>+44 7350 156605</span>
+      <span>•</span>
+      <span><a href="mailto:godswill.ec@gmail.com">godswill.ec@gmail.com</a></span>
+      <span>•</span>
+      <span><a href="https://github.com/Manlikenonso1/Myportfolio">Live Portfolio & Case Studies</a></span>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="section">
+    <h2 class="section-title">Professional Summary</h2>
+    <p class="summary-text">
+      Commercially-driven UI/UX Designer with 4+ years of experience delivering high-impact SaaS, web, and mobile products. Track record of accelerating development cycles by 50%, lifting mobile checkout conversions by +34%, and reducing cart abandonment by 44%. Combines end-to-end design craft (user research, wireframing, production design tokens) with an MSc in Cyber Security at Aston University, bringing a specialist focus on WCAG 2.1 AA accessibility, GDPR, and Privacy-by-Design. Experienced across Agile teams in the UK and internationally.
+    </p>
+  </section>
+
+  <!-- CORE SKILLS -->
+  <section class="section">
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Design & Prototyping:</span>
+        <span class="skill-desc">UI/UX Architecture, Wireframing, Rapid Prototyping, User Flows, Journey Mapping, Mobile-First Design, Micro-Interactions.</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Systems & Dev Handoff:</span>
+        <span class="skill-desc">Figma (Tokens, Auto-layout, Variables, Component Libraries), CSS/React Token Mapping, Interaction Specs, Design QA.</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Research & Usability:</span>
+        <span class="skill-desc">Heuristic Audits, Usability Testing, User Interviews, Empathy Mapping, A/B Testing, Task Drop-Off & Friction Logging.</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Standards & Tooling:</span>
+        <span class="skill-desc">WCAG 2.1 AA Compliance, GDPR & Privacy-by-Design, Jira, Teamwork, Agile/Scrum, Adobe Creative Cloud.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+
+    <!-- APPSATILE -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Lead UI/UX Designer</span> — <span class="exp-company">Appsatile Ltd</span>
+        </div>
+        <span class="exp-meta">Gateshead, UK (Remote) | Mar 2023 – Feb 2026</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Spearheaded the design system from scratch across Appsatile’s multi-product SaaS suite, establishing unified component libraries for 3 squads.</li>
+        <li>Architected a 3-tier token structure (colors, typography, spacing) mapped 1:1 to CSS variables and React props, <strong>cutting handoff time by 50%</strong>.</li>
+        <li>Guaranteed <strong>100% WCAG 2.1 AA accessibility</strong> across all components with high-contrast palettes, accessible focus rings, and compliant touch targets.</li>
+        <li>Managed sprint workflows in Jira and Teamwork, conducting backlog groomings, design reviews, and engineering QA pairing sessions.</li>
+        <li>Built high-fidelity interactive prototypes validating user flows with stakeholders prior to engineering sprints, eliminating post-release rework.</li>
+      </ul>
+    </div>
+
+    <!-- FEATURED CLIENT CASE STUDIES -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">Lead Product Designer</span> — <span class="exp-company">Key Portfolio Client Case Studies</span>
+        </div>
+        <span class="exp-meta">UK & Global | 2022 – Present</span>
+      </div>
+      <ul class="exp-bullets">
+        <li><span class="case-title">LazyZoneLabs (AI Creator Suite):</span> Architected single-screen web workspace unifying script writing, audio waveforms, and video timelines; <strong>lifted project completion to 88%</strong> and <strong>cut video production time by 42%</strong>.</li>
+        <li><span class="case-title">Nikos Farm (E-Commerce Platform):</span> Redesigned mobile shopping with slide-out cart drawer and harvest date badges, delivering a <strong>+34% increase in mobile orders</strong> and a <strong>-44% reduction in cart abandonment</strong>.</li>
+        <li><span class="case-title">Cook by Ugo (Hospitality Ordering UI):</span> Designed direct takeout platform with spice toggles and 90-second checkout, <strong>driving a +45% increase in direct orders</strong> and saving 30% in third-party commissions.</li>
+      </ul>
+    </div>
+
+    <!-- TALSTRIKE -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">UI/UX Designer</span> — <span class="exp-company">Talstrike</span>
+        </div>
+        <span class="exp-meta">United States (Remote) | Jul 2024 – Dec 2024</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Conducted user research, heuristic evaluations, and journey mapping to uncover critical drop-off points across web and mobile surfaces.</li>
+        <li>Delivered production-ready interactive prototypes in bi-weekly Agile sprints, collaborating with distributed engineering teams.</li>
+        <li>Translated qualitative user testing insights into iterative wireframes, improving core feature engagement and task completion rates.</li>
+      </ul>
+    </div>
+
+    <!-- CLOUDNET IQ LABS -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-role">User Experience Designer</span> — <span class="exp-company">Cloudnet IQ Labs</span>
+        </div>
+        <span class="exp-meta">Remote | Nov 2020 – Mar 2022</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Designed wireframes, personas, and interactive prototypes for digital client platforms across fintech, logistics, and web tools.</li>
+        <li>Conducted usability audits and user interviews, identifying friction points in navigation to guide iterative product refinements.</li>
+        <li>Partnered with front-end developers during staging QA to ensure high-fidelity implementation of spacing, typography, and interactive states.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-row">
+      <div>
+        <span class="edu-degree">MSc Cyber Security</span> — <span class="edu-school">Aston University, Birmingham, UK</span>
+        <span style="color:#64748b; font-size:7.6pt;">(Specialism: Security-by-Design, Privacy UX, GDPR)</span>
+      </div>
+      <span class="edu-date">Sep 2025 – Oct 2026 (Expected)</span>
+    </div>
+    <div class="edu-row">
+      <div>
+        <span class="edu-degree">BSc Computer Science (Second Class Upper)</span> — <span class="edu-school">Adeleke University</span>
+      </div>
+      <span class="edu-date">Sep 2019 – Jun 2023</span>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" style="margin-bottom: 0;">
+    <h2 class="section-title">Certifications</h2>
+    <ul class="cert-grid">
+      <li><strong>Google UX Design:</strong> Conduct UX Research & Test Early Concepts (2024)</li>
+      <li><strong>Google UX Design:</strong> Build Wireframes & Low-Fidelity Prototypes (2024)</li>
+      <li><strong>Google UX Design:</strong> Empathize, Define, and Ideate (2024)</li>
+      <li><strong>Google:</strong> Foundations of Cybersecurity (2024)</li>
+      <li><strong>Udemy:</strong> Agile & Front-End DevOps Engineering (2026)</li>
+    </ul>
+  </section>
+
+</body>
+</html>
