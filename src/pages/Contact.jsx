@@ -49,11 +49,13 @@ export default function Contact() {
       if (response.ok && (result.success === "true" || result.success === true)) {
         setStatus('success');
         setFormData({ name: '', email: '', details: '' });
+        setTimeout(() => setStatus('idle'), 3500);
       } else {
         // FormSubmit first-time activation notice or fallback
         if (result.message && result.message.includes('Activation')) {
           setStatus('success');
           setFormData({ name: '', email: '', details: '' });
+          setTimeout(() => setStatus('idle'), 3500);
         } else {
           setStatus('error');
           setErrorMessage(result.message || 'Failed to send message. Please try again or email directly.');
@@ -103,87 +105,71 @@ export default function Contact() {
 
           {/* Contact Form */}
           <FadeIn className="bg-[var(--card)] rounded-[32px] p-8 md:p-12 border border-white/10 relative">
-            {status === 'success' ? (
-              <div className="py-16 text-center flex flex-col items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-[var(--green)]/10 border border-[var(--green)]/30 flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 stroke-[var(--green)] fill-none stroke-[2.5]" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <h3 className="font-['DM_Sans'] text-[28px] font-bold text-white mb-3">Message Sent!</h3>
-                <p className="text-white/60 text-[16px] max-w-[420px] leading-relaxed mb-8">
-                  Thank you for reaching out. Your project details have been sent directly to my inbox, and I will get back to you within 24 hours.
-                </p>
-                <button 
-                  onClick={() => setStatus('idle')}
-                  className="px-8 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:scale-105 transition-all"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[14px] text-white/70 pl-2 font-medium">Full Name <span className="text-[var(--blue)]">*</span></label>
-                    <input 
-                      type="text" 
-                      name="name"
-                      required 
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="e.g. Alex Morgan" 
-                      className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-[14px] text-white/70 pl-2 font-medium">Email Address <span className="text-[var(--blue)]">*</span></label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      required 
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="alex@company.com" 
-                      className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-2 mt-2">
-                  <label className="text-[14px] text-white/70 pl-2 font-medium">Project Details <span className="text-[var(--blue)]">*</span></label>
-                  <textarea 
-                    name="details"
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
+                  <label className="text-[14px] text-white/70 pl-2 font-medium">Full Name <span className="text-[var(--blue)]">*</span></label>
+                  <input 
+                    type="text" 
+                    name="name"
                     required 
-                    rows="6" 
-                    value={formData.details}
+                    value={formData.name}
                     onChange={handleChange}
-                    placeholder="Tell me a bit about your product, timeline, goals, or what challenges you're looking to solve..." 
-                    className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light resize-none"
-                  ></textarea>
+                    placeholder="e.g. Alex Morgan" 
+                    className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
+                  />
                 </div>
+                <div className="flex flex-col gap-2">
+                  <label className="text-[14px] text-white/70 pl-2 font-medium">Email Address <span className="text-[var(--blue)]">*</span></label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    required 
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="alex@company.com" 
+                    className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
+                  />
+                </div>
+              </div>
 
-                {status === 'error' && (
-                  <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-[14px]">
-                    {errorMessage}
-                  </div>
+              <div className="flex flex-col gap-2 mt-2">
+                <label className="text-[14px] text-white/70 pl-2 font-medium">Project Details <span className="text-[var(--blue)]">*</span></label>
+                <textarea 
+                  name="details"
+                  required 
+                  rows="6" 
+                  value={formData.details}
+                  onChange={handleChange}
+                  placeholder="Tell me a bit about your product, timeline, goals, or what challenges you're looking to solve..." 
+                  className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light resize-none"
+                ></textarea>
+              </div>
+
+              {status === 'error' && (
+                <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-[14px]">
+                  {errorMessage}
+                </div>
+              )}
+
+              <button 
+                type="submit" 
+                disabled={status === 'submitting'}
+                className="mt-4 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg"
+              >
+                {status === 'submitting' ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                    <span>Sending...</span>
+                  </>
+                ) : status === 'success' ? (
+                  <span className="text-emerald-600 font-bold">Sent ✓</span>
+                ) : (
+                  <span>Send Message</span>
                 )}
-
-                <button 
-                  type="submit" 
-                  disabled={status === 'submitting'}
-                  className="mt-4 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg"
-                >
-                  {status === 'submitting' ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending message...</span>
-                    </>
-                  ) : (
-                    <span>Send Message</span>
-                  )}
-                </button>
-              </form>
-            )}
+              </button>
+            </form>
           </FadeIn>
 
         </div>
