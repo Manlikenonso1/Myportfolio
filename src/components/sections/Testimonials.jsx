@@ -15,9 +15,9 @@ const testimonials = [
   },
   {
     quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended.",
-    name: "Emily Carter",
-    role: "Founding Partner, Aptinfy",
-    avatar: "/avatar3.jpg"
+    name: "Stangly Sunday",
+    role: "Founder, Lazyzonelab",
+    avatar: "/lazyzonelab-logo.png"
   }
 ];
 

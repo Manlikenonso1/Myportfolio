@@ -187,7 +187,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Devin Vance", role: "Co-Founder, LazyZoneLabs", text: "Chinonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
+        { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Chinonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
         { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Chinonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
         { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Chinonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
       ]
