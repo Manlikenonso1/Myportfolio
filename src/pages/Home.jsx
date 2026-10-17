@@ -6,7 +6,7 @@ import Testimonials from '../components/sections/Testimonials';
 export default function Home() {
   return (
     <div className="w-full relative">
-      <SEO title="Chinonso Ezeigbo | UI/UX Designer" description="Crafting digital products that feel almost magic." />
+      <SEO title="Chinonso Ezeigbo" description="Crafting digital products that feel almost magic." />
       
       {/* 1. HERO - MASSIVE TYPOGRAPHY & MESH GLOW */}
       <section className="relative min-h-[100svh] flex flex-col justify-center items-center px-6 overflow-hidden bg-[var(--bg)]">
