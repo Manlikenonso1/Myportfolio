@@ -31,11 +31,13 @@ export default function Footer() {
               <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Contact</Link>
             </div>
             <div className="flex flex-col gap-4">
-              <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Social</h4>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Twitter</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">LinkedIn</a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Github</a>
-              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-white hover:translate-x-0.5 transition-all text-[15px]">Dribbble</a>
+              <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Contact</h4>
+              <a href="mailto:hello@chinonsoezeigbo.com" className="text-white/40 hover:text-white transition-colors text-[15px]">hello@chinonsoezeigbo.com</a>
+              <span className="text-white/30 text-[14px]">Available for remote work worldwide</span>
+              <a href="/resume.pdf" download className="text-white/40 hover:text-white transition-colors text-[15px] inline-flex items-center gap-1.5 mt-1">
+                <span>Download Resume</span>
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </a>
             </div>
           </div>
         </div>
