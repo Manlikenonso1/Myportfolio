@@ -135,7 +135,7 @@ export default function HelpCenter() {
       <div className="ca-info-list">
         <div className="ca-info-item">
           <div className="ca-info-label">E-MAIL:</div>
-          <a href="mailto:hello@chinonsoezeigbo.com" className="ca-info-val">hello@chinonsoezeigbo.com</a>
+          <a href="mailto:godswill.ec@gmail.com" className="ca-info-val">godswill.ec@gmail.com</a>
         </div>
         <div className="ca-info-item">
           <div className="ca-info-label">PHONE:</div>

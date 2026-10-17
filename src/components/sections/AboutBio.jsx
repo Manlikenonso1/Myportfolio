@@ -42,7 +42,7 @@ export default function AboutBio() {
             
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)] leading-[1.6]">
               Have a project in mind or just want to chat design?{' '}
-              <a href="mailto:hello@chinonsoezeigbo.com" className="text-[var(--blue)] no-underline hover:underline">Let's talk</a>
+              <a href="mailto:godswill.ec@gmail.com" className="text-[var(--blue)] no-underline hover:underline">Let's talk</a>
             </p>
           </div>
         </FadeIn>

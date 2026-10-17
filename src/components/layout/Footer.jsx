@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Contact</h4>
-              <a href="mailto:hello@chinonsoezeigbo.com" className="text-white/40 hover:text-white transition-colors text-[15px]">hello@chinonsoezeigbo.com</a>
+              <a href="mailto:godswill.ec@gmail.com" className="text-white/40 hover:text-white transition-colors text-[15px]">godswill.ec@gmail.com</a>
               <span className="text-white/30 text-[14px]">Available for remote work worldwide</span>
             </div>
           </div>

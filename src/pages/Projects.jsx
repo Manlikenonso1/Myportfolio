@@ -1,10 +1,83 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FadeIn } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import CallToAction from '../components/sections/CallToAction';
 import SEO from '../components/ui/SEO';
 
+const allProjects = [
+  {
+    id: 'appsatile',
+    title: 'Appsatile',
+    categoryLabel: 'Design System',
+    description: 'Unified multi-product SaaS design system cutting developer handoff by 50%.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Figma Tokens', 'WCAG 2.1 AA', 'React Handoff'],
+    image: '/appsatile-thumbnail.png'
+  },
+  {
+    id: 'lazyzone',
+    title: 'LazyZoneLabs',
+    categoryLabel: 'AI Creator Suite & Web App',
+    description: 'Single-screen workspace combining scriptwriting, AI audio waveforms, and video timelines.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['AI Interface', 'Audio/Video Timeline', 'Dark UI'],
+    image: '/lazyzone-thumbnail.png'
+  },
+  {
+    id: 'huntly',
+    title: 'HuntlyAi',
+    categoryLabel: 'AI Job Search & Workspace',
+    description: 'Calm botanical productivity dashboard with slide-out context drawers.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['Dashboard UX', 'Kanban System', 'Productivity'],
+    image: '/huntly-thumbnail.png'
+  },
+  {
+    id: 'nikos-farm',
+    title: 'Nikos Farm',
+    categoryLabel: 'E-Commerce',
+    description: 'Mobile-first farm shop with slide-out cart drawer lifting mobile orders by +34%.',
+    categories: ['all', 'ecommerce'],
+    tags: ['Mobile Commerce', 'Cart Drawer', 'Conversion UX'],
+    image: '/nikos-farm-thumbnail.png'
+  },
+  {
+    id: 'cook-by-ugo',
+    title: 'Cook by Ugo',
+    categoryLabel: 'Food & Hospitality',
+    description: 'Direct takeout platform with spice customizer and 90-second checkout flow.',
+    categories: ['all', 'ecommerce'],
+    tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
+    image: '/cook-by-ugo-thumbnail.png'
+  },
+  {
+    id: 'aptinfy',
+    title: 'Aptinfy',
+    categoryLabel: 'Brand Identity',
+    description: 'Geometric brand identity system and presentation architecture for enterprise cloud.',
+    categories: ['all', 'brand', 'design-systems'],
+    tags: ['Brand Guidelines', 'Typography Scale', 'Vector Design'],
+    image: '/aptinfy-thumbnail.png'
+  }
+];
+
+const categoryFilters = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'saas', label: 'SaaS & Web Apps' },
+  { id: 'ai', label: 'AI Products' },
+  { id: 'ecommerce', label: 'E-Commerce' },
+  { id: 'design-systems', label: 'Design Systems' }
+];
+
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const filtered = activeCategory === 'all'
+    ? allProjects
+    : allProjects.filter(p => p.categories.includes(activeCategory));
+
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
       <SEO title="Projects | Chinonso Ezeigbo" description="A collection of structured UI/UX case studies." />
@@ -12,109 +85,72 @@ export default function Projects() {
       {/* 1. HERO */}
       <PageHeader title="Projects" breadcrumbText="Work" />
 
-      {/* 2. RECENT PROJECTS (APPSATILE & NIKOS FARM) */}
+      {/* 2. RECENT PROJECTS WITH CATEGORY FILTERS */}
       <section className="px-6 py-20 max-w-[1200px] mx-auto">
         <FadeIn>
-          <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-12">Featured Projects</h2>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Portfolio Index</div>
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-bold text-white tracking-tight">Featured Case Studies</h2>
+            </div>
+            
+            {/* Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2">
+              {categoryFilters.map(cat => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-5 py-2.5 rounded-full text-[13px] font-medium transition-all ${
+                    activeCategory === cat.id
+                      ? 'bg-white text-black font-semibold shadow-lg shadow-white/10 scale-105'
+                      : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10 border border-white/5'
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
         </FadeIn>
         
-        <div className="flex flex-col gap-24">
-          {/* Appsatile Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Design System</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Appsatile</h3>
-               </div>
-               <Link to="/projects/appsatile" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/appsatile" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/appsatile-thumbnail.png" alt="Appsatile Design System" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-80 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-
-          {/* LazyZoneLabs Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">AI Creator Suite & Web App</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">LazyZoneLabs</h3>
-               </div>
-               <Link to="/projects/lazyzone" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/lazyzone" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/lazyzone-thumbnail.png" alt="LazyZoneLabs AI Creator Suite" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-
-          {/* HuntlyAi Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">AI Job Search & Application Workspace</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">HuntlyAi</h3>
-               </div>
-               <Link to="/projects/huntly" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/huntly" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/huntly-thumbnail.png" alt="HuntlyAi Application Workspace" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-
-          {/* Nikos Farm Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">E-Commerce</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Nikos Farm</h3>
-               </div>
-               <Link to="/projects/nikos-farm" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/nikos-farm" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/nikos-farm-thumbnail.png" alt="Nikos Farm E-Commerce" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-80 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-
-          {/* Cook by Ugo Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Food & Hospitality</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Cook by Ugo</h3>
-               </div>
-               <Link to="/projects/cook-by-ugo" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/cook-by-ugo" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/cook-by-ugo-thumbnail.png" alt="Cook by Ugo Digital Experience" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-
-          {/* Aptinfy Showcase */}
-          <FadeIn direction="up">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-               <div>
-                 <div className="text-[var(--muted)] text-[14px] uppercase tracking-widest font-bold mb-2">Brand Identity</div>
-                 <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">Aptinfy</h3>
-               </div>
-               <Link to="/projects/aptinfy" className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit">
-                 View Case Study
-               </Link>
-            </div>
-            <Link to="/projects/aptinfy" className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group">
-               <img src="/aptinfy-thumbnail.png" alt="Aptinfy Logo Branding" className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-80 group-hover:opacity-100" />
-            </Link>
-          </FadeIn>
-        </div>
+        <motion.div layout className="flex flex-col gap-24">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((proj) => (
+              <motion.div
+                key={proj.id}
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.98 }}
+                transition={{ duration: 0.4 }}
+              >
+                <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-[var(--muted)] text-[13px] uppercase tracking-widest font-bold">{proj.categoryLabel}</span>
+                      <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                      <div className="flex gap-2">
+                        {proj.tags.map((tag, tIdx) => (
+                          <span key={tIdx} className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/50">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">{proj.title}</h3>
+                    <p className="text-white/50 text-[16px] max-w-[650px] mt-2 font-light">{proj.description}</p>
+                  </div>
+                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit shrink-0">
+                    View Case Study
+                  </Link>
+                </div>
+                <Link to={`/projects/${proj.id}`} className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group hover:border-white/25 transition-colors">
+                  <img src={proj.image} alt={proj.title} className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
+                </Link>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </section>
 
       {/* 5. TESTIMONIALS */}

@@ -238,6 +238,11 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
+  const projectOrder = ['appsatile', 'lazyzone', 'huntly', 'nikos-farm', 'cook-by-ugo', 'aptinfy'];
+  const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
+  const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
+  const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
+
   return (
     <div className="w-full relative bg-[#0a0a0a] min-h-screen">
       <SEO title={`${project.title} | Case Study`} description={project.overview.slice(0, 150) + "..."} image={project.heroImg} />
@@ -529,7 +534,32 @@ export default function ProjectDetails() {
         </div>
       </section>
 
-      {/* 8. BACK TO WORK */}
+      {/* 8. NEXT PROJECT PREVIEW CARD */}
+      <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-white/5">
+        <FadeIn>
+          <div className="p-8 md:p-12 rounded-3xl bg-[var(--card)] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 group hover:border-white/20 transition-all shadow-2xl">
+            <div className="flex items-center gap-6">
+              <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
+                <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" />
+              </div>
+              <div>
+                <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-1.5">Next Case Study</div>
+                <h3 className="font-['DM_Sans'] text-[24px] md:text-[34px] font-bold text-white mb-1">{nextProject.title}</h3>
+                <p className="text-white/50 text-[14px] md:text-[15px] font-light">{nextProject.category} · {nextProject.type}</p>
+              </div>
+            </div>
+            <Link 
+              to={`/projects/${nextProject.id}`}
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-all shadow-xl shrink-0 group-hover:shadow-white/20"
+            >
+              <span>View Case Study</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </Link>
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* 9. BACK TO WORK & CTA */}
       <section className="bg-[var(--bg)] py-32 text-center">
          <FadeIn className="max-w-[800px] mx-auto px-6 mb-16">
             <h2 className="font-['DM_Sans'] text-[36px] md:text-[48px] font-bold text-white leading-tight mb-6">

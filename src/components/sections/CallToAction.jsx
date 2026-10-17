@@ -51,7 +51,7 @@ export default function CallToAction() {
 
         <FadeIn delay={0.4}>
           <div className="flex justify-center gap-[18px] flex-wrap mb-[24px]">
-            <a href="mailto:hello@chinonsoezeigbo.com" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 no-underline">
+            <a href="mailto:godswill.ec@gmail.com" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30 no-underline">
               Contact Me
             </a>
 

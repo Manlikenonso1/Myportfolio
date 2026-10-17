@@ -62,10 +62,19 @@ export default function Navbar() {
           }}
           className={`flex justify-between items-center rounded-3xl pointer-events-auto transition-shadow duration-500 border border-white/10 backdrop-blur-xl ${scrolled ? 'shadow-2xl shadow-blue-900/10' : ''}`}
         >
-          {/* Logo */}
-          <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white z-10 flex items-center gap-1 hover:opacity-70 transition-opacity">
-            Chinonso.
-          </Link>
+          {/* Logo & Availability Badge */}
+          <div className="flex items-center gap-3.5 z-10">
+            <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
+              Chinonso.
+            </Link>
+            <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
+              </span>
+              <span>Available</span>
+            </div>
+          </div>
 
           {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-8 text-[14px] font-medium text-white/60">
