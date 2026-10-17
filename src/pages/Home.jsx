@@ -169,7 +169,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4">
             <FadeIn direction="up">
-              <Link to="/services" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
+              <Link to="/services/ux-strategy" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-white/50">01</div>
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">UI/UX Design</h3>
@@ -180,7 +180,7 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.1}>
-              <Link to="/services" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-[var(--blue)]/10 transition-colors border border-white/5 hover:border-[var(--blue)]/30">
+              <Link to="/services/interactive-motion" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-[var(--blue)]/10 transition-colors border border-white/5 hover:border-[var(--blue)]/30">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-[var(--blue)]/50">02</div>
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold group-hover:text-[var(--blue)]">Prototyping</h3>
@@ -191,7 +191,7 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.2}>
-              <Link to="/services" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
+              <Link to="/services/design-systems" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-white/50">03</div>
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">Design Systems</h3>
@@ -202,7 +202,7 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.3}>
-              <Link to="/services" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
+              <Link to="/services/user-research" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-white/50">04</div>
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">User Research</h3>
@@ -213,7 +213,7 @@ export default function Home() {
               </Link>
             </FadeIn>
             <FadeIn direction="up" delay={0.4}>
-              <Link to="/services" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
+              <Link to="/services/developer-handoff" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-white/50">05</div>
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">Dev Handoff</h3>

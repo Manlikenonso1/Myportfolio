@@ -94,12 +94,17 @@ export default function Services() {
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows so every design decision is grounded in real evidence, not guesswork.
                   </p>
-                  <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
-                    Request an audit
-                  </Link>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Link to="/services/user-research" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
+                      Explore process
+                    </Link>
+                    <Link to="/contact" className="inline-flex items-center gap-2 text-[14px] text-white/50 hover:text-white transition-colors">
+                      Request an audit &rarr;
+                    </Link>
+                  </div>
                 </div>
                 <div className="w-full md:w-[400px] aspect-square rounded-2xl overflow-hidden relative border border-white/10">
-                   <img src="/service_ui_ux.png" alt="User Research" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                   <img src="/service_user_research.jpg" alt="User Research & Usability Audits" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
                 </div>
               </div>
             </div>
@@ -114,12 +119,17 @@ export default function Services() {
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in, so your dev team builds exactly what was designed, first time.
                   </p>
-                  <Link to="/contact" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
-                    Explore process
-                  </Link>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <Link to="/services/developer-handoff" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 transition-all">
+                      Explore process
+                    </Link>
+                    <Link to="/contact" className="inline-flex items-center gap-2 text-[14px] text-white/50 hover:text-white transition-colors">
+                      Discuss handoff &rarr;
+                    </Link>
+                  </div>
                 </div>
                 <div className="w-full md:w-[400px] aspect-square rounded-2xl overflow-hidden relative border border-white/10">
-                   <img src="/service_design_system.png" alt="Developer Handoff" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
+                   <img src="/service_dev_handoff.jpg" alt="Developer Handoff & Accessibility" className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105" />
                 </div>
               </div>
             </div>

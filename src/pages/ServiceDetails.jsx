@@ -91,6 +91,66 @@ const serviceData = {
         desc: "Supplying exact easing curves, durations, and CSS/Framer Motion specs so developers can implement animations without guessing."
       }
     ]
+  },
+  'user-research': {
+    title: "User Research & Usability Audits",
+    headline: "Uncovering real user behavior and diagnosing friction to drive confident decisions.",
+    eyebrow: "User Research & Usability Audits",
+    image: "/service_user_research.jpg",
+    overview: "Building features based on guesswork leads to expensive rework and low user retention. I analyze how real people navigate your product, identifying where they hesitate, stumble, or abandon critical flows.",
+    description: "Through targeted user interviews, behavioral analytics, and heuristic audits, I replace assumptions with objective insights—giving your team a prioritized action plan to boost conversions and task completion rates.",
+    phases: [
+      {
+        num: "01",
+        title: "Heuristic & Flow Audit",
+        desc: "Systematic evaluation of your existing application against recognized usability heuristics, flagging interface inconsistencies, cognitive overload, and navigation dead-ends."
+      },
+      {
+        num: "02",
+        title: "User Interviews & Behavioral Sessions",
+        desc: "Moderated user sessions and qualitative interviews to uncover emotional friction, unspoken user goals, and the mental models driving decision-making."
+      },
+      {
+        num: "03",
+        title: "Journey Mapping & Friction Logging",
+        desc: "Mapping end-to-end paths with severity-rated friction points, drop-off rates, and task duration metrics to pinpoint where users lose momentum."
+      },
+      {
+        num: "04",
+        title: "Actionable Findings & Product Roadmap",
+        desc: "A prioritized findings deck with concrete UX solutions, wireframe recommendations, and measurable benchmarks ready for immediate product backlog execution."
+      }
+    ]
+  },
+  'developer-handoff': {
+    title: "Developer Handoff & Accessibility",
+    headline: "Production-ready design specs and accessible standards engineers love to build.",
+    eyebrow: "Engineering Alignment & Accessibility",
+    image: "/service_dev_handoff.jpg",
+    overview: "A great design is only as good as what actually ships to users. I bridge the gap between design and engineering by delivering meticulous Figma specs, design token architectures, and strict accessibility standards.",
+    description: "I ensure engineers never have to guess spacing, responsive behaviors, or edge cases. With WCAG compliance built into typography, color contrast, and interactive focus states, your product ships cleanly, on time, and accessible to everyone.",
+    phases: [
+      {
+        num: "01",
+        title: "Design Tokens & Naming Architecture",
+        desc: "Structured variables for color palettes, typography scales, spacing units, and radius values that map 1:1 with CSS, Tailwind, or styled-components."
+      },
+      {
+        num: "02",
+        title: "Interactive Specs & Edge Cases",
+        desc: "Comprehensive screen states for every element—default, hover, focus, active, disabled, loading, empty states, and responsive breakpoints across mobile, tablet, and desktop."
+      },
+      {
+        num: "03",
+        title: "WCAG Accessibility Verification",
+        desc: "Validating color contrast ratios (minimum 4.5:1 / 7:1 for AAA), keyboard tab sequences, screen reader ARIA labels, and tap target sizing for full compliance."
+      },
+      {
+        num: "04",
+        title: "Engineering Sync & QA Pairing",
+        desc: "Direct handoff walkthrough with frontend engineers and continuous visual QA during staging to ensure the deployed code matches the design pixel-for-pixel."
+      }
+    ]
   }
 };
 
@@ -129,7 +189,7 @@ export default function ServiceDetails() {
           </FadeIn>
 
           <FadeIn className="w-full aspect-video rounded-3xl overflow-hidden bg-[var(--card)] p-2 border border-white/10 relative mb-32 shadow-2xl">
-             <img src={activeService.image} className="w-full h-full object-cover rounded-2xl opacity-60" alt="Process Blueprint" />
+             <img src={activeService.image} className="w-full h-full object-cover rounded-2xl opacity-90 transition-opacity duration-500" alt="Process Blueprint" />
           </FadeIn>
 
           <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-12 text-center">
@@ -149,6 +209,32 @@ export default function ServiceDetails() {
               </FadeInStaggerItem>
             ))}
           </FadeInStagger>
+
+          {/* Other Services Switcher */}
+          <FadeIn className="mb-24">
+            <div className="font-['DM_Sans'] text-[14px] tracking-[.08em] uppercase text-white/40 mb-6 text-center">Explore Other Capabilities</div>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {[
+                { slug: 'ux-strategy', title: 'UI/UX Design' },
+                { slug: 'design-systems', title: 'Design Systems' },
+                { slug: 'interactive-motion', title: 'Motion & Prototyping' },
+                { slug: 'user-research', title: 'User Research & Audits' },
+                { slug: 'developer-handoff', title: 'Developer Handoff' }
+              ].map(s => (
+                <Link
+                  key={s.slug}
+                  to={`/services/${s.slug}`}
+                  className={`px-5 py-2.5 rounded-full text-[14px] font-medium border transition-all ${
+                    id === s.slug
+                      ? 'border-white bg-white text-black'
+                      : 'border-white/10 bg-white/5 text-white/70 hover:border-white/30 hover:text-white'
+                  }`}
+                >
+                  {s.title}
+                </Link>
+              ))}
+            </div>
+          </FadeIn>
 
           {/* Dynamic Footer CTA */}
           <FadeIn className="p-8 md:p-16 rounded-[32px] bg-gradient-to-br from-[var(--card)] to-[var(--bg2)] border border-white/10 text-center relative overflow-hidden shadow-2xl">
