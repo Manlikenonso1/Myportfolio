@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ChevronDown, Send } from 'lucide-react';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
+import SEO from '../components/ui/SEO';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -71,6 +72,10 @@ export default function Contact() {
 
   return (
     <div className="w-full relative pb-32">
+      <SEO 
+        title="Contact · Chinonso Ezeigbo" 
+        description="Let's build something extraordinary. Get in touch for product design, design systems, and UX consultations." 
+      />
       
       {/* 1. HERO - CONTACT */}
       <PageHeader title="Let's start a new project together." breadcrumbText="Contact" />

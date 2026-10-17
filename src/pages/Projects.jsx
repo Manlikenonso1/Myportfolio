@@ -81,7 +81,7 @@ export default function Projects() {
 
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
-      <SEO title="Projects | Chinonso Ezeigbo" description="A collection of structured UI/UX case studies." />
+      <SEO title="Work · Chinonso Ezeigbo" description="Selected case studies in SaaS interfaces, design systems, AI creator suites, and e-commerce products by Chinonso Ezeigbo." />
 
       {/* 1. HERO */}
       <PageHeader title="Projects" breadcrumbText="Work" />

@@ -246,7 +246,7 @@ export default function ProjectDetails() {
 
   return (
     <div className="w-full relative bg-[#0a0a0a] min-h-screen">
-      <SEO title={`${project.title} | Case Study`} description={project.overview.slice(0, 150) + "..."} image={project.heroImg} />
+      <SEO title={`${project.title} · Chinonso Ezeigbo`} description={project.overview.slice(0, 150) + "..."} image={project.heroImg} />
       
       {/* Background Flora Patterns */}
       {/* 1. HERO HEADER */}

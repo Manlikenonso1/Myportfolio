@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
+import SEO from '../components/ui/SEO';
 
 const serviceData = {
   'ux-strategy': {
@@ -160,6 +161,10 @@ export default function ServiceDetails() {
 
   return (
     <div className="w-full relative pb-32">
+      <SEO 
+        title={`${activeService.title} · Chinonso Ezeigbo`} 
+        description={activeService.headline} 
+      />
       
       {/* 1. HEADER */}
       <section className="relative pt-48 pb-20 px-6 border-b border-white/5 bg-[var(--bg)]">

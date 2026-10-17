@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
+import SEO from '../components/ui/SEO';
 
 export default function Services() {
   return (
     <div className="w-full relative pb-32">
+      <SEO 
+        title="Services · Chinonso Ezeigbo" 
+        description="End-to-end product design services: UI/UX design, Figma design systems, interactive prototypes, user research, and dev handoff." 
+      />
       
       {/* 1. HERO - SERVICES */}
       <section className="bg-[var(--bg)] relative overflow-hidden flex flex-col items-center gap-5 pt-[160px] pb-[120px] px-[var(--px)]">

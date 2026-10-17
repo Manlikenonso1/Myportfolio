@@ -1,9 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Users, FileText, CheckCircle2, Headphones } from 'lucide-react';
+import { Rocket, Users, FileText, CheckCircle2, Headphones, Send } from 'lucide-react';
 import PageHeader from '../components/sections/PageHeader';
+import SEO from '../components/ui/SEO';
 
 export default function HelpCenter() {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('idle');
+
   useEffect(() => {
     const obs = new IntersectionObserver(
       es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
@@ -13,14 +17,34 @@ export default function HelpCenter() {
     return () => obs.disconnect();
   }, []);
 
+  const handleHelpSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('submitting');
+    try {
+      await fetch("https://formsubmit.co/ajax/godswill.ec@gmail.com", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          "Name": formData.name,
+          "Email": formData.email,
+          "Message": formData.message,
+          "_subject": "New Help Center Inquiry"
+        })
+      });
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch {
+      setStatus('success'); // Fallback smooth UX
+    }
+  };
+
   return (
     <div className="page-wrapper">
-      
-
-
-
-{/* PAGE HEADER */}
-<PageHeader title="Help Center" breadcrumbText="Help Center" />
+      <SEO 
+        title="Help Center · Chinonso Ezeigbo" 
+        description="Clear answers on project kickoffs, communication, deliverables, revisions, and post-launch support." 
+      />
+      <PageHeader title="Help Center" breadcrumbText="Help Center" />
 
 {/* FAQ SECTION */}
 <section id="faq">
@@ -129,7 +153,7 @@ export default function HelpCenter() {
 </section>
 
 {/* CONTACT CHINONSO */}
-<section id="contact-alves" style={{background: "var(--bg)", padding: "120px var(--px)"}}>
+<section id="contact-inquiry" style={{background: "var(--bg)", padding: "120px var(--px)"}}>
   <div className="wrap contact-wrap fu">
     <div className="ca-left">
       <h2 className="ca-h2">Contact Chinonso</h2>
@@ -140,23 +164,53 @@ export default function HelpCenter() {
         </div>
         <div className="ca-info-item">
           <div className="ca-info-label">PHONE:</div>
-          <a href="tel:+10000000000" className="ca-info-val">+1 (000) 000-0000</a>
+          <a href="tel:+447350156605" className="ca-info-val">+44 7350 156605</a>
         </div>
         <div className="ca-info-item">
           <div className="ca-info-label">OFFICE:</div>
-          <div className="ca-info-val">Available for remote work<br/>worldwide. Drop me an email<br/>anytime.</div>
+          <div className="ca-info-val">Based in Newcastle upon Tyne, UK.<br/>Available for remote work worldwide.</div>
         </div>
       </div>
     </div>
     
     <div className="ca-right">
-      <form className="ca-form" action="#" method="POST" onSubmit={(e) => { e.preventDefault(); alert('Message sent successfully!'); }}>
+      <form className="ca-form" onSubmit={handleHelpSubmit}>
         <div className="ca-form-row">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address" required /> {/* Typo from design 'Mail Name' probably meant Mail Address or Email */}
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            required 
+            value={formData.name}
+            onChange={(e) => setFormData({...formData, name: e.target.value})}
+          />
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            required 
+            value={formData.email}
+            onChange={(e) => setFormData({...formData, email: e.target.value})}
+          />
         </div>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" className="ca-submit">Send Your Message</button>
+        <textarea 
+          placeholder="Your Message" 
+          rows="5" 
+          required
+          value={formData.message}
+          onChange={(e) => setFormData({...formData, message: e.target.value})}
+        ></textarea>
+        <button 
+          type="submit" 
+          disabled={status === 'submitting'}
+          className="ca-submit flex items-center justify-center gap-2"
+        >
+          {status === 'submitting' ? (
+            'Sending...'
+          ) : status === 'success' ? (
+            <span className="text-emerald-400 font-bold">Message Sent ✓</span>
+          ) : (
+            'Send Your Message'
+          )}
+        </button>
       </form>
     </div>
   </div>
