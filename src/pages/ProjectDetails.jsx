@@ -76,7 +76,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Niko Vane", role: "Owner & Founder, Nikos Farm", text: "Chinonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
+        { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
         { name: "Clara Brooks", role: "Digital Director", text: "The new cart experience and bundle recommendations made an immediate impact on our sales. It simply works." },
         { name: "Marcus Thorne", role: "Operations Lead", text: "The order views and product management screens Chinonso designed saved our fulfillment team hours every single day." }
       ]
@@ -500,7 +500,9 @@ export default function ProjectDetails() {
                           <img 
                             src={quote.avatar} 
                             alt={quote.name} 
-                            className="w-12 h-12 rounded-full object-cover border border-[var(--border)] bg-white/5" 
+                            className={`w-12 h-12 rounded-full border border-[var(--border)] ${
+                              quote.avatar.includes('logo') ? 'object-contain p-1 bg-white/5' : 'object-cover'
+                            }`} 
                           />
                         ) : (
                           <div className="w-12 h-12 rounded bg-[#0a0a0a] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">

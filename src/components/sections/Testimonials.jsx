@@ -8,10 +8,10 @@ const testimonials = [
     avatar: "/appsatile-logo.png"
   },
   {
-    quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups. He gave our engineering team clean components and clear specs that were a joy to build with.",
-    name: "David Chen",
-    role: "Engineering Manager, Nikos Farm",
-    avatar: "/avatar2.jpg"
+    quote: "Chinonso redesigned our storefront from the ground up. The site looks stunning, our mobile checkout flows effortlessly, and our farm customers love the new experience.",
+    name: "Diamond Nicholas",
+    role: "Owner, Nikos Farm",
+    avatar: "/nikos-farm-logo.png"
   },
   {
     quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended.",
@@ -50,7 +50,9 @@ export default function Testimonials() {
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="w-12 h-12 rounded-full object-cover border border-white/10"
+                    className={`w-12 h-12 rounded-full border border-white/10 ${
+                      t.avatar.includes('logo') ? 'object-contain p-1 bg-white/5' : 'object-cover'
+                    }`}
                   />
                   <div>
                     <div className="font-['DM_Sans'] font-bold text-[16px] text-white">{t.name}</div>

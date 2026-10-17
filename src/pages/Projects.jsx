@@ -130,7 +130,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
-            { name: "Theresa Webb", role: "Product Lead, Nikos Farm", avatar: "/avatar2.jpg", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
+            { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
             { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", avatar: "/avatar3.jpg", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (
             <FadeIn key={i} delay={i * 0.1}>
@@ -140,7 +140,9 @@ export default function Projects() {
                     <img 
                       src={quote.avatar} 
                       alt={quote.name} 
-                      className="w-12 h-12 rounded-full object-cover border border-white/10" 
+                      className={`w-12 h-12 rounded-full border border-white/10 ${
+                        quote.avatar.includes('logo') ? 'object-contain p-1 bg-white/5' : 'object-cover'
+                      }`} 
                     />
                     <div>
                       <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
