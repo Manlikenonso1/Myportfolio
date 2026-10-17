@@ -3,9 +3,9 @@ import { FadeIn } from '../ui/FadeIn';
 const testimonials = [
   {
     quote: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
-    name: "Sarah Jenkins",
-    role: "VP of Product, Appsatile",
-    avatar: "/avatar1.jpg"
+    name: "Joseph Schnedir",
+    role: "Founder, Appsatile",
+    avatar: "/appsatile-logo.png"
   },
   {
     quote: "His attention to detail is remarkable. He didn't just hand off pretty mockups. He gave our engineering team clean components and clear specs that were a joy to build with.",

@@ -129,7 +129,7 @@ export default function Projects() {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
-            { name: "Chelsea Hardy", role: "Lead Product Architect, Appsatile", avatar: "/avatar1.jpg", text: "Chinonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
+            { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso has a rare ability to understand complex product requirements and translate them into clean, intuitive screens. Working with him was an absolute pleasure." },
             { name: "Theresa Webb", role: "Product Lead, Nikos Farm", avatar: "/avatar2.jpg", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
             { name: "Cody Fisher", role: "VP of Engineering, Aptinfy", avatar: "/avatar3.jpg", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (

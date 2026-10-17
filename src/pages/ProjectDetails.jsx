@@ -39,7 +39,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Jerome Bell", role: "VP of Product, Appsatile", text: "Chinonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
+        { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
         { name: "Dianne Russell", role: "Engineering Director", text: "Chinonso organized our Figma components and design tokens so clearly that our front-end team was able to build pages in half the usual time." },
         { name: "Shane Collier", role: "Co-Founder & CTO", text: "He has an incredible eye for detail and structure. Working with his components made building and maintaining our screens a breeze." }
       ]
@@ -496,9 +496,17 @@ export default function ProjectDetails() {
                  <FadeIn key={i} delay={i * 0.1}>
                    <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
                       <div className="flex gap-4 items-center mb-6">
-                        <div className="w-12 h-12 rounded bg-[#0a0a0a] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
-                          {quote.name.split(' ').map(n=>n[0]).join('')}
-                        </div>
+                        {quote.avatar ? (
+                          <img 
+                            src={quote.avatar} 
+                            alt={quote.name} 
+                            className="w-12 h-12 rounded-full object-cover border border-[var(--border)] bg-white/5" 
+                          />
+                        ) : (
+                          <div className="w-12 h-12 rounded bg-[#0a0a0a] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
+                            {quote.name.split(' ').map(n=>n[0]).join('')}
+                          </div>
+                        )}
                         <div>
                           <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
                           <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
