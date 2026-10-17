@@ -34,10 +34,6 @@ export default function Footer() {
               <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Contact</h4>
               <a href="mailto:hello@chinonsoezeigbo.com" className="text-white/40 hover:text-white transition-colors text-[15px]">hello@chinonsoezeigbo.com</a>
               <span className="text-white/30 text-[14px]">Available for remote work worldwide</span>
-              <a href="/resume.pdf" download className="text-white/40 hover:text-white transition-colors text-[15px] inline-flex items-center gap-1.5 mt-1">
-                <span>Download Resume</span>
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              </a>
             </div>
           </div>
         </div>

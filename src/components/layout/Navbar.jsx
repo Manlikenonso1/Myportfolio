@@ -47,7 +47,6 @@ export default function Navbar() {
               <Link to="/services" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Services</Link>
               <Link to="/projects" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Work</Link>
               <Link to="/contact" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Contact</Link>
-              <a href="/resume.pdf" download onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Resume</a>
             </motion.div>
           </motion.div>
         )}
@@ -78,10 +77,6 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="/resume.pdf" download className="px-5 py-2.5 rounded-full text-white/70 hover:text-white text-[14px] font-medium transition-colors flex items-center gap-2">
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Resume
-            </a>
             <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 hover:scale-105 text-[14px] font-semibold transition-all">
               Connect
             </Link>
