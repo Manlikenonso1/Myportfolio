@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 import Testimonials from '../components/sections/Testimonials';
@@ -79,7 +80,7 @@ export default function Home() {
             <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-bold tracking-tight text-white leading-none">Selected<br/>Work</h2>
             <Link to="/projects" className="hidden md:flex items-center gap-2 text-white/50 hover:text-white transition-colors group">
               View All Work
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </FadeIn>
 
@@ -163,7 +164,7 @@ export default function Home() {
             </p>
             <Link to="/about" className="inline-flex items-center gap-3 text-white font-semibold hover:text-[var(--blue)] transition-colors group">
               Learn more about me
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </FadeIn>
 
@@ -175,7 +176,7 @@ export default function Home() {
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">UI/UX Design</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--bg)]">
-                  <svg className="w-5 h-5 stroke-white fill-none stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <ArrowRight size={18} strokeWidth={2} className="text-white" />
                 </div>
               </Link>
             </FadeIn>
@@ -186,7 +187,7 @@ export default function Home() {
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold group-hover:text-[var(--blue)]">Prototyping</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-[var(--blue)]/30 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--blue)]/20">
-                  <svg className="w-5 h-5 stroke-[var(--blue)] fill-none stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <ArrowRight size={18} strokeWidth={2} className="text-[var(--blue)]" />
                 </div>
               </Link>
             </FadeIn>
@@ -197,7 +198,7 @@ export default function Home() {
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">Design Systems</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--bg)]">
-                  <svg className="w-5 h-5 stroke-white fill-none stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <ArrowRight size={18} strokeWidth={2} className="text-white" />
                 </div>
               </Link>
             </FadeIn>
@@ -208,7 +209,7 @@ export default function Home() {
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">User Research</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--bg)]">
-                  <svg className="w-5 h-5 stroke-white fill-none stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <ArrowRight size={18} strokeWidth={2} className="text-white" />
                 </div>
               </Link>
             </FadeIn>
@@ -219,7 +220,7 @@ export default function Home() {
                   <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">Dev Handoff</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--bg)]">
-                  <svg className="w-5 h-5 stroke-white fill-none stroke-2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  <ArrowRight size={18} strokeWidth={2} className="text-white" />
                 </div>
               </Link>
             </FadeIn>

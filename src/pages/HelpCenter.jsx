@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Rocket, Users, FileText, CheckCircle2, Headphones } from 'lucide-react';
 import PageHeader from '../components/sections/PageHeader';
 
 export default function HelpCenter() {
@@ -88,37 +89,37 @@ export default function HelpCenter() {
     
     <div className="hc-grid">
       <div className="hc-card fu d1">
-        <div className="hc-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <div className="hc-icon flex items-center justify-center">
+          <Rocket size={24} strokeWidth={2} className="text-[var(--blue)]" />
         </div>
         <div className="hc-title">Kickstart Your Project</div>
         <div className="hc-desc">How we get started, the basic info needed to begin, and what the first week looks like.</div>
       </div>
       <div className="hc-card fu d2">
-        <div className="hc-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <div className="hc-icon flex items-center justify-center">
+          <Users size={24} strokeWidth={2} className="text-[var(--blue)]" />
         </div>
         <div className="hc-title">Collaboration Model</div>
         <div className="hc-desc">How we stay in sync through regular updates, Slack/Teams chats, and quick video walkthroughs.</div>
       </div>
 
       <div className="hc-card fu d1">
-        <div className="hc-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <div className="hc-icon flex items-center justify-center">
+          <FileText size={24} strokeWidth={2} className="text-[var(--blue)]" />
         </div>
         <div className="hc-title">Design Deliverables</div>
         <div className="hc-desc">Everything you receive at the finish line: clean Figma source files, reusable components, and developer-ready specs.</div>
       </div>
       <div className="hc-card fu d2">
-        <div className="hc-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M22 4L12 14.01l-3-3" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <div className="hc-icon flex items-center justify-center">
+          <CheckCircle2 size={24} strokeWidth={2} className="text-[var(--blue)]" />
         </div>
         <div className="hc-title">Revisions & Feedback</div>
         <div className="hc-desc">How feedback works during each phase, so you have plenty of opportunities to review and refine before anything goes live.</div>
       </div>
       <div className="hc-card fu d3">
-        <div className="hc-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        <div className="hc-icon flex items-center justify-center">
+          <Headphones size={24} strokeWidth={2} className="text-[var(--blue)]" />
         </div>
         <div className="hc-title">Post-Launch Support</div>
         <div className="hc-desc">Have questions while your developers build? I stick around after handoff to answer questions, review builds, and make sure everything matches.</div>

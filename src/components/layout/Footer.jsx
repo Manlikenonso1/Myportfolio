@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
             <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 hover:shadow-lg hover:shadow-white/10 transition-all duration-300">
               Get in touch
               <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center">
-                 <svg className="w-3 h-3 stroke-black fill-none stroke-[2]" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <ArrowRight size={13} strokeWidth={2.5} className="text-black" />
               </div>
             </Link>
           </div>

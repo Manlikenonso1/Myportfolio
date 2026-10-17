@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react';
 import { FadeIn, FadeInStagger } from '../ui/FadeIn';
 
 export default function AboutBio() {
@@ -31,9 +32,7 @@ export default function AboutBio() {
               {['Design Systems & Tokens', 'WCAG Accessibility', 'Figma & Prototyping', 'Smooth Dev Handoff'].map((badge, idx) => (
                 <div key={idx} className="flex items-center gap-[12px] bg-[var(--card)] border border-[var(--border)] rounded-[8px] py-4 px-[22px] w-full sm:w-[270px] font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)]">
                   <span className="w-[18px] h-[18px] shrink-0 rounded-full bg-[var(--blue)] flex items-center justify-center">
-                    <svg viewBox="0 0 12 12" className="w-[10px] h-[10px] stroke-white fill-none stroke-[2.5]" style={{ strokeLinecap: 'round', strokeLinejoin: 'round' }}>
-                      <polyline points="2 6 5 9 10 3"/>
-                    </svg>
+                    <Check size={11} strokeWidth={3} className="text-white" />
                   </span>
                   {badge}
                 </div>

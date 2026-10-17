@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react';
 import { FadeIn } from '../ui/FadeIn';
 
 export default function CallToAction() {
@@ -36,9 +37,7 @@ export default function CallToAction() {
             {stats.map((stat, idx) => (
               <div key={idx} className="flex items-start gap-[14px]">
                 <div className="w-[26px] h-[26px] rounded-full bg-[var(--green)] shrink-0 mt-1 flex items-center justify-center">
-                  <svg viewBox="0 0 12 12" className="w-[12px] h-[12px] stroke-black fill-none stroke-[2.5]" style={{ strokeLinecap: 'round', strokeLinejoin: 'round' }}>
-                    <polyline points="2 6 5 9 10 3"/>
-                  </svg>
+                  <Check size={14} strokeWidth={3} className="text-black" />
                 </div>
                 <div className="text-left">
                   <div className="font-['DM_Sans'] text-[24px] font-normal text-[var(--white)] leading-[1.3] mb-1">{stat.num}</div>

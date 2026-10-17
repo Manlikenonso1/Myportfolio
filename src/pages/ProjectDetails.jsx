@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ExternalLink, ArrowLeft, ArrowRight, Info, AlertTriangle, Star } from 'lucide-react';
 import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 
@@ -291,11 +292,7 @@ export default function ProjectDetails() {
                 >
                   <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
                   <span>Visit Live Site</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    <polyline points="15 3 21 3 21 9"></polyline>
-                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                  </svg>
+                  <ExternalLink size={15} strokeWidth={2.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
              )}
 
@@ -303,10 +300,7 @@ export default function ProjectDetails() {
                to="/projects" 
                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
              >
-               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                 <line x1="19" y1="12" x2="5" y2="12"></line>
-                 <polyline points="12 19 5 12 12 5"></polyline>
-               </svg>
+               <ArrowLeft size={16} strokeWidth={2} />
                <span>All Projects</span>
              </Link>
            </div>
@@ -335,7 +329,7 @@ export default function ProjectDetails() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 rounded-lg bg-[var(--blue)]/10 border border-[var(--blue)]/30 flex items-center justify-center text-[var(--blue)] font-bold text-[14px]">
-                    <svg className="w-4 h-4 stroke-current fill-none stroke-[2]" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    <Info size={16} strokeWidth={2} />
                   </div>
                   <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Background</span>
                 </div>
@@ -352,7 +346,7 @@ export default function ProjectDetails() {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-[14px]">
-                    <svg className="w-4 h-4 stroke-current fill-none stroke-[2]" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <AlertTriangle size={16} strokeWidth={2} />
                   </div>
                   <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Challenge</span>
                 </div>
@@ -428,10 +422,7 @@ export default function ProjectDetails() {
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-semibold text-[13px] hover:scale-105 hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
               >
                 <span>Visit Live Website</span>
-                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
+                <ExternalLink size={14} strokeWidth={2.2} />
               </a>
             )}
           </div>
@@ -518,12 +509,11 @@ export default function ProjectDetails() {
                           <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
                           <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
                           <div className="flex gap-1 text-[var(--green)] mt-2">
-                            <svg className="w-3 h-3 fill-[var(--green)]" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg className="w-3 h-3 fill-[var(--green)]" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg className="w-3 h-3 fill-[var(--green)]" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg className="w-3 h-3 fill-[var(--green)]" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg className="w-3 h-3 fill-[#333]" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                         </div>
+                            {[...Array(4)].map((_, sIdx) => (
+                              <Star key={sIdx} size={12} className="fill-[var(--green)] text-[var(--green)]" />
+                            ))}
+                            <Star size={12} className="fill-[#333] text-[#333]" />
+                          </div>
                        </div>
                      </div>
                      <p className="text-[14px] text-white/50 leading-[1.6]">"{quote.text}"</p>
@@ -553,7 +543,7 @@ export default function ProjectDetails() {
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-all shadow-xl shrink-0 group-hover:shadow-white/20"
             >
               <span>View Case Study</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </FadeIn>
@@ -571,8 +561,9 @@ export default function ProjectDetails() {
          </FadeIn>
 
          <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-4 mt-12 pb-12">
-            <Link to="/projects" className="px-8 py-4 rounded-full border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
-               ← Back to All Projects
+            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
+               <ArrowLeft size={16} strokeWidth={2} />
+               <span>Back to All Projects</span>
             </Link>
             {project.liveLink && (
               <a 
@@ -582,10 +573,7 @@ export default function ProjectDetails() {
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black text-[15px] font-bold transition-all hover:scale-105 shadow-[0_0_25px_rgba(255,255,255,0.25)]"
               >
                  <span>Visit Live Site</span>
-                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                   <line x1="7" y1="17" x2="17" y2="7"></line>
-                   <polyline points="7 7 17 7 17 17"></polyline>
-                 </svg>
+                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
             <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all shadow-[0_0_20px_rgba(57,123,251,0.2)]">

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, ChevronDown, Send } from 'lucide-react';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 
@@ -85,17 +86,26 @@ export default function Contact() {
             
             <FadeInStagger className="flex flex-col gap-10">
               <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="text-[12px] font-bold tracking-widest text-white/30 uppercase">E-Mail</div>
+                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
+                  <Mail size={14} className="text-[var(--blue)]" />
+                  <span>E-Mail</span>
+                </div>
                 <a href={`mailto:${recipientEmail}`} className="text-[20px] font-['DM_Sans'] font-medium hover:text-[var(--blue)] transition-colors">{recipientEmail}</a>
               </FadeInStaggerItem>
               
               <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="text-[12px] font-bold tracking-widest text-white/30 uppercase">Phone</div>
+                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
+                  <Phone size={14} className="text-[var(--blue)]" />
+                  <span>Phone</span>
+                </div>
                 <a href="tel:+447350156605" className="text-[20px] font-['DM_Sans'] font-medium hover:text-[var(--blue)] transition-colors">+44 7350 156605</a>
               </FadeInStaggerItem>
               
               <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="text-[12px] font-bold tracking-widest text-white/30 uppercase">Office & Availability</div>
+                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
+                  <MapPin size={14} className="text-[var(--blue)]" />
+                  <span>Office & Availability</span>
+                </div>
                 <div className="text-[18px] text-white/60 leading-[1.6] max-w-[340px]">
                   Based in Newcastle upon Tyne, UK. Available for remote contract and full-time product roles worldwide.
                 </div>
@@ -166,7 +176,10 @@ export default function Contact() {
                 ) : status === 'success' ? (
                   <span className="text-emerald-600 font-bold">Sent ✓</span>
                 ) : (
-                  <span>Send Message</span>
+                  <>
+                    <span>Send Message</span>
+                    <Send size={16} strokeWidth={2.2} />
+                  </>
                 )}
               </button>
             </form>
@@ -194,8 +207,8 @@ export default function Contact() {
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
                     What services do you offer?
-                    <span className="transition group-open:rotate-180">
-                      <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
+                      <ChevronDown size={20} strokeWidth={2} />
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
@@ -205,8 +218,8 @@ export default function Contact() {
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
                     How long does a typical project take?
-                    <span className="transition group-open:rotate-180">
-                      <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
+                      <ChevronDown size={20} strokeWidth={2} />
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
@@ -223,8 +236,8 @@ export default function Contact() {
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
                     How involved will I be in the design process?
-                    <span className="transition group-open:rotate-180">
-                      <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
+                      <ChevronDown size={20} strokeWidth={2} />
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
@@ -234,8 +247,8 @@ export default function Contact() {
                 <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
                   <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
                     Do you conduct user research?
-                    <span className="transition group-open:rotate-180">
-                      <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
+                      <ChevronDown size={20} strokeWidth={2} />
                     </span>
                   </summary>
                   <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
