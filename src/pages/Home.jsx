@@ -13,12 +13,8 @@ export default function Home() {
       <section className="relative min-h-[100svh] flex flex-col justify-center items-center px-6 overflow-hidden bg-[var(--bg)]">
 
         <FadeIn className="relative z-10 w-full max-w-[1200px] mx-auto flex flex-col items-center mt-20">
-          <div className="px-5 py-2 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-md flex items-center gap-3">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
-            </span>
-            <span className="text-[13px] font-medium tracking-wide text-white/80 uppercase">Available for new opportunities</span>
+          <div className="px-5 py-2 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+            <span className="text-[13px] font-medium tracking-widest text-white/80 uppercase">UI/UX Designer</span>
           </div>
 
           <h1 className="font-['DM_Sans'] text-[clamp(48px,8vw,110px)] font-bold leading-[1.0] tracking-[-0.03em] text-center max-w-[1000px] mb-10 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
