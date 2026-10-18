@@ -14,7 +14,7 @@ export default function ProjectDetails() {
       type: "Design System",
       category: "Design Architecture",
       role: "UI/UX Designer",
-      heroImg: "/appsatile-thumbnail.png",
+      heroImg: "/appsatile-thumbnail.webp",
       liveLink: null,
       sliceCount: 33,
       overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I designed and built their design system from scratch so both designers and engineers could move faster without breaking visual consistency.",
@@ -46,10 +46,11 @@ export default function ProjectDetails() {
     'aerovia': {
       id: 'aerovia',
       title: "Aerovia",
+      concept: true,
       type: "Product & Interface Design",
       category: "Airline & Travel Web App",
       role: "UI/UX Designer",
-      heroImg: "/aerovia-thumbnail.png",
+      heroImg: "/aerovia-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
       overview: "Aerovia is a flight booking web platform engineered to eliminate stress and turbulence from travel planning. I designed the complete journey from destination inspiration to confirmed digital boarding passes, introducing a transparent 6-step waypoint architecture that does away with hidden fees and deceptive drip pricing.",
@@ -87,7 +88,7 @@ export default function ProjectDetails() {
       type: "E-Commerce",
       category: "E-Commerce Interface",
       role: "Product Designer",
-      heroImg: "/nikos-farm-thumbnail.png",
+      heroImg: "/nikos-farm-thumbnail.webp",
       liveLink: "https://nikosfarm.com/",
       sliceCount: 11,
       overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
@@ -122,9 +123,9 @@ export default function ProjectDetails() {
       type: "Logo & Brand Identity",
       category: "Brand Design",
       role: "Brand & UI Designer",
-      heroImg: "/aptinfy-thumbnail.png",
+      heroImg: "/aptinfy-thumbnail.webp",
       liveLink: null,
-      sliceCount: 1,
+      sliceCount: 2,
       overview: "Aptinfy is a tech startup focused on secure cloud infrastructure. I created their brand identity, visual system, and presentation templates to help them look confident and polished when pitching to enterprise clients and investors.",
       problem: "Their original logo was generic and hard to recognize. Even worse, it completely blurred together whenever it was scaled down to a small size, like in a browser tab or mobile app icon. They needed an identity that felt technical and trustworthy without looking boring.",
       deliverables: ["Geometric Logo Suite", "Scalable Favicon Matrix", "Brand Guidelines Book", "Typography Hierarchy", "Pitch Deck Master Templates"],
@@ -155,7 +156,7 @@ export default function ProjectDetails() {
       type: "Food & Hospitality",
       category: "Restaurant & Ordering Experience",
       role: "UI/UX & Brand Designer",
-      heroImg: "/cook-by-ugo-thumbnail.png",
+      heroImg: "/cook-by-ugo-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
       overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed their direct ordering website and brand identity, giving customers a smooth way to browse dishes, customize spice levels, and order takeout in minutes.",
@@ -188,7 +189,7 @@ export default function ProjectDetails() {
       type: "Product & Interface Design",
       category: "AI Creator Suite & Web App",
       role: "Product Designer",
-      heroImg: "/lazyzone-thumbnail.png",
+      heroImg: "/lazyzone-thumbnail.webp",
       liveLink: "https://www.lazyzonelabs.com/",
       sliceCount: 10,
       overview: "LazyZoneLabs is an all-in-one AI tool for content creators who need to write scripts, generate realistic voiceovers, and edit video clips without jumping between different apps. I designed the complete web application interface from scratch.",
@@ -223,7 +224,7 @@ export default function ProjectDetails() {
       type: "Product Design",
       category: "AI Job Search & Application Tracker",
       role: "Product Designer",
-      heroImg: "/huntly-thumbnail.png",
+      heroImg: "/huntly-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
       overview: "HuntlyAi is a workspace designed to help job seekers manage their applications, interview stages, and follow-ups in one calm, organized dashboard.",
@@ -263,7 +264,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['appsatile', 'aerovia', 'lazyzone', 'huntly', 'nikos-farm', 'cook-by-ugo', 'aptinfy'];
+  const projectOrder = ['appsatile', 'nikos-farm', 'aerovia', 'lazyzone', 'cook-by-ugo', 'huntly', 'aptinfy'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -296,13 +297,18 @@ export default function ProjectDetails() {
                  <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-white font-medium text-[14px]">
                    {project.category}
                  </div>
+                 {project.concept && (
+                   <div className="inline-flex items-center ml-2 px-3.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 font-medium text-[14px]">
+                     Concept project
+                   </div>
+                 )}
               </div>
 
               <div className="hidden sm:block w-px h-10 bg-white/10"></div>
 
               <div>
                  <div className="text-white font-['DM_Sans'] font-bold text-[24px] md:text-[28px] tracking-tight">{project.title}</div>
-                 <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">Comprehensive product case study & interactive screens.</div>
+                 <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
               </div>
            </div>
            
@@ -417,6 +423,9 @@ export default function ProjectDetails() {
           )}
 
           {/* Measurable Outcomes & Credibility Stats */}
+          {project.metrics && project.concept && (
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">Design targets · not measured results</div>
+          )}
           {project.metrics && (
             <FadeIn delay={0.3} className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/10">
               {project.metrics.map((metric, idx) => (
@@ -476,8 +485,10 @@ export default function ProjectDetails() {
                 return (
                   <div key={num} className="relative w-full m-0 p-0 leading-none">
                     <img
-                      src={`/${prefix}-${num}.png`}
+                      src={`/${prefix}-${num}.webp`}
                       alt={`${project.title} Section ${num}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-auto block m-0 p-0 align-bottom object-cover"
                       style={{ display: 'block', margin: 0, padding: 0 }}
                     />
@@ -515,8 +526,10 @@ export default function ProjectDetails() {
               ) : (
                 <img 
                   key={num}
-                  src={`/${prefix}-${num}.png`} 
+                  src={`/${prefix}-${num}.webp`} 
                   alt={`${project.title} Section ${num}`} 
+                  loading={num > 1 ? "lazy" : "eager"}
+                  decoding="async"
                   className="w-full h-auto block m-0 p-0 align-bottom object-cover" 
                   style={{ display: 'block', margin: 0, padding: 0 }}
                   onError={(e) => {

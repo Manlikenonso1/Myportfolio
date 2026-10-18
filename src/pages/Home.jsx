@@ -38,7 +38,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-12 mt-16">
             {[
               { value: '6+', label: 'Products shipped' },
-              { value: '3+', label: 'Years of experience' },
+              { value: '4+', label: 'Years of experience' },
               { value: '8+', label: 'Happy clients' },
             ].map((s, i) => (
               <div key={i} className="flex flex-col items-center gap-1">
@@ -81,66 +81,32 @@ export default function Home() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <FadeIn direction="up">
-              <Link to="/projects/appsatile" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/appsatile-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Appsatile Design System" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">Design System</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Appsatile</h3>
-                </div>
-              </Link>
-            </FadeIn>
-            <FadeIn direction="up" delay={0.1}>
-              <Link to="/projects/lazyzone" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/lazyzone-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="LazyZoneLabs AI Creator Suite" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-red-500/20 backdrop-blur-md border border-red-500/30 text-red-200 text-[12px] font-medium tracking-wide mb-3 inline-block">AI Creator Suite</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">LazyZoneLabs</h3>
-                </div>
-              </Link>
-            </FadeIn>
-            <FadeIn direction="up" delay={0.2}>
-              <Link to="/projects/huntly" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/huntly-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="HuntlyAi Application Workspace" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/30 text-emerald-200 text-[12px] font-medium tracking-wide mb-3 inline-block">AI Job Workspace</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">HuntlyAi</h3>
-                </div>
-              </Link>
-            </FadeIn>
-            <FadeIn direction="up" delay={0.2}>
-              <Link to="/projects/cook-by-ugo" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/cook-by-ugo-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Cook by Ugo Digital Experience" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">Food & Hospitality</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Cook by Ugo</h3>
-                </div>
-              </Link>
-            </FadeIn>
-            <FadeIn direction="up" delay={0.3}>
-              <Link to="/projects/nikos-farm" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/nikos-farm-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Nikos Farm E-Commerce" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">E-Commerce</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Nikos Farm</h3>
-                </div>
-              </Link>
-            </FadeIn>
-            <FadeIn direction="up" delay={0.4}>
-              <Link to="/projects/aptinfy" className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                <img src="/aptinfy-thumbnail.png" className="w-full aspect-[4/3] object-cover opacity-60 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt="Aptinfy Logo Branding" />
-                <div className="absolute bottom-10 left-10 z-20">
-                  <div className="px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-[12px] font-medium tracking-wide mb-3 inline-block">Brand Identity</div>
-                  <h3 className="font-['DM_Sans'] text-[36px] font-bold text-white">Aptinfy</h3>
-                </div>
-              </Link>
-            </FadeIn>
+            {[
+              { id: 'appsatile', title: 'Appsatile', tag: 'Design System', alt: 'Appsatile Design System', pill: 'bg-white/10 border-white/20 text-white/80' },
+              { id: 'nikos-farm', title: 'Nikos Farm', tag: 'E-Commerce', alt: 'Nikos Farm E-Commerce', pill: 'bg-white/10 border-white/20 text-white/80' },
+              { id: 'aerovia', title: 'Aerovia', tag: 'Travel UX · Concept', alt: 'Aerovia flight booking concept', pill: 'bg-amber-400/15 border-amber-400/30 text-amber-200' },
+              { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-red-500/20 border-red-500/30 text-red-200' },
+              { id: 'cook-by-ugo', title: 'Cook by Ugo', tag: 'Food & Hospitality', alt: 'Cook by Ugo Digital Experience', pill: 'bg-white/10 border-white/20 text-white/80' },
+              { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-emerald-500/20 border-emerald-500/30 text-emerald-200' },
+            ].map((p, i) => (
+              <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1}>
+                <Link to={`/projects/${p.id}`} className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
+                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt={p.alt} />
+                  <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20">
+                    <div className={`px-4 py-1.5 rounded-full backdrop-blur-md border text-[12px] font-medium tracking-wide mb-3 inline-block ${p.pill}`}>{p.tag}</div>
+                    <h3 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-bold text-white">{p.title}</h3>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+
+          <div className="mt-12 flex justify-center">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-[15px] hover:bg-white/10 transition-all group">
+              View All Work
+              <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

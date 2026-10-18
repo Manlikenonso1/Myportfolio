@@ -15,34 +15,7 @@ const allProjects = [
     description: 'Unified multi-product SaaS design system cutting developer handoff by 50%.',
     categories: ['all', 'saas', 'design-systems'],
     tags: ['Figma Tokens', 'WCAG 2.1 AA', 'React Handoff'],
-    image: '/appsatile-thumbnail.png'
-  },
-  {
-    id: 'aerovia',
-    title: 'Aerovia',
-    categoryLabel: 'Airline & Travel UX',
-    description: 'Calm flight booking platform with 6-step waypoint architecture and upfront fare transparency.',
-    categories: ['all', 'saas', 'design-systems'],
-    tags: ['Travel UX', 'Booking Flow', 'Design System'],
-    image: '/aerovia-thumbnail.png'
-  },
-  {
-    id: 'lazyzone',
-    title: 'LazyZoneLabs',
-    categoryLabel: 'AI Creator Suite & Web App',
-    description: 'Single-screen workspace combining scriptwriting, AI audio waveforms, and video timelines.',
-    categories: ['all', 'saas', 'ai'],
-    tags: ['AI Interface', 'Audio/Video Timeline', 'Dark UI'],
-    image: '/lazyzone-thumbnail.png'
-  },
-  {
-    id: 'huntly',
-    title: 'HuntlyAi',
-    categoryLabel: 'AI Job Search & Workspace',
-    description: 'Calm botanical productivity dashboard with slide-out context drawers.',
-    categories: ['all', 'saas', 'ai'],
-    tags: ['Dashboard UX', 'Kanban System', 'Productivity'],
-    image: '/huntly-thumbnail.png'
+    image: '/appsatile-thumbnail.webp'
   },
   {
     id: 'nikos-farm',
@@ -51,7 +24,26 @@ const allProjects = [
     description: 'Mobile-first farm shop with slide-out cart drawer lifting mobile orders by +34%.',
     categories: ['all', 'ecommerce'],
     tags: ['Mobile Commerce', 'Cart Drawer', 'Conversion UX'],
-    image: '/nikos-farm-thumbnail.png'
+    image: '/nikos-farm-thumbnail.webp'
+  },
+  {
+    id: 'aerovia',
+    title: 'Aerovia',
+    concept: true,
+    categoryLabel: 'Airline & Travel UX',
+    description: 'Calm flight booking platform with 6-step waypoint architecture and upfront fare transparency.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Travel UX', 'Booking Flow', 'Design System'],
+    image: '/aerovia-thumbnail.webp'
+  },
+  {
+    id: 'lazyzone',
+    title: 'LazyZoneLabs',
+    categoryLabel: 'AI Creator Suite & Web App',
+    description: 'Single-screen workspace combining scriptwriting, AI audio waveforms, and video timelines.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['AI Interface', 'Audio/Video Timeline', 'Dark UI'],
+    image: '/lazyzone-thumbnail.webp'
   },
   {
     id: 'cook-by-ugo',
@@ -60,7 +52,16 @@ const allProjects = [
     description: 'Direct takeout platform with spice customizer and 90-second checkout flow.',
     categories: ['all', 'ecommerce'],
     tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
-    image: '/cook-by-ugo-thumbnail.png'
+    image: '/cook-by-ugo-thumbnail.webp'
+  },
+  {
+    id: 'huntly',
+    title: 'HuntlyAi',
+    categoryLabel: 'AI Job Search & Workspace',
+    description: 'Calm botanical productivity dashboard with slide-out context drawers.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['Dashboard UX', 'Kanban System', 'Productivity'],
+    image: '/huntly-thumbnail.webp'
   },
   {
     id: 'aptinfy',
@@ -69,7 +70,7 @@ const allProjects = [
     description: 'Geometric brand identity system and presentation architecture for enterprise cloud.',
     categories: ['all', 'brand', 'design-systems'],
     tags: ['Brand Guidelines', 'Typography Scale', 'Vector Design'],
-    image: '/aptinfy-thumbnail.png'
+    image: '/aptinfy-thumbnail.webp'
   }
 ];
 
@@ -138,6 +139,7 @@ export default function Projects() {
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-[var(--muted)] text-[13px] uppercase tracking-widest font-bold">{proj.categoryLabel}</span>
+                      {proj.concept && <span className="px-2.5 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 text-[11px] uppercase tracking-widest font-bold">Concept</span>}
                       <span className="w-1 h-1 rounded-full bg-white/20"></span>
                       <div className="flex gap-2">
                         {proj.tags.map((tag, tIdx) => (
