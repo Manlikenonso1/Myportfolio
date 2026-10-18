@@ -39,6 +39,26 @@ export default function ProjectDetails() {
           rationale: "I checked color contrast across every single text and background pair to make sure they passed WCAG AA standards. I also included clear keyboard focus outlines and large enough touch targets so no one had to come back and fix accessibility bugs later."
         }
       ],
+      process: [
+        {
+          title: "Research before components",
+          text: "I started with a moodboard of established design systems and SaaS UI kits, then mapped what Appsatile needed against the Material 3 structure. That gave me a six-part plan: foundations, base components, selection modules, app shell, data views and theming.",
+          before: "/appsatile-process-1-before.webp", beforeLabel: "Moodboard · reference systems",
+          after: "/appsatile-process-1-after.webp", afterLabel: "Structure plan · Material 3 audit"
+        },
+        {
+          title: "One naming rule for every token",
+          text: "Every token follows category / role / state, and never a colour name. A primitive like Primary/brand/600 is aliased to a semantic token like action/primary/default, which the button uses. Swapping a brand colour then updates every component at once.",
+          before: "/appsatile-process-2-before.webp", beforeLabel: "Token naming convention",
+          after: "/appsatile-process-2-after.webp", afterLabel: "System overview · 4 token layers"
+        },
+        {
+          title: "Same screen, both themes",
+          text: "Because components only use semantic tokens, dark mode is a token swap, not a redesign. I tested it on a real, dense screen: the Research Planning task view with its sidebar, list, tags and detail panel.",
+          before: "/appsatile-process-3-before.webp", beforeLabel: "Light mode",
+          after: "/appsatile-process-3-after.webp", afterLabel: "Dark mode · same components"
+        }
+      ],
       reviews: [
         { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer." }
       ]
@@ -112,13 +132,8 @@ export default function ProjectDetails() {
       liveLink: "https://nikosfarm.com/",
       sliceCount: 11,
       overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
-      problem: "Over 70% of their shoppers were visiting on mobile, but nearly 7 out of 10 people were dropping out before finishing their order. The checkout took too many steps, produce availability was confusing, and customers weren't sure how fresh the food would actually be when it arrived.",
+      problem: "The old site didn't show what the farm sold or what it cost. The homepage led with a stock photo, product cards had no prices or buy buttons, and checking a product meant leaving the shop page.",
       deliverables: ["E-Commerce UX Flow", "Slide-Out Cart Drawer", "Product Catalog Grid", "Harvest Origin Badges", "Mobile Checkout UI"],
-      metrics: [
-        { value: "+34%", label: "Increase in completed mobile orders" },
-        { value: "+22%", label: "Higher average order size from bundles" },
-        { value: "-44%", label: "Drop in cart abandonment" }
-      ],
       decisions: [
         {
           pillar: "01. Slide-out cart instead of kicking people to a new page",

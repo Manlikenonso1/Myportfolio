@@ -21,7 +21,7 @@ const allProjects = [
     id: 'nikos-farm',
     title: 'Nikos Farm',
     categoryLabel: 'E-Commerce',
-    description: 'Mobile-first farm shop with slide-out cart drawer lifting mobile orders by +34%.',
+    description: 'Farm shop redesign with clear prices, quick-view product details and a slide-out cart.',
     categories: ['all', 'ecommerce'],
     tags: ['Mobile Commerce', 'Cart Drawer', 'Conversion UX'],
     image: '/nikos-farm-thumbnail.webp'
