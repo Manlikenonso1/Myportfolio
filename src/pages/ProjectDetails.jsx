@@ -136,8 +136,8 @@ export default function ProjectDetails() {
       process: [
         {
           title: "A hero that shows the produce",
-          text: "My first hero used a blurred landscape photo, so nothing on screen said what the farm actually sells. The final version uses an aerial shot of the land with the four products in gold-ringed circles, a warmer type pairing and one clear Buy Now action.",
-          before: "/nikos-farm-process-1-before.webp", beforeLabel: "Early hero · moodboard",
+          text: "The old site opened on a stock photo of a tea plantation with a big AGRICULTURE overlay, so nothing on screen said what the farm actually sells. The new hero uses an aerial shot of the land with the four products in gold-ringed circles, a warmer type pairing and one clear Buy Now action.",
+          before: "/nikos-farm-before-poster.webp", beforeVideo: "/nikos-farm-before.mp4", beforeLabel: "Old site · nikosfarm.com",
           after: "/nikos-farm-process-1-after.webp", afterLabel: "Final hero"
         },
         {
@@ -497,9 +497,13 @@ export default function ProjectDetails() {
                     <p className="font-['Inter_Tight'] text-[15px] text-white/60 leading-[1.7] max-w-[640px]">{step.text}</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[['before', step.before, step.beforeLabel], ['after', step.after, step.afterLabel]].map(([k, src, label]) => (
+                    {[['before', step.before, step.beforeLabel, step.beforeVideo], ['after', step.after, step.afterLabel, step.afterVideo]].map(([k, src, label, vid]) => (
                       <figure key={k} className="m-0">
-                        <img src={src} alt={label} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10" />
+                        {vid ? (
+                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10 bg-black" />
+                        ) : (
+                          <img src={src} alt={label} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10" />
+                        )}
                         <figcaption className={`mt-2 text-[12px] font-semibold tracking-wide uppercase ${k === 'after' ? 'text-emerald-300/80' : 'text-white/40'}`}>{label}</figcaption>
                       </figure>
                     ))}
