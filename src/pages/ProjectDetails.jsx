@@ -75,6 +75,26 @@ export default function ProjectDetails() {
           rationale: "Travel anxiety is high during high-stakes booking. I paired deep Runway Teal with crisp negative space and warm amber accent badges to signal clarity and security without looking like another generic corporate travel portal."
         }
       ],
+      process: [
+        {
+          title: "From Flyboo to Aerovia",
+          text: "The flow started as a first draft called Flyboo, in a bright sky blue. I renamed it Aerovia for a calmer, more premium feel, and added one amber accent reserved for the recommended flight.",
+          before: "/aerovia-process-1-before.webp", beforeLabel: "First draft · Flyboo",
+          after: "/aerovia-process-1-after.webp", afterLabel: "Final · Aerovia"
+        },
+        {
+          title: "Re-coloured for accessibility",
+          text: "White text on the original sky blue (#0097DB) scored 3.3:1, which fails WCAG AA. The new Runway teal (#0F766E) scores 5.5:1 and passes, so every button and label stays readable.",
+          before: "/aerovia-process-2-before.webp", beforeLabel: "Sky blue · 3.3:1 contrast",
+          after: "/aerovia-process-2-after.webp", afterLabel: "Runway teal · 5.5:1 contrast"
+        },
+        {
+          title: "Designing the wait",
+          text: "Instead of a blank page while flights load, skeleton cards hold the layout, then results slide in from the top pick down. I prototyped this in Figma with Smart Animate.",
+          before: "/aerovia-process-3-before.webp", beforeLabel: "Loading · skeleton",
+          after: "/aerovia-process-3-after.webp", afterLabel: "Loaded · staggered reveal"
+        }
+      ],
       video: {
         src: "/aerovia-prototype.mp4",
         slice: 8,
@@ -435,6 +455,34 @@ export default function ProjectDetails() {
                   </div>
                   <div className="text-[13px] md:text-[14px] text-white/50 font-medium">
                     {metric.label}
+                  </div>
+                </div>
+              ))}
+            </FadeIn>
+          )}
+
+          {/* Design process: before & after */}
+          {project.process && (
+            <FadeIn delay={0.2} className="flex flex-col gap-10">
+              <div>
+                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Process</div>
+                <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white">How the design evolved</h3>
+              </div>
+              {project.process.map((step, idx) => (
+                <div key={idx} className="flex flex-col gap-5 pb-10 border-b border-white/10 last:border-none last:pb-0">
+                  <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-10">
+                    <div className="font-['DM_Sans'] text-[18px] font-bold text-white md:w-[280px] shrink-0">
+                      <span className="text-[var(--blue)] mr-2">0{idx + 1}</span>{step.title}
+                    </div>
+                    <p className="font-['Inter_Tight'] text-[15px] text-white/60 leading-[1.7] max-w-[640px]">{step.text}</p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[['before', step.before, step.beforeLabel], ['after', step.after, step.afterLabel]].map(([k, src, label]) => (
+                      <figure key={k} className="m-0">
+                        <img src={src} alt={label} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10" />
+                        <figcaption className={`mt-2 text-[12px] font-semibold tracking-wide uppercase ${k === 'after' ? 'text-emerald-300/80' : 'text-white/40'}`}>{label}</figcaption>
+                      </figure>
+                    ))}
                   </div>
                 </div>
               ))}
