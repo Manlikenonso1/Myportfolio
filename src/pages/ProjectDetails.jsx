@@ -264,7 +264,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['appsatile', 'nikos-farm', 'aerovia', 'lazyzone', 'cook-by-ugo', 'huntly', 'aptinfy'];
+  const projectOrder = ['appsatile', 'nikos-farm', 'aerovia', 'lazyzone', 'cook-by-ugo', 'huntly'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];

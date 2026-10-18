@@ -62,15 +62,6 @@ const allProjects = [
     categories: ['all', 'saas', 'ai'],
     tags: ['Dashboard UX', 'Kanban System', 'Productivity'],
     image: '/huntly-thumbnail.webp'
-  },
-  {
-    id: 'aptinfy',
-    title: 'Aptinfy',
-    categoryLabel: 'Brand Identity',
-    description: 'Geometric brand identity system and presentation architecture for enterprise cloud.',
-    categories: ['all', 'brand', 'design-systems'],
-    tags: ['Brand Guidelines', 'Typography Scale', 'Vector Design'],
-    image: '/aptinfy-thumbnail.webp'
   }
 ];
 
