@@ -18,6 +18,15 @@ const allProjects = [
     image: '/appsatile-thumbnail.png'
   },
   {
+    id: 'aerovia',
+    title: 'Aerovia',
+    categoryLabel: 'Airline & Travel UX',
+    description: 'Calm flight booking platform with 6-step waypoint architecture and upfront fare transparency.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Travel UX', 'Booking Flow', 'Design System'],
+    image: '/aerovia-thumbnail.png'
+  },
+  {
     id: 'lazyzone',
     title: 'LazyZoneLabs',
     categoryLabel: 'AI Creator Suite & Web App',
@@ -207,6 +216,7 @@ export default function Projects() {
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 mt-4">
              <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Appsatile</Link>
+             <Link to="/projects/aerovia"    className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Aerovia</Link>
              <Link to="/projects/huntly"      className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">HuntlyAi</Link>
              <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">LazyZone</Link>
              <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Cook by Ugo</Link>

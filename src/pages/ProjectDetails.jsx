@@ -45,6 +45,44 @@ export default function ProjectDetails() {
         { name: "Shane Collier", role: "Co-Founder & CTO", text: "He has an incredible eye for detail and structure. Working with his components made building and maintaining our screens a breeze." }
       ]
     },
+    'aerovia': {
+      id: 'aerovia',
+      title: "Aerovia",
+      type: "Product & Interface Design",
+      category: "Airline & Travel Web App",
+      role: "UI/UX Designer",
+      heroImg: "/aerovia-thumbnail.png",
+      liveLink: null,
+      sliceCount: 10,
+      overview: "Aerovia is a flight booking web platform engineered to eliminate stress and turbulence from travel planning. I designed the complete journey from destination inspiration to confirmed digital boarding passes, introducing a transparent 6-step waypoint architecture that does away with hidden fees and deceptive drip pricing.",
+      problem: "Most airline websites are notorious for high cognitive fatigue: surprise baggage charges emerge on the very last step, ambiguous checkout flows leave travelers lost in multi-leg confusion, and cramped comparison tables make it nearly impossible to evaluate what each fare actually includes.",
+      deliverables: ["End-to-End Booking UX Flow", "6-Step Guided Progress Architecture", "Transparent Fare Matrix", "Runway Teal Design System", "Responsive Mobile Web Experience"],
+      metrics: [
+        { value: "0", label: "Hidden fees at checkout" },
+        { value: "6-Step", label: "Clear waypoint booking flow" },
+        { value: "100%", label: "Upfront baggage & seat pricing" }
+      ],
+      decisions: [
+        {
+          pillar: "01. Six stops, one clear path",
+          rationale: "Instead of ambiguous multi-page forms, a persistent waypoint progress bar anchors every step: Search → Flights → Fare → Travelers → Payment → Confirmed. Travelers always know exactly where they are and how many steps remain."
+        },
+        {
+          pillar: "02. Compare at a glance with honest inclusions",
+          rationale: "Rather than forcing users to click through separate tabs to compare baggage and seat rules, I designed side-by-side fare cards (Best, Cheapest, Fastest) with color-coded tags and immediate price impact preview."
+        },
+        {
+          pillar: "03. Calm teal aesthetic built for trust",
+          rationale: "Travel anxiety is high during high-stakes booking. I paired deep Runway Teal with crisp negative space and warm amber accent badges to signal clarity and security without looking like another generic corporate travel portal."
+        }
+      ],
+      video: {
+        src: "/aerovia-prototype.mp4",
+        slice: 8,
+        box: { left: '8.333%', width: '83.333%', top: '42.92%', height: '57.08%' }
+      },
+      reviews: []
+    },
     'nikos-farm': {
       id: 'nikos-farm',
       title: "Nikos Farm",
@@ -239,7 +277,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['appsatile', 'lazyzone', 'huntly', 'nikos-farm', 'cook-by-ugo', 'aptinfy'];
+  const projectOrder = ['appsatile', 'aerovia', 'lazyzone', 'huntly', 'nikos-farm', 'cook-by-ugo', 'aptinfy'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -431,7 +469,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : project.id === 'huntly' ? 'bg-[#102219]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;
@@ -448,6 +486,30 @@ export default function ProjectDetails() {
                 );
               }
               
+              if (project.video && num === project.video.slice) {
+                return (
+                  <div key={num} className="relative w-full m-0 p-0 leading-none">
+                    <img
+                      src={`/${prefix}-${num}.png`}
+                      alt={`${project.title} Section ${num}`}
+                      className="w-full h-auto block m-0 p-0 align-bottom object-cover"
+                      style={{ display: 'block', margin: 0, padding: 0 }}
+                    />
+                    <video
+                      src={project.video.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls
+                      className="absolute object-cover rounded-[1.2vw] bg-black"
+                      style={project.video.box}
+                      onError={(e) => { e.target.style.display = 'none'; }}
+                    />
+                  </div>
+                );
+              }
+
               const isVideo = prefix === 'appsatile' && [3, 16, 21, 31].includes(num);
               
               return isVideo ? (
@@ -482,6 +544,7 @@ export default function ProjectDetails() {
       </section>
 
       {/* 7. REVIEWS */}
+      {project.reviews && project.reviews.length > 0 && (
       <section className="bg-[var(--bg2)] py-20 border-y border-[var(--border)]">
         <div className="max-w-[1200px] mx-auto px-6">
            <FadeIn direction="up">
@@ -523,6 +586,7 @@ export default function ProjectDetails() {
            </div>
         </div>
       </section>
+      )}
 
       {/* 8. NEXT PROJECT PREVIEW CARD */}
       <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-white/5">
