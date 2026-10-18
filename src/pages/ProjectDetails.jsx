@@ -133,6 +133,26 @@ export default function ProjectDetails() {
           rationale: "Since most people order on their phones while on the move, I anchored all the main actions like add-to-cart buttons, quantity counters, and the checkout button to the bottom half of the screen where thumbs naturally reach."
         }
       ],
+      process: [
+        {
+          title: "A hero that shows the produce",
+          text: "My first hero used a blurred landscape photo, so nothing on screen said what the farm actually sells. The final version uses an aerial shot of the land with the four products in gold-ringed circles, a warmer type pairing and one clear Buy Now action.",
+          before: "/nikos-farm-process-1-before.webp", beforeLabel: "Early hero · moodboard",
+          after: "/nikos-farm-process-1-after.webp", afterLabel: "Final hero"
+        },
+        {
+          title: "Product cards built around the photo",
+          text: "The first cards were dark, text-heavy and had no price or way to buy. I rebuilt them around a large product photo, moved the key tags onto the image, and added colour options, the price per kg and a cart button on every card.",
+          before: "/nikos-farm-process-2-before.webp", beforeLabel: "Early cards · dark, no price",
+          after: "/nikos-farm-process-2-after.webp", afterLabel: "Final cards · price + add to cart"
+        },
+        {
+          title: "Details without leaving the shop",
+          text: "Clicking View Details opens a quick view over the product grid instead of a new page. Shoppers can check weight, origin and stock, pick a quantity with a live total, read reviews and add to cart, then close it and carry on browsing.",
+          before: "/nikos-farm-process-3-before.webp", beforeLabel: "Shop grid",
+          after: "/nikos-farm-process-3-after.webp", afterLabel: "Quick view · description + reviews"
+        }
+      ],
       reviews: [
         { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso redesigned our storefront from the ground up. The site looks stunning, our mobile checkout flows effortlessly, and our farm customers love the new experience." }
       ]
