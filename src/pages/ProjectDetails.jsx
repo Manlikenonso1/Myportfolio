@@ -40,9 +40,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso built a clean, intuitive design system for us. It made handing work over to our engineers effortless and noticeably sped up our release cycles." },
-        { name: "Dianne Russell", role: "Engineering Director", text: "Chinonso organized our Figma components and design tokens so clearly that our front-end team was able to build pages in half the usual time." },
-        { name: "Shane Collier", role: "Co-Founder & CTO", text: "He has an incredible eye for detail and structure. Working with his components made building and maintaining our screens a breeze." }
+        { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer." }
       ]
     },
     'aerovia': {
@@ -115,9 +113,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso made our online farm shop look beautiful and inviting. Our customers constantly mention how easy it is to place an order." },
-        { name: "Clara Brooks", role: "Digital Director", text: "The new cart experience and bundle recommendations made an immediate impact on our sales. It simply works." },
-        { name: "Marcus Thorne", role: "Operations Lead", text: "The order views and product management screens Chinonso designed saved our fulfillment team hours every single day." }
+        { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso redesigned our storefront from the ground up. The site looks stunning, our mobile checkout flows effortlessly, and our farm customers love the new experience." }
       ]
     },
     'aptinfy': {
@@ -151,11 +147,7 @@ export default function ProjectDetails() {
           rationale: "I handed off clean SVG exports with proper bounding boxes, plus exact color variables and Google Slides master decks. The marketing and sales team could immediately build customer-facing decks without asking how to use the logo."
         }
       ],
-      reviews: [
-        { name: "Sarah Jenkins", role: "VP of Product, Aptinfy", text: "Chinonso gave Aptinfy an identity that immediately resonated with our audience. The new mark feels both sharp and authentic." },
-        { name: "Liam O'Connor", role: "Marketing Director", text: "The brand guide and asset kit Chinonso handed off made designing our landing pages and marketing collateral completely seamless." },
-        { name: "Bessie Cooper", role: "Creative Director", text: "A thoughtfully balanced mark with great attention to proportion and versatility. Fantastic work all around." }
-      ]
+      reviews: []
     },
     'cook-by-ugo': {
       id: 'cook-by-ugo',
@@ -188,11 +180,7 @@ export default function ProjectDetails() {
           rationale: "I blended deep forest greens and warm gold accents with clean, modern typography. It honors Nigerian culinary traditions while presenting the business as a top-tier, trustworthy local kitchen."
         }
       ],
-      reviews: [
-        { name: "Ugochukwu Nwosu", role: "Founder & Head Chef, Cook by Ugo", text: "Chinonso captured the warmth and soul of our kitchen perfectly. Customers find the online ordering so simple, and our direct orders increased noticeably right after launch." },
-        { name: "Amaka O.", role: "Operations Lead, Cook by Ugo", text: "The meal customization flow and cart drawer make order management effortless. He created an interface that feels authentic and looks world-class." },
-        { name: "Liam Davies", role: "Digital Marketing Consultant", text: "A stunning food e-commerce experience. Chinonso balanced expressive Nigerian branding with an intuitive, clean checkout journey." }
-      ]
+      reviews: []
     },
     'lazyzone': {
       id: 'lazyzone',
@@ -226,9 +214,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Chinonso designed a clean, high-performance workspace that our creator community loves. He took complex AI pipelines and made them feel effortless and intuitive to use." },
-        { name: "Elena Rostova", role: "Head of Product", text: "The studio audio controls and video clipping timeline Chinonso designed solved our biggest UX bottleneck. Our engagement numbers jumped significantly after this release." },
-        { name: "Marcus Chen", role: "Lead Full-Stack Engineer", text: "The component architecture and state specs Chinonso handed off were rock solid. Handover was seamless, and building the dark UI was faster than any previous sprint." }
+        { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended." }
       ]
     },
     'huntly': {
@@ -550,7 +536,7 @@ export default function ProjectDetails() {
            <FadeIn direction="up">
              <h2 className="font-['DM_Sans'] text-[24px] font-bold text-white mb-10">Review</h2>
            </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
                  <FadeIn key={i} delay={i * 0.1}>
                    <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
