@@ -216,24 +216,45 @@ export default function ProjectDetails() {
       sliceCount: 10,
       overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed their direct ordering website and brand identity, giving customers a smooth way to browse dishes, customize spice levels, and order takeout in minutes.",
       problem: "Third-party delivery apps were taking up to 30% commission on every order and locking away customer data. The restaurant needed their own ordering website that made ordering takeout quick and effortless, while showing off the authentic warmth of West African hospitality.",
-      deliverables: ["Brand Identity System", "Direct Takeout Platform", "Spice & Side Configurator", "Pickup Scheduling Flow", "Mobile First UI"],
+      deliverables: ["Brand Identity System", "Direct Ordering Website", "Protein & Side Picker", "3-Step Checkout Drawer", "Mobile First UI"],
+      targets: true,
       metrics: [
-        { value: "+45%", label: "Growth in direct orders in two months" },
-        { value: "90s", label: "Average time to complete an order" },
-        { value: "30%", label: "Commission fees saved on direct sales" }
+        { value: "+45%", label: "Target growth in direct orders" },
+        { value: "<90s", label: "Target time to complete an order" },
+        { value: "0%", label: "Commission on direct orders vs up to 30% on delivery apps" }
       ],
       decisions: [
         {
-          pillar: "01. Food photography first with clear spice selectors",
-          rationale: "Nigerian dishes are vibrant and rich. I led with large, mouth-watering dish photos and added simple spice toggles (Mild, Traditional, Extra Hot) and side dish pickers so both longtime fans and first-time guests could order with zero confusion."
+          pillar: "01. Food photography first with clear choices",
+          rationale: "Nigerian dishes are vibrant and rich. I led with large dish photos, then made each dish's options simple: a required protein choice and up to two optional sides, each with its price, so both longtime fans and first-time guests can order with zero confusion."
         },
         {
-          pillar: "02. Quick checkout in under 90 seconds",
-          rationale: "Nobody wants to fill out a long form when they are hungry. I cut the ordering journey down to three simple steps: pick your food, choose a pickup or delivery slot, and pay with Apple Pay or card."
+          pillar: "02. A short checkout, designed for under 90 seconds",
+          rationale: "Nobody wants to fill out a long form when they are hungry. Checkout is three steps in one drawer: delivery details with an ASAP or scheduled time, payment by card or on delivery, then confirmation. A WhatsApp button stays on screen for people who would rather message."
         },
         {
           pillar: "03. Warm branding with modern polish",
           rationale: "I blended deep forest greens and warm gold accents with clean, modern typography. It honors Nigerian culinary traditions while presenting the business as a top-tier, trustworthy local kitchen."
+        }
+      ],
+      process: [
+        {
+          title: "Options that guide, not block",
+          text: "Every dish asks for one required choice, the protein, plus up to two optional sides with their prices shown. The add button stays disabled and says what is missing, then shows the live price once a protein is picked.",
+          before: "/cook-by-ugo-process-1-before.webp", beforeLabel: "No protein yet · button explains why",
+          after: "/cook-by-ugo-process-1-after.webp", afterLabel: "Protein picked · add to cart"
+        },
+        {
+          title: "Cart and checkout stay on the menu",
+          text: "The cart and checkout open as a drawer over the menu, so customers never lose their place. A three-step bar shows delivery, payment and confirmation, and delivery time can be ASAP or scheduled.",
+          before: "/cook-by-ugo-process-2-before.webp", beforeLabel: "Cart drawer",
+          after: "/cook-by-ugo-process-2-after.webp", afterLabel: "Checkout step 1 · delivery"
+        },
+        {
+          title: "Two ways to pay",
+          text: "Some customers prefer to pay at the door, so payment offers card or pay on delivery. Choosing pay on delivery hides the card form and shows the exact amount to have ready.",
+          before: "/cook-by-ugo-process-3-before.webp", beforeLabel: "Pay by card",
+          after: "/cook-by-ugo-process-3-after.webp", afterLabel: "Pay on delivery"
         }
       ],
       reviews: []
@@ -478,8 +499,8 @@ export default function ProjectDetails() {
           )}
 
           {/* Measurable Outcomes & Credibility Stats */}
-          {project.metrics && project.concept && (
-            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">Design targets · not measured results</div>
+          {project.metrics && (project.concept || project.targets) && (
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
           )}
           {project.metrics && (
             <FadeIn delay={0.3} className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/10">

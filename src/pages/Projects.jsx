@@ -49,7 +49,7 @@ const allProjects = [
     id: 'cook-by-ugo',
     title: 'Cook by Ugo',
     categoryLabel: 'Food & Hospitality',
-    description: 'Direct takeout platform with spice customizer and 90-second checkout flow.',
+    description: 'Direct ordering website with a protein & side picker and a 3-step checkout drawer.',
     categories: ['all', 'ecommerce'],
     tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
     image: '/cook-by-ugo-thumbnail.webp'
