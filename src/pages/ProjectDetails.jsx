@@ -502,7 +502,7 @@ export default function ProjectDetails() {
                       muted
                       playsInline
                       controls
-                      className="absolute object-cover rounded-[1.2vw] bg-black"
+                      className="absolute object-contain rounded-[1.2vw] bg-[#050C0B]"
                       style={project.video.box}
                       onError={(e) => { e.target.style.display = 'none'; }}
                     />
