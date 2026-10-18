@@ -213,7 +213,7 @@ export default function ProjectDetails() {
       role: "UI/UX & Brand Designer",
       heroImg: "/cook-by-ugo-thumbnail.webp",
       liveLink: null,
-      sliceCount: 10,
+      sliceCount: 9,
       overview: "Cook by Ugo brings authentic Nigerian home cooking to Newcastle upon Tyne. I designed their direct ordering website and brand identity, giving customers a smooth way to browse dishes, customize spice levels, and order takeout in minutes.",
       problem: "Third-party delivery apps were taking up to 30% commission on every order and locking away customer data. The restaurant needed their own ordering website that made ordering takeout quick and effortless, while showing off the authentic warmth of West African hospitality.",
       deliverables: ["Brand Identity System", "Direct Ordering Website", "Protein & Side Picker", "3-Step Checkout Drawer", "Mobile First UI"],
