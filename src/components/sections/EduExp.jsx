@@ -14,31 +14,13 @@ export default function EduExp() {
     }
   ];
 
-  const experience = [
-    {
-      title: "UI/UX Designer",
-      subtitle: "Appsatile Ltd · Gateshead, UK (Remote)",
-      desc: "Designed and built Appsatile's comprehensive SaaS design system and component libraries. Streamlined design-to-development handoffs and unified visual patterns across product suites."
-    },
-    {
-      title: "UI/UX Designer",
-      subtitle: "Talstrike · United States (Remote)",
-      desc: "Conducted in-depth user research, created wireframes, and designed intuitive user-centered interfaces for recruitment and talent workflows."
-    },
-    {
-      title: "User Experience Designer",
-      subtitle: "cloudnet IQ labs",
-      desc: "Designed end-to-end user journeys, low-to-high fidelity wireframes, and interactive product prototypes, focusing on clear usability and intuitive navigation."
-    }
-  ];
-
   return (
     <section className="bg-[var(--bg)] px-[var(--px)] pb-[120px]">
       <div className="max-w-[var(--max)] mx-auto">
 
         {/* Education Row */}
         <FadeIn>
-          <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6 lg:gap-x-[206px] py-[50px] border-t border-[var(--border)]">
+          <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6 lg:gap-x-[206px] py-[50px] border-t border-b border-[var(--border)]">
             <div className="font-['DM_Sans'] text-[24px] font-normal text-[var(--white)] pt-1">
               My Education:
             </div>
@@ -47,29 +29,6 @@ export default function EduExp() {
                 <div key={idx} className="flex gap-[6px] items-start w-full sm:w-[328px]">
                   <div className="w-[22px] h-[22px] rounded-full shrink-0 mt-[2px] border-2 border-[var(--blue)] bg-transparent flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-[var(--blue)]"></div>
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="font-['DM_Sans'] text-[20px] font-normal text-[var(--white)] mb-[6px] leading-[1.3]">{item.title}</div>
-                    <div className="font-['Inter_Tight'] text-[14px] italic text-[var(--white)] mb-[10px] leading-[1.6]">{item.subtitle}</div>
-                    <p className="font-['Inter_Tight'] text-[14px] text-[var(--muted)] leading-[1.6] m-0">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-
-        {/* Experience Row */}
-        <FadeIn delay={0.1}>
-          <div className="grid grid-cols-1 lg:grid-cols-[190px_1fr] gap-6 lg:gap-x-[206px] py-[50px] border-t border-b border-[var(--border)]">
-            <div className="font-['DM_Sans'] text-[24px] font-normal text-[var(--white)] pt-1">
-              My Experience:
-            </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-[44px]">
-              {experience.map((item, idx) => (
-                <div key={idx} className="flex gap-[6px] items-start w-full sm:w-[328px]">
-                  <div className="w-[22px] h-[22px] rounded-full shrink-0 mt-[2px] border-2 border-[var(--tan)] bg-transparent flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-[var(--tan)]"></div>
                   </div>
                   <div className="flex flex-col">
                     <div className="font-['DM_Sans'] text-[20px] font-normal text-[var(--white)] mb-[6px] leading-[1.3]">{item.title}</div>

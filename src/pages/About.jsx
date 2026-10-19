@@ -12,7 +12,7 @@ export default function About() {
     <div className="w-full bg-[var(--bg)] min-h-screen text-[var(--white)]">
       <SEO 
         title="About · Chinonso Ezeigbo" 
-        description="Learn more about Chinonso Ezeigbo, a UI/UX Designer with an MSc in Cyber Security from Aston University, building accessible, secure, and intuitive digital products." 
+        description="Learn more about Chinonso Ezeigbo, a Product Designer with an MSc in Cyber Security from Aston University, building accessible, secure, and intuitive digital products." 
       />
       <PageHeader title="About Me" breadcrumbText="About Me" />
       <AboutBio />

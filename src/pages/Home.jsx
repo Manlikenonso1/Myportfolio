@@ -14,7 +14,7 @@ export default function Home() {
 
         <FadeIn className="relative z-10 w-full max-w-[1200px] mx-auto flex flex-col items-center mt-20">
           <div className="px-5 py-2 mb-8 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
-            <span className="text-[13px] font-medium tracking-widest text-white/80 uppercase">UI/UX Designer</span>
+            <span className="text-[13px] font-medium tracking-widest text-white/80 uppercase">Product Designer</span>
           </div>
 
           <h1 className="font-['DM_Sans'] text-[clamp(48px,8vw,110px)] font-bold leading-[1.0] tracking-[-0.03em] text-center max-w-[1000px] mb-10 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
@@ -22,7 +22,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[18px] md:text-[22px] text-white/50 text-center max-w-[640px] leading-[1.6] mb-12 font-light">
-            I'm a UI/UX designer with a background in Cyber Security. I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build.
+            I'm a Product Designer with a background in Cyber Security. I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">
