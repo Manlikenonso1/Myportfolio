@@ -40,9 +40,9 @@ const allProjects = [
     id: 'lazyzone',
     title: 'LazyZoneLabs',
     categoryLabel: 'AI Creator Suite & Web App',
-    description: 'Single-screen workspace combining scriptwriting, AI audio waveforms, and video timelines.',
+    description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
     categories: ['all', 'saas', 'ai'],
-    tags: ['AI Interface', 'Audio/Video Timeline', 'Dark UI'],
+    tags: ['Product Redesign', 'AI Interface', 'Design System'],
     image: '/lazyzone-thumbnail.webp'
   },
   {

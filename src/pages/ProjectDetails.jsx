@@ -262,32 +262,47 @@ export default function ProjectDetails() {
     'lazyzone': {
       id: 'lazyzone',
       title: "LazyZoneLabs",
-      type: "Product & Interface Design",
+      type: "Product Design",
       category: "AI Creator Suite & Web App",
-      role: "Product Designer",
+      role: "Product Designer (solo)",
       heroImg: "/lazyzone-thumbnail.webp",
       liveLink: "https://www.lazyzonelabs.com/",
-      sliceCount: 10,
-      overview: "LazyZoneLabs is an all-in-one AI tool for content creators who need to write scripts, generate realistic voiceovers, and edit video clips without jumping between different apps. I designed the complete web application interface from scratch.",
-      problem: "Creators were juggling three separate subscription tools just to make one short-form video. The biggest design challenge was avoiding cognitive overload: packing writing prompts, audio waveforms, and video timelines into a single screen can easily become cluttered and intimidating.",
-      deliverables: ["End-to-End Web App UI", "High-Focus Dark Design System", "Interactive Audio/Video Timeline", "Prompt Engineering Controls", "Handoff Specs"],
-      metrics: [
-        { value: "42%", label: "Faster time to produce and export video" },
-        { value: "3-in-1", label: "Consolidated workflow into one screen" },
-        { value: "88%", label: "New creators finishing their first video" }
-      ],
+      sliceCount: 13,
+      overview: "LazyZoneLabs is an AI studio with five tools: AI Scripting, Text to Speech, Imagine, AI Clipping and Video Enhancement. I audited the live app, then redesigned it end to end so each tool works on its own and all five can share one project: research, flows, wireframes, a token design system, desktop, tablet and mobile screens, and a developer handoff.",
+      problem: "In the live app every tool is its own page and nothing passes between them, so a script has to be copied into Text to Speech by hand. Credits sit in a corner and no button says what an action will cost. A heuristic and WCAG 2.2 audit logged 11 issues, 6 of them high severity, from 3 root causes.",
+      deliverables: ["Heuristic & WCAG 2.2 Audit · 11 Issues", "Personas, User Stories & Journey Map", "Sitemap & User Flows", "Wireframes", "Token Design System · Light & Dark", "Desktop, Tablet & Mobile Screens", "Clickable Prototype", "Developer Handoff & Accessibility Specs"],
       decisions: [
         {
-          pillar: "01. Showing tools only when creators need them",
-          rationale: "Instead of crowding the screen with dozens of sliders at once, the workspace adapts based on what you are doing. When you are writing, it feels like a clean doc. When you move to voiceover or video slicing, the waveform and trimming tools slide in smoothly."
+          pillar: "01. One project, one tool or all five",
+          rationale: "A project holds the tools you pick, in sidebar order. Every tool has the same Input box at the top, filled by the tool before it or by your own file, so a tool can work alone or as part of a chain. Moving on is always a button you press, never automatic."
         },
         {
-          pillar: "02. A dark UI built for long editing sessions",
-          rationale: "Creators often edit for hours at a time. I used soft layered charcoal surfaces instead of harsh pure blacks to minimize eye strain, saving bold red accents strictly for active recording states, cuts, and the export button."
+          pillar: "02. Your work first, AI when asked",
+          rationale: "The script opens as an editor: type, paste or drop a file into the same box, free. AI is a button, not a mode. Suggest rewrites one section for 1 credit and Draft with AI writes the whole script for 2. Captions work the same way: type your own, or Auto-caption for 1 credit."
         },
         {
-          pillar: "03. An interactive timeline that doesn't punish mistakes",
-          rationale: "Editing needs to feel fast and forgiving. I designed simple drag handles for trimming, instant audio previews, and standard keyboard shortcuts so creators can split and rearrange clips without worrying about losing their work."
+          pillar: "03. Every cost on the button",
+          rationale: "Every action that spends credits shows its price on the button and the balance left after it. Red is kept for the one action that moves the project forward. If the balance is too low, a top-up sheet states the shortfall and nothing is lost."
+        }
+      ],
+      process: [
+        {
+          title: "From ten pages to one project",
+          text: "The live app lists every AI feature as its own page beside socials and subscriptions, and the home screen is one link box. The redesign opens on what you want to make: presets, a single tool, or a new project that holds one to five tools.",
+          before: "/lazyzone-process-1-before.webp", beforeLabel: "Before · live home",
+          after: "/lazyzone-process-1-after.webp", afterLabel: "After · presets, single tools, recent work"
+        },
+        {
+          title: "Writing first, AI when asked",
+          text: "An early version made people choose between writing, uploading and AI before they could start. Now the script opens as one editor that takes typing, pasting or a dropped file, and AI only runs when you press Draft with AI or Suggest.",
+          before: "/lazyzone-process-2-before.webp", beforeLabel: "Draft with AI · opt in, 2 credits",
+          after: "/lazyzone-process-2-after.webp", afterLabel: "Write it yourself · free default"
+        },
+        {
+          title: "Captions you control",
+          text: "Video Enhancement gets a Captions switch and an editor. Type your own lines or let Auto-caption fill them for 1 credit. Every line keeps its own timing, stays editable and shows in a live preview with the spoken word highlighted.",
+          before: "/lazyzone-process-3-before.webp", beforeLabel: "Video Enhancement · captions on",
+          after: "/lazyzone-process-3-after.webp", afterLabel: "Caption editor · type my own"
         }
       ],
       reviews: [
@@ -583,7 +598,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#080808]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;
