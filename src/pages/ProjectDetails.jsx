@@ -306,11 +306,6 @@ export default function ProjectDetails() {
       overview: "HuntlyAi helps job seekers track every application, interview and follow-up in one place. It was built for a client. I audited what shipped, then redesigned it end to end: research, flows, wireframes, a token-based design system in light and dark, and a developer handoff.",
       problem: "The shipped product showed applications as a grid of cards with no pipeline view. The Add Job form skipped the company and job title, the sidebar had nine items with duplicates, and the landing page had typos in its first lines. A heuristic review found 12 issues across the app and the site.",
       deliverables: ["Heuristic Audit · 12 Issues", "Personas, User Stories & Journey Map", "Sitemap & User Flows", "Wireframes", "Token Design System · Light & Dark", "12 Desktop + 6 Mobile Screens", "Developer Handoff & Specs"],
-      metrics: [
-        { value: "12", label: "Usability issues found in the audit and fixed in the redesign" },
-        { value: "9 → 6", label: "Navigation items after restructuring the product" },
-        { value: "2", label: "Colour modes from one set of tokens, both WCAG AA" }
-      ],
       decisions: [
         {
           pillar: "01. One board instead of a card grid",
