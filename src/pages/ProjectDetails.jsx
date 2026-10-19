@@ -130,7 +130,7 @@ export default function ProjectDetails() {
       role: "Product Designer",
       heroImg: "/nikos-farm-thumbnail.webp",
       liveLink: "https://nikosfarm.com/",
-      sliceCount: 11,
+      sliceCount: 10,
       overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
       problem: "The old site didn't show what the farm sold or what it cost. The homepage led with a stock photo, product cards had no prices or buy buttons, and checking a product meant leaving the shop page.",
       deliverables: ["E-Commerce UX Flow", "Slide-Out Cart Drawer", "Product Catalog Grid", "Harvest Origin Badges", "Mobile Checkout UI"],
