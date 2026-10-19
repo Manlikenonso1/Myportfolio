@@ -299,37 +299,53 @@ export default function ProjectDetails() {
       title: "HuntlyAi",
       type: "Product Design",
       category: "AI Job Search & Application Tracker",
-      role: "Product Designer",
+      role: "Product Designer (solo)",
       heroImg: "/huntly-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
-      overview: "HuntlyAi is a workspace designed to help job seekers manage their applications, interview stages, and follow-ups in one calm, organized dashboard.",
-      problem: "Job hunting is stressful enough on its own. Most candidates try to stay organized with messy spreadsheets, random email alerts, and multiple resume files scattered across tabs. It feels chaotic, and it's easy to miss deadlines or forget who you reached out to.",
-      deliverables: ["Dashboard & Kanban Architecture", "Slide-Over Detail Drawer", "Automated Follow-Up Reminders", "Calm Botanical Design System", "Figma Components"],
+      overview: "HuntlyAi helps job seekers track every application, interview and follow-up in one place. It was built for a client. I audited what shipped, then redesigned it end to end: research, flows, wireframes, a token-based design system in light and dark, and a developer handoff.",
+      problem: "The shipped product showed applications as a grid of cards with no pipeline view. The Add Job form skipped the company and job title, the sidebar had nine items with duplicates, and the landing page had typos in its first lines. A heuristic review found 12 issues across the app and the site.",
+      deliverables: ["Heuristic Audit · 12 Issues", "Personas, User Stories & Journey Map", "Sitemap & User Flows", "Wireframes", "Token Design System · Light & Dark", "12 Desktop + 6 Mobile Screens", "Developer Handoff & Specs"],
       metrics: [
-        { value: "65%", label: "Faster time to log and track applications" },
-        { value: "4.9/5", label: "User satisfaction rating" },
-        { value: "0", label: "Lost context with slide-over drawers" }
+        { value: "12", label: "Usability issues found in the audit and fixed in the redesign" },
+        { value: "9 → 6", label: "Navigation items after restructuring the product" },
+        { value: "2", label: "Colour modes from one set of tokens, both WCAG AA" }
       ],
       decisions: [
         {
-          pillar: "01. A calm color palette that lowers anxiety",
-          rationale: "Most CRM tools look cold, gray, and corporate. I chose an organic botanical palette with soft greens and warm neutral tones to create a peaceful environment that feels encouraging rather than overwhelming to open every morning."
+          pillar: "01. One board instead of a card grid",
+          rationale: "Applications now sit on a kanban board from Saved to Closed, with a count on every column and the same lines on every card: role, company, next step, age and the CV you sent. You can see where your whole search stands at a glance."
         },
         {
-          pillar: "02. Slide-over details so you never lose your place",
-          rationale: "Instead of making users jump between different pages, clicking any job card opens a side drawer with the job post, interview notes, and the tailored resume side-by-side. You get full context in one glance without opening ten tabs."
+          pillar: "02. Gmail import you confirm",
+          rationale: "Huntly reads job emails and shows what it thinks happened, with a flag when it is unsure. Nothing touches the board until you say yes, so the automation can never make your board wrong."
         },
         {
-          pillar: "03. Helpful reminders without the stress",
-          rationale: "I used subtle color-coded tags showing days since last contact to gently remind people when to follow up, avoiding aggressive red warning badges that cause unnecessary panic."
+          pillar: "03. Built on tokens, ready for developers",
+          rationale: "Every colour, space and radius is a Figma variable with Light and Dark modes, and every screen is built from 13 components with auto layout. Developers get token names, states and notes on the tricky interactions instead of guesses."
         }
       ],
-      reviews: [
-        { name: "Julian Thorne", role: "Co-Founder & CEO, HuntlyAi", text: "Chinonso brought incredible clarity to our product. He took a chaotic job tracking workflow and designed an interface that feels genuinely calming and intuitive to use." },
-        { name: "Sophia Martinez", role: "Head of Growth", text: "The onboarding flow and application dashboard Chinonso designed had an immediate impact on our retention. Users constantly praise how easy it is to keep track of interviews." },
-        { name: "David Kim", role: "Lead Full-Stack Engineer", text: "Chinonso's Figma components and design tokens made front-end development seamless. The visual hierarchy and state treatments were thoughtful from day one." }
-      ]
+      process: [
+        {
+          title: "From a card grid to one board",
+          text: "The old dashboard listed applications as cards with status pills, and its details modal repeated what the card already showed. The redesign puts every application on one board by stage and opens details in a side drawer with a timeline, so you never lose your place.",
+          before: "/huntly-process-1-before.webp", beforeLabel: "Before · card grid and modal",
+          after: "/huntly-process-1-after.webp", afterLabel: "After · kanban board"
+        },
+        {
+          title: "An Add form that asks the right things",
+          text: "The old form asked for salary and location but not the company or the job title. Now you paste a job link, the company, title and location fill in from the post, and company and title are required.",
+          before: "/huntly-process-2-before.webp", beforeLabel: "Before · Add Job form",
+          after: "/huntly-process-2-after.webp", afterLabel: "After · link autofill"
+        },
+        {
+          title: "One set of tokens, two themes",
+          text: "Because every colour is a variable with Light and Dark modes, dark mode is a mode switch rather than a second design. I checked every text and status colour pair in both themes against WCAG AA.",
+          before: "/huntly-process-3-before.webp", beforeLabel: "Light mode",
+          after: "/huntly-process-3-after.webp", afterLabel: "Dark mode · same components"
+        }
+      ],
+      reviews: []
     }
   };
 

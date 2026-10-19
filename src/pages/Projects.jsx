@@ -58,9 +58,9 @@ const allProjects = [
     id: 'huntly',
     title: 'HuntlyAi',
     categoryLabel: 'AI Job Search & Workspace',
-    description: 'Calm botanical productivity dashboard with slide-out context drawers.',
+    description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',
     categories: ['all', 'saas', 'ai'],
-    tags: ['Dashboard UX', 'Kanban System', 'Productivity'],
+    tags: ['Product Redesign', 'Design System', 'Dev Handoff'],
     image: '/huntly-thumbnail.webp'
   }
 ];
