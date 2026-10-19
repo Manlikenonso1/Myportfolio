@@ -131,35 +131,35 @@ export default function ProjectDetails() {
       heroImg: "/nikos-farm-thumbnail.webp",
       liveLink: "https://nikosfarm.com/",
       sliceCount: 10,
-      overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make ordering farm produce as fast and simple as possible on mobile phones.",
+      overview: "Nikos Farm sells fresh organic fruit and vegetables directly to local customers. I redesigned their online shop from the ground up to make it clear what the farm sells, what it costs, and how to buy it.",
       problem: "The old site didn't show what the farm sold or what it cost. The homepage led with a stock photo, product cards had no prices or buy buttons, and checking a product meant leaving the shop page.",
-      deliverables: ["E-Commerce UX Flow", "Slide-Out Cart Drawer", "Product Catalog Grid", "Harvest Origin Badges", "Mobile Checkout UI"],
+      deliverables: ["User Flow", "Product Grid", "Quick View", "Cart Drawer", "One-Page Checkout", "Mobile Layouts"],
       decisions: [
         {
-          pillar: "01. Slide-out cart instead of kicking people to a new page",
-          rationale: "Instead of redirecting shoppers to a separate cart page every time they picked something, I built an interactive drawer. Customers can change quantities, see bundle discounts update live, and select their delivery slot without losing their place in the shop."
+          pillar: "01. A cart that slides in, not a new page",
+          rationale: "Adding a product opens a cart drawer over the shop. Shoppers can change quantities, remove items and see the total without losing their place, then go straight to checkout."
         },
         {
-          pillar: "02. Putting harvest dates right on product cards",
-          rationale: "People buy from local farms because they want real freshness. I added clear harvest dates, farmer notes, and simple storage tips right onto the product cards, which gave first-time buyers immediate confidence to check out."
+          pillar: "02. A quick view instead of a product page",
+          rationale: "View Details opens a pop-up over the grid with weight, origin, stock, a quantity picker with a live total, and reviews in a tab. Closing it returns people to exactly where they were."
         },
         {
-          pillar: "03. Designing for the thumb on mobile",
-          rationale: "Since most people order on their phones while on the move, I anchored all the main actions like add-to-cart buttons, quantity counters, and the checkout button to the bottom half of the screen where thumbs naturally reach."
+          pillar: "03. Price and buy button on every card",
+          rationale: "The old site never showed a price. Every card now shows the price per kg, colour options and a cart button, so people can compare and buy without opening anything."
         }
       ],
       process: [
         {
           title: "A hero that shows the produce",
           text: "The old site opened on a stock photo of a tea plantation with a big AGRICULTURE overlay, so nothing on screen said what the farm actually sells. The new hero uses an aerial shot of the land with the four products in gold-ringed circles, a warmer type pairing and one clear Buy Now action.",
-          before: "/nikos-farm-before-poster.webp", beforeVideo: "/nikos-farm-before.mp4", beforeLabel: "Old site · nikosfarm.com",
+          before: "/nikos-farm-process-1-before.webp", beforeLabel: "Old homepage",
           after: "/nikos-farm-process-1-after.webp", afterLabel: "Final hero"
         },
         {
-          title: "Product cards built around the photo",
-          text: "The first cards were dark, text-heavy and had no price or way to buy. I rebuilt them around a large product photo, moved the key tags onto the image, and added colour options, the price per kg and a cart button on every card.",
-          before: "/nikos-farm-process-2-before.webp", beforeLabel: "Early cards · dark, no price",
-          after: "/nikos-farm-process-2-after.webp", afterLabel: "Final cards · price + add to cart"
+          title: "Mapping the journey before the screens",
+          text: "I mapped every route from landing to a placed order before designing. It showed two needs: a way to add to cart straight from a product card, and a cart that never takes people away from the shop. The product cards were then built around those needs, with price per kg, colour options and a cart button on each.",
+          before: "/nikos-farm-process-2-before.webp", beforeLabel: "User flow",
+          after: "/nikos-farm-process-2-after.webp", afterLabel: "Product cards · price + add to cart"
         },
         {
           title: "Details without leaving the shop",
