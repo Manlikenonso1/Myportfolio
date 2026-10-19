@@ -82,6 +82,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
+              { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-red-500/20 border-red-500/30 text-red-200' },
               { id: 'appsatile', title: 'Appsatile', tag: 'Design System', alt: 'Appsatile Design System', pill: 'bg-white/10 border-white/20 text-white/80' },
               { id: 'nikos-farm', title: 'Nikos Farm', tag: 'E-Commerce', alt: 'Nikos Farm E-Commerce', pill: 'bg-white/10 border-white/20 text-white/80' },
               { id: 'aerovia', title: 'Aerovia', tag: 'Travel UX · Concept', alt: 'Aerovia flight booking concept', pill: 'bg-amber-400/15 border-amber-400/30 text-amber-200' },
@@ -89,10 +90,10 @@ export default function Home() {
               { id: 'cook-by-ugo', title: 'Cook by Ugo', tag: 'Food & Hospitality', alt: 'Cook by Ugo Digital Experience', pill: 'bg-white/10 border-white/20 text-white/80' },
               { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-emerald-500/20 border-emerald-500/30 text-emerald-200' },
             ].map((p, i) => (
-              <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1}>
+              <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105" alt={p.alt} />
+                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className={`w-full ${i === 0 ? 'aspect-[4/3] md:aspect-[16/9]' : 'aspect-[4/3]'} object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105`} alt={p.alt} />
                   <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20">
                     <div className={`px-4 py-1.5 rounded-full backdrop-blur-md border text-[12px] font-medium tracking-wide mb-3 inline-block ${p.pill}`}>{p.tag}</div>
                     <h3 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-bold text-white">{p.title}</h3>

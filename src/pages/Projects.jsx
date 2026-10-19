@@ -9,6 +9,16 @@ import SEO from '../components/ui/SEO';
 
 const allProjects = [
   {
+    id: 'hsbc',
+    title: 'HSBC UK',
+    concept: true,
+    categoryLabel: 'Mobile Banking',
+    description: 'Banking app redesign: one tab bar, safety you can see, and Global Money built into everyday banking.',
+    categories: ['all', 'design-systems'],
+    tags: ['Mobile App', 'Fraud Prevention', 'Design System'],
+    image: '/hsbc-thumbnail.webp'
+  },
+  {
     id: 'appsatile',
     title: 'Appsatile',
     categoryLabel: 'Design System',

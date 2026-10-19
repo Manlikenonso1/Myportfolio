@@ -309,6 +309,55 @@ export default function ProjectDetails() {
         { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended." }
       ]
     },
+    'hsbc': {
+      id: 'hsbc',
+      title: "HSBC UK",
+      concept: true,
+      type: "Product Design",
+      category: "Mobile Banking App",
+      role: "Designer (solo)",
+      heroImg: "/hsbc-thumbnail.webp",
+      liveLink: null,
+      sliceCount: 12,
+      overview: "An unofficial end-to-end redesign of the HSBC UK app I use every week. I audited my own account, studied what Monzo, Starling, Revolut and Barclays do well, then rebuilt the structure, flows, design system and 25 screens around two ideas: safe by default, and Global Money built into everyday banking.",
+      problem: "The app has three navigation systems that repeat each other, shows the full sort code and account number even when the balance is hidden, and only checks for scams after every payee detail is typed. A heuristic and WCAG 2.2 review of five screens logged 16 issues, 6 of them high severity, from 3 root causes.",
+      deliverables: ["Heuristic & WCAG 2.2 Audit · 16 Issues", "Competitor & Regulation Research", "Proto-personas & How Might We", "Information Architecture & 3 Flows", "Wireframes", "Token Design System · Light & Dark", "25 Screens · iOS", "Clickable Prototype · 4 Journeys"],
+      decisions: [
+        {
+          pillar: "01. Three menus become five tabs",
+          rationale: "Top tabs, a hamburger menu and a profile list held the same places. Now every destination has one home in a bottom tab bar the thumb can reach: Home, Pay, Cards, Safety and More."
+        },
+        {
+          pillar: "02. Safe by default",
+          rationale: "Security gets its own tab and one status on Home. Account numbers stay hidden until you hold to show, and adding a new payee starts with “What is this payment for?”, so a risky payment can be stopped before any details are typed."
+        },
+        {
+          pillar: "03. Global built in",
+          rationale: "HSBC already offers Global Money with live rates. Here currency balances sit on Home, Send abroad shows the rate, fee and countdown before you confirm, and travel mode on the card spends from the matching currency first."
+        }
+      ],
+      process: [
+        {
+          title: "Making safety visible",
+          text: "On the current Home, the sort code and account number stay on screen and security is split across three menus. The new Safety tab brings devices, call checks, fraud reports and a trusted contact together under one status you can read at a glance.",
+          before: "/hsbc-process-1-before.webp", beforeLabel: "Before · current Home, details redacted",
+          after: "/hsbc-process-1-after.webp", afterLabel: "After · Safety tab"
+        },
+        {
+          title: "Ask why first, then the details",
+          text: "The wireframe moved one question to the start of adding a payee. In the final screen it is a single tap list, and “Someone asked me to move money” leads straight to a stop screen with 159.",
+          before: "/hsbc-process-2-before.webp", beforeLabel: "Wireframe · new payee reason",
+          after: "/hsbc-process-2-after.webp", afterLabel: "Final · new payee reason"
+        },
+        {
+          title: "From a new palette to HSBC’s own",
+          text: "My first visual direction used its own colours and looked polished but not like HSBC. The final design keeps the hexagon idea and the depth, and moves everything onto HSBC red, black and white so it feels like the real bank.",
+          before: "/hsbc-process-3-before.webp", beforeLabel: "Direction A · own palette",
+          after: "/hsbc-process-3-after.webp", afterLabel: "Final · HSBC red and black"
+        }
+      ],
+      reviews: []
+    },
     'huntly': {
       id: 'huntly',
       title: "HuntlyAi",
@@ -366,7 +415,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['appsatile', 'nikos-farm', 'aerovia', 'lazyzone', 'cook-by-ugo', 'huntly'];
+  const projectOrder = ['hsbc', 'appsatile', 'nikos-farm', 'aerovia', 'lazyzone', 'cook-by-ugo', 'huntly'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -598,7 +647,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;
