@@ -239,20 +239,20 @@ export default function ProjectDetails() {
       ],
       process: [
         {
-          title: "Options that guide, not block",
-          text: "Every dish asks for one required choice, the protein, plus up to two optional sides with their prices shown. The add button stays disabled and says what is missing, then shows the live price once a protein is picked.",
-          before: "/cook-by-ugo-process-1-before.webp", beforeLabel: "No protein yet · button explains why",
-          after: "/cook-by-ugo-process-1-after.webp", afterLabel: "Protein picked · add to cart"
+          title: "From a dark template to a warm brand",
+          text: "The first version worked but looked like any restaurant template: near-black everywhere, five fonts and low-contrast grey text. I rebuilt it on a cream base with jollof red, palm gold, ewedu green and adire indigo, Nigerian textile patterns, and three fonts that all pass WCAG AA.",
+          before: "/cook-by-ugo-process-1-before.webp", beforeLabel: "Version 1 · dark template",
+          after: "/cook-by-ugo-process-1-after.webp", afterLabel: "Version 3 · modern Afro redesign"
         },
         {
-          title: "Cart and checkout stay on the menu",
-          text: "The cart and checkout open as a drawer over the menu, so customers never lose their place. A three-step bar shows delivery, payment and confirmation, and delivery time can be ASAP or scheduled.",
-          before: "/cook-by-ugo-process-2-before.webp", beforeLabel: "Cart drawer",
-          after: "/cook-by-ugo-process-2-after.webp", afterLabel: "Checkout step 1 · delivery"
+          title: "Options that guide, not block",
+          text: "Every dish asks for one required choice, the protein, plus up to two optional sides with their prices. The button stays inactive and says what is missing, then shows the live total once a protein is picked. I also added a spice level, from Mild to Naija hot.",
+          before: "/cook-by-ugo-process-2-before.webp", beforeLabel: "No protein yet · button explains why",
+          after: "/cook-by-ugo-process-2-after.webp", afterLabel: "Ready · add to order £14.49"
         },
         {
           title: "Two ways to pay",
-          text: "Some customers prefer to pay at the door, so payment offers card or pay on delivery. Choosing pay on delivery hides the card form and shows the exact amount to have ready.",
+          text: "Checkout slides in as a drawer over the menu, with a three-step bar. Some customers prefer to pay at the door, so payment offers card or pay on delivery. Choosing pay on delivery hides the card form and shows the exact amount to have ready.",
           before: "/cook-by-ugo-process-3-before.webp", beforeLabel: "Pay by card",
           after: "/cook-by-ugo-process-3-after.webp", afterLabel: "Pay on delivery"
         }
