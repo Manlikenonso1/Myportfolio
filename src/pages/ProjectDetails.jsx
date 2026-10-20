@@ -290,6 +290,7 @@ export default function ProjectDetails() {
       category: "Mobile Banking App",
       role: "Designer (solo)",
       heroImg: "/hsbc-thumbnail.webp",
+      prototypeLink: "https://www.figma.com/proto/DIyIHsRYjtPHAeQzfpxkex/Hsbc-Mobile-App-redesign?node-id=56-949&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=56%3A949&show-proto-sidebar=1&page-id=21%3A51",
       phoneProcess: true,
       liveLink: null,
       sliceCount: 12,
