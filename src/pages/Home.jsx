@@ -83,12 +83,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-red-500/20 border-red-500/30 text-red-200' },
+              { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-red-500/20 border-red-500/30 text-red-200' },
+              { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-emerald-500/20 border-emerald-500/30 text-emerald-200' },
               { id: 'appsatile', title: 'Appsatile', tag: 'Design System', alt: 'Appsatile Design System', pill: 'bg-white/10 border-white/20 text-white/80' },
               { id: 'nikos-farm', title: 'Nikos Farm', tag: 'E-Commerce', alt: 'Nikos Farm E-Commerce', pill: 'bg-white/10 border-white/20 text-white/80' },
               { id: 'aerovia', title: 'Aerovia', tag: 'Travel UX · Concept', alt: 'Aerovia flight booking concept', pill: 'bg-amber-400/15 border-amber-400/30 text-amber-200' },
-              { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-red-500/20 border-red-500/30 text-red-200' },
               { id: 'cook-by-ugo', title: 'Cook by Ugo', tag: 'Food & Hospitality', alt: 'Cook by Ugo Digital Experience', pill: 'bg-white/10 border-white/20 text-white/80' },
-              { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-emerald-500/20 border-emerald-500/30 text-emerald-200' },
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">

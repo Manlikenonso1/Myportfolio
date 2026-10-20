@@ -19,6 +19,24 @@ const allProjects = [
     image: '/hsbc-thumbnail.webp'
   },
   {
+    id: 'lazyzone',
+    title: 'LazyZoneLabs',
+    categoryLabel: 'AI Creator Suite & Web App',
+    description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['Product Redesign', 'AI Interface', 'Design System'],
+    image: '/lazyzone-thumbnail.webp'
+  },
+  {
+    id: 'huntly',
+    title: 'HuntlyAi',
+    categoryLabel: 'AI Job Search & Workspace',
+    description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['Product Redesign', 'Design System', 'Dev Handoff'],
+    image: '/huntly-thumbnail.webp'
+  },
+  {
     id: 'appsatile',
     title: 'Appsatile',
     categoryLabel: 'Design System',
@@ -47,15 +65,6 @@ const allProjects = [
     image: '/aerovia-thumbnail.webp'
   },
   {
-    id: 'lazyzone',
-    title: 'LazyZoneLabs',
-    categoryLabel: 'AI Creator Suite & Web App',
-    description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
-    categories: ['all', 'saas', 'ai'],
-    tags: ['Product Redesign', 'AI Interface', 'Design System'],
-    image: '/lazyzone-thumbnail.webp'
-  },
-  {
     id: 'cook-by-ugo',
     title: 'Cook by Ugo',
     categoryLabel: 'Food & Hospitality',
@@ -63,15 +72,6 @@ const allProjects = [
     categories: ['all', 'ecommerce'],
     tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
     image: '/cook-by-ugo-thumbnail.webp'
-  },
-  {
-    id: 'huntly',
-    title: 'HuntlyAi',
-    categoryLabel: 'AI Job Search & Workspace',
-    description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',
-    categories: ['all', 'saas', 'ai'],
-    tags: ['Product Redesign', 'Design System', 'Dev Handoff'],
-    image: '/huntly-thumbnail.webp'
   }
 ];
 
