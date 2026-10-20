@@ -251,10 +251,10 @@ export default function ServiceDetails() {
                 Tell me about your product, your goals, or what challenges you're facing. I'd love to help you build something great.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-                <Link to="/contact" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-transform duration-300">
+                <Link to="/contact" className="px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] transition-transform duration-300">
                   Get in touch
                 </Link>
-                <Link to="/services" className="px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] border border-white/20 hover:bg-white/5 transition-colors duration-300">
+                <Link to="/services" className="px-8 py-4 rounded-lg bg-transparent text-white font-semibold text-[15px] border border-white/20 hover:bg-white/5 transition-colors duration-300">
                   Back to Services
                 </Link>
               </div>

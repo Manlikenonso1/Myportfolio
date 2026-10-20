@@ -153,7 +153,7 @@ export default function Projects() {
                     <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-medium text-white">{proj.title}</h3>
                     <p className="text-white/50 text-[16px] max-w-[650px] mt-2 font-light">{proj.description}</p>
                   </div>
-                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:border-white/60 transition-all w-fit shrink-0">
+                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-lg border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:border-white/60 transition-all w-fit shrink-0">
                     View Case Study
                   </Link>
                 </div>

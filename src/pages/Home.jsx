@@ -24,10 +24,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">
-            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] text-center transition-all duration-300">
+            <Link to="/contact" className="w-full sm:w-auto px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] text-center transition-all duration-300">
               Start a project
             </Link>
-            <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300">
+            <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-lg bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300">
               View my work
             </Link>
           </div>
@@ -89,7 +89,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-[15px] hover:bg-white/10 transition-all group">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white font-semibold text-[15px] hover:bg-white/10 transition-all group">
               View All Work
               <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
             </Link>

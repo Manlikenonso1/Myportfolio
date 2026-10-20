@@ -471,7 +471,7 @@ export default function ProjectDetails() {
                   href={project.liveLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/95 transition-all"
+                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white text-black font-semibold text-[14px] hover:bg-white/95 transition-all"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
                   <span>Visit Live Site</span>
@@ -481,7 +481,7 @@ export default function ProjectDetails() {
 
              <Link 
                to="/projects" 
-               className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
+               className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
              >
                <ArrowLeft size={16} strokeWidth={2} />
                <span>All Projects</span>
@@ -637,7 +637,7 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
               >
                 <span>Visit Live Website</span>
                 <ExternalLink size={14} strokeWidth={2.2} />
@@ -788,7 +788,7 @@ export default function ProjectDetails() {
             </div>
             <Link 
               to={`/projects/${nextProject.id}`}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all shrink-0 group-hover:shadow-white/20"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] transition-all shrink-0 group-hover:shadow-white/20"
             >
               <span>View Case Study</span>
               <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
@@ -809,7 +809,7 @@ export default function ProjectDetails() {
          </FadeIn>
 
          <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-4 mt-12 pb-12">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
                <ArrowLeft size={16} strokeWidth={2} />
                <span>Back to All Projects</span>
             </Link>
@@ -818,13 +818,13 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black text-[15px] font-bold transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-black text-[15px] font-bold transition-all"
               >
                  <span>Visit Live Site</span>
                  <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
-            <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all">
+            <Link to="/contact" className="px-8 py-4 rounded-lg bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all">
                Get in Touch
             </Link>
          </FadeIn>

@@ -14,7 +14,7 @@ export default function Footer() {
             <p className="text-white/50 text-[18px] max-w-[400px] mb-10">
               Tell me what is confusing your users and I'll show you how I'd fix it.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all duration-300">
+            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] transition-all duration-300">
               Get in touch
               <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center">
                 <ArrowRight size={13} strokeWidth={2.5} className="text-black" />

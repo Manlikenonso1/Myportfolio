@@ -29,7 +29,7 @@ export default function NotFound() {
         
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:bg-white/95 transition-all"
+          className="inline-flex items-center gap-2.5 px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] hover:bg-white/95 transition-all"
         >
           <ArrowLeft size={16} strokeWidth={2} />
           <span>Return to Homepage</span>

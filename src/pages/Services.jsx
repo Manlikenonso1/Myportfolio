@@ -39,7 +39,7 @@ export default function Services() {
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     I turn complicated workflows into clean, straightforward interfaces. By mapping out how users move through your app and testing key flows early, I build layouts that help people get things done without getting confused.
                   </p>
-                  <Link to="/services/ux-strategy" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
+                  <Link to="/services/ux-strategy" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                     Explore process
                   </Link>
                 </div>
@@ -59,7 +59,7 @@ export default function Services() {
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colors, fonts, and responsive components, giving your team a reliable blueprint that saves hours of development time.
                   </p>
-                  <Link to="/services/design-systems" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
+                  <Link to="/services/design-systems" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                     Explore process
                   </Link>
                 </div>
@@ -79,7 +79,7 @@ export default function Services() {
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Static mockups don't show how an app actually feels to use. I design smooth transitions and realistic, clickable prototypes so your team can test the actual flow and get everyone aligned before building.
                   </p>
-                  <Link to="/services/interactive-motion" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
+                  <Link to="/services/interactive-motion" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                     Explore process
                   </Link>
                 </div>
@@ -100,7 +100,7 @@ export default function Services() {
                     Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows so every design decision is grounded in real evidence, not guesswork.
                   </p>
                   <div className="flex flex-wrap items-center gap-4">
-                    <Link to="/services/user-research" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
+                    <Link to="/services/user-research" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                       Explore process
                     </Link>
                     <Link to="/contact" className="inline-flex items-center gap-2 text-[14px] text-white/50 hover:text-white transition-colors">
@@ -125,7 +125,7 @@ export default function Services() {
                     Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in, so your dev team builds exactly what was designed, first time.
                   </p>
                   <div className="flex flex-wrap items-center gap-4">
-                    <Link to="/services/developer-handoff" className="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
+                    <Link to="/services/developer-handoff" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                       Explore process
                     </Link>
                     <Link to="/contact" className="inline-flex items-center gap-2 text-[14px] text-white/50 hover:text-white transition-colors">

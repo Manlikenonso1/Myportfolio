@@ -92,7 +92,7 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 text-[14px] font-semibold transition-all">
+            <Link to="/contact" className="px-5 py-2.5 rounded-lg bg-[var(--white)] text-[#000000] hover:bg-white/90 text-[14px] font-semibold transition-all">
               Connect
             </Link>
           </div>
