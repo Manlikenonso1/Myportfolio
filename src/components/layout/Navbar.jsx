@@ -64,27 +64,26 @@ export default function Navbar() {
           animate={{
             width: scrolled ? '800px' : '100%',
             maxWidth: '1200px',
-            backgroundColor: scrolled ? 'rgba(5,5,5,0.7)' : 'rgba(10,10,10,0.2)',
+            backgroundColor: scrolled ? 'rgba(0,0,0,0.92)' : 'rgba(0,0,0,0)',
             padding: isMobile ? '10px 18px' : (scrolled ? '12px 24px' : '20px 32px')
           }}
-          className={`flex justify-between items-center rounded-3xl pointer-events-auto transition-shadow duration-500 border border-white/10 backdrop-blur-xl ${scrolled ? 'shadow-2xl shadow-blue-900/10' : ''}`}
+          className={`flex justify-between items-center rounded-2xl pointer-events-auto border border-white/10 `}
         >
           {/* Logo & Availability Badge */}
           <div className="flex items-center gap-3.5 z-10">
-            <Link to="/" className="font-['DM_Sans'] text-[18px] md:text-[22px] font-bold tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
+            <Link to="/" className="font-['DM_Sans'] text-[18px] md:text-[22px] font-medium tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
               Chinonso.
             </Link>
             <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
               </span>
               <span>Available</span>
             </div>
           </div>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 text-[14px] font-medium text-white/60">
+          <ul className="hidden md:flex items-center gap-8 text-[12px] font-medium tracking-[0.12em] uppercase text-white/55">
             <li><NavLink to="/" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Home</NavLink></li>
             <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>About</NavLink></li>
             <li><NavLink to="/services" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Services</NavLink></li>
@@ -93,7 +92,7 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 hover:scale-105 text-[14px] font-semibold transition-all">
+            <Link to="/contact" className="px-5 py-2.5 rounded-full bg-[var(--white)] text-[#000000] hover:bg-white/90 text-[14px] font-semibold transition-all">
               Connect
             </Link>
           </div>

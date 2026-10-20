@@ -35,14 +35,14 @@ export default function ClientsPartners() {
                 <Link
                   key={idx}
                   to={logo.route}
-                  className="font-['DM_Sans'] font-bold text-[16px] text-white/30 tracking-[-0.3px] transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5"
+                  className="font-['DM_Sans'] font-medium text-[16px] text-white/30 tracking-[-0.3px] transition-all duration-300 hover:text-white"
                 >
                   {logo.name}
                 </Link>
               ) : (
                 <span
                   key={idx}
-                  className="font-['DM_Sans'] font-bold text-[16px] text-white/30 tracking-[-0.3px] cursor-default"
+                  className="font-['DM_Sans'] font-medium text-[16px] text-white/30 tracking-[-0.3px] cursor-default"
                 >
                   {logo.name}
                 </span>

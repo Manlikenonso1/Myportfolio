@@ -7,14 +7,14 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>
-            <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-bold tracking-tight leading-[1.1] mb-8">
+            <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-medium tracking-tight leading-[1.1] mb-8">
               Let's make your product<br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--blue)] to-[var(--green)]">easier to use.</span>
+              <span className="text-white/45">easier to use.</span>
             </h2>
             <p className="text-white/50 text-[18px] max-w-[400px] mb-10">
               Tell me what is confusing your users and I'll show you how I'd fix it.
             </p>
-            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 hover:shadow-lg hover:shadow-white/10 transition-all duration-300">
+            <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all duration-300">
               Get in touch
               <div className="w-6 h-6 rounded-full bg-black/10 flex items-center justify-center">
                 <ArrowRight size={13} strokeWidth={2.5} className="text-black" />
@@ -24,7 +24,7 @@ export default function Footer() {
           
           <div className="grid grid-cols-2 gap-10">
             <div className="flex flex-col gap-4">
-              <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Pages</h4>
+              <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Pages</h4>
               <Link to="/" className="text-white/40 hover:text-white transition-colors text-[15px]">Home</Link>
               <Link to="/about" className="text-white/40 hover:text-white transition-colors text-[15px]">About</Link>
               <Link to="/services" className="text-white/40 hover:text-white transition-colors text-[15px]">Services</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
               <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Contact</Link>
             </div>
             <div className="flex flex-col gap-4">
-              <h4 className="font-['DM_Sans'] font-bold text-[18px] mb-2 text-white/90">Contact</h4>
+              <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Contact</h4>
               <a href="mailto:godswill.ec@gmail.com" className="text-white/40 hover:text-white transition-colors text-[15px]">godswill.ec@gmail.com</a>
               <span className="text-white/30 text-[14px]">Available for remote work worldwide</span>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <Link to="/" className="font-['DM_Sans'] text-[20px] font-bold tracking-tight flex items-center gap-2 hover:opacity-70 transition-opacity">
+          <Link to="/" className="font-['DM_Sans'] text-[20px] font-medium tracking-tight flex items-center gap-2 hover:opacity-70 transition-opacity">
             Chinonso.
           </Link>
           <div className="text-white/30 text-[14px]">

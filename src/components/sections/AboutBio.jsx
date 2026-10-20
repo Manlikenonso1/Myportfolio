@@ -7,7 +7,7 @@ export default function AboutBio() {
       <div className="max-w-[var(--max)] mx-auto grid grid-cols-1 lg:grid-cols-[510px_1fr] gap-[80px] items-center">
         
         <FadeIn>
-          <div className="w-full max-w-[400px] lg:max-w-none lg:w-[510px] h-[513px] rounded-[15px] bg-[var(--tan)] overflow-hidden relative shrink-0 mx-auto lg:mx-0 shadow-2xl border border-white/10">
+          <div className="w-full max-w-[400px] lg:max-w-none lg:w-[510px] h-[513px] rounded-[15px] bg-[var(--tan)] overflow-hidden relative shrink-0 mx-auto lg:mx-0 border border-white/10">
             <img 
               src="/profile.jpg" 
               alt="Chinonso Ezeigbo" 

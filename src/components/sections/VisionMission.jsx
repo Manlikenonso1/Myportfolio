@@ -30,7 +30,7 @@ export default function VisionMission() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="w-full max-w-[400px] lg:max-w-none lg:w-[510px] h-[400px] lg:h-[606px] rounded-[15px] bg-[var(--tan)] overflow-hidden relative mx-auto lg:mx-0 shrink-0 shadow-2xl border border-white/10">
+          <div className="w-full max-w-[400px] lg:max-w-none lg:w-[510px] h-[400px] lg:h-[606px] rounded-[15px] bg-[var(--tan)] overflow-hidden relative mx-auto lg:mx-0 shrink-0 border border-white/10">
             <img 
               src="/profile.jpg" 
               alt="Chinonso Ezeigbo" 

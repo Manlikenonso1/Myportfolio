@@ -86,7 +86,7 @@ export default function Contact() {
           {/* Contact Details */}
           <div className="flex flex-col justify-between">
             <FadeIn>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold mb-10 text-white">Contact Details</h2>
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-10 text-white">Contact Details</h2>
             </FadeIn>
             
             <FadeInStagger className="flex flex-col gap-10">
@@ -119,7 +119,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <FadeIn className="bg-[var(--card)] rounded-[32px] p-8 md:p-12 border border-white/10 relative">
+          <FadeIn className="bg-[var(--card)] rounded-2xl p-8 md:p-12 border border-white/10 relative">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -171,7 +171,7 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={status === 'submitting'}
-                className="mt-4 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg"
+                className="mt-4 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
               >
                 {status === 'submitting' ? (
                   <>
@@ -198,7 +198,7 @@ export default function Contact() {
         <div className="max-w-[800px] mx-auto">
           <FadeIn>
             <div className="text-center mb-20">
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-medium text-white mb-6">Frequently Asked Questions</h2>
               <p className="text-white/50 text-[18px]">A few common questions about timelines, working together, and deliverables.</p>
             </div>
           </FadeIn>

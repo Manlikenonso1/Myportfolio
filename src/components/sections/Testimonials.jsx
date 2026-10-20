@@ -23,12 +23,11 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-32 px-6 border-y border-[var(--border)] bg-[var(--bg2)]/30 backdrop-blur-3xl overflow-hidden relative">
-      <div className="absolute top-0 left-[10%] w-[500px] h-[500px] bg-[var(--tan)]/5 blur-[120px] rounded-full pointer-events-none"></div>
+    <section className="py-32 px-6 border-y border-[var(--border)] bg-[var(--bg2)]/30 overflow-hidden relative">
       
       <div className="max-w-[1200px] mx-auto z-10 relative">
         <FadeIn className="text-center mb-20">
-          <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-bold tracking-tight text-white leading-none mb-6">
+          <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-medium tracking-tight text-white leading-none mb-6">
             Words from partners
           </h2>
           <p className="text-[18px] text-[var(--muted)] max-w-[600px] mx-auto font-light">
@@ -55,7 +54,7 @@ export default function Testimonials() {
                     }`}
                   />
                   <div>
-                    <div className="font-['DM_Sans'] font-bold text-[16px] text-white">{t.name}</div>
+                    <div className="font-['DM_Sans'] font-medium text-[16px] text-white">{t.name}</div>
                     <div className="text-[12px] text-[var(--muted)] mt-1">{t.role}</div>
                   </div>
                 </div>

@@ -45,7 +45,7 @@ export default function SkillsSection() {
                   whileInView={{ width: `${skill.pct}%` }}
                   viewport={{ once: true, amount: 0.05 }}
                   transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white shadow-[0_0_12px_rgba(208,201,185,0.5)]"
+                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white"
                 ></motion.div>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function SkillsSection() {
                   whileInView={{ width: `${skill.pct}%` }}
                   viewport={{ once: true, amount: 0.05 }}
                   transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white shadow-[0_0_12px_rgba(208,201,185,0.5)]"
+                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white"
                 ></motion.div>
               </div>
             </div>

@@ -427,9 +427,9 @@ export default function ProjectDetails() {
       
       {/* Background Flora Patterns */}
       {/* 1. HERO HEADER */}
-      <section className="relative z-10 bg-[var(--bg3)] pt-32 pb-16 px-6 text-center border-b border-[var(--border)]">
+      <section className="relative z-10 bg-[var(--bg)] pt-36 pb-14 px-6 text-center border-b border-[var(--border)]">
         <FadeIn>
-          <h1 className="font-['DM_Sans'] text-[32px] md:text-[52px] font-bold text-white tracking-tight mb-4">{project.title}</h1>
+          <h1 className="font-['DM_Sans'] text-[32px] md:text-[52px] font-medium text-white tracking-tight mb-4">{project.title}</h1>
           <div className="flex items-center justify-center gap-2 text-[14px] text-[var(--muted)] font-['Inter_Tight']">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span className="text-white/30">/</span>
@@ -460,7 +460,7 @@ export default function ProjectDetails() {
 
               <div>
                  <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Role</div>
-                 <div className="text-white font-['DM_Sans'] font-bold text-[20px] md:text-[22px] tracking-tight">{project.role}</div>
+                 <div className="text-white font-['DM_Sans'] font-medium text-[20px] md:text-[22px] tracking-tight">{project.role}</div>
                  <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
               </div>
            </div>
@@ -471,7 +471,7 @@ export default function ProjectDetails() {
                   href={project.liveLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:scale-105 hover:bg-white/95 transition-all shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/95 transition-all"
                 >
                   <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
                   <span>Visit Live Site</span>
@@ -516,7 +516,7 @@ export default function ProjectDetails() {
                   </div>
                   <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Background</span>
                 </div>
-                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-bold text-white mb-4 leading-snug">
+                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white mb-4 leading-snug">
                   Overview
                 </h3>
                 <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
@@ -533,7 +533,7 @@ export default function ProjectDetails() {
                   </div>
                   <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Challenge</span>
                 </div>
-                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-bold text-white mb-4 leading-snug">
+                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white mb-4 leading-snug">
                   What Needed Fixing
                 </h3>
                 <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
@@ -549,7 +549,7 @@ export default function ProjectDetails() {
               <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-[var(--border)]">
                 <div>
                   <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Decisions</div>
-                  <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-bold text-white">
+                  <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-medium text-white">
                     How I Tackled Key Challenges
                   </h3>
                 </div>
@@ -562,7 +562,7 @@ export default function ProjectDetails() {
                 {project.decisions.map((dec, idx) => (
                   <div key={idx} className="p-7 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between hover:border-white/20 transition-all">
                     <div>
-                      <div className="font-['DM_Sans'] text-[16px] font-bold text-[var(--blue)] mb-3">
+                      <div className="font-['DM_Sans'] text-[16px] font-medium text-[var(--blue)] mb-3">
                         {dec.pillar}
                       </div>
                       <p className="font-['Inter_Tight'] text-[14px] text-white/60 leading-[1.7]">
@@ -580,10 +580,10 @@ export default function ProjectDetails() {
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
           )}
           {project.metrics && (
-            <FadeIn delay={0.3} className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 md:p-8 rounded-2xl bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/10">
+            <FadeIn delay={0.3} className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10">
               {project.metrics.map((metric, idx) => (
                 <div key={idx} className="text-center sm:text-left sm:border-r last:border-none border-white/10 sm:pr-6 sm:last:pr-0">
-                  <div className="font-['DM_Sans'] text-[36px] md:text-[44px] font-bold text-white tracking-tight leading-none mb-2">
+                  <div className="font-['DM_Sans'] text-[36px] md:text-[44px] font-medium text-white tracking-tight leading-none mb-2">
                     {metric.value}
                   </div>
                   <div className="text-[13px] md:text-[14px] text-white/50 font-medium">
@@ -599,12 +599,12 @@ export default function ProjectDetails() {
             <FadeIn delay={0.2} className="flex flex-col gap-10">
               <div>
                 <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Process</div>
-                <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white">How the design evolved</h3>
+                <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-medium text-white">How the design evolved</h3>
               </div>
               {project.process.map((step, idx) => (
                 <div key={idx} className="flex flex-col gap-5 pb-10 border-b border-white/10 last:border-none last:pb-0">
                   <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-10">
-                    <div className="font-['DM_Sans'] text-[18px] font-bold text-white md:w-[280px] shrink-0">
+                    <div className="font-['DM_Sans'] text-[18px] font-medium text-white md:w-[280px] shrink-0">
                       <span className="text-[var(--blue)] mr-2">0{idx + 1}</span>{step.title}
                     </div>
                     <p className="font-['Inter_Tight'] text-[15px] text-white/60 leading-[1.7] max-w-[640px]">{step.text}</p>
@@ -629,7 +629,7 @@ export default function ProjectDetails() {
           {/* Transition to Visual Walkthrough */}
           <div className="pt-10 border-t border-white/10 flex flex-col items-center text-center">
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual Walkthrough</div>
-            <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white mb-4">
+            <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-medium text-white mb-4">
               The final screens
             </h3>
             {project.liveLink && (
@@ -637,7 +637,7 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-semibold text-[13px] hover:scale-105 hover:bg-white/90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
               >
                 <span>Visit Live Website</span>
                 <ExternalLink size={14} strokeWidth={2.2} />
@@ -648,7 +648,7 @@ export default function ProjectDetails() {
         </div>
 
         <FadeIn direction="up" className="w-full mb-32">
-          <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] ring-1 ring-white/10 leading-none ${
+          <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden ring-1 ring-white/10 leading-none ${
             project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
@@ -732,7 +732,7 @@ export default function ProjectDetails() {
       <section className="bg-[var(--bg2)] py-20 border-y border-[var(--border)]">
         <div className="max-w-[1200px] mx-auto px-6">
            <FadeIn direction="up">
-             <h2 className="font-['DM_Sans'] text-[24px] font-bold text-white mb-10">Review</h2>
+             <h2 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-10">Review</h2>
            </FadeIn>
             <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
@@ -753,7 +753,7 @@ export default function ProjectDetails() {
                           </div>
                         )}
                         <div>
-                          <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
+                          <div className="font-['DM_Sans'] font-medium text-white text-[16px]">{quote.name}</div>
                           <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
                           <div className="flex gap-1 text-[var(--green)] mt-2">
                             {[...Array(4)].map((_, sIdx) => (
@@ -775,20 +775,20 @@ export default function ProjectDetails() {
       {/* 8. NEXT PROJECT PREVIEW CARD */}
       <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-white/5">
         <FadeIn>
-          <div className="p-8 md:p-12 rounded-3xl bg-[var(--card)] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 group hover:border-white/20 transition-all shadow-2xl">
+          <div className="p-8 md:p-12 rounded-2xl bg-[var(--card)] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 group hover:border-white/20 transition-all">
             <div className="flex items-center gap-6">
               <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
-                <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" />
+                <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover transition-transform duration-500 opacity-80 group-hover:opacity-100" />
               </div>
               <div>
                 <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-1.5">Next Case Study</div>
-                <h3 className="font-['DM_Sans'] text-[24px] md:text-[34px] font-bold text-white mb-1">{nextProject.title}</h3>
+                <h3 className="font-['DM_Sans'] text-[24px] md:text-[34px] font-medium text-white mb-1">{nextProject.title}</h3>
                 <p className="text-white/50 text-[14px] md:text-[15px] font-light">{nextProject.category} · {nextProject.type}</p>
               </div>
             </div>
             <Link 
               to={`/projects/${nextProject.id}`}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-all shadow-xl shrink-0 group-hover:shadow-white/20"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-all shrink-0 group-hover:shadow-white/20"
             >
               <span>View Case Study</span>
               <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
@@ -800,7 +800,7 @@ export default function ProjectDetails() {
       {/* 9. BACK TO WORK & CTA */}
       <section className="bg-[var(--bg)] py-32 text-center">
          <FadeIn className="max-w-[800px] mx-auto px-6 mb-16">
-            <h2 className="font-['DM_Sans'] text-[36px] md:text-[48px] font-bold text-white leading-tight mb-6">
+            <h2 className="font-['DM_Sans'] text-[36px] md:text-[48px] font-medium text-white leading-tight mb-6">
               Interested in collaborating?
             </h2>
             <p className="text-[var(--muted)] text-[16px] leading-[1.6]">
@@ -818,13 +818,13 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black text-[15px] font-bold transition-all hover:scale-105 shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-black text-[15px] font-bold transition-all"
               >
                  <span>Visit Live Site</span>
                  <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
-            <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all shadow-[0_0_20px_rgba(57,123,251,0.2)]">
+            <Link to="/contact" className="px-8 py-4 rounded-full bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all">
                Get in Touch
             </Link>
          </FadeIn>

@@ -103,7 +103,7 @@ export default function Projects() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Portfolio Index</div>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-bold text-white tracking-tight">Featured Case Studies</h2>
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium text-white tracking-tight">Featured Case Studies</h2>
             </div>
             
             {/* Filter Pills */}
@@ -114,7 +114,7 @@ export default function Projects() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-full text-[13px] font-medium transition-all ${
                     activeCategory === cat.id
-                      ? 'bg-white text-black font-semibold shadow-lg shadow-white/10 scale-105'
+                      ? 'bg-white text-black font-semibold scale-105'
                       : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10 border border-white/5'
                   }`}
                 >
@@ -150,10 +150,10 @@ export default function Projects() {
                         ))}
                       </div>
                     </div>
-                    <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-bold text-white">{proj.title}</h3>
+                    <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-medium text-white">{proj.title}</h3>
                     <p className="text-white/50 text-[16px] max-w-[650px] mt-2 font-light">{proj.description}</p>
                   </div>
-                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:scale-105 hover:border-white/60 transition-all w-fit shrink-0">
+                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-full border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:border-white/60 transition-all w-fit shrink-0">
                     View Case Study
                   </Link>
                 </div>
@@ -170,7 +170,7 @@ export default function Projects() {
       <section className="px-6 py-32 max-w-[1200px] mx-auto border-t border-[var(--border)]">
         <FadeIn className="text-center mb-16">
           <div className="text-[14px] text-[var(--muted)] tracking-[0.2em] uppercase font-bold mb-4">Testimonials</div>
-          <h2 className="font-['DM_Sans'] text-[40px] md:text-[56px] font-bold text-white leading-[1.1] tracking-tight">
+          <h2 className="font-['DM_Sans'] text-[40px] md:text-[56px] font-medium text-white leading-[1.1] tracking-tight">
             Hear What They're Saying About Me
           </h2>
         </FadeIn>
@@ -194,7 +194,7 @@ export default function Projects() {
                       }`} 
                     />
                     <div>
-                      <div className="font-['DM_Sans'] font-bold text-white text-[16px]">{quote.name}</div>
+                      <div className="font-['DM_Sans'] font-medium text-white text-[16px]">{quote.name}</div>
                       <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
                       <div className="flex gap-1 text-[var(--green)] mt-2">
                         {[...Array(5)].map((_, sIdx) => (
@@ -214,19 +214,19 @@ export default function Projects() {
       {/* 6. CLIENT LOGOS */}
       <section className="py-[60px] border-y border-[var(--border)] bg-[#050505]">
         <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
-          <div className="font-['DM_Sans'] text-[16px] font-bold text-white mb-6 w-full text-center">
+          <div className="font-['DM_Sans'] text-[16px] font-medium text-white mb-6 w-full text-center">
             Clients & Collaborations
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 mt-4">
-             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Appsatile</Link>
-             <Link to="/projects/aerovia"    className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Aerovia</Link>
-             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">HuntlyAi</Link>
-             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">LazyZone</Link>
-             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Cook by Ugo</Link>
-             <span className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 cursor-default">Talstrike</span>
-             <span className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 cursor-default">cloudnet IQ</span>
-             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Nikos Farm</Link>
-             <Link to="/projects/aptinfy"     className="font-['DM_Sans'] font-bold text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white hover:scale-110 hover:-translate-y-0.5">Aptinfy</Link>
+             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
+             <Link to="/projects/aerovia"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Aerovia</Link>
+             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
+             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
+             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
+             <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">Talstrike</span>
+             <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">cloudnet IQ</span>
+             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
+             <Link to="/projects/aptinfy"     className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Aptinfy</Link>
           </div>
         </FadeIn>
       </section>

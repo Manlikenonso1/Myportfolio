@@ -9,18 +9,17 @@ export default function NotFound() {
       <SEO title="Page Not Found · Chinonso Ezeigbo" description="The page you are looking for does not exist." />
       
       {/* Ambient background glow */}
-      <div className="absolute w-[500px] h-[500px] bg-[var(--blue)]/10 blur-[140px] rounded-full pointer-events-none -top-20"></div>
 
       <FadeIn className="max-w-[600px] mx-auto text-center relative z-10 flex flex-col items-center">
         <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[12px] font-bold tracking-widest text-[var(--blue)] uppercase mb-6">
           Error 404
         </span>
         
-        <h1 className="font-['DM_Sans'] text-[clamp(60px,10vw,120px)] font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-white/80 to-white/20 leading-none mb-4">
+        <h1 className="font-['DM_Sans'] text-[clamp(60px,10vw,120px)] font-medium tracking-tighter text-white leading-none mb-4">
           404
         </h1>
         
-        <h2 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold text-white mb-4">
+        <h2 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-medium text-white mb-4">
           Page Not Found
         </h2>
         
@@ -30,7 +29,7 @@ export default function NotFound() {
         
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 hover:bg-white/95 transition-all shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+          className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:bg-white/95 transition-all"
         >
           <ArrowLeft size={16} strokeWidth={2} />
           <span>Return to Homepage</span>

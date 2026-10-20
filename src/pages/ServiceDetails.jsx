@@ -175,7 +175,7 @@ export default function ServiceDetails() {
               <div className="w-1 h-1 rounded-full bg-white/20"></div>
               <span className="text-white">{activeService.title}</span>
             </div>
-            <h1 className="font-['DM_Sans'] text-[clamp(40px,5vw,64px)] font-bold leading-[1.2] tracking-tight text-white mb-8">
+            <h1 className="font-['DM_Sans'] text-[clamp(40px,5vw,64px)] font-medium leading-[1.2] tracking-tight text-white mb-8">
               {activeService.headline}
             </h1>
           </FadeIn>
@@ -186,14 +186,14 @@ export default function ServiceDetails() {
       <section className="px-6 py-20 lg:py-32">
         <div className="max-w-[1000px] mx-auto">
           <FadeIn className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-32">
-            <h2 className="font-['DM_Sans'] text-[24px] lg:text-[32px] font-bold text-white">The Method</h2>
+            <h2 className="font-['DM_Sans'] text-[24px] lg:text-[32px] font-medium text-white">The Method</h2>
             <div className="flex flex-col gap-8 text-[18px] lg:text-[20px] text-white/60 leading-[1.7] font-light">
               <p>{activeService.overview}</p>
               <p>{activeService.description}</p>
             </div>
           </FadeIn>
 
-          <FadeIn className="w-full aspect-video rounded-3xl overflow-hidden bg-[var(--card)] p-2 border border-white/10 relative mb-32 shadow-2xl">
+          <FadeIn className="w-full aspect-video rounded-2xl overflow-hidden bg-[var(--card)] p-2 border border-white/10 relative mb-32">
              <img src={activeService.image} className="w-full h-full object-cover rounded-2xl opacity-90 transition-opacity duration-500" alt="Process Blueprint" />
           </FadeIn>
 
@@ -203,12 +203,12 @@ export default function ServiceDetails() {
 
           <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-32">
             {activeService.phases.map((phase, idx) => (
-              <FadeInStaggerItem key={idx} className="bg-[var(--card)] p-8 rounded-3xl border border-white/10 flex flex-col justify-between group hover:border-[var(--blue)]/30 hover:bg-white/5 transition-all duration-300">
+              <FadeInStaggerItem key={idx} className="bg-[var(--card)] p-8 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-[var(--blue)]/30 hover:bg-white/5 transition-all duration-300">
                 <div>
                   <div className="w-12 h-12 rounded-lg bg-[var(--blue)]/15 border border-[var(--blue)]/30 flex items-center justify-center mb-6">
                      <span className="font-['DM_Sans'] text-[16px] font-semibold text-[var(--blue)]">{phase.num}</span>
                   </div>
-                  <h3 className="font-['DM_Sans'] text-[24px] font-bold mb-4 text-white group-hover:text-[var(--blue)] transition-colors">{phase.title}</h3>
+                  <h3 className="font-['DM_Sans'] text-[24px] font-medium mb-4 text-white group-hover:text-[var(--blue)] transition-colors">{phase.title}</h3>
                   <p className="text-white/50 leading-[1.6] font-light">{phase.desc}</p>
                 </div>
               </FadeInStaggerItem>
@@ -242,17 +242,16 @@ export default function ServiceDetails() {
           </FadeIn>
 
           {/* Dynamic Footer CTA */}
-          <FadeIn className="p-8 md:p-16 rounded-[32px] bg-gradient-to-br from-[var(--card)] to-[var(--bg2)] border border-white/10 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[var(--blue)]/5 blur-[100px] rounded-full pointer-events-none"></div>
+          <FadeIn className="p-8 md:p-16 rounded-2xl bg-[var(--card)] border border-white/10 text-center relative overflow-hidden">
             <div className="relative z-10 max-w-[600px] mx-auto flex flex-col items-center">
-              <h3 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-bold text-white mb-6 leading-tight">
+              <h3 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium text-white mb-6 leading-tight">
                 Ready to work together?
               </h3>
               <p className="text-[16px] md:text-[18px] text-white/50 leading-[1.6] mb-10 font-light">
                 Tell me about your product, your goals, or what challenges you're facing. I'd love to help you build something great.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
-                <Link to="/contact" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(255,255,255,0.15)]">
+                <Link to="/contact" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] transition-transform duration-300">
                   Get in touch
                 </Link>
                 <Link to="/services" className="px-8 py-4 rounded-full bg-transparent text-white font-semibold text-[15px] border border-white/20 hover:bg-white/5 transition-colors duration-300">
