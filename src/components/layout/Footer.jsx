@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>
             <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-bold tracking-tight leading-[1.1] mb-8">
-              Let's create something<br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--blue)] to-[var(--green)]">extraordinary.</span>
+              Let's make your product<br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--blue)] to-[var(--green)]">easier to use.</span>
             </h2>
             <p className="text-white/50 text-[18px] max-w-[400px] mb-10">
-              I'm always looking for ambitious projects and great teams to build digital products with.
+              Tell me what is confusing your users and I'll show you how I'd fix it.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-black font-semibold text-[15px] hover:scale-105 hover:shadow-lg hover:shadow-white/10 transition-all duration-300">
               Get in touch

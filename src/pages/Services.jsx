@@ -7,7 +7,7 @@ export default function Services() {
     <div className="w-full relative pb-32">
       <SEO 
         title="Services · Chinonso Ezeigbo" 
-        description="End-to-end product design services: UI/UX design, Figma design systems, interactive prototypes, user research, and dev handoff." 
+        description="End-to-end product design services: interface design, Figma design systems, interactive prototypes, user research, and dev handoff." 
       />
       
       {/* 1. HERO - SERVICES */}
@@ -35,7 +35,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">01</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Product Strategy & UI/UX Design</h3>
+                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-bold text-white mb-6">Product Strategy & Interface Design</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     I turn complicated workflows into clean, straightforward interfaces. By mapping out how users move through your app and testing key flows early, I build layouts that help people get things done without getting confused.
                   </p>

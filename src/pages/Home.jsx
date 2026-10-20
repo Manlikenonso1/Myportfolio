@@ -17,11 +17,11 @@ export default function Home() {
             <span className="text-[13px] font-medium tracking-widest text-white/80 uppercase">Designer</span>
           </div>
 
-          <h1 className="font-['DM_Sans'] text-[clamp(48px,8vw,110px)] font-bold leading-[1.0] tracking-[-0.03em] text-center max-w-[1000px] mb-10 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
+          <h1 className="font-['DM_Sans'] text-[clamp(48px,8vw,110px)] font-bold leading-[1.0] tracking-[-0.03em] text-center max-w-[1000px] mb-10 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
             Where security thinking meets beautiful design.
           </h1>
 
-          <p className="text-[18px] md:text-[22px] text-white/50 text-center max-w-[640px] leading-[1.6] mb-12 font-light">
+          <p className="text-[18px] md:text-[22px] text-white/70 text-center max-w-[640px] leading-[1.6] mb-12 font-light">
             I'm a designer with a background in Cyber Security. I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build.
           </p>
 
@@ -92,11 +92,11 @@ export default function Home() {
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-3xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-70"></div>
-                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className={`w-full ${i === 0 ? 'aspect-[4/3] md:aspect-[16/9]' : 'aspect-[4/3]'} object-cover opacity-65 group-hover:opacity-100 transition-transform duration-700 group-hover:scale-105`} alt={p.alt} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-0"></div>
+                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className={`w-full ${i === 0 ? 'aspect-[4/3] md:aspect-[16/9]' : 'aspect-[4/3]'} object-cover transition-transform duration-700 group-hover:scale-105`} alt={p.alt} />
                   <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20">
                     <div className={`px-4 py-1.5 rounded-full backdrop-blur-md border text-[12px] font-medium tracking-wide mb-3 inline-block ${p.pill}`}>{p.tag}</div>
-                    <h3 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-bold text-white">{p.title}</h3>
+                    <h3 className="sr-only">{p.title}</h3>
                   </div>
                 </Link>
               </FadeIn>
@@ -136,7 +136,7 @@ export default function Home() {
               <Link to="/services/ux-strategy" className="group flex items-center justify-between p-8 rounded-3xl bg-[var(--card)] hover:bg-white/5 transition-colors border border-white/5 hover:border-white/20">
                 <div className="flex items-center gap-6">
                   <div className="text-[14px] text-white/30 font-medium group-hover:text-white/50">01</div>
-                  <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">UI/UX Design</h3>
+                  <h3 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-bold">Interface Design</h3>
                 </div>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all bg-[var(--bg)]">
                   <ArrowRight size={18} strokeWidth={2} className="text-white" />

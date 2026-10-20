@@ -5,6 +5,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,19 +59,19 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-[200] pt-6 px-6 pointer-events-none flex justify-center">
+      <nav className="fixed top-0 left-0 right-0 z-[200] pt-3 px-4 md:pt-6 md:px-6 pointer-events-none flex justify-center">
         <motion.div 
           animate={{
             width: scrolled ? '800px' : '100%',
             maxWidth: '1200px',
             backgroundColor: scrolled ? 'rgba(5,5,5,0.7)' : 'rgba(10,10,10,0.2)',
-            padding: scrolled ? '12px 24px' : '20px 32px'
+            padding: isMobile ? '10px 18px' : (scrolled ? '12px 24px' : '20px 32px')
           }}
           className={`flex justify-between items-center rounded-3xl pointer-events-auto transition-shadow duration-500 border border-white/10 backdrop-blur-xl ${scrolled ? 'shadow-2xl shadow-blue-900/10' : ''}`}
         >
           {/* Logo & Availability Badge */}
           <div className="flex items-center gap-3.5 z-10">
-            <Link to="/" className="font-['DM_Sans'] text-[22px] font-bold tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
+            <Link to="/" className="font-['DM_Sans'] text-[18px] md:text-[22px] font-bold tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
               Chinonso.
             </Link>
             <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">

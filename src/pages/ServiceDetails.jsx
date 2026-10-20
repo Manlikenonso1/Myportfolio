@@ -4,7 +4,7 @@ import SEO from '../components/ui/SEO';
 
 const serviceData = {
   'ux-strategy': {
-    title: "Product Strategy & UI/UX Design",
+    title: "Product Strategy & Interface Design",
     headline: "Designing clean, intuitive digital products people actually enjoy using.",
     eyebrow: "Product Strategy & UX Design",
     image: "/service_ui_ux.png",
@@ -220,7 +220,7 @@ export default function ServiceDetails() {
             <div className="font-['DM_Sans'] text-[14px] tracking-[.08em] uppercase text-white/40 mb-6 text-center">Explore Other Capabilities</div>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {[
-                { slug: 'ux-strategy', title: 'UI/UX Design' },
+                { slug: 'ux-strategy', title: 'Interface Design' },
                 { slug: 'design-systems', title: 'Design Systems' },
                 { slug: 'interactive-motion', title: 'Motion & Prototyping' },
                 { slug: 'user-research', title: 'User Research & Audits' },

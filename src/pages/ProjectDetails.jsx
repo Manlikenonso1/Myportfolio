@@ -317,6 +317,7 @@ export default function ProjectDetails() {
       category: "Mobile Banking App",
       role: "Designer (solo)",
       heroImg: "/hsbc-thumbnail.webp",
+      phoneProcess: true,
       liveLink: null,
       sliceCount: 12,
       overview: "An unofficial end-to-end redesign of the HSBC UK app I use every week. I audited my own account, studied what Monzo, Starling, Revolut and Barclays do well, then rebuilt the structure, flows, design system and 25 screens around two ideas: safe by default, and Global Money built into everyday banking.",
@@ -458,7 +459,8 @@ export default function ProjectDetails() {
               <div className="hidden sm:block w-px h-10 bg-white/10"></div>
 
               <div>
-                 <div className="text-white font-['DM_Sans'] font-bold text-[24px] md:text-[28px] tracking-tight">{project.title}</div>
+                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Role</div>
+                 <div className="text-white font-['DM_Sans'] font-bold text-[20px] md:text-[22px] tracking-tight">{project.role}</div>
                  <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
               </div>
            </div>
@@ -613,7 +615,7 @@ export default function ProjectDetails() {
                         {vid ? (
                           <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10 bg-black" />
                         ) : (
-                          <img src={src} alt={label} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10" />
+                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} rounded-xl border border-white/10`} />
                         )}
                         <figcaption className={`mt-2 text-[12px] font-semibold tracking-wide uppercase ${k === 'after' ? 'text-emerald-300/80' : 'text-white/40'}`}>{label}</figcaption>
                       </figure>
@@ -628,7 +630,7 @@ export default function ProjectDetails() {
           <div className="pt-10 border-t border-white/10 flex flex-col items-center text-center">
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual Walkthrough</div>
             <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-bold text-white mb-4">
-              Full Screens & Interaction Details
+              The final screens
             </h3>
             {project.liveLink && (
               <a 

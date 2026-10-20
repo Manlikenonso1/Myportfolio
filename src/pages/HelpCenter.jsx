@@ -62,7 +62,7 @@ export default function HelpCenter() {
           <div className="faq-answer">Send me a message through the contact form below or drop me an email. We'll set up a quick 20–30 minute chat to talk through your goals, timeline, and what you're looking to build.</div>
         </details>
         <details className="faq-item">
-          <summary>How do you approach UI/UX design work?</summary>
+          <summary>How do you approach design work?</summary>
           <div className="faq-answer">I keep it practical and user-focused. I look at who is using your product, where they run into confusion or friction, and design clean, intuitive screens that make completing tasks feel effortless.</div>
         </details>
         <details className="faq-item">
