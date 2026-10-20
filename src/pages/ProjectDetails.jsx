@@ -10,6 +10,7 @@ export default function ProjectDetails() {
   const projectsData = {
     'appsatile': {
       id: 'appsatile',
+      glance: { problem: "Three product teams were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system for all three teams. The founder said it made the whole app easier to use." },
       title: "Appsatile",
       type: "Design System",
       category: "Design Architecture",
@@ -65,6 +66,7 @@ export default function ProjectDetails() {
     },
     'aerovia': {
       id: 'aerovia',
+      glance: { problem: "Airline sites hide fees until the last step and make fares hard to compare.", did: "A 6-step booking flow, side-by-side fare cards and a design system for web and mobile.", outcome: "Concept, not shipped. Every fee and bag price is shown before checkout." },
       title: "Aerovia",
       concept: true,
       type: "Product & Interface Design",
@@ -124,6 +126,7 @@ export default function ProjectDetails() {
     },
     'nikos-farm': {
       id: 'nikos-farm',
+      glance: { problem: "The old shop showed no prices or buy buttons, and checking a product meant leaving the page.", did: "User flow, product grid, quick view, cart drawer and a one-page checkout, on desktop and mobile.", outcome: "Live at nikosfarm.com, with price and add to cart on every product card." },
       title: "Nikos Farm",
       type: "E-Commerce",
       category: "E-Commerce Interface",
@@ -174,6 +177,7 @@ export default function ProjectDetails() {
     },
     'aptinfy': {
       id: 'aptinfy',
+      glance: { problem: "A generic logo that blurred into nothing at small sizes.", did: "Logo suite, favicon set, brand guidelines and pitch deck templates.", outcome: "A mark that stays clear from browser tab up to full screen." },
       title: "Aptinfy",
       type: "Logo & Brand Identity",
       category: "Brand Design",
@@ -207,6 +211,7 @@ export default function ProjectDetails() {
     },
     'cook-by-ugo': {
       id: 'cook-by-ugo',
+      glance: { problem: "Delivery apps take up to 30% of every order and keep the customer data.", did: "Brand identity, a direct ordering site, a protein and side picker, and a 3-step checkout.", outcome: "Designs complete. The site is not live yet." },
       title: "Cook by Ugo",
       type: "Food & Hospitality",
       category: "Restaurant & Ordering Experience",
@@ -261,6 +266,7 @@ export default function ProjectDetails() {
     },
     'lazyzone': {
       id: 'lazyzone',
+      glance: { problem: "Five AI tools that don't talk to each other, and no button says what an action costs.", did: "Audit (11 issues), research, flows, a light and dark design system, desktop, tablet and mobile screens, and handoff.", outcome: "All five tools share one project, and every action shows its credit cost before you press it." },
       title: "LazyZoneLabs",
       type: "Product Design",
       category: "AI Creator Suite & Web App",
@@ -311,6 +317,7 @@ export default function ProjectDetails() {
     },
     'hsbc': {
       id: 'hsbc',
+      glance: { problem: "Three menus that repeat each other, account numbers always visible, and scam checks that come too late.", did: "Audit (16 issues), competitor research, flows, wireframes, a design system and 25 iOS screens.", outcome: "Concept, not shipped. A clickable prototype covering 4 journeys, built around safety by default." },
       title: "HSBC UK",
       concept: true,
       type: "Product Design",
@@ -361,6 +368,7 @@ export default function ProjectDetails() {
     },
     'huntly': {
       id: 'huntly',
+      glance: { problem: "No pipeline view, an Add Job form missing company and title, and a cluttered sidebar.", did: "Audit (12 issues), research, flows, wireframes, a light and dark design system and handoff.", outcome: "A board for every application, an Add Job form that fills in from a link, and 12 desktop plus 6 mobile screens." },
       title: "HuntlyAi",
       type: "Product Design",
       category: "AI Job Search & Application Tracker",
@@ -459,9 +467,8 @@ export default function ProjectDetails() {
               <div className="hidden sm:block w-px h-10 bg-white/10"></div>
 
               <div>
-                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Role</div>
-                 <div className="text-white font-['DM_Sans'] font-medium text-[20px] md:text-[22px] tracking-tight">{project.role}</div>
-                 <div className="text-[var(--muted)] text-[14px] leading-[1.5] mt-0.5">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
+                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Type</div>
+                 <div className="text-white/80 text-[14px] leading-[1.5]">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
               </div>
            </div>
            
@@ -488,6 +495,18 @@ export default function ProjectDetails() {
              </Link>
            </div>
         </FadeIn>
+
+        {/* AT A GLANCE */}
+        {project.glance && (
+          <FadeIn delay={0.12} className="grid grid-cols-1 md:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden mb-16">
+            {[['Problem', project.glance.problem], ['Role', project.role], ['What I did', project.glance.did], ['Outcome', project.glance.outcome]].map(([label, text]) => (
+              <div key={label} className="bg-[#0a0a0a] p-6">
+                <div className="text-[11px] font-bold tracking-[0.18em] uppercase text-white/40 mb-3">{label}</div>
+                <p className="font-['Inter_Tight'] text-[15px] leading-[1.6] text-white/85 m-0">{text}</p>
+              </div>
+            ))}
+          </FadeIn>
+        )}
 
         {/* 3. CASE STUDY BRIEFING: CRITICAL THINKING & TRADE-OFFS */}
         <div className="mb-20 flex flex-col gap-12">
