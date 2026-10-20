@@ -72,7 +72,7 @@ export default function Navbar() {
           {/* Logo & Availability Badge */}
           <div className="flex items-center gap-3.5 z-10">
             <Link to="/" className="font-['DM_Sans'] text-[18px] md:text-[22px] font-medium tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
-              Chinonso.
+              designbynonso.
             </Link>
             <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">
               <span className="relative flex h-2 w-2">
