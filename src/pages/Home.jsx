@@ -41,7 +41,7 @@ export default function Home() {
           <div className="text-[12px] font-medium tracking-[0.2em] uppercase text-white/30 mb-10 border-b border-white/10 pb-4 w-full text-center">
             Selected Clients & Collaborations
           </div>
-          <div className="grid grid-cols-4 gap-x-14 gap-y-8 place-items-center">
+          <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
              <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
              <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
              <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
@@ -49,7 +49,6 @@ export default function Home() {
              <span className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 cursor-default">Talstrike</span>
              <span className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 cursor-default">cloudnet IQ</span>
              <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
-             <Link to="/projects/aptinfy"     className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Aptinfy</Link>
           </div>
         </FadeIn>
       </section>

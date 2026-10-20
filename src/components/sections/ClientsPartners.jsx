@@ -9,7 +9,6 @@ const logos = [
   { name: "Talstrike",   route: null },
   { name: "cloudnet IQ", route: null },
   { name: "Nikos Farm",  route: "/projects/nikos-farm" },
-  { name: "Aptinfy",     route: "/projects/aptinfy" },
 ];
 
 export default function ClientsPartners() {

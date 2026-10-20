@@ -226,7 +226,6 @@ export default function Projects() {
              <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">Talstrike</span>
              <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">cloudnet IQ</span>
              <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
-             <Link to="/projects/aptinfy"     className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Aptinfy</Link>
           </div>
         </FadeIn>
       </section>

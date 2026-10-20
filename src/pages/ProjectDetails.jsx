@@ -175,40 +175,6 @@ export default function ProjectDetails() {
         { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso redesigned our storefront from the ground up. The site looks stunning, our mobile checkout flows effortlessly, and our farm customers love the new experience." }
       ]
     },
-    'aptinfy': {
-      id: 'aptinfy',
-      glance: { problem: "A generic logo that blurred into nothing at small sizes.", did: "Logo suite, favicon set, brand guidelines and pitch deck templates.", outcome: "A mark that stays clear from browser tab up to full screen." },
-      title: "Aptinfy",
-      type: "Logo & Brand Identity",
-      category: "Brand Design",
-      role: "Designer · brand & UI",
-      heroImg: "/aptinfy-thumbnail.webp",
-      liveLink: null,
-      sliceCount: 2,
-      overview: "Aptinfy is a tech startup focused on secure cloud infrastructure. I created their brand identity, visual system, and presentation templates to help them look confident and polished when pitching to enterprise clients and investors.",
-      problem: "Their original logo was generic and hard to recognize. Even worse, it completely blurred together whenever it was scaled down to a small size, like in a browser tab or mobile app icon. They needed an identity that felt technical and trustworthy without looking boring.",
-      deliverables: ["Geometric Logo Suite", "Scalable Favicon Matrix", "Brand Guidelines Book", "Typography Hierarchy", "Pitch Deck Master Templates"],
-      metrics: [
-        { value: "16px to 4K", label: "Clean legibility at any resolution" },
-        { value: "100%", label: "Consistent branding across all decks" },
-        { value: "3 Weeks", label: "From first sketch to full handoff" }
-      ],
-      decisions: [
-        {
-          pillar: "01. Clean circular geometry that scales down cleanly",
-          rationale: "I built the logo using balanced circular geometry and bold, simple negative space. That way, the mark stays sharp and recognizable whether it is a tiny 16-pixel favicon in a browser tab or a massive graphic at a conference."
-        },
-        {
-          pillar: "02. Deep tech tones paired with warm lavender",
-          rationale: "Instead of defaulting to standard corporate blue, I paired rich dark surfaces with vibrant purple and electric lavender gradients. It communicates security and technical depth while still feeling modern and memorable."
-        },
-        {
-          pillar: "03. Ready-to-use templates the team could actually work with",
-          rationale: "I handed off clean SVG exports with proper bounding boxes, plus exact color variables and Google Slides master decks. The marketing and sales team could immediately build customer-facing decks without asking how to use the logo."
-        }
-      ],
-      reviews: []
-    },
     'cook-by-ugo': {
       id: 'cook-by-ugo',
       glance: { problem: "Delivery apps take up to 30% of every order and keep the customer data.", did: "Brand identity, a direct ordering site, a protein and side picker, and a 3-step checkout.", outcome: "Designs complete. The site is not live yet." },
