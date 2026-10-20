@@ -332,6 +332,57 @@ export default function ProjectDetails() {
       ],
       reviews: []
     },
+    'keel': {
+      id: 'keel',
+      glance: { problem: "Staying safe means five places: an authenticator, a web portal, a report button, a help page and a phone line. None of them say what happened next.", did: "Research, an audit of my own Microsoft 365 account (13 issues), flows, wireframes, three visual directions, a design system and 17 screens.", outcome: "Concept, not shipped. One app with four tabs, a three-minute setup and a clickable prototype." },
+      title: "Keel",
+      concept: true,
+      type: "Product Design",
+      category: "Security App",
+      role: "Designer (solo)",
+      heroImg: "/keel-thumbnail.webp",
+      phoneProcess: true,
+      liveLink: null,
+      sliceCount: 10,
+      overview: "Keel is a concept app that keeps a work account safe. I researched how work accounts get broken into, audited my own Microsoft 365 university account, then designed one app that explains sign-ins in plain words, gives every phishing report an answer, and gets people back in without calling the help desk.",
+      problem: "85% of UK businesses that had a breach or attack last year were hit by phishing (Cyber Security Breaches Survey 2025). Yet the tools people use to stay safe are written for IT: sign-in prompts show only an app and a country, activity pages list IP addresses, and reporting an email ends in silence. My audit logged 13 issues, 4 of them serious, from 3 root causes.",
+      deliverables: ["Research · UK Data & NCSC Guidance", "Heuristic & WCAG 2.2 Audit · 13 Issues", "Proto-personas & How Might We", "Structure & 4 Flows", "Wireframes · 10 Screens", "3 Visual Directions", "Design System · Light & Dark", "17 Screens · iOS", "Clickable Prototype"],
+      decisions: [
+        {
+          pillar: "01. Plain words, not logs",
+          rationale: "Every sign-in reads like a sentence: you, on your iPhone in Newcastle, 8:32 this morning. The approval prompt shows city, device, time and account, and you type the number from the sign-in screen, so a sleepy tap can’t approve a stranger."
+        },
+        {
+          pillar: "02. Every action has an ending",
+          rationale: "Block a sign-in and Keel says what it stopped and what to do next. Report an email and you hear back: removed, safe or still checking. Four prompts in three minutes pause automatically, because that pattern usually means someone is guessing."
+        },
+        {
+          pillar: "03. Back in without a phone call",
+          rationale: "Passkeys come first, as the NCSC now recommends. If the phone is lost, a passkey on another device, a backup code or a recovery contact gets you back in. The help desk is the last resort, with an ID check, because a phone call is exactly what attackers fake."
+        }
+      ],
+      process: [
+        {
+          title: "A prompt you can actually answer",
+          text: "Today’s Authenticator prompt shows an app and a country, and a “Map unavailable” box fills a quarter of it. Keel’s prompt answers “is this me?” with city, device, time and account, and makes No as easy to find as Yes.",
+          before: "/keel-process-1-before.webp", beforeLabel: "Before · Authenticator prompt, my account",
+          after: "/keel-process-1-after.webp", afterLabel: "After · Keel sign-in prompt"
+        },
+        {
+          title: "Words first, then the look",
+          text: "The greyscale wireframe settled the words before any colour: what we did, and what you should do. The final screen turns that into a short timeline with times, and one next step with a time estimate.",
+          before: "/keel-process-2-before.webp", beforeLabel: "Wireframe · sign-in blocked",
+          after: "/keel-process-2-after.webp", afterLabel: "Final · sign-in blocked"
+        },
+        {
+          title: "Quiet paper, with tighter type",
+          text: "Direction A, warm and editorial with a serif, felt like a trusted letter rather than an alarm. I kept its paper colours and the orange-only-for-risk rule, added Direction C’s bold number boxes, and moved to Inter so small text stays sharp.",
+          before: "/keel-process-3-before.webp", beforeLabel: "Direction A · Quiet paper",
+          after: "/keel-process-3-after.webp", afterLabel: "Final · Home"
+        }
+      ],
+      reviews: []
+    },
     'huntly': {
       id: 'huntly',
       glance: { problem: "No pipeline view, an Add Job form missing company and title, and a cluttered sidebar.", did: "Audit (12 issues), research, flows, wireframes, a light and dark design system and handoff.", outcome: "A board for every application, an Add Job form that fills in from a link, and 12 desktop plus 6 mobile screens." },
@@ -390,7 +441,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['hsbc', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm', 'aerovia', 'cook-by-ugo'];
+  const projectOrder = ['hsbc', 'keel', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm', 'aerovia', 'cook-by-ugo'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -634,7 +685,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;

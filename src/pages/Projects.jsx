@@ -20,6 +20,17 @@ const allProjects = [
     image: '/hsbc-thumbnail.webp'
   },
   {
+    id: 'keel',
+    featured: true,
+    title: 'Keel',
+    concept: true,
+    categoryLabel: 'Security App',
+    description: 'Work account safety: sign-ins in plain words, phishing reports that get an answer, and recovery without the help desk.',
+    categories: ['all', 'design-systems'],
+    tags: ['Security UX', 'Mobile App', 'Design System'],
+    image: '/keel-thumbnail.webp'
+  },
+  {
     id: 'lazyzone',
     featured: true,
     title: 'LazyZoneLabs',
@@ -51,7 +62,6 @@ const allProjects = [
   },
   {
     id: 'nikos-farm',
-    featured: true,
     title: 'Nikos Farm',
     categoryLabel: 'E-Commerce',
     description: 'Farm shop redesign with clear prices, quick-view product details and a slide-out cart.',
