@@ -10,6 +10,7 @@ import SEO from '../components/ui/SEO';
 const allProjects = [
   {
     id: 'hsbc',
+    featured: true,
     title: 'HSBC UK',
     concept: true,
     categoryLabel: 'Mobile Banking',
@@ -20,6 +21,7 @@ const allProjects = [
   },
   {
     id: 'lazyzone',
+    featured: true,
     title: 'LazyZoneLabs',
     categoryLabel: 'AI Creator Suite & Web App',
     description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
@@ -29,6 +31,7 @@ const allProjects = [
   },
   {
     id: 'huntly',
+    featured: true,
     title: 'HuntlyAi',
     categoryLabel: 'AI Job Search & Workspace',
     description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',
@@ -38,6 +41,7 @@ const allProjects = [
   },
   {
     id: 'appsatile',
+    featured: true,
     title: 'Appsatile',
     categoryLabel: 'Design System',
     description: 'Unified multi-product SaaS design system cutting developer handoff by 50%.',
@@ -47,6 +51,7 @@ const allProjects = [
   },
   {
     id: 'nikos-farm',
+    featured: true,
     title: 'Nikos Farm',
     categoryLabel: 'E-Commerce',
     description: 'Farm shop redesign with clear prices, quick-view product details and a slide-out cart.',
@@ -89,6 +94,8 @@ export default function Projects() {
   const filtered = activeCategory === 'all'
     ? allProjects
     : allProjects.filter(p => p.categories.includes(activeCategory));
+  const featured = filtered.filter(p => p.featured);
+  const more = filtered.filter(p => !p.featured);
 
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
@@ -114,7 +121,7 @@ export default function Projects() {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-full text-[13px] font-medium transition-all ${
                     activeCategory === cat.id
-                      ? 'bg-white text-black font-semibold scale-105'
+                      ? 'bg-white text-black font-semibold'
                       : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10 border border-white/5'
                   }`}
                 >
@@ -127,7 +134,7 @@ export default function Projects() {
         
         <motion.div layout className="flex flex-col gap-24">
           <AnimatePresence mode="popLayout">
-            {filtered.map((proj) => (
+            {featured.map((proj) => (
               <motion.div
                 key={proj.id}
                 layout
@@ -164,6 +171,35 @@ export default function Projects() {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        {more.length > 0 && (
+          <div className="mt-32">
+            <FadeIn>
+              <div className="border-b border-white/10 pb-6 mb-10">
+                <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Archive</div>
+                <h2 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-medium text-white tracking-tight">More work</h2>
+              </div>
+            </FadeIn>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {more.map((proj, i) => (
+                <FadeIn key={proj.id} delay={i * 0.08}>
+                  <Link to={`/projects/${proj.id}`} className="group block">
+                    <div className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--card)] group-hover:border-white/25 transition-colors">
+                      <img src={proj.image} alt={proj.title} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
+                    </div>
+                    <div className="flex items-center gap-2 mt-4 mb-1">
+                      <h3 className="font-['DM_Sans'] text-[20px] font-medium text-white">{proj.title}</h3>
+                      {proj.concept && <span className="px-2 py-0.5 rounded-full border border-white/15 text-white/60 text-[10px] uppercase tracking-widest font-bold">Concept</span>}
+                    </div>
+                    <div className="text-[12px] uppercase tracking-widest text-white/40 font-bold mb-2">{proj.categoryLabel}</div>
+                    <p className="text-[14px] text-white/55 leading-[1.6]">{proj.description}</p>
+                    <span className="inline-block mt-3 text-[13px] text-white/80 group-hover:text-white underline underline-offset-4 decoration-white/30">View project</span>
+                  </Link>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        )}
       </section>
 
       {/* 5. TESTIMONIALS */}

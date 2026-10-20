@@ -71,8 +71,6 @@ export default function Home() {
               { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'appsatile', title: 'Appsatile', tag: 'Design System', alt: 'Appsatile Design System', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'nikos-farm', title: 'Nikos Farm', tag: 'E-Commerce', alt: 'Nikos Farm E-Commerce', pill: 'bg-black/40 border-white/15 text-white/85' },
-              { id: 'aerovia', title: 'Aerovia', tag: 'Travel UX · Concept', alt: 'Aerovia flight booking concept', pill: 'bg-black/40 border-white/15 text-white/85' },
-              { id: 'cook-by-ugo', title: 'Cook by Ugo', tag: 'Food & Hospitality', alt: 'Cook by Ugo Digital Experience', pill: 'bg-black/40 border-white/15 text-white/85' },
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-2xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
