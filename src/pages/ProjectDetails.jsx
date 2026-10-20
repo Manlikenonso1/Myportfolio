@@ -342,7 +342,7 @@ export default function ProjectDetails() {
       category: "Security App",
       role: "Designer (solo)",
       heroImg: "/keel-thumbnail.webp",
-      prototypeLink: "https://www.figma.com/proto/uZo6nyOc2J6HdOJ8pjXX5t/Keel-%C2%B7-work-account-safety--concept-?node-id=33-348&p=f&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=33%3A348&show-proto-sidebar=1&page-id=2%3A8",
+      prototypeLink: "https://www.figma.com/proto/uZo6nyOc2J6HdOJ8pjXX5t/Keel-%C2%B7-work-account-safety--concept-?node-id=33-348&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=33%3A348&show-proto-sidebar=1&page-id=2%3A8",
       phoneProcess: true,
       liveLink: null,
       sliceCount: 10,
