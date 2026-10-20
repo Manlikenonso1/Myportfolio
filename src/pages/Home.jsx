@@ -34,19 +34,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Impact Stats */}
-          <div className="flex flex-wrap justify-center gap-12 mt-16">
-            {[
-              { value: '6+', label: 'Products shipped' },
-              { value: '4+', label: 'Years of experience' },
-              { value: '8+', label: 'Happy clients' },
-            ].map((s, i) => (
-              <div key={i} className="flex flex-col items-center gap-1">
-                <span className="font-['DM_Sans'] text-[44px] font-bold text-white leading-none">{s.value}</span>
-                <span className="text-[12px] text-white/40 font-medium tracking-[0.15em] uppercase">{s.label}</span>
-              </div>
-            ))}
-          </div>
         </FadeIn>
       </section>
 
