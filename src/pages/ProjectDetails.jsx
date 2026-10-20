@@ -341,6 +341,7 @@ export default function ProjectDetails() {
       category: "Security App",
       role: "Designer (solo)",
       heroImg: "/keel-thumbnail.webp",
+      prototypeLink: "https://www.figma.com/proto/uZo6nyOc2J6HdOJ8pjXX5t/Keel-%C2%B7-work-account-safety--concept-?node-id=33-348&p=f&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=33%3A348&show-proto-sidebar=1&page-id=2%3A8",
       phoneProcess: true,
       liveLink: null,
       sliceCount: 10,
@@ -500,6 +501,18 @@ export default function ProjectDetails() {
                   <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
                   <span>Visit Live Site</span>
                   <ExternalLink size={15} strokeWidth={2.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+             )}
+
+             {project.prototypeLink && (
+                <a
+                  href={project.prototypeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all"
+                >
+                  <span>Try the prototype</span>
+                  <ExternalLink size={15} strokeWidth={2.2} />
                 </a>
              )}
 
