@@ -76,7 +76,8 @@ export default function Navbar() {
             </Link>
             <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">
               <span className="relative flex h-2 w-2">
-                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-60"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
               </span>
               <span>Available</span>
             </div>
@@ -84,10 +85,10 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <ul className="hidden md:flex items-center gap-8 text-[12px] font-medium tracking-[0.12em] uppercase text-white/55">
-            <li><NavLink to="/" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Home</NavLink></li>
-            <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>About</NavLink></li>
-            <li><NavLink to="/services" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Services</NavLink></li>
-            <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Projects</NavLink></li>
+            <li><NavLink to="/" end className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Home</NavLink></li>
+            <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>About</NavLink></li>
+            <li><NavLink to="/services" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Services</NavLink></li>
+            <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Projects</NavLink></li>
           </ul>
 
           {/* Desktop CTAs */}

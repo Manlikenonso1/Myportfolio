@@ -73,7 +73,7 @@ export default function Home() {
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-2xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 pointer-events-none transition-opacity group-hover:opacity-0"></div>
-                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className={`w-full ${i === 0 ? 'aspect-[4/3] md:aspect-[16/9]' : 'aspect-[4/3]'} object-cover transition-transform duration-700`} alt={p.alt} />
+                  <img src={`/${p.id}-thumbnail.webp`} loading="lazy" decoding="async" className={`w-full ${i === 0 ? 'aspect-[4/3] md:aspect-[16/9]' : 'aspect-[4/3]'} object-cover transition-transform duration-500 group-hover:scale-[1.03]`} alt={p.alt} />
                   <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10 z-20">
                     <div className={`px-4 py-1.5 rounded-full border text-[12px] font-medium tracking-wide mb-3 inline-block ${p.pill}`}>{p.tag}</div>
                     <h3 className="sr-only">{p.title}</h3>

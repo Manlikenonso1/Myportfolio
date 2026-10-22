@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Send } from 'lucide-react';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import SEO from '../components/ui/SEO';
 import WorldMapWidget from '../components/ui/WorldMapWidget';
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -99,8 +101,43 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <FadeIn className="bg-[var(--card)] rounded-2xl p-8 md:p-12 border border-white/10 relative">
+          <FadeIn className="bg-[var(--card)] rounded-2xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
+
+            {/* ── Success Overlay ── */}
+            <AnimatePresence>
+              {status === 'success' && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-[var(--card)] rounded-2xl px-8 text-center gap-6"
+                >
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1,   opacity: 1 }}
+                    transition={{ delay: 0.1, duration: 0.5, type: 'spring', stiffness: 200 }}
+                    className="w-20 h-20 rounded-full bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center"
+                  >
+                    <svg className="w-9 h-9 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <motion.path
+                        strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"
+                        initial={{ pathLength: 0 }}
+                        animate={{ pathLength: 1 }}
+                        transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
+                      />
+                    </svg>
+                  </motion.div>
+                  <div>
+                    <h3 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-2">Message sent!</h3>
+                    <p className="text-white/50 text-[15px] leading-[1.6] max-w-[300px]">Thanks for reaching out. I'll get back to you within 24 hours.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">

@@ -1,8 +1,12 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
+import PageTransition from './components/ui/PageTransition';
+import CustomCursor from './components/ui/CustomCursor';
+import ScrollToTopBtn from './components/ui/ScrollToTopBtn';
 
 // Code-splitting routes for optimal performance and near-instant initial load
 const Home = lazy(() => import('./pages/Home'));
@@ -24,19 +28,23 @@ function RouteLoader() {
 }
 
 function AppRoutes() {
+  const location = useLocation();
+
   return (
     <Suspense fallback={<RouteLoader />}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:id" element={<ServiceDetails />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:id" element={<ProjectDetails />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/help-center" element={<HelpCenter />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <AnimatePresence mode="wait" initial={false}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/"            element={<PageTransition><Home /></PageTransition>} />
+          <Route path="/about"       element={<PageTransition><About /></PageTransition>} />
+          <Route path="/services"    element={<PageTransition><Services /></PageTransition>} />
+          <Route path="/services/:id" element={<PageTransition><ServiceDetails /></PageTransition>} />
+          <Route path="/projects"    element={<PageTransition><Projects /></PageTransition>} />
+          <Route path="/projects/:id" element={<PageTransition><ProjectDetails /></PageTransition>} />
+          <Route path="/contact"     element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="/help-center" element={<PageTransition><HelpCenter /></PageTransition>} />
+          <Route path="*"            element={<PageTransition><NotFound /></PageTransition>} />
+        </Routes>
+      </AnimatePresence>
     </Suspense>
   );
 }
@@ -44,14 +52,17 @@ function AppRoutes() {
 function App() {
   return (
     <Router>
+      <CustomCursor />
       <ScrollToTop />
       <Navbar />
       <main>
         <AppRoutes />
       </main>
+      <ScrollToTopBtn />
       <Footer />
     </Router>
   );
 }
 
 export default App;
+

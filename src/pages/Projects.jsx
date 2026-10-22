@@ -175,7 +175,7 @@ export default function Projects() {
                   </Link>
                 </div>
                 <Link to={`/projects/${proj.id}`} className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group hover:border-white/25 transition-colors">
-                  <img src={proj.image} alt={proj.title} className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-700 opacity-85 group-hover:opacity-100" />
+                  <img src={proj.image} alt={proj.title} className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-500 opacity-85 group-hover:opacity-100" />
                 </Link>
               </motion.div>
             ))}
