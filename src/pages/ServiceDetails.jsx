@@ -197,7 +197,7 @@ export default function ServiceDetails() {
              <img src={activeService.image} className="w-full h-full object-cover rounded-2xl opacity-90 transition-opacity duration-500" alt="Process Blueprint" />
           </FadeIn>
 
-          <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-12 text-center">
+          <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-12 text-center">
             Detailed Workflow Phases
           </div>
 
@@ -217,7 +217,7 @@ export default function ServiceDetails() {
 
           {/* Other Services Switcher */}
           <FadeIn className="mb-24">
-            <div className="font-['DM_Sans'] text-[14px] tracking-[.08em] uppercase text-white/40 mb-6 text-center">Explore Other Capabilities</div>
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-6 text-center">Explore Other Capabilities</div>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {[
                 { slug: 'ux-strategy', title: 'Interface Design' },

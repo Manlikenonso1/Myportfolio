@@ -6,14 +6,14 @@ export default function VisionMission() {
       <div className="max-w-[var(--max)] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_510px] gap-[80px] items-start">
 
         <FadeIn className="flex flex-col">
-          <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">
+          <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             Design Philosophy
           </div>
-          <p className="font-['DM_Sans'] font-normal text-[24px] md:text-[32px] leading-[1.3] text-[var(--white)] w-full lg:w-[530px] mb-[44px]">
+          <p className="font-['DM_Sans'] font-normal text-[24px] md:text-[32px] leading-[1.3] text-[var(--white)] w-full lg:w-[530px] mb-[44px] tracking-tight">
             Great design balances what users need with what engineering can realistically build.
           </p>
 
-          <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-4">
+          <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             How I Work
           </div>
           <div className="flex flex-col gap-4">

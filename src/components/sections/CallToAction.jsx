@@ -16,13 +16,13 @@ export default function CallToAction() {
 
       <div className="max-w-[779px] mx-auto text-center relative z-10">
         <FadeIn>
-          <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">
+          <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             Get In Touch
           </div>
         </FadeIn>
         
         <FadeIn delay={0.1}>
-          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5">
+          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5 tracking-tight">
             Let's Build Something Great Together
           </h2>
         </FadeIn>

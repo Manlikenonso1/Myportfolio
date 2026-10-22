@@ -17,10 +17,10 @@ export default function SkillsSection() {
     <section className="bg-[var(--bg2)] px-[var(--px)] py-[120px]">
       <FadeIn>
         <div className="text-center mb-[80px]">
-          <div className="font-['DM_Sans'] text-[18px] font-normal tracking-[.08em] uppercase text-[var(--muted)] mb-5">
+          <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             Core Skills
           </div>
-          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.3] text-[var(--white)] max-w-[686px] mx-auto mb-5">
+          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.2] text-[var(--white)] max-w-[686px] mx-auto mb-5 tracking-tight">
             What I bring to your team
           </h2>
           <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[760px] mx-auto">

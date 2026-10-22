@@ -15,8 +15,8 @@ export default function Services() {
         <div className="absolute inset-0 bg-[var(--bg3)] opacity-45 pointer-events-none"></div>
         <div className="max-w-[1200px] mx-auto relative z-10 text-center">
           <FadeIn>
-            <div className="font-['DM_Sans'] text-[18px] tracking-[.08em] uppercase text-[var(--muted)] mb-5">Services</div>
-            <h1 className="font-['DM_Sans'] font-light text-[56px] leading-[1.3] text-[var(--white)] mx-auto mb-8 max-w-[1000px]">
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">Services</div>
+            <h1 className="font-['DM_Sans'] font-light text-[40px] md:text-[56px] leading-[1.2] text-[var(--white)] mx-auto mb-8 max-w-[1000px] tracking-tight">
               Thoughtful design that helps your product grow.
             </h1>
             <p className="text-[18px] text-white/50 leading-[1.8] max-w-[640px] mx-auto font-light">
