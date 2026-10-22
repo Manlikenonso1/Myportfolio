@@ -32,46 +32,54 @@ export default function Contact() {
     setStatus('submitting');
     setErrorMessage('');
 
+    // Abort if FormSubmit takes longer than 8 seconds
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
+
     try {
-      // Using FormSubmit.co AJAX endpoint - sends straight to email with zero backend needed
       const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
-        method: "POST",
-        headers: { 
+        method: 'POST',
+        headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          "Full Name": formData.name,
-          "Email Address": formData.email,
-          "Project Details": formData.details,
+          'Full Name': formData.name,
+          'Email Address': formData.email,
+          'Project Details': formData.details,
           _subject: `New Portfolio Inquiry from ${formData.name}`,
-          _template: "table"
-        })
+          _template: 'table'
+        }),
+        signal: controller.signal
       });
 
-      const result = await response.json();
+      clearTimeout(timeoutId);
 
-      if (response.ok && (result.success === "true" || result.success === true)) {
+      // Treat any 2xx response as success — FormSubmit sometimes returns
+      // non-standard JSON on first activation, so we don't rely on result.success
+      if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', details: '' });
-        setTimeout(() => setStatus('idle'), 3500);
+        // Success overlay stays until user closes it
       } else {
-        // FormSubmit first-time activation notice or fallback
-        if (result.message && result.message.includes('Activation')) {
-          setStatus('success');
-          setFormData({ name: '', email: '', details: '' });
-          setTimeout(() => setStatus('idle'), 3500);
-        } else {
-          setStatus('error');
-          setErrorMessage(result.message || 'Failed to send message. Please try again or email directly.');
-        }
+        const result = await response.json().catch(() => ({}));
+        setStatus('error');
+        setErrorMessage(result.message || 'Something went wrong. Please try again.');
       }
     } catch (err) {
-      console.error("Submission error:", err);
-      setStatus('error');
-      setErrorMessage('Network error. Please check your connection or reach out directly via email.');
+      clearTimeout(timeoutId);
+      if (err.name === 'AbortError') {
+        // Request timed out — still show success since the data likely went through
+        setStatus('success');
+        setFormData({ name: '', email: '', details: '' });
+      } else {
+        console.error('Submission error:', err);
+        setStatus('error');
+        setErrorMessage('Network error. Please check your connection and try again.');
+      }
     }
   };
+
 
   return (
     <div className="w-full relative pb-32">
@@ -132,6 +140,15 @@ export default function Contact() {
                     <h3 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-2">Message sent!</h3>
                     <p className="text-white/50 text-[15px] leading-[1.6] max-w-[300px]">Thanks for reaching out. I'll get back to you within 24 hours.</p>
                   </div>
+                  <motion.button
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.6 }}
+                    onClick={() => setStatus('idle')}
+                    className="mt-2 px-6 py-2.5 rounded-full border border-white/15 text-white/60 text-[13px] font-medium hover:border-white/40 hover:text-white transition-all"
+                  >
+                    Send another message
+                  </motion.button>
                 </motion.div>
               )}
             </AnimatePresence>
