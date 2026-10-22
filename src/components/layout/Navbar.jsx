@@ -52,7 +52,7 @@ export default function Navbar() {
               <Link to="/" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Home</Link>
               <Link to="/about" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">About</Link>
               <Link to="/services" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Services</Link>
-              <Link to="/projects" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Work</Link>
+              <Link to="/projects" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Projects</Link>
               <Link to="/contact" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Contact</Link>
             </motion.div>
           </motion.div>
@@ -87,7 +87,7 @@ export default function Navbar() {
             <li><NavLink to="/" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Home</NavLink></li>
             <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>About</NavLink></li>
             <li><NavLink to="/services" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Services</NavLink></li>
-            <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Work</NavLink></li>
+            <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white" : "hover:text-white transition-colors"}>Projects</NavLink></li>
           </ul>
 
           {/* Desktop CTAs */}

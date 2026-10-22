@@ -109,10 +109,10 @@ export default function Projects() {
 
   return (
     <div className="w-full relative pb-10 bg-[var(--bg)]">
-      <SEO title="Work · Chinonso Ezeigbo" description="Selected case studies in SaaS interfaces, design systems, AI creator suites, and e-commerce products by Chinonso Ezeigbo." />
+      <SEO title="Projects · Chinonso Ezeigbo" description="Selected case studies in SaaS interfaces, design systems, AI creator suites, and e-commerce products by Chinonso Ezeigbo." />
 
       {/* 1. HERO */}
-      <PageHeader title="Projects" breadcrumbText="Work" />
+      <PageHeader title="Projects" breadcrumbText="Projects" />
 
       {/* 2. RECENT PROJECTS WITH CATEGORY FILTERS */}
       <section className="px-6 py-20 max-w-[1200px] mx-auto">
@@ -187,7 +187,7 @@ export default function Projects() {
             <FadeIn>
               <div className="border-b border-white/10 pb-6 mb-10">
                 <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Archive</div>
-                <h2 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-medium text-white tracking-tight">More work</h2>
+                <h2 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-medium text-white tracking-tight">More projects</h2>
               </div>
             </FadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

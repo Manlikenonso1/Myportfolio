@@ -460,7 +460,7 @@ export default function ProjectDetails() {
           <div className="flex items-center justify-center gap-2 text-[14px] text-[var(--muted)] font-['Inter_Tight']">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span className="text-white/30">/</span>
-            <Link to="/projects" className="hover:text-white transition-colors">Work</Link>
+            <Link to="/projects" className="hover:text-white transition-colors">Projects</Link>
             <span className="text-white/30">/</span>
             <span className="text-white">{project.title}</span>
           </div>

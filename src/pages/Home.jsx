@@ -55,9 +55,9 @@ export default function Home() {
       <section className="py-32 px-6">
         <div className="max-w-[1200px] mx-auto">
           <FadeIn className="flex justify-between items-end mb-16 border-b border-white/10 pb-8">
-            <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-medium tracking-tight text-white leading-none">Selected<br/>Work</h2>
+            <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-medium tracking-tight text-white leading-none">Selected<br/>Projects</h2>
             <Link to="/projects" className="hidden md:flex items-center gap-2 text-white/50 hover:text-white transition-colors group">
-              View All Work
+              View All Projects
               <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </FadeIn>
@@ -85,7 +85,7 @@ export default function Home() {
 
           <div className="mt-12 flex justify-center">
             <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white font-semibold text-[15px] hover:bg-white/10 transition-all group">
-              View All Work
+              View All Projects
               <ArrowRight size={16} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
