@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ChevronDown, Send } from 'lucide-react';
+import { Phone, ChevronDown, Send } from 'lucide-react';
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import SEO from '../components/ui/SEO';
@@ -84,36 +84,21 @@ export default function Contact() {
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-stretch">
           
           {/* Contact Details */}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-start">
             <FadeIn>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-10 text-white">Contact Details</h2>
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-4 text-white">Get in touch</h2>
+              <p className="text-white/60 text-[16px] leading-[1.7] max-w-[400px] mb-10 font-light">
+                Have an upcoming project, a product that needs a redesign, or want to collaborate? Send a message through the form and I'll get back to you directly.
+              </p>
             </FadeIn>
             
-            <FadeInStagger className="flex flex-col gap-10">
-              <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
-                  <Mail size={14} className="text-[var(--blue)]" />
-                  <span>E-Mail</span>
-                </div>
-                <a href={`mailto:${recipientEmail}`} className="text-[20px] font-['DM_Sans'] font-medium hover:text-[var(--blue)] transition-colors">{recipientEmail}</a>
-              </FadeInStaggerItem>
-              
+            <FadeInStagger className="flex flex-col gap-8">
               <FadeInStaggerItem className="flex flex-col gap-2">
                 <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
                   <Phone size={14} className="text-[var(--blue)]" />
                   <span>Phone</span>
                 </div>
                 <a href="tel:+447350156605" className="text-[20px] font-['DM_Sans'] font-medium hover:text-[var(--blue)] transition-colors">+44 7350 156605</a>
-              </FadeInStaggerItem>
-              
-              <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
-                  <MapPin size={14} className="text-[var(--blue)]" />
-                  <span>Office & Availability</span>
-                </div>
-                <div className="text-[18px] text-white/60 leading-[1.6] max-w-[340px]">
-                  Based in Newcastle upon Tyne, UK. Available for remote contract and full-time product roles worldwide.
-                </div>
               </FadeInStaggerItem>
             </FadeInStagger>
           </div>

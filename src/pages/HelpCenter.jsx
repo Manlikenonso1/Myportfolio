@@ -157,18 +157,13 @@ export default function HelpCenter() {
   <div className="wrap contact-wrap fu">
     <div className="ca-left">
       <h2 className="ca-h2">Contact Chinonso</h2>
+      <p style={{color: "var(--muted)", fontSize: "15px", lineHeight: "1.6", marginBottom: "28px", maxWidth: "340px"}}>
+        Have questions or want to discuss a project? Fill in the form and I'll respond directly.
+      </p>
       <div className="ca-info-list">
-        <div className="ca-info-item">
-          <div className="ca-info-label">E-MAIL:</div>
-          <a href="mailto:godswill.ec@gmail.com" className="ca-info-val">godswill.ec@gmail.com</a>
-        </div>
         <div className="ca-info-item">
           <div className="ca-info-label">PHONE:</div>
           <a href="tel:+447350156605" className="ca-info-val">+44 7350 156605</a>
-        </div>
-        <div className="ca-info-item">
-          <div className="ca-info-label">OFFICE:</div>
-          <div className="ca-info-val">Based in Newcastle upon Tyne, UK.<br/>Available for remote work worldwide.</div>
         </div>
       </div>
     </div>

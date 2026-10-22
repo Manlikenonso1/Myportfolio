@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { FadeIn, FadeInStagger } from '../ui/FadeIn';
 
@@ -41,7 +42,7 @@ export default function AboutBio() {
             
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)] leading-[1.6]">
               Have a project in mind or just want to chat design?{' '}
-              <a href="mailto:godswill.ec@gmail.com" className="text-[var(--blue)] no-underline hover:underline">Let's talk</a>
+              <Link to="/contact" className="text-[var(--blue)] no-underline hover:underline">Let's talk</Link>
             </p>
           </div>
         </FadeIn>

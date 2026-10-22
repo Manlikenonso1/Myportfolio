@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Check } from 'lucide-react';
 import { FadeIn } from '../ui/FadeIn';
 
@@ -50,10 +51,9 @@ export default function CallToAction() {
 
         <FadeIn delay={0.4}>
           <div className="flex justify-center gap-[18px] flex-wrap mb-[24px]">
-            <a href="mailto:godswill.ec@gmail.com" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] no-underline">
+            <Link to="/contact" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] no-underline">
               Contact Me
-            </a>
-
+            </Link>
           </div>
           <div className="flex items-center justify-center gap-[10px] font-['Inter_Tight'] text-[14px] text-[var(--muted)]">
             <span className="text-[16px] text-[var(--green)]">⚡</span>

@@ -34,8 +34,8 @@ export default function Footer() {
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Contact</h4>
-              <a href="mailto:godswill.ec@gmail.com" className="text-white/40 hover:text-white transition-colors text-[15px]">godswill.ec@gmail.com</a>
-              <span className="text-white/30 text-[14px]">Available for remote work worldwide</span>
+              <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Send a Message</Link>
+              <a href="tel:+447350156605" className="text-white/40 hover:text-white transition-colors text-[15px]">+44 7350 156605</a>
             </div>
           </div>
         </div>
