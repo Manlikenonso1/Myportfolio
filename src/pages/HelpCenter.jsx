@@ -158,14 +158,8 @@ export default function HelpCenter() {
     <div className="ca-left">
       <h2 className="ca-h2">Contact Chinonso</h2>
       <p style={{color: "var(--muted)", fontSize: "15px", lineHeight: "1.6", marginBottom: "28px", maxWidth: "340px"}}>
-        Have questions or want to discuss a project? Fill in the form and I'll respond directly.
+        Have questions or want to discuss a project? Fill in the form and I'll respond directly to your inquiry.
       </p>
-      <div className="ca-info-list">
-        <div className="ca-info-item">
-          <div className="ca-info-label">PHONE:</div>
-          <a href="tel:+447350156605" className="ca-info-val">+44 7350 156605</a>
-        </div>
-      </div>
     </div>
     
     <div className="ca-right">

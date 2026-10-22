@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, ChevronDown, Send } from 'lucide-react';
-import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
+import { ChevronDown, Send } from 'lucide-react';
+import { FadeIn } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import SEO from '../components/ui/SEO';
+import WorldMapWidget from '../components/ui/WorldMapWidget';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -83,24 +84,18 @@ export default function Contact() {
       <section className="px-6 py-20 border-b border-white/5">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-stretch">
           
-          {/* Contact Details */}
+          {/* Left Column: Heading + Interactive World Map Widget */}
           <div className="flex flex-col justify-start">
             <FadeIn>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-4 text-white">Get in touch</h2>
-              <p className="text-white/60 text-[16px] leading-[1.7] max-w-[400px] mb-10 font-light">
+              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-3 text-white">Get in touch</h2>
+              <p className="text-white/60 text-[15px] md:text-[16px] leading-[1.7] max-w-[440px] mb-8 font-light">
                 Have an upcoming project, a product that needs a redesign, or want to collaborate? Send a message through the form and I'll get back to you directly.
               </p>
             </FadeIn>
             
-            <FadeInStagger className="flex flex-col gap-8">
-              <FadeInStaggerItem className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 text-[12px] font-bold tracking-widest text-white/40 uppercase">
-                  <Phone size={14} className="text-[var(--blue)]" />
-                  <span>Phone</span>
-                </div>
-                <a href="tel:+447350156605" className="text-[20px] font-['DM_Sans'] font-medium hover:text-[var(--blue)] transition-colors">+44 7350 156605</a>
-              </FadeInStaggerItem>
-            </FadeInStagger>
+            <FadeIn delay={0.15}>
+              <WorldMapWidget />
+            </FadeIn>
           </div>
 
           {/* Contact Form */}
