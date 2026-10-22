@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Send } from 'lucide-react';
-import { FadeIn } from '../components/ui/FadeIn';
+import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
 import PageHeader from '../components/sections/PageHeader';
 import SEO from '../components/ui/SEO';
 import WorldMapWidget from '../components/ui/WorldMapWidget';
