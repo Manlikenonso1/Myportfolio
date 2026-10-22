@@ -3,7 +3,6 @@ import { FadeIn } from '../ui/FadeIn';
 
 const logos = [
   { name: "Appsatile",   route: "/projects/appsatile" },
-  { name: "Aerovia",     route: "/projects/aerovia" },
   { name: "HuntlyAi",    route: "/projects/huntly" },
   { name: "LazyZone",    route: "/projects/lazyzone" },
   { name: "Cook by Ugo", route: "/projects/cook-by-ugo" },

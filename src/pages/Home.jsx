@@ -43,7 +43,6 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
              <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
-             <Link to="/projects/aerovia"    className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Aerovia</Link>
              <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
              <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
              <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
