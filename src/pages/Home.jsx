@@ -28,7 +28,7 @@ export default function Home() {
               Start a project
             </Link>
             <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-lg bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300">
-              View my work
+              View projects
             </Link>
           </div>
 
