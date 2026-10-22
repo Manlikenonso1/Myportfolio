@@ -269,8 +269,6 @@ export default function Projects() {
              <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
              <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
              <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
-             <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">Talstrike</span>
-             <span className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 cursor-default">cloudnet IQ</span>
              <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
           </div>
         </FadeIn>
