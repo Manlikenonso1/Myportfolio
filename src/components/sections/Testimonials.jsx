@@ -2,12 +2,6 @@ import { FadeIn } from '../ui/FadeIn';
 
 const testimonials = [
   {
-    quote: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer.",
-    name: "Joseph Schnedir",
-    role: "Founder, Appsatile",
-    avatar: "/appsatile-logo.png"
-  },
-  {
     quote: "Chinonso redesigned our storefront from the ground up. The site looks stunning, our mobile checkout flows effortlessly, and our farm customers love the new experience.",
     name: "Diamond Nicholas",
     role: "Owner, Nikos Farm",
@@ -35,7 +29,7 @@ export default function Testimonials() {
           </p>
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-[960px] mx-auto gap-6">
           {testimonials.map((t, idx) => (
             <FadeIn key={idx} delay={idx * 0.1}>
               <div className="bg-[var(--card)] border border-[var(--border)] rounded-[10px] p-8 h-full flex flex-col justify-between group hover:border-[var(--tan)]/30 transition-colors">

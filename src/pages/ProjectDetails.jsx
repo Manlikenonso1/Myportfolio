@@ -60,9 +60,7 @@ export default function ProjectDetails() {
           after: "/appsatile-process-3-after.webp", afterLabel: "Dark mode · same components"
         }
       ],
-      reviews: [
-        { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer." }
-      ]
+      reviews: []
     },
     'appsatile-workspace': {
       id: 'appsatile-workspace',
