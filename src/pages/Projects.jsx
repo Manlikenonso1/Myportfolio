@@ -9,15 +9,14 @@ import SEO from '../components/ui/SEO';
 
 const allProjects = [
   {
-    id: 'hsbc',
+    id: 'appsatile-workspace',
     featured: true,
-    title: 'HSBC UK',
-    concept: true,
-    categoryLabel: 'Mobile Banking',
-    description: 'Banking app redesign: one tab bar, safety you can see, and Global Money built into everyday banking.',
-    categories: ['all', 'design-systems'],
-    tags: ['Mobile App', 'Fraud Prevention', 'Design System'],
-    image: '/hsbc-thumbnail.webp'
+    title: 'Appsatile Workspace',
+    categoryLabel: 'Business Workspace · Rebuild',
+    description: 'Three years on one product, a rebrand, and the rebuild I made to finish it: one workspace for tasks, files, email and leave.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Product Design', 'Design System', 'Prototype'],
+    image: '/appsatile-workspace-thumbnail.webp'
   },
   {
     id: 'keel',
@@ -29,16 +28,6 @@ const allProjects = [
     categories: ['all', 'design-systems'],
     tags: ['Security UX', 'Mobile App', 'Design System'],
     image: '/keel-thumbnail.webp'
-  },
-  {
-    id: 'appsatile-workspace',
-    featured: true,
-    title: 'Appsatile Workspace',
-    categoryLabel: 'Business Workspace · Rebuild',
-    description: 'Three years on one product, a rebrand, and the rebuild I made to finish it: one workspace for tasks, files, email and leave.',
-    categories: ['all', 'saas', 'design-systems'],
-    tags: ['Product Design', 'Design System', 'Prototype'],
-    image: '/appsatile-workspace-thumbnail.webp'
   },
   {
     id: 'lazyzone',
@@ -71,6 +60,17 @@ const allProjects = [
     image: '/appsatile-thumbnail.webp'
   },
   {
+    id: 'hsbc',
+    featured: true,
+    title: 'HSBC UK',
+    concept: true,
+    categoryLabel: 'Mobile Banking',
+    description: 'Banking app redesign: one tab bar, safety you can see, and Global Money built into everyday banking.',
+    categories: ['all', 'design-systems'],
+    tags: ['Mobile App', 'Fraud Prevention', 'Design System'],
+    image: '/hsbc-thumbnail.webp'
+  },
+  {
     id: 'nikos-farm',
     title: 'Nikos Farm',
     categoryLabel: 'E-Commerce',
@@ -78,6 +78,15 @@ const allProjects = [
     categories: ['all', 'ecommerce'],
     tags: ['Mobile Commerce', 'Cart Drawer', 'Conversion UX'],
     image: '/nikos-farm-thumbnail.webp'
+  },
+  {
+    id: 'cook-by-ugo',
+    title: 'Cook by Ugo',
+    categoryLabel: 'Food & Hospitality',
+    description: 'Direct ordering website with a protein & side picker and a 3-step checkout drawer.',
+    categories: ['all', 'ecommerce'],
+    tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
+    image: '/cook-by-ugo-thumbnail.webp'
   },
   {
     id: 'aerovia',
@@ -88,15 +97,6 @@ const allProjects = [
     categories: ['all', 'saas', 'design-systems'],
     tags: ['Travel UX', 'Booking Flow', 'Design System'],
     image: '/aerovia-thumbnail.webp'
-  },
-  {
-    id: 'cook-by-ugo',
-    title: 'Cook by Ugo',
-    categoryLabel: 'Food & Hospitality',
-    description: 'Direct ordering website with a protein & side picker and a 3-step checkout drawer.',
-    categories: ['all', 'ecommerce'],
-    tags: ['Takeout Ordering', 'Customizer Flow', 'Brand Identity'],
-    image: '/cook-by-ugo-thumbnail.webp'
   }
 ];
 

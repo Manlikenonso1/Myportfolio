@@ -64,11 +64,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-black/40 border-white/15 text-white/85' },
+              { id: 'appsatile-workspace', title: 'Appsatile Workspace', tag: 'Product Design · Rebuild', alt: 'Appsatile Workspace business productivity suite', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'keel', title: 'Keel', tag: 'Security App · Concept', alt: 'Keel work account safety app concept', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-black/40 border-white/15 text-white/85' },
-              { id: 'appsatile', title: 'Appsatile', tag: 'Design System', alt: 'Appsatile Design System', pill: 'bg-black/40 border-white/15 text-white/85' },
+              { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-black/40 border-white/15 text-white/85' },
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
                 <Link to={`/projects/${p.id}`} className="group block w-full rounded-2xl overflow-hidden relative bg-[var(--card)] border border-white/10 hover:border-white/20 transition-all">
