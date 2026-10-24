@@ -31,6 +31,16 @@ const allProjects = [
     image: '/keel-thumbnail.webp'
   },
   {
+    id: 'appsatile-workspace',
+    featured: true,
+    title: 'Appsatile Workspace',
+    categoryLabel: 'Business Workspace · Rebuild',
+    description: 'Three years on one product, a rebrand, and the rebuild I made to finish it: one workspace for tasks, files, email and leave.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Product Design', 'Design System', 'Prototype'],
+    image: '/appsatile-workspace-thumbnail.webp'
+  },
+  {
     id: 'lazyzone',
     featured: true,
     title: 'LazyZoneLabs',

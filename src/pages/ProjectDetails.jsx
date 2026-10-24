@@ -64,6 +64,56 @@ export default function ProjectDetails() {
         { name: "Joseph Schnedir", role: "Founder, Appsatile", avatar: "/appsatile-logo.png", text: "Chinonso made an immediate difference on our product team. In just six weeks, he simplified our key user journeys and made our entire app easier to use. A thoughtful, talented designer." }
       ]
     },
+    'appsatile-workspace': {
+      id: 'appsatile-workspace',
+      glance: { problem: "Three years of work sat in 18 Figma files when the product was paused before launch: status colours failing contrast, ten names for a place, and a core path split across six files.", did: "Icons, tokens for developers, Cabinet and the advanced filter at the company. Then an independent rebuild: audit, research, structure, a design system, screens and a full prototype.", outcome: "Rebuild, not shipped. One clear structure, every status colour passing WCAG AA, and a prototype that runs from sign-up to an installed app." },
+      title: "Appsatile Workspace",
+      type: "Product Design",
+      category: "Business Workspace · Rebuild",
+      role: "Designer",
+      heroImg: "/appsatile-workspace-thumbnail.webp",
+      prototypeLink: "https://www.figma.com/proto/rk1I3Fhrv0V8EljUAWdzer/Appsatile-Workspace--rebuild-?page-id=2%3A9&node-id=179-2251&starting-point-node-id=179%3A2251&scaling=scale-down&content-scaling=fixed",
+      liveLink: null,
+      sliceCount: 11,
+      overview: "Appsatile is one workspace where a business runs its day-to-day work: tasks, files, email, leave and calendars in one place, organised around Hubs like London Office. I joined when it was called Alsoit, stayed through the rebrand as the only designer left, and helped shape Appsatile with a new team. When the product was paused before launch, I rebuilt it in a new file with my own content to finish what we started.",
+      problem: "Going back through all 18 files, the gaps were clear. White text on the amber status chip measured 2.58:1, well under the 4.5:1 that text needs. Ten container names overlapped, so people could not tell a Hub from a Wallet from a Folder. Two navigation models were promised but only one was drawn, and the brand was violet while every button in the product was blue.",
+      deliverables: ["Icon Library", "Tokens for Developers", "Cabinet", "Advanced Filter", "Audit · 18 Files", "Desk Research & Personas", "Structure & Flows", "Design System · Light & Dark", "Screens & Developer Handoff", "Full Prototype"],
+      decisions: [
+        {
+          pillar: "01. Ten names became four",
+          rationale: "Hub, Sub Hub, Wallet, Sub Wallet, List, Sub List, Folder, Sub Folder, Project and File became Hub, Folder, List and Record. Each level has one meaning, and the place you are in is always shown at the top of the page."
+        },
+        {
+          pillar: "02. Records open beside the list",
+          rationale: "Pilot opens any task, file or email in a side panel, so you never lose your place in a long list. Arrows step through records one by one, and Esc closes it."
+        },
+        {
+          pillar: "03. The product finally looks like the brand",
+          rationale: "Violet and Poppins came from Appsatile's own brand guidelines. Brand violet passes AA with white text at 7.03:1, and every status chip now pairs a dark shade on a light tint with a shape, so none relies on colour alone."
+        }
+      ],
+      process: [
+        {
+          title: "The filter, rules first",
+          text: "I designed the advanced filter at Appsatile. For the rebuild I started from a grey wireframe to settle the rules before any colour: pick a field, a rule and a value, group conditions, and see the count update as you type.",
+          before: "/appsatile-workspace-process-1-before.webp", beforeLabel: "Wireframe · advanced filter",
+          after: "/appsatile-workspace-process-1-after.webp", afterLabel: "Final · advanced filter"
+        },
+        {
+          title: "Blue product, violet brand",
+          text: "I applied both directions to the same screen, a task open in Pilot, so they could be compared fairly. The blue kept what the team knew. The violet matched the logo and brand guidelines, so the rebuild went violet.",
+          before: "/appsatile-workspace-process-2-before.webp", beforeLabel: "Direction B · darker blue",
+          after: "/appsatile-workspace-process-2-after.webp", afterLabel: "Direction A · brand violet"
+        },
+        {
+          title: "Dark mode from the same tokens",
+          text: "Every colour is a variable with light and dark modes, so dark mode is a switch rather than a second design. The violet lightens on dark surfaces so it still passes contrast.",
+          before: "/appsatile-workspace-process-3-before.webp", beforeLabel: "Light mode",
+          after: "/appsatile-workspace-process-3-after.webp", afterLabel: "Dark mode · same screen"
+        }
+      ],
+      reviews: []
+    },
     'aerovia': {
       id: 'aerovia',
       glance: { problem: "Airline sites hide fees until the last step and make fares hard to compare.", did: "A 6-step booking flow, side-by-side fare cards and a design system for web and mobile.", outcome: "Concept, not shipped. Every fee and bag price is shown before checkout." },
@@ -443,7 +493,7 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['hsbc', 'keel', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm', 'aerovia', 'cook-by-ugo'];
+  const projectOrder = ['hsbc', 'keel', 'appsatile-workspace', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm', 'aerovia', 'cook-by-ugo'];
   const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -699,7 +749,7 @@ export default function ProjectDetails() {
 
         <FadeIn direction="up" className="w-full mb-32">
           <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
+            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'appsatile-workspace' ? 'bg-[#F6F4EF]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
           }`}>
             {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
               const prefix = project.id;
