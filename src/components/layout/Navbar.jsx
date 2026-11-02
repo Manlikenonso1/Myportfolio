@@ -51,7 +51,6 @@ export default function Navbar() {
             >
               <Link to="/" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Home</Link>
               <Link to="/about" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">About</Link>
-              <Link to="/services" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Services</Link>
               <Link to="/projects" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Projects</Link>
               <Link to="/contact" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Contact</Link>
             </motion.div>
@@ -84,10 +83,9 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 text-[12px] font-medium tracking-[0.12em] uppercase text-white/55">
+          <ul className="hidden md:flex items-center gap-7 lg:ml-6 text-[12px] font-medium tracking-[0.12em] uppercase text-white/55">
             <li><NavLink to="/" end className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Home</NavLink></li>
             <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>About</NavLink></li>
-            <li><NavLink to="/services" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Services</NavLink></li>
             <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Projects</NavLink></li>
           </ul>
 
