@@ -23,14 +23,22 @@ export default function Home() {
             I'm a designer with a background in Cyber Security. I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build.
           </p>
 
+          <p className="text-[14px] md:text-[15px] text-white/80 text-center max-w-[640px] leading-[1.6] mb-12 -mt-6 font-medium">
+            4+ years in product design · Co-built a 70+ component, 1,100+ token design system used by 3 product squads
+          </p>
+
           <div className="flex flex-col sm:flex-row items-center gap-5 w-full justify-center">
             <Link to="/contact" className="w-full sm:w-auto px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] text-center transition-all duration-300">
-              Start a project
+              Get in touch
             </Link>
             <Link to="/projects" className="w-full sm:w-auto px-8 py-4 rounded-lg bg-transparent text-white font-semibold text-[15px] text-center border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300">
               View projects
             </Link>
           </div>
+
+          <a href="mailto:godswill.ec@gmail.com" className="mt-8 text-[15px] text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-colors">
+            godswill.ec@gmail.com
+          </a>
 
         </FadeIn>
       </section>
@@ -39,7 +47,7 @@ export default function Home() {
       <section className="py-16 border-y border-white/5 bg-[var(--bg)]/50 overflow-hidden">
         <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
           <div className="text-[12px] font-medium tracking-[0.2em] uppercase text-white/30 mb-10 border-b border-white/10 pb-4 w-full text-center">
-            Selected Clients & Collaborations
+            Worked with
           </div>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
              <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
@@ -65,9 +73,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { id: 'appsatile-workspace', title: 'Appsatile Workspace', tag: 'Product Design · Rebuild', alt: 'Appsatile Workspace business productivity suite', pill: 'bg-black/40 border-white/15 text-white/85' },
+              { id: 'appsatile', title: 'Appsatile Design System', tag: 'Design System · 70+ components', alt: 'Appsatile design system components and tokens', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'keel', title: 'Keel', tag: 'Security App · Concept', alt: 'Keel work account safety app concept', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-black/40 border-white/15 text-white/85' },
-              { id: 'huntly', title: 'HuntlyAi', tag: 'AI Job Workspace', alt: 'HuntlyAi Application Workspace', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-black/40 border-white/15 text-white/85' },
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>

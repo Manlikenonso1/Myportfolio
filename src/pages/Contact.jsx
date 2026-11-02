@@ -101,6 +101,9 @@ export default function Contact() {
               <p className="text-white/60 text-[15px] md:text-[16px] leading-[1.7] max-w-[440px] mb-8 font-light">
                 Have an upcoming project, a product that needs a redesign, or want to collaborate? Send a message through the form and I'll get back to you directly.
               </p>
+              <a href="mailto:godswill.ec@gmail.com" className="inline-block mb-8 text-[16px] text-white hover:text-white/70 underline underline-offset-4 decoration-white/30 transition-colors">
+                godswill.ec@gmail.com
+              </a>
             </FadeIn>
             
             <FadeIn delay={0.15}>

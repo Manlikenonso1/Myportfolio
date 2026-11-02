@@ -54,7 +54,7 @@ const allProjects = [
     featured: true,
     title: 'Appsatile',
     categoryLabel: 'Design System',
-    description: 'Unified multi-product SaaS design system cutting developer handoff by 50%.',
+    description: 'Co-built multi-product SaaS design system: 70+ components, 1,100+ tokens, 868 icons, 4 density modes. Cut developer handoff by about 50%.',
     categories: ['all', 'saas', 'design-systems'],
     tags: ['Figma Tokens', 'WCAG 2.1 AA', 'React Handoff'],
     image: '/appsatile-thumbnail.webp'

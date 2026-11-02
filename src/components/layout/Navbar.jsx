@@ -79,7 +79,7 @@ export default function Navbar() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
               </span>
-              <span>Available</span>
+              <span>Open to full-time roles</span>
             </div>
           </div>
 
