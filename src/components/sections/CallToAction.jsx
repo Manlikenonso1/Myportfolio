@@ -4,9 +4,9 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function CallToAction() {
   const stats = [
-    { num: "40% +", label: "Drop in user drop-off across redesigned key flows." },
-    { num: "10x", label: "Faster development cycles with clear design systems." },
-    { num: "100%", label: "Accessible, responsive components tested for real use." }
+    { num: "70+", label: "Components in a design system used by 3 product squads." },
+    { num: "868", label: "Icons in the product icon library I built and maintained." },
+    { num: "~50%", label: "Faster handoffs to engineers with a shared system." }
   ];
 
   return (
@@ -23,13 +23,13 @@ export default function CallToAction() {
         
         <FadeIn delay={0.1}>
           <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5 tracking-tight">
-            Let's Build Something Great Together
+            Let's Work Together
           </h2>
         </FadeIn>
         
         <FadeIn delay={0.2}>
           <p className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
-            Have an upcoming project, a product that needs a redesign, or want to build a design system? I'm currently open for new projects and consulting.
+            Hiring a product designer? I'm open to full-time roles, remote or in the North East, and happy to travel for team days.
           </p>
         </FadeIn>
 

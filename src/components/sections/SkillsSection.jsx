@@ -1,5 +1,4 @@
 import { FadeIn } from '../ui/FadeIn';
-import { motion } from 'framer-motion';
 
 export default function SkillsSection() {
   const col1 = [
@@ -29,51 +28,13 @@ export default function SkillsSection() {
         </div>
       </FadeIn>
 
-      <div className="max-w-[var(--max)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[24px] lg:gap-x-[70px]">
-        
-        {/* Column 1 */}
-        <FadeIn className="flex flex-col gap-[24px]">
-          {col1.map((skill, idx) => (
-            <div key={idx} className="flex flex-col gap-[14px]">
-              <div className="flex justify-between items-center">
-                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
-                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
-              </div>
-              <div className="h-[14px] sm:h-[16px] w-full bg-white/10 rounded-full overflow-hidden relative border border-white/15 p-[2px] shadow-inner">
-                <motion.div 
-                  initial={{ width: "0%" }}
-                  whileInView={{ width: `${skill.pct}%` }}
-                  viewport={{ once: true, amount: 0.05 }}
-                  transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white"
-                ></motion.div>
-              </div>
-            </div>
-          ))}
-        </FadeIn>
-
-        {/* Column 2 */}
-        <FadeIn delay={0.1} className="flex flex-col gap-[24px]">
-          {col2.map((skill, idx) => (
-            <div key={idx} className="flex flex-col gap-[14px]">
-              <div className="flex justify-between items-center">
-                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--white)]">{skill.name}</span>
-                <span className="font-['DM_Sans'] text-[18px] sm:text-[20px] font-normal text-[var(--green)]">{skill.pct}%</span>
-              </div>
-              <div className="h-[14px] sm:h-[16px] w-full bg-white/10 rounded-full overflow-hidden relative border border-white/15 p-[2px] shadow-inner">
-                <motion.div 
-                  initial={{ width: "0%" }}
-                  whileInView={{ width: `${skill.pct}%` }}
-                  viewport={{ once: true, amount: 0.05 }}
-                  transition={{ duration: 1.2, delay: 0.1 + idx * 0.05, ease: [0.4, 0, 0.2, 1] }}
-                  className="h-full rounded-full bg-gradient-to-r from-[var(--tan)] via-[var(--tan)] to-white"
-                ></motion.div>
-              </div>
-            </div>
-          ))}
-        </FadeIn>
-
-      </div>
+      <FadeIn className="max-w-[var(--max)] mx-auto flex flex-wrap justify-center gap-3">
+        {[...col1, ...col2].map((skill) => (
+          <span key={skill.name} className="font-['DM_Sans'] text-[16px] sm:text-[18px] text-[var(--white)] px-5 py-3 rounded-full border border-white/15 bg-white/5">
+            {skill.name}
+          </span>
+        ))}
+      </FadeIn>
     </section>
   );
 }

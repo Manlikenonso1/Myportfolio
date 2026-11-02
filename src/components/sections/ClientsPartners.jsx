@@ -15,13 +15,13 @@ export default function ClientsPartners() {
       <div className="max-w-[var(--max)] mx-auto text-center">
         <FadeIn>
           <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
-            Clients &amp; Collaborators
+            Worked with
           </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <h2 className="font-['DM_Sans'] font-normal text-[32px] md:text-[36px] leading-[1.3] text-[var(--white)] max-w-[728px] mx-auto mb-[60px] tracking-tight">
-            Brands and teams I've had the pleasure of working with
+            Teams and businesses I've designed for
           </h2>
         </FadeIn>
 
