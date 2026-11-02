@@ -21,7 +21,7 @@ export default function HelpCenter() {
     e.preventDefault();
     setStatus('submitting');
     try {
-      await fetch("https://formsubmit.co/ajax/godswill.ec@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/cezeigbo4@gmail.com", {
         method: "POST",
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({

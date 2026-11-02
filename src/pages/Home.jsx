@@ -36,8 +36,8 @@ export default function Home() {
             </Link>
           </div>
 
-          <a href="mailto:godswill.ec@gmail.com" className="mt-8 text-[15px] text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-colors">
-            godswill.ec@gmail.com
+          <a href="mailto:cezeigbo4@gmail.com" className="mt-8 text-[15px] text-white/60 hover:text-white underline underline-offset-4 decoration-white/30 transition-colors">
+            cezeigbo4@gmail.com
           </a>
 
         </FadeIn>
