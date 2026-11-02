@@ -9,6 +9,16 @@ import SEO from '../components/ui/SEO';
 
 const allProjects = [
   {
+    id: 'appsatile',
+    featured: true,
+    title: 'Appsatile',
+    categoryLabel: 'Design System',
+    description: 'Co-built multi-product SaaS design system: 70+ components, 1,100+ tokens, 868 icons, 4 density modes. Cut developer handoff by about 50%.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Figma Tokens', 'WCAG 2.1 AA', 'React Handoff'],
+    image: '/appsatile-thumbnail.webp'
+  },
+  {
     id: 'appsatile-workspace',
     featured: true,
     title: 'Appsatile Workspace',
@@ -17,6 +27,16 @@ const allProjects = [
     categories: ['all', 'saas', 'design-systems'],
     tags: ['Product Design', 'Design System', 'Prototype'],
     image: '/appsatile-workspace-thumbnail.webp'
+  },
+  {
+    id: 'lazyzone',
+    featured: true,
+    title: 'LazyZoneLabs',
+    categoryLabel: 'AI Creator Suite & Web App',
+    description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
+    categories: ['all', 'saas', 'ai'],
+    tags: ['Product Redesign', 'AI Interface', 'Design System'],
+    image: '/lazyzone-thumbnail.webp'
   },
   {
     id: 'keel',
@@ -30,14 +50,15 @@ const allProjects = [
     image: '/keel-thumbnail.webp'
   },
   {
-    id: 'lazyzone',
+    id: 'hsbc',
     featured: true,
-    title: 'LazyZoneLabs',
-    categoryLabel: 'AI Creator Suite & Web App',
-    description: 'Five AI tools in one project. Use one on its own or chain them, with every cost on the button.',
-    categories: ['all', 'saas', 'ai'],
-    tags: ['Product Redesign', 'AI Interface', 'Design System'],
-    image: '/lazyzone-thumbnail.webp'
+    title: 'HSBC UK',
+    concept: true,
+    categoryLabel: 'Mobile Banking',
+    description: 'Banking app redesign: one tab bar, safety you can see, and Global Money built into everyday banking.',
+    categories: ['all', 'design-systems'],
+    tags: ['Mobile App', 'Fraud Prevention', 'Design System'],
+    image: '/hsbc-thumbnail.webp'
   },
   {
     id: 'huntly',
@@ -48,27 +69,6 @@ const allProjects = [
     categories: ['all', 'saas', 'ai'],
     tags: ['Product Redesign', 'Design System', 'Dev Handoff'],
     image: '/huntly-thumbnail.webp'
-  },
-  {
-    id: 'appsatile',
-    featured: true,
-    title: 'Appsatile',
-    categoryLabel: 'Design System',
-    description: 'Co-built multi-product SaaS design system: 70+ components, 1,100+ tokens, 868 icons, 4 density modes. Cut developer handoff by about 50%.',
-    categories: ['all', 'saas', 'design-systems'],
-    tags: ['Figma Tokens', 'WCAG 2.1 AA', 'React Handoff'],
-    image: '/appsatile-thumbnail.webp'
-  },
-  {
-    id: 'hsbc',
-    featured: true,
-    title: 'HSBC UK',
-    concept: true,
-    categoryLabel: 'Mobile Banking',
-    description: 'Banking app redesign: one tab bar, safety you can see, and Global Money built into everyday banking.',
-    categories: ['all', 'design-systems'],
-    tags: ['Mobile App', 'Fraud Prevention', 'Design System'],
-    image: '/hsbc-thumbnail.webp'
   },
   {
     id: 'nikos-farm',

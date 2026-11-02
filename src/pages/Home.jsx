@@ -72,10 +72,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { id: 'appsatile-workspace', title: 'Appsatile Workspace', tag: 'Product Design · Rebuild', alt: 'Appsatile Workspace business productivity suite', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'appsatile', title: 'Appsatile Design System', tag: 'Design System · 70+ components', alt: 'Appsatile design system components and tokens', pill: 'bg-black/40 border-white/15 text-white/85' },
-              { id: 'keel', title: 'Keel', tag: 'Security App · Concept', alt: 'Keel work account safety app concept', pill: 'bg-black/40 border-white/15 text-white/85' },
+              { id: 'appsatile-workspace', title: 'Appsatile Workspace', tag: 'Product Design · Rebuild', alt: 'Appsatile Workspace business productivity suite', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'lazyzone', title: 'LazyZoneLabs', tag: 'AI Creator Suite', alt: 'LazyZoneLabs AI Creator Suite', pill: 'bg-black/40 border-white/15 text-white/85' },
+              { id: 'keel', title: 'Keel', tag: 'Security App · Concept', alt: 'Keel work account safety app concept', pill: 'bg-black/40 border-white/15 text-white/85' },
               { id: 'hsbc', title: 'HSBC UK', tag: 'Mobile Banking · Concept', alt: 'HSBC UK mobile banking app redesign concept', pill: 'bg-black/40 border-white/15 text-white/85' },
             ].map((p, i) => (
               <FadeIn key={p.id} direction="up" delay={Math.min(i, 3) * 0.1} className={i === 0 ? 'md:col-span-2' : ''}>
