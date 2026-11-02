@@ -18,7 +18,7 @@ export default function ProjectDetails() {
       heroImg: "/appsatile-thumbnail.webp",
       liveLink: null,
       sliceCount: 33,
-      overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I designed and built their design system from scratch so both designers and engineers could move faster without breaking visual consistency.",
+      overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I co-built their design system with another designer, owning the icon library, the token export to code and the component naming, so both designers and engineers could move faster without breaking visual consistency.",
       problem: "Every squad was basically creating their own buttons, modals, and input fields. Buttons had different corner radii on different pages, handoffs took hours of back-and-forth in Slack, and fixing a simple color change meant updating dozens of disconnected code files.",
       deliverables: ["Component Library", "Design Tokens Architecture", "Interactive Figma Specs", "WCAG 2.1 AA Compliance", "Documentation Guide"],
       metrics: [
@@ -29,7 +29,7 @@ export default function ProjectDetails() {
       decisions: [
         {
           pillar: "01. Tokens that match how devs actually write CSS",
-          rationale: "Instead of picking random hex values across Figma frames, I set up a clear three-tier token system for colors, spacing, and font sizes. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
+          rationale: "Instead of picking random hex values across Figma frames, we set up a clear three-tier token system for colors, spacing, and font sizes. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
         },
         {
           pillar: "02. Naming components to match React props",
