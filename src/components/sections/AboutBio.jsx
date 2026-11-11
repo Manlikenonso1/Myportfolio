@@ -26,7 +26,7 @@ export default function AboutBio() {
               I'm Chinonso Ezeigbo, a designer with a master's degree in Cyber Security from Aston University. That background shapes how I approach design: I love clean, polished interfaces, but I also care about data clarity, user privacy, and building software people can actually trust.
             </p>
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-[30px] w-full lg:w-[530px]">
-              Over 4+ years, I've designed SaaS design systems, AI creator workspaces, and e-commerce apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.
+              Over 4+ years, I've designed B2B SaaS products, AI assistants, design systems and mobile apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.
             </p>
             
             <div className="flex flex-wrap gap-5 mb-[30px] flex-col sm:flex-row">
