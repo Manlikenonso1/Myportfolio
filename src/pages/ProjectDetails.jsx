@@ -23,7 +23,7 @@ export default function ProjectDetails() {
       deliverables: ["Component Library", "Design Tokens Architecture", "Interactive Figma Specs", "WCAG 2.1 AA Compliance", "Documentation Guide"],
       metrics: [
         { value: "50%", label: "Faster handoffs to engineers" },
-        { value: "100%", label: "Accessible contrast across all screens" },
+        { value: "AA", label: "Every colour pair in the system passes WCAG AA" },
         { value: "0", label: "Mismatched components across teams" }
       ],
       decisions: [
@@ -238,7 +238,7 @@ export default function ProjectDetails() {
       deliverables: ["Brand Identity System", "Direct Ordering Website", "Protein & Side Picker", "3-Step Checkout Drawer", "Mobile First UI"],
       targets: true,
       metrics: [
-        { value: "+45%", label: "Target growth in direct orders" },
+        { value: "3", label: "Steps to check out, in one drawer" },
         { value: "<90s", label: "Target time to complete an order" },
         { value: "0%", label: "Commission on direct orders vs up to 30% on delivery apps" }
       ],
