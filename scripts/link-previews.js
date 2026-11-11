@@ -8,7 +8,7 @@ import { allProjects } from '../src/data/projects.js';
 
 const SITE = 'https://designbynonso.co.uk';
 const DIST = 'dist';
-const DEFAULT_IMAGE = '/og/default.jpg';
+const DEFAULT_IMAGE = '/og/home.jpg';
 const DEFAULT_DESCRIPTION =
   'Product Designer in Newcastle, UK. Design systems, B2B SaaS and security UX, from research to handoff.';
 

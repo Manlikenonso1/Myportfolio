@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 export default function SEO({ 
   title = "Chinonso Ezeigbo", 
   description = "A designer obsessed with human behavior, building scalable interfaces that drastically improve retention and joy.", 
-  image = "/og/default.jpg" 
+  image = "/og/home.jpg" 
 }) {
   useEffect(() => {
     // Standard Title
