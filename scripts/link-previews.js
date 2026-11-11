@@ -14,13 +14,17 @@ const DEFAULT_DESCRIPTION =
 
 const pages = [
   { path: '/', title: 'Chinonso Ezeigbo · Product Designer', description: DEFAULT_DESCRIPTION },
-  { path: '/projects', title: 'Projects · Chinonso Ezeigbo', description: 'Selected case studies in SaaS interfaces, design systems, security UX and AI products.' },
+  { path: '/projects', title: 'Projects · Chinonso Ezeigbo', description: 'Selected case studies in SaaS interfaces, design systems, security UX and AI products, from research and audits to handoff.' },
   { path: '/about', title: 'About · Chinonso Ezeigbo', description: DEFAULT_DESCRIPTION },
   { path: '/contact', title: 'Contact · Chinonso Ezeigbo', description: DEFAULT_DESCRIPTION },
   ...allProjects.map((p) => ({
     path: `/projects/${p.id}`,
     title: `${p.title}${p.concept ? ' (concept)' : ''} · Chinonso Ezeigbo`,
-    description: p.description,
+    // LinkedIn warns when a description is under 100 characters.
+    description:
+      p.description.length < 100
+        ? `${p.description} A case study by Chinonso Ezeigbo, Product Designer.`
+        : p.description,
     image: `/og/${p.id}.jpg`,
     type: 'article',
   })),
