@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/link-previews.js",
     "preview": "vite preview",
     "find-copy": "node find_and_copy.js"
   },
