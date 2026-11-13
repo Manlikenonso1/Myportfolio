@@ -4,7 +4,7 @@ import { FadeIn } from '../ui/FadeIn';
 const logos = [
   { name: "Appsatile",   route: "/projects/appsatile" },
   { name: "HuntlyAi",    route: "/projects/huntly" },
-  { name: "LazyZone",    route: "/projects/lazyzone" },
+  { name: "LazyZoneLabs",   route: "/projects/lazyzone" },
   { name: "Cook by Ugo", route: "/projects/cook-by-ugo" },
   { name: "Nikos Farm",  route: "/projects/nikos-farm" },
 ];
@@ -32,14 +32,14 @@ export default function ClientsPartners() {
                 <Link
                   key={idx}
                   to={logo.route}
-                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/40 tracking-tight transition-all duration-300 hover:text-white"
+                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight transition-all duration-300 hover:text-white"
                 >
                   {logo.name}
                 </Link>
               ) : (
                 <span
                   key={idx}
-                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/40 tracking-tight cursor-default"
+                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight cursor-default"
                 >
                   {logo.name}
                 </span>

@@ -143,7 +143,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-[960px] mx-auto gap-6">
           {[
             { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
-            { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
+            { name: "Stangly Sunday", role: "Founder, LazyZoneLabs", avatar: "/lazyzonelab-logo.png", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
           ].map((quote, i) => (
             <FadeIn key={i} delay={i * 0.1}>
               <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">
@@ -181,11 +181,11 @@ export default function Projects() {
             Clients & Collaborations
           </div>
           <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 mt-4">
-             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
-             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
-             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
-             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
-             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
+             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Appsatile</Link>
+             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">HuntlyAi</Link>
+             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">LazyZoneLabs</Link>
+             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
+             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Nikos Farm</Link>
           </div>
         </FadeIn>
       </section>

@@ -7,7 +7,7 @@ import Testimonials from '../components/sections/Testimonials';
 export default function Home() {
   return (
     <div className="w-full relative">
-      <SEO title="Chinonso Ezeigbo" description="Crafting digital products that feel almost magic." />
+      <SEO title="Chinonso Ezeigbo · Designer" description="Designer creating web and mobile products that are simple to use and straightforward to build." />
       
       {/* 1. HERO - MASSIVE TYPOGRAPHY & MESH GLOW */}
       <section className="relative min-h-[100svh] flex flex-col justify-center items-center px-6 overflow-hidden bg-[var(--bg)]">
@@ -16,11 +16,11 @@ export default function Home() {
           <div className="mb-8 text-[12px] font-medium tracking-[0.2em] text-white/50 uppercase">Chinonso Ezeigbo · Designer</div>
 
           <h1 className="font-['DM_Sans'] text-[clamp(40px,6.2vw,88px)] font-medium leading-[1.05] tracking-[-0.035em] text-center max-w-[1000px] mb-10 pb-2 text-white">
-            Where security thinking meets beautiful design.
+            Design that makes complex products feel simple.
           </h1>
 
           <p className="text-[17px] md:text-[19px] text-white/65 text-center max-w-[600px] leading-[1.65] mb-12">
-            I'm a designer with a background in Cyber Security. I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build.
+            I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build. My Cyber Security background is a bonus: privacy and safety are considered from the first sketch.
           </p>
 
           <p className="text-[14px] md:text-[15px] text-white/80 text-center max-w-[640px] leading-[1.6] mb-12 -mt-6 font-medium">
@@ -46,21 +46,21 @@ export default function Home() {
       {/* 2. LOGO SECTION */}
       <section className="py-16 border-y border-white/5 bg-[var(--bg)]/50 overflow-hidden">
         <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
-          <div className="text-[12px] font-medium tracking-[0.2em] uppercase text-white/30 mb-10 border-b border-white/10 pb-4 w-full text-center">
+          <div className="text-[12px] font-medium tracking-[0.2em] uppercase text-white/50 mb-10 border-b border-white/10 pb-4 w-full text-center">
             Worked with
           </div>
           <div className="flex flex-wrap justify-center items-center gap-x-14 gap-y-8">
-             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Appsatile</Link>
-             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">HuntlyAi</Link>
-             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">LazyZone</Link>
-             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
-             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/30 transition-all duration-300 hover:text-white">Nikos Farm</Link>
+             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Appsatile</Link>
+             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">HuntlyAi</Link>
+             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">LazyZoneLabs</Link>
+             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
+             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[22px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Nikos Farm</Link>
           </div>
         </FadeIn>
       </section>
 
       {/* 3. SELECTED WORK */}
-      <section className="py-32 px-6">
+      <section className="pt-20 pb-24 px-6">
         <div className="max-w-[1200px] mx-auto">
           <FadeIn className="flex justify-between items-end mb-16 border-b border-white/10 pb-8">
             <h2 className="font-['DM_Sans'] text-[clamp(32px,5vw,56px)] font-medium tracking-tight text-white leading-none">Selected<br/>Projects</h2>
@@ -104,7 +104,7 @@ export default function Home() {
       <Testimonials />
 
       {/* 4. EXPERTISE - GLASS ACCORDION/CARDS */}
-      <section className="py-32 px-6 border-y border-white/5 bg-[var(--bg2)]/30 relative overflow-hidden">
+      <section className="py-24 px-6 border-y border-white/5 bg-[var(--bg2)]/30 relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-center relative z-10">
           <FadeIn>
             <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 w-fit min-w-max text-[12px] font-medium tracking-widest text-white/50 uppercase mb-8">What I Do</div>

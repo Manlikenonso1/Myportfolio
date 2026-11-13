@@ -10,14 +10,14 @@ const testimonials = [
   {
     quote: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended.",
     name: "Stangly Sunday",
-    role: "Founder, Lazyzonelab",
+    role: "Founder, LazyZoneLabs",
     avatar: "/lazyzonelab-logo.png"
   }
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-32 px-6 border-y border-[var(--border)] bg-[var(--bg2)]/30 overflow-hidden relative">
+    <section className="py-24 px-6 border-y border-[var(--border)] bg-[var(--bg2)]/30 overflow-hidden relative">
       
       <div className="max-w-[1200px] mx-auto z-10 relative">
         <FadeIn className="text-center mb-20">
@@ -25,7 +25,7 @@ export default function Testimonials() {
             Words from partners
           </h2>
           <p className="text-[18px] text-[var(--muted)] max-w-[600px] mx-auto font-light">
-            Feedback from founders, product managers, and developers I've collaborated with.
+            Feedback from founders and business owners I've worked with.
           </p>
         </FadeIn>
 

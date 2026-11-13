@@ -326,7 +326,7 @@ export default function ProjectDetails() {
         }
       ],
       reviews: [
-        { name: "Stangly Sunday", role: "Founder, Lazyzonelab", avatar: "/lazyzonelab-logo.png", text: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended." }
+        { name: "Stangly Sunday", role: "Founder, LazyZoneLabs", avatar: "/lazyzonelab-logo.png", text: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended." }
       ]
     },
     'hsbc': {
