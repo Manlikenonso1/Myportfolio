@@ -23,7 +23,7 @@ export default function AboutBio() {
               Designer who makes complex products simple.
             </h2>
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-4 w-full lg:w-[530px]">
-              I'm Chinonso Ezeigbo, a designer who loves clean, polished interfaces and clear, usable products. I also hold a master's degree in Cyber Security from Aston University, so data clarity, user privacy, and trust are built into my work as a plus.
+              I'm Chinonso Ezeigbo, a designer with a master's degree in Cyber Security from Aston University. I love clean, polished interfaces, and I care just as much about data clarity, user privacy, and building software people can actually trust.
             </p>
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] mb-[30px] w-full lg:w-[530px]">
               Over 4+ years, I've designed B2B SaaS products, AI assistants, design systems and mobile apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.

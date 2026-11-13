@@ -20,7 +20,7 @@ export default function Home() {
           </h1>
 
           <p className="text-[17px] md:text-[19px] text-white/65 text-center max-w-[600px] leading-[1.65] mb-12">
-            I design thoughtful web and mobile apps that feel simple to use and are a pleasure for developers to build. My Cyber Security background is a bonus: privacy and safety are considered from the first sketch.
+            I design thoughtful web and mobile apps that feel simple to use, keep people's data safe, and are a pleasure for developers to build.
           </p>
 
           <p className="text-[14px] md:text-[15px] text-white/80 text-center max-w-[640px] leading-[1.6] mb-12 -mt-6 font-medium">
