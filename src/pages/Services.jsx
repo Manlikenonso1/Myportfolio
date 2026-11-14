@@ -57,7 +57,7 @@ export default function Services() {
                   <div className="text-[14px] font-medium text-white/40 mb-4">02</div>
                   <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">Design Systems & Brand Standards</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
-                    Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colors, fonts, and responsive components, giving your team a reliable blueprint that saves hours of development time.
+                    Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colours, fonts, and responsive components, giving your team a reliable blueprint that saves hours of development time.
                   </p>
                   <Link to="/services/design-systems" className="inline-flex items-center gap-3 px-6 py-3 rounded-lg border border-white/20 text-white font-medium text-[14px] hover:bg-white hover:text-black transition-all">
                     Explore process

@@ -24,7 +24,7 @@ const serviceData = {
       {
         num: "03",
         title: "Wireframes & Layouts",
-        desc: "Creating screen-by-screen layouts to test content priority, button placement, and overall balance so we are confident in the layout before finalizing colors and typography."
+        desc: "Creating screen-by-screen layouts to test content priority, button placement, and overall balance so we are confident in the layout before finalising colours and typography."
       },
       {
         num: "04",
@@ -39,12 +39,12 @@ const serviceData = {
     eyebrow: "Design Systems & Component Libraries",
     image: "/service_design_system.png",
     overview: "As products grow, keeping screens consistent and code clean gets harder. I build structured, reusable design systems in Figma and code so your team can roll out new features without reinventing the wheel each time.",
-    description: "Every button, form field, and color token is organized with clear rules and auto-layout. Designers and developers stay on the same page, handoffs become painless, and your product stays visually cohesive.",
+    description: "Every button, form field, and colour token is organised with clear rules and auto-layout. Designers and developers stay on the same page, handoffs become painless, and your product stays visually cohesive.",
     phases: [
       {
         num: "01",
         title: "Core Foundations",
-        desc: "Setting up the essentials: responsive grids, accessible color palettes, readable type scales, and spacing rules that hold everything together."
+        desc: "Setting up the essentials: responsive grids, accessible colour palettes, readable type scales, and spacing rules that hold everything together."
       },
       {
         num: "02",
@@ -54,7 +54,7 @@ const serviceData = {
       {
         num: "03",
         title: "Design Tokens & Variables",
-        desc: "Translating styles into structured tokens (colors, spacing, typography) that match your front-end code (CSS, Tailwind, or React variables)."
+        desc: "Translating styles into structured tokens (colours, spacing, typography) that match your front-end code (CSS, Tailwind, or React variables)."
       },
       {
         num: "04",
@@ -129,12 +129,12 @@ const serviceData = {
     eyebrow: "Engineering Alignment & Accessibility",
     image: "/service_dev_handoff.jpg",
     overview: "A great design is only as good as what actually ships to users. I bridge the gap between design and engineering by delivering meticulous Figma specs, design token architectures, and strict accessibility standards.",
-    description: "I ensure engineers never have to guess spacing, responsive behaviors, or edge cases. With WCAG compliance built into typography, color contrast, and interactive focus states, your product ships cleanly, on time, and accessible to everyone.",
+    description: "I ensure engineers never have to guess spacing, responsive behaviors, or edge cases. With WCAG compliance built into typography, colour contrast, and interactive focus states, your product ships cleanly, on time, and accessible to everyone.",
     phases: [
       {
         num: "01",
         title: "Design Tokens & Naming Architecture",
-        desc: "Structured variables for color palettes, typography scales, spacing units, and radius values that map 1:1 with CSS, Tailwind, or styled-components."
+        desc: "Structured variables for colour palettes, typography scales, spacing units, and radius values that map 1:1 with CSS, Tailwind, or styled-components."
       },
       {
         num: "02",
@@ -144,7 +144,7 @@ const serviceData = {
       {
         num: "03",
         title: "WCAG Accessibility Verification",
-        desc: "Validating color contrast ratios (minimum 4.5:1 / 7:1 for AAA), keyboard tab sequences, screen reader ARIA labels, and tap target sizing for full compliance."
+        desc: "Validating colour contrast ratios (minimum 4.5:1 / 7:1 for AAA), keyboard tab sequences, screen reader ARIA labels, and tap target sizing for full compliance."
       },
       {
         num: "04",

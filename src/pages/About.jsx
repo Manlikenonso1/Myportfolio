@@ -1,4 +1,3 @@
-import PageHeader from '../components/sections/PageHeader';
 import AboutBio from '../components/sections/AboutBio';
 import EduExp from '../components/sections/EduExp';
 import SkillsSection from '../components/sections/SkillsSection';
@@ -12,9 +11,8 @@ export default function About() {
     <div className="w-full bg-[var(--bg)] min-h-screen text-[var(--white)]">
       <SEO 
         title="About · Chinonso Ezeigbo" 
-        description="Learn more about Chinonso Ezeigbo, a designer with an MSc in Cyber Security from Aston University, building accessible, secure, and intuitive digital products." 
+        description="Learn more about Chinonso Ezeigbo, a product designer with an MSc in Cyber Security from Aston University, building accessible, secure, and intuitive digital products." 
       />
-      <PageHeader title="About Me" breadcrumbText="About Me" />
       <AboutBio />
       <EduExp />
       <SkillsSection />

@@ -13,13 +13,13 @@ export default function ProjectDetails() {
       glance: { problem: "Three product teams were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system for all three teams. The founder said it made the whole app easier to use." },
       title: "Appsatile",
       type: "Design System",
-      category: "Design Architecture",
-      role: "Designer",
+      category: "B2B SaaS · 70+ components",
+      role: "Product Designer. Co-built the system with another designer; owned the icon library, the token export to code and component naming.",
       heroImg: "/appsatile-thumbnail.webp",
       liveLink: null,
       sliceCount: 33,
       overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I co-built their design system with another designer, owning the icon library, the token export to code and the component naming, so both designers and engineers could move faster without breaking visual consistency.",
-      problem: "Every squad was basically creating their own buttons, modals, and input fields. Buttons had different corner radii on different pages, handoffs took hours of back-and-forth in Slack, and fixing a simple color change meant updating dozens of disconnected code files.",
+      problem: "Every squad was basically creating their own buttons, modals, and input fields. Buttons had different corner radii on different pages, handoffs took hours of back-and-forth in Slack, and fixing a simple colour change meant updating dozens of disconnected code files.",
       deliverables: ["Component Library", "Design Tokens Architecture", "Interactive Figma Specs", "WCAG 2.1 AA Compliance", "Documentation Guide"],
       metrics: [
         { value: "50%", label: "Faster handoffs to engineers" },
@@ -29,7 +29,7 @@ export default function ProjectDetails() {
       decisions: [
         {
           pillar: "01. Tokens that match how devs actually write CSS",
-          rationale: "Instead of picking random hex values across Figma frames, we set up a clear three-tier token system for colors, spacing, and font sizes. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
+          rationale: "Instead of picking random hex values across Figma frames, we set up a layered token system for colours, spacing, and font sizes: primitives, then semantic tokens, then components. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
         },
         {
           pillar: "02. Naming components to match React props",
@@ -37,7 +37,7 @@ export default function ProjectDetails() {
         },
         {
           pillar: "03. Accessibility built in from day one",
-          rationale: "I checked color contrast across every single text and background pair to make sure they passed WCAG AA standards. I also included clear keyboard focus outlines and large enough touch targets so no one had to come back and fix accessibility bugs later."
+          rationale: "I checked colour contrast across every single text and background pair to make sure they passed WCAG AA standards. I also included clear keyboard focus outlines and large enough touch targets so no one had to come back and fix accessibility bugs later."
         }
       ],
       process: [
@@ -51,7 +51,7 @@ export default function ProjectDetails() {
           title: "One naming rule for every token",
           text: "Every token follows category / role / state, and never a colour name. A primitive like Primary/brand/600 is aliased to a semantic token like action/primary/default, which the button uses. Swapping a brand colour then updates every component at once.",
           before: "/appsatile-process-2-before.webp", beforeLabel: "Token naming convention",
-          after: "/appsatile-process-2-after.webp", afterLabel: "System overview · 4 token layers"
+          after: "/appsatile-process-2-after.webp", afterLabel: "System overview"
         },
         {
           title: "Same screen, both themes",
@@ -68,7 +68,7 @@ export default function ProjectDetails() {
       title: "Appsatile Workspace",
       type: "Product Design",
       category: "Business Workspace · Rebuild",
-      role: "Designer",
+      role: "Product Designer",
       heroImg: "/appsatile-workspace-thumbnail.webp",
       prototypeLink: "https://www.figma.com/proto/rk1I3Fhrv0V8EljUAWdzer/Appsatile-Workspace--rebuild-?page-id=2%3A9&node-id=179-2251&starting-point-node-id=179%3A2251&scaling=scale-down&content-scaling=fixed",
       liveLink: null,
@@ -119,7 +119,7 @@ export default function ProjectDetails() {
       concept: true,
       type: "Product & Interface Design",
       category: "Airline & Travel Web App",
-      role: "Designer",
+      role: "Product Designer",
       heroImg: "/aerovia-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
@@ -138,7 +138,7 @@ export default function ProjectDetails() {
         },
         {
           pillar: "02. Compare at a glance with honest inclusions",
-          rationale: "Rather than forcing users to click through separate tabs to compare baggage and seat rules, I designed side-by-side fare cards (Best, Cheapest, Fastest) with color-coded tags and immediate price impact preview."
+          rationale: "Rather than forcing users to click through separate tabs to compare baggage and seat rules, I designed side-by-side fare cards (Best, Cheapest, Fastest) with colour-coded tags and immediate price impact preview."
         },
         {
           pillar: "03. Calm teal aesthetic built for trust",
@@ -178,7 +178,7 @@ export default function ProjectDetails() {
       title: "Nikos Farm",
       type: "E-Commerce",
       category: "E-Commerce Interface",
-      role: "Designer",
+      role: "Product Designer",
       heroImg: "/nikos-farm-thumbnail.webp",
       liveLink: "https://nikosfarm.com/",
       sliceCount: 10,
@@ -229,7 +229,7 @@ export default function ProjectDetails() {
       title: "Cook by Ugo",
       type: "Food & Hospitality",
       category: "Restaurant & Ordering Experience",
-      role: "Designer · UI & brand",
+      role: "Product Designer · UI & brand",
       heroImg: "/cook-by-ugo-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
@@ -284,7 +284,7 @@ export default function ProjectDetails() {
       title: "LazyZoneLabs",
       type: "Product Design",
       category: "AI Creator Suite & Web App",
-      role: "Designer (solo)",
+      role: "Product Designer (solo)",
       heroImg: "/lazyzone-thumbnail.webp",
       liveLink: "https://www.lazyzonelabs.com/",
       sliceCount: 13,
@@ -336,7 +336,7 @@ export default function ProjectDetails() {
       concept: true,
       type: "Product Design",
       category: "Mobile Banking App",
-      role: "Designer (solo)",
+      role: "Product Designer (solo)",
       heroImg: "/hsbc-thumbnail.webp",
       prototypeLink: "https://www.figma.com/proto/DIyIHsRYjtPHAeQzfpxkex/Hsbc-Mobile-App-redesign?node-id=56-949&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=56%3A949&show-proto-sidebar=1&page-id=21%3A51",
       phoneProcess: true,
@@ -388,7 +388,7 @@ export default function ProjectDetails() {
       concept: true,
       type: "Product Design",
       category: "Security App",
-      role: "Designer (solo)",
+      role: "Product Designer (solo)",
       heroImg: "/keel-thumbnail.webp",
       prototypeLink: "https://www.figma.com/proto/uZo6nyOc2J6HdOJ8pjXX5t/Keel-%C2%B7-work-account-safety--concept-?node-id=33-348&p=f&scaling=scale-down&content-scaling=fixed&starting-point-node-id=33%3A348&show-proto-sidebar=1&page-id=2%3A8",
       phoneProcess: true,
@@ -439,7 +439,7 @@ export default function ProjectDetails() {
       title: "HuntlyAi",
       type: "Product Design",
       category: "AI Job Search & Application Tracker",
-      role: "Designer (solo)",
+      role: "Product Designer (solo)",
       heroImg: "/huntly-thumbnail.webp",
       liveLink: null,
       sliceCount: 10,
@@ -501,44 +501,49 @@ export default function ProjectDetails() {
       <SEO title={`${project.title} · Chinonso Ezeigbo`} description={project.overview.slice(0, 150) + "..."} image={`/og/${project.id}.jpg`} />
       
       {/* Background Flora Patterns */}
-      {/* 1. HERO HEADER */}
-      <section className="relative z-10 bg-[var(--bg)] pt-36 pb-14 px-6 text-center border-b border-[var(--border)]">
-        <FadeIn>
-          <h1 className="font-['DM_Sans'] text-[32px] md:text-[52px] font-medium text-white tracking-tight mb-4">{project.title}</h1>
-          <div className="flex items-center justify-center gap-2 text-[14px] text-[var(--muted)] font-['Inter_Tight']">
+      {/* 1. HERO HEADER + COVER */}
+      <section className="relative z-10 bg-[var(--bg)] pt-32 md:pt-36 pb-0 px-6">
+        <FadeIn className="max-w-[1200px] mx-auto">
+          <div className="flex items-center gap-2 text-[13px] text-[var(--muted)] font-['Inter_Tight'] mb-5">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span className="text-white/30">/</span>
             <Link to="/projects" className="hover:text-white transition-colors">Projects</Link>
             <span className="text-white/30">/</span>
             <span className="text-white">{project.title}</span>
           </div>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <h1 className="font-['DM_Sans'] text-[36px] md:text-[56px] font-medium text-white tracking-tight leading-[1.05] m-0">{project.title}</h1>
+            <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/60 m-0 md:text-right">{project.type} · {project.category}</p>
+          </div>
+          <img
+            src={project.heroImg}
+            alt={`${project.title} cover`}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover rounded-2xl border border-white/10 bg-[var(--card)]"
+          />
         </FadeIn>
       </section>
 
-      <section className="relative z-10 max-w-[1200px] mx-auto px-6 py-16">
+      <section className="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-16">
         {/* 2. META ROW & QUICK ACTIONS */}
         <FadeIn delay={0.1} className="flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-white/10 pb-8 mb-12">
-           <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
-              <div>
-                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Category</div>
-                 <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-white font-medium text-[14px]">
-                   {project.category}
-                 </div>
-                 {project.concept && (
-                   <div className="inline-flex items-center ml-2 px-3.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 font-medium text-[14px]">
-                     Concept project
-                   </div>
-                 )}
+           <div className="flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-white font-medium text-[14px]">
+                {project.type}
               </div>
-
-              <div className="hidden sm:block w-px h-10 bg-white/10"></div>
-
-              <div>
-                 <div className="text-[11px] font-bold tracking-widest text-[#888] uppercase mb-1">Type</div>
-                 <div className="text-white/80 text-[14px] leading-[1.5]">{project.concept ? "Self-initiated concept: end-to-end case study & interactive screens." : "Comprehensive product case study & interactive screens."}</div>
-              </div>
+              {project.concept && (
+                <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 font-medium text-[14px]">
+                  Self-initiated concept
+                </div>
+              )}
+              {project.liveLink && (
+                <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-200 font-medium text-[14px]">
+                  Shipped · live
+                </div>
+              )}
            </div>
-           
+
            <div className="flex flex-wrap items-center gap-3.5 pt-2 md:pt-0">
              {project.liveLink && (
                 <a 
@@ -641,38 +646,6 @@ export default function ProjectDetails() {
             </div>
           </FadeIn>
 
-          {/* Critical Thinking & Trade-Offs Deep Dive */}
-          {project.decisions && (
-            <FadeIn delay={0.25} className="flex flex-col gap-6">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-[var(--border)]">
-                <div>
-                  <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Decisions</div>
-                  <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-medium text-white">
-                    How I Tackled Key Challenges
-                  </h3>
-                </div>
-                <p className="text-[14px] text-white/40 max-w-[420px]">
-                  Key trade-offs and why these solutions worked best for users and engineers.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {project.decisions.map((dec, idx) => (
-                  <div key={idx} className="p-7 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between hover:border-white/20 transition-all">
-                    <div>
-                      <div className="font-['DM_Sans'] text-[16px] font-medium text-[var(--blue)] mb-3">
-                        {dec.pillar}
-                      </div>
-                      <p className="font-['Inter_Tight'] text-[14px] text-white/60 leading-[1.7]">
-                        {dec.rationale}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          )}
-
           {/* Measurable Outcomes & Credibility Stats */}
           {project.metrics && (project.concept || project.targets) && (
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
@@ -721,6 +694,38 @@ export default function ProjectDetails() {
                   </div>
                 </div>
               ))}
+            </FadeIn>
+          )}
+
+          {/* Critical Thinking & Trade-Offs Deep Dive */}
+          {project.decisions && (
+            <FadeIn delay={0.25} className="flex flex-col gap-6">
+              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-[var(--border)]">
+                <div>
+                  <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Decisions</div>
+                  <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-medium text-white">
+                    How I Tackled Key Challenges
+                  </h3>
+                </div>
+                <p className="text-[14px] text-white/40 max-w-[420px]">
+                  Key trade-offs and why these solutions worked best for users and engineers.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {project.decisions.map((dec, idx) => (
+                  <div key={idx} className="p-7 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between hover:border-white/20 transition-all">
+                    <div>
+                      <div className="font-['DM_Sans'] text-[16px] font-medium text-[var(--blue)] mb-3">
+                        {dec.pillar}
+                      </div>
+                      <p className="font-['Inter_Tight'] text-[14px] text-white/60 leading-[1.7]">
+                        {dec.rationale}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </FadeIn>
           )}
 
