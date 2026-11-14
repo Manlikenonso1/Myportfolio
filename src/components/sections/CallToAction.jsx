@@ -55,10 +55,6 @@ export default function CallToAction() {
               Contact Me
             </Link>
           </div>
-          <div className="flex items-center justify-center gap-[10px] font-['Inter_Tight'] text-[14px] text-[var(--muted)]">
-            <span className="text-[16px] text-[var(--green)]">⚡</span>
-            <span>Let's make something great together!</span>
-          </div>
         </FadeIn>
       </div>
     </section>

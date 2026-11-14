@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ExternalLink, ArrowLeft, ArrowRight, Info, AlertTriangle, Star } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowRight, Info, AlertTriangle } from 'lucide-react';
 import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 
@@ -835,7 +835,7 @@ export default function ProjectDetails() {
       <section className="bg-[var(--bg2)] py-20 border-y border-[var(--border)]">
         <div className="max-w-[1200px] mx-auto px-6">
            <FadeIn direction="up">
-             <h2 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-10">Review</h2>
+             <h2 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-10">What the client said</h2>
            </FadeIn>
             <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
@@ -858,12 +858,6 @@ export default function ProjectDetails() {
                         <div>
                           <div className="font-['DM_Sans'] font-medium text-white text-[16px]">{quote.name}</div>
                           <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
-                          <div className="flex gap-1 text-[var(--green)] mt-2">
-                            {[...Array(4)].map((_, sIdx) => (
-                              <Star key={sIdx} size={12} className="fill-[var(--green)] text-[var(--green)]" />
-                            ))}
-                            <Star size={12} className="fill-[#333] text-[#333]" />
-                          </div>
                        </div>
                      </div>
                      <p className="text-[14px] text-white/50 leading-[1.6]">"{quote.text}"</p>
@@ -904,10 +898,10 @@ export default function ProjectDetails() {
       <section className="bg-[var(--bg)] py-32 text-center">
          <FadeIn className="max-w-[800px] mx-auto px-6 mb-16">
             <h2 className="font-['DM_Sans'] text-[36px] md:text-[48px] font-medium text-white leading-tight mb-6">
-              Interested in collaborating?
+              Hiring a product designer?
             </h2>
             <p className="text-[var(--muted)] text-[16px] leading-[1.6]">
-              Have an upcoming project or need design help with an existing product? Let's chat.
+              I'm open to full-time roles, remote or in the North East. Happy to walk you through any of this work.
             </p>
          </FadeIn>
 

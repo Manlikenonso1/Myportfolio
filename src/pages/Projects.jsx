@@ -130,49 +130,6 @@ export default function Projects() {
         )}
       </section>
 
-      {/* 5. TESTIMONIALS */}
-      <section className="px-6 py-32 max-w-[1200px] mx-auto border-t border-[var(--border)]">
-        <FadeIn className="text-center mb-16">
-          <div className="text-[14px] text-[var(--muted)] tracking-[0.2em] uppercase font-bold mb-4">Testimonials</div>
-          <h2 className="font-['DM_Sans'] text-[40px] md:text-[56px] font-medium text-white leading-[1.1] tracking-tight">
-            Hear What They're Saying About Me
-          </h2>
-        </FadeIn>
-
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-[960px] mx-auto gap-6">
-          {[
-            { name: "Diamond Nicholas", role: "Owner, Nikos Farm", avatar: "/nikos-farm-logo.png", text: "Chinonso delivered ahead of schedule with exceptional quality. The new storefront interface has received overwhelmingly positive feedback from our customers." },
-            { name: "Stangly Sunday", role: "Founder, LazyZoneLabs", avatar: "/lazyzonelab-logo.png", text: "Chinonso brought clarity and structure to our brand and product UI. He communicates clearly, delivers on time, and makes the whole process easy." }
-          ].map((quote, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
-              <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full flex flex-col justify-between hover:border-white/20 transition-colors">
-                <div>
-                  <div className="flex gap-4 items-center mb-6">
-                    <img 
-                      src={quote.avatar} 
-                      alt={quote.name} 
-                      className={`w-12 h-12 rounded-full border border-white/10 ${
-                        quote.avatar.includes('logo') ? 'object-contain p-1 bg-white/5' : 'object-cover'
-                      }`} 
-                    />
-                    <div>
-                      <div className="font-['DM_Sans'] font-medium text-white text-[16px]">{quote.name}</div>
-                      <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
-                      <div className="flex gap-1 text-[var(--green)] mt-2">
-                        {[...Array(5)].map((_, sIdx) => (
-                          <Star key={sIdx} size={13} className="fill-[var(--green)] text-[var(--green)]" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-[14px] text-white/60 leading-[1.6]">"{quote.text}"</p>
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
 
       {/* 6. CLIENT LOGOS */}
       <section className="py-[60px] border-y border-[var(--border)] bg-[#050505]">

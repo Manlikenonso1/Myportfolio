@@ -46,7 +46,7 @@ export default function Contact() {
         body: JSON.stringify({
           'Full Name': formData.name,
           'Email Address': formData.email,
-          'Project Details': formData.details,
+          'Message': formData.details,
           _subject: `New Portfolio Inquiry from ${formData.name}`,
           _template: 'table'
         }),
@@ -85,11 +85,11 @@ export default function Contact() {
     <div className="w-full relative pb-32">
       <SEO 
         title="Contact · Chinonso Ezeigbo" 
-        description="Let's build something extraordinary. Get in touch for product design, design systems, and UX consultations." 
+        description="Get in touch with Chinonso Ezeigbo, a product designer open to full-time roles, remote or in the North East." 
       />
       
       {/* 1. HERO - CONTACT */}
-      <PageHeader title="Let's start a new project together." breadcrumbText="Contact" />
+      <PageHeader title="Let's talk." breadcrumbText="Contact" />
       {/* 2. CONTACT SYSTEM */}
       <section className="px-6 py-20 border-b border-white/5">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-stretch">
@@ -99,7 +99,7 @@ export default function Contact() {
             <FadeIn>
               <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-3 text-white">Get in touch</h2>
               <p className="text-white/60 text-[15px] md:text-[16px] leading-[1.7] max-w-[440px] mb-8 font-light">
-                Have an upcoming project, a product that needs a redesign, or want to collaborate? Send a message through the form and I'll get back to you directly.
+                Hiring a product designer, or want to talk through any of my work? Send a message through the form and I'll get back to you directly.
               </p>
               <a href="mailto:cezeigbo4@gmail.com" className="inline-block mb-8 text-[16px] text-white hover:text-white/70 underline underline-offset-4 decoration-white/30 transition-colors">
                 cezeigbo4@gmail.com
@@ -187,14 +187,14 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col gap-2 mt-2">
-                <label className="text-[14px] text-white/70 pl-2 font-medium">Project Details <span className="text-[var(--blue)]">*</span></label>
+                <label className="text-[14px] text-white/70 pl-2 font-medium">Message <span className="text-[var(--blue)]">*</span></label>
                 <textarea 
                   name="details"
                   required 
                   rows="6" 
                   value={formData.details}
                   onChange={handleChange}
-                  placeholder="Tell me a bit about your product, timeline, goals, or what challenges you're looking to solve..." 
+                  placeholder="Tell me a bit about the role or what you'd like to discuss..." 
                   className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light resize-none"
                 ></textarea>
               </div>
@@ -230,79 +230,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* 3. FAQ SECTION */}
-      <section className="px-6 py-32">
-        <div className="max-w-[800px] mx-auto">
-          <FadeIn>
-            <div className="text-center mb-20">
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-medium text-white mb-6">Frequently Asked Questions</h2>
-              <p className="text-white/50 text-[18px]">A few common questions about timelines, working together, and deliverables.</p>
-            </div>
-          </FadeIn>
-
-          <FadeInStagger className="flex flex-col gap-16">
-            
-            {/* General */}
-            <FadeInStaggerItem>
-              <h3 className="text-[14px] font-bold tracking-widest text-[var(--blue)] uppercase mb-8 border-b border-white/10 pb-4">General FAQ</h3>
-              <div className="flex flex-col gap-4">
-                <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
-                    What services do you offer?
-                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
-                      <ChevronDown size={20} strokeWidth={2} />
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    I handle end-to-end product design: user research, wireframes, interactive prototypes, full UI design for web and mobile apps, and scalable design systems.
-                  </div>
-                </details>
-                <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
-                    How long does a typical project take?
-                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
-                      <ChevronDown size={20} strokeWidth={2} />
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    It depends on the scope. A focused landing page or small feature revamp usually takes 1–2 weeks, while a full product design or complete design system typically runs between 4 to 8 weeks. I'll provide an honest, clear timeline after we talk through what you need.
-                  </div>
-                </details>
-              </div>
-            </FadeInStaggerItem>
-
-            {/* Process */}
-            <FadeInStaggerItem>
-              <h3 className="text-[14px] font-bold tracking-widest text-[var(--blue)] uppercase mb-8 border-b border-white/10 pb-4">Process & Collaboration</h3>
-              <div className="flex flex-col gap-4">
-                <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
-                    How involved will I be in the design process?
-                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
-                      <ChevronDown size={20} strokeWidth={2} />
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    As involved as you want to be. Typically, we'll kick off with a deep dive into your goals, followed by weekly check-ins and shared Figma links so you can leave comments and watch progress happen in real time with complete transparency.
-                  </div>
-                </details>
-                <details className="group bg-white/5 border border-white/10 rounded-2xl [&_summary::-webkit-details-marker]:hidden">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer font-['DM_Sans'] font-medium text-[18px]">
-                    Do you conduct user research?
-                    <span className="transition-transform duration-300 group-open:rotate-180 text-white/50 group-hover:text-white">
-                      <ChevronDown size={20} strokeWidth={2} />
-                    </span>
-                  </summary>
-                  <div className="px-6 pb-6 text-white/50 leading-[1.7] font-light">
-                    Definitely. Good design shouldn't be based on guesswork. Depending on your project stage, I talk with real users, analyze competitors, and look at actual user paths to make sure we're building what people actually need.
-                  </div>
-                </details>
-              </div>
-            </FadeInStaggerItem>
-
-          </FadeInStagger>
-        </div>
-      </section>
 
     </div>
   );

@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>
             <h2 className="font-['DM_Sans'] text-[clamp(40px,5vw,60px)] font-medium tracking-tight leading-[1.1] mb-8">
-              Let's make your product<br/>
-              <span className="text-white/45">easier to use.</span>
+              Hiring a product designer?<br/>
+              <span className="text-white/45">Let's talk.</span>
             </h2>
             <p className="text-white/50 text-[18px] max-w-[400px] mb-10">
-              Tell me what is confusing your users and I'll show you how I'd fix it.
+              I'm open to full-time roles, remote or in the North East, and happy to travel for team days.
             </p>
             <Link to="/contact" className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] transition-all duration-300">
               Get in touch
@@ -27,9 +27,7 @@ export default function Footer() {
               <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Pages</h4>
               <Link to="/" className="text-white/40 hover:text-white transition-colors text-[15px]">Home</Link>
               <Link to="/about" className="text-white/40 hover:text-white transition-colors text-[15px]">About</Link>
-              <Link to="/services" className="text-white/40 hover:text-white transition-colors text-[15px]">Services</Link>
               <Link to="/projects" className="text-white/40 hover:text-white transition-colors text-[15px]">Projects</Link>
-              <Link to="/help-center" className="text-white/40 hover:text-white transition-colors text-[15px]">Help Center</Link>
               <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Contact</Link>
             </div>
             <div className="flex flex-col gap-4">

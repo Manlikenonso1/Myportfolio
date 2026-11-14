@@ -43,7 +43,6 @@ export const allProjects = [
   },
   {
     id: 'hsbc',
-    featured: true,
     title: 'HSBC UK',
     concept: true,
     categoryLabel: 'Mobile Banking',
@@ -54,7 +53,6 @@ export const allProjects = [
   },
   {
     id: 'huntly',
-    featured: true,
     title: 'HuntlyAi',
     categoryLabel: 'AI Job Search & Workspace',
     description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',

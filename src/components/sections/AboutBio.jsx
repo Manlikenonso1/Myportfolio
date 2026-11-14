@@ -32,7 +32,7 @@ export default function AboutBio() {
             </div>
             
             <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--white)] leading-[1.6]">
-              Have a project in mind or just want to chat design?{' '}
+              Hiring a product designer?{' '}
               <Link to="/contact" className="text-[var(--blue)] no-underline hover:underline">Let's talk</Link>
             </p>
           </div>
