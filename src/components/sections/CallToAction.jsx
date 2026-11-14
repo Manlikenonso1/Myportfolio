@@ -4,7 +4,7 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function CallToAction() {
   const stats = [
-    { num: "70+", label: "Components in a design system used by 3 product squads." },
+    { num: "70+", label: "Components in a design system used by the whole design team." },
     { num: "868", label: "Icons in the product icon library I built and maintained." },
     { num: "~50%", label: "Faster handoffs to engineers with a shared system." }
   ];

@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 import PageTransition from './components/ui/PageTransition';
 import CustomCursor from './components/ui/CustomCursor';
-import ScrollToTopBtn from './components/ui/ScrollToTopBtn';
+import { TokenProvider, TokenDock } from './tokens/TokenProvider';
 
 // Code-splitting routes for optimal performance and near-instant initial load
 const Home = lazy(() => import('./pages/Home'));
@@ -51,6 +51,7 @@ function AppRoutes() {
 
 function App() {
   return (
+    <TokenProvider>
     <Router>
       <CustomCursor />
       <ScrollToTop />
@@ -58,9 +59,10 @@ function App() {
       <main>
         <AppRoutes />
       </main>
-      <ScrollToTopBtn />
       <Footer />
+      <TokenDock />
     </Router>
+    </TokenProvider>
   );
 }
 

@@ -1,155 +1,93 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star } from 'lucide-react';
 import { FadeIn } from '../components/ui/FadeIn';
-import PageHeader from '../components/sections/PageHeader';
-import CallToAction from '../components/sections/CallToAction';
+import CaseStudyCard from '../components/sections/CaseStudyCard';
 import SEO from '../components/ui/SEO';
 import { allProjects } from '../data/projects';
 
 const categoryFilters = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'saas', label: 'SaaS & Web Apps' },
-  { id: 'ai', label: 'AI Products' },
-  { id: 'ecommerce', label: 'E-Commerce' },
-  { id: 'design-systems', label: 'Design Systems' }
+  { id: 'all', label: 'All' },
+  { id: 'design-systems', label: 'Design systems' },
+  { id: 'saas', label: 'SaaS and web apps' },
+  { id: 'ai', label: 'AI products' },
+  { id: 'ecommerce', label: 'E-commerce' },
 ];
+
+const h2 = "font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0";
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('all');
-
-  const filtered = activeCategory === 'all'
-    ? allProjects
-    : allProjects.filter(p => p.categories.includes(activeCategory));
+  const filtered = activeCategory === 'all' ? allProjects : allProjects.filter(p => p.categories.includes(activeCategory));
   const featured = filtered.filter(p => p.featured);
   const more = filtered.filter(p => !p.featured);
 
   return (
-    <div className="w-full relative pb-10 bg-[var(--bg)]">
-      <SEO title="Projects · Chinonso Ezeigbo" description="Selected case studies in SaaS interfaces, design systems, AI creator suites, and e-commerce products by Chinonso Ezeigbo." />
+    <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
+      <SEO title="Projects · Chinonso Ezeigbo" description="Case studies in design systems, B2B SaaS, AI products and security UX by Chinonso Ezeigbo, Product Designer." />
 
-      {/* 1. HERO */}
-      <PageHeader title="Projects" breadcrumbText="Projects" />
+      <div className="max-w-[920px] mx-auto px-6">
 
-      {/* 2. RECENT PROJECTS WITH CATEGORY FILTERS */}
-      <section className="px-6 py-20 max-w-[1200px] mx-auto">
-        <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Portfolio Index</div>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium text-white tracking-tight">Featured Case Studies</h2>
-            </div>
-            
-            {/* Filter Pills */}
-            <div className="flex flex-wrap items-center gap-2">
+        {/* INTRO */}
+        <section className="pt-36 md:pt-44 pb-10 md:pb-12">
+          <FadeIn>
+            <h1 className="font-['DM_Sans'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-4">Projects</h1>
+            <p className="text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)] max-w-[600px] m-0 mb-8">
+              {allProjects.length} case studies. Each one runs from the problem to the final screens, and says plainly whether it shipped or is a concept.
+            </p>
+            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter projects">
               {categoryFilters.map(cat => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`px-5 py-2.5 rounded-full text-[13px] font-medium transition-all ${
-                    activeCategory === cat.id
-                      ? 'bg-white text-black font-semibold'
-                      : 'bg-white/5 text-white/60 hover:text-white hover:bg-white/10 border border-white/5'
-                  }`}
-                >
+                <button key={cat.id} type="button" aria-pressed={activeCategory === cat.id} onClick={() => setActiveCategory(cat.id)}
+                  className={`px-4 py-2 text-[14px] font-semibold border transition-colors ${activeCategory === cat.id ? 'bg-[var(--t-fg)] text-[var(--t-bg)] border-transparent' : 'bg-[var(--t-surface)] text-[var(--t-muted)] border-[var(--t-border)] hover:text-[var(--t-fg)]'}`}
+                  style={{ borderRadius: 'var(--t-radius)' }}>
                   {cat.label}
                 </button>
               ))}
             </div>
-          </div>
-        </FadeIn>
-        
-        <motion.div layout className="flex flex-col gap-24">
-          <AnimatePresence mode="popLayout">
-            {featured.map((proj) => (
-              <motion.div
-                key={proj.id}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4 border-b border-white/10 pb-6">
-                  <div>
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-[var(--muted)] text-[13px] uppercase tracking-widest font-bold">{proj.categoryLabel}</span>
-                      {proj.concept && <span className="px-2.5 py-0.5 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 text-[11px] uppercase tracking-widest font-bold">Concept</span>}
-                      <span className="w-1 h-1 rounded-full bg-white/20"></span>
-                      <div className="flex gap-2">
-                        {proj.tags.map((tag, tIdx) => (
-                          <span key={tIdx} className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-[11px] text-white/50">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <h3 className="font-['DM_Sans'] text-[32px] md:text-[48px] font-medium text-white">{proj.title}</h3>
-                    <p className="text-white/50 text-[16px] max-w-[650px] mt-2 font-light">{proj.description}</p>
-                  </div>
-                  <Link to={`/projects/${proj.id}`} className="px-8 py-3 rounded-lg border border-[var(--border)] bg-black text-white font-medium text-[14px] hover:bg-white hover:text-black hover:border-white/60 transition-all w-fit shrink-0">
-                    View Case Study
-                  </Link>
-                </div>
-                <Link to={`/projects/${proj.id}`} className="block w-full rounded-2xl bg-[var(--card)] border border-[var(--border)] overflow-hidden group hover:border-white/25 transition-colors">
-                  <img src={proj.image} alt={proj.title} className="w-full h-auto object-cover group-hover:scale-[1.03] transition-transform duration-500 opacity-85 group-hover:opacity-100" />
-                </Link>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+          </FadeIn>
+        </section>
 
+        {/* CASE STUDIES */}
+        {featured.length > 0 && (
+          <section>
+            <h2 className={`${h2} mb-6`}>Case studies</h2>
+            <div className="flex flex-col gap-8">
+              <AnimatePresence mode="popLayout">
+                {featured.map((p, i) => (
+                  <motion.div key={p.id} layout initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.98 }} transition={{ duration: 0.4 }}>
+                    <CaseStudyCard project={p} eager={i === 0} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+          </section>
+        )}
+
+        {/* MORE WORK */}
         {more.length > 0 && (
-          <div className="mt-32">
-            <FadeIn>
-              <div className="border-b border-white/10 pb-6 mb-10">
-                <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-3">Archive</div>
-                <h2 className="font-['DM_Sans'] text-[28px] md:text-[36px] font-medium text-white tracking-tight">More projects</h2>
-              </div>
-            </FadeIn>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {more.map((proj, i) => (
-                <FadeIn key={proj.id} delay={i * 0.08}>
-                  <Link to={`/projects/${proj.id}`} className="group block">
-                    <div className="rounded-xl overflow-hidden border border-[var(--border)] bg-[var(--card)] group-hover:border-white/25 transition-colors">
-                      <img src={proj.image} alt={proj.title} loading="lazy" decoding="async" className="w-full aspect-[4/3] object-cover" />
+          <section className={featured.length > 0 ? 'mt-24 md:mt-32' : ''}>
+            <h2 className={`${h2} mb-6`}>More work</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-9">
+              {more.map((p, i) => (
+                <FadeIn key={p.id} delay={Math.min(i, 4) * 0.05}>
+                  <Link to={`/projects/${p.id}`} data-cursor="View project" className="group block">
+                    <div className="overflow-hidden border border-[var(--t-border)] transition-[border-radius] duration-300" style={{ borderRadius: 'var(--t-radius-lg)' }}>
+                      <img src={p.image} alt={`${p.title} cover`} loading="lazy" decoding="async" className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                     </div>
-                    <div className="flex items-center gap-2 mt-4 mb-1">
-                      <h3 className="font-['DM_Sans'] text-[20px] font-medium text-white">{proj.title}</h3>
-                      {proj.concept && <span className="px-2 py-0.5 rounded-full border border-white/15 text-white/60 text-[10px] uppercase tracking-widest font-bold">Concept</span>}
+                    <div className="flex items-center justify-between gap-3 mt-3 px-0.5">
+                      <h3 className="font-['DM_Sans'] text-[17px] font-medium text-[var(--t-fg)] m-0">{p.title}</h3>
+                      {p.concept && <span className="text-[12px] text-[var(--t-faint)]">Concept</span>}
                     </div>
-                    <div className="text-[12px] uppercase tracking-widest text-white/40 font-bold mb-2">{proj.categoryLabel}</div>
-                    <p className="text-[14px] text-white/55 leading-[1.6]">{proj.description}</p>
-                    <span className="inline-block mt-3 text-[13px] text-white/80 group-hover:text-white underline underline-offset-4 decoration-white/30">View project</span>
+                    <p className="text-[14.5px] leading-[1.5] text-[var(--t-muted)] m-0 mt-1 px-0.5">{p.hook}</p>
                   </Link>
                 </FadeIn>
               ))}
             </div>
-          </div>
+          </section>
         )}
-      </section>
 
-
-      {/* 6. CLIENT LOGOS */}
-      <section className="py-[60px] border-y border-[var(--border)] bg-[#050505]">
-        <FadeIn className="max-w-[1200px] mx-auto px-6 w-full flex flex-col items-center">
-          <div className="font-['DM_Sans'] text-[16px] font-medium text-white mb-6 w-full text-center">
-            Clients & Collaborations
-          </div>
-          <div className="flex justify-center items-center flex-wrap gap-10 lg:gap-20 mt-4">
-             <Link to="/projects/appsatile"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Appsatile</Link>
-             <Link to="/projects/huntly"      className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">HuntlyAi</Link>
-             <Link to="/projects/lazyzone"    className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">LazyZoneLabs</Link>
-             <Link to="/projects/cook-by-ugo" className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Cook by Ugo</Link>
-             <Link to="/projects/nikos-farm"  className="font-['DM_Sans'] font-medium text-[24px] tracking-tight text-white/60 transition-all duration-300 hover:text-white">Nikos Farm</Link>
-          </div>
-        </FadeIn>
-      </section>
-
-      {/* 7. CALL TO ACTION */}
-      <CallToAction />
-
+        <div className="h-24 md:h-32" />
+      </div>
     </div>
   );
 }

@@ -25,14 +25,16 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-10">
             <div className="flex flex-col gap-4">
               <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Pages</h4>
-              <Link to="/" className="text-white/40 hover:text-white transition-colors text-[15px]">Home</Link>
-              <Link to="/about" className="text-white/40 hover:text-white transition-colors text-[15px]">About</Link>
-              <Link to="/projects" className="text-white/40 hover:text-white transition-colors text-[15px]">Projects</Link>
-              <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Contact</Link>
+              <Link to="/" className="text-white/60 hover:text-white transition-colors text-[15px]">Home</Link>
+              <Link to="/about" className="text-white/60 hover:text-white transition-colors text-[15px]">About</Link>
+              <Link to="/projects" className="text-white/60 hover:text-white transition-colors text-[15px]">Projects</Link>
+              <Link to="/contact" className="text-white/60 hover:text-white transition-colors text-[15px]">Contact</Link>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-['DM_Sans'] font-medium text-[18px] mb-2 text-white/90">Contact</h4>
-              <Link to="/contact" className="text-white/40 hover:text-white transition-colors text-[15px]">Send a Message &rarr;</Link>
+              <a href="mailto:cezeigbo4@gmail.com" className="text-white/60 hover:text-white transition-colors text-[15px] break-all">cezeigbo4@gmail.com</a>
+              <a href="https://www.linkedin.com/in/ezeigbochinonso" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors text-[15px]">LinkedIn &#8599;</a>
+              <Link to="/contact" className="text-white/60 hover:text-white transition-colors text-[15px]">Send a message &rarr;</Link>
             </div>
           </div>
         </div>

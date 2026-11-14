@@ -1,30 +1,27 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Send } from 'lucide-react';
-import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../components/ui/FadeIn';
-import PageHeader from '../components/sections/PageHeader';
+import { ArrowUpRight, Check, Copy, Mail, Send } from 'lucide-react';
+import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
-import WorldMapWidget from '../components/ui/WorldMapWidget';
 
+const EMAIL = 'cezeigbo4@gmail.com';
+const LINKEDIN = 'https://www.linkedin.com/in/ezeigbochinonso';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    details: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', details: '' });
   const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
   const [errorMessage, setErrorMessage] = useState('');
+  const [copied, setCopied] = useState(false);
 
-  // Target destination email
-  const recipientEmail = "cezeigbo4@gmail.com"; // Will be updated with user's preferred email
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -32,205 +29,125 @@ export default function Contact() {
     setStatus('submitting');
     setErrorMessage('');
 
-    // Abort if FormSubmit takes longer than 8 seconds
+    // Give up if the form service takes longer than 8 seconds
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 8000);
 
     try {
-      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           'Full Name': formData.name,
           'Email Address': formData.email,
           'Message': formData.details,
           _subject: `New Portfolio Inquiry from ${formData.name}`,
-          _template: 'table'
+          _template: 'table',
         }),
-        signal: controller.signal
+        signal: controller.signal,
       });
-
       clearTimeout(timeoutId);
 
-      // Treat any 2xx response as success — FormSubmit sometimes returns
-      // non-standard JSON on first activation, so we don't rely on result.success
       if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', details: '' });
-        // Success overlay stays until user closes it
       } else {
         const result = await response.json().catch(() => ({}));
         setStatus('error');
-        setErrorMessage(result.message || 'Something went wrong. Please try again.');
+        setErrorMessage(result.message || `Your message was not sent. Please try again, or email ${EMAIL}.`);
       }
     } catch (err) {
       clearTimeout(timeoutId);
-      if (err.name === 'AbortError') {
-        // Request timed out — still show success since the data likely went through
-        setStatus('success');
-        setFormData({ name: '', email: '', details: '' });
-      } else {
-        console.error('Submission error:', err);
-        setStatus('error');
-        setErrorMessage('Network error. Please check your connection and try again.');
-      }
+      setStatus('error');
+      setErrorMessage(err.name === 'AbortError'
+        ? `The form took too long to respond, so I can't confirm your message was sent. Please try again, or email ${EMAIL}.`
+        : `Your message was not sent. Check your connection and try again, or email ${EMAIL}.`);
     }
   };
 
+  const chip = "inline-flex items-center gap-2 px-4 py-2 text-[14px] font-semibold text-[var(--t-fg)] bg-[var(--t-surface)] border border-[var(--t-border)] hover:border-[var(--t-fg)] transition-[border-color,border-radius,transform] duration-200 active:scale-[0.97]";
+  const field = "w-full bg-[var(--t-surface)] border border-[var(--t-border)] px-4 py-3 text-[16px] text-[var(--t-fg)] placeholder:text-[var(--t-faint)] focus:outline-none focus:border-[var(--t-accent)] focus:ring-2 focus:ring-[var(--t-accent)]/30 transition-[border-color,box-shadow,border-radius]";
+  const label = "text-[14px] font-medium text-[var(--t-fg)]";
 
   return (
-    <div className="w-full relative pb-32">
-      <SEO 
-        title="Contact · Chinonso Ezeigbo" 
-        description="Get in touch with Chinonso Ezeigbo, a product designer open to full-time roles, remote or in the North East." 
+    <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
+      <SEO
+        title="Contact · Chinonso Ezeigbo"
+        description="Get in touch with Chinonso Ezeigbo, a product designer open to full-time roles, remote or in the North East."
       />
-      
-      {/* 1. HERO - CONTACT */}
-      <PageHeader title="Let's talk." breadcrumbText="Contact" />
-      {/* 2. CONTACT SYSTEM */}
-      <section className="px-6 py-20 border-b border-white/5">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-stretch">
-          
-          {/* Left Column: Heading + Interactive World Map Widget */}
-          <div className="flex flex-col justify-start">
-            <FadeIn>
-              <h2 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium mb-3 text-white">Get in touch</h2>
-              <p className="text-white/60 text-[15px] md:text-[16px] leading-[1.7] max-w-[440px] mb-8 font-light">
-                Hiring a product designer, or want to talk through any of my work? Send a message through the form and I'll get back to you directly.
+
+      <div className="max-w-[920px] mx-auto px-6">
+        <section className="pt-36 md:pt-44 pb-12">
+          <FadeIn>
+            <h1 className="font-['DM_Sans'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-4">Let's talk</h1>
+            <div className="max-w-[600px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
+              <p className="m-0">Hiring a product designer, or want to talk through any of my work? Email is quickest, or use the form below.</p>
+              <p className="m-0 flex items-start gap-2.5">
+                <span className="relative flex h-2 w-2 shrink-0 mt-[0.65em]">
+                  <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                </span>
+                <span>Based in Newcastle upon Tyne. Open to full-time roles across the UK: remote, hybrid or on-site.</span>
               </p>
-              <a href="mailto:cezeigbo4@gmail.com" className="inline-block mb-8 text-[16px] text-white hover:text-white/70 underline underline-offset-4 decoration-white/30 transition-colors">
-                cezeigbo4@gmail.com
-              </a>
-            </FadeIn>
-            
-            <FadeIn delay={0.15}>
-              <WorldMapWidget />
-            </FadeIn>
-          </div>
-
-          {/* Contact Form */}
-          <FadeIn className="bg-[var(--card)] rounded-2xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
-
-            {/* ── Success Overlay ── */}
-            <AnimatePresence>
-              {status === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-[var(--card)] rounded-2xl px-8 text-center gap-6"
-                >
-                  <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1,   opacity: 1 }}
-                    transition={{ delay: 0.1, duration: 0.5, type: 'spring', stiffness: 200 }}
-                    className="w-20 h-20 rounded-full bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center"
-                  >
-                    <svg className="w-9 h-9 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <motion.path
-                        strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: 1 }}
-                        transition={{ delay: 0.3, duration: 0.5, ease: 'easeOut' }}
-                      />
-                    </svg>
-                  </motion.div>
-                  <div>
-                    <h3 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-2">Message sent!</h3>
-                    <p className="text-white/50 text-[15px] leading-[1.6] max-w-[300px]">Thanks for reaching out. I'll get back to you within 24 hours.</p>
-                  </div>
-                  <motion.button
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    onClick={() => setStatus('idle')}
-                    className="mt-2 px-6 py-2.5 rounded-full border border-white/15 text-white/60 text-[13px] font-medium hover:border-white/40 hover:text-white transition-all"
-                  >
-                    Send another message
-                  </motion.button>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col gap-2">
-                  <label className="text-[14px] text-white/70 pl-2 font-medium">Full Name <span className="text-[var(--blue)]">*</span></label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    required 
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="e.g. Alex Morgan" 
-                    className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-[14px] text-white/70 pl-2 font-medium">Email Address <span className="text-[var(--blue)]">*</span></label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    required 
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="alex@company.com" 
-                    className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light" 
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2 mt-2">
-                <label className="text-[14px] text-white/70 pl-2 font-medium">Message <span className="text-[var(--blue)]">*</span></label>
-                <textarea 
-                  name="details"
-                  required 
-                  rows="6" 
-                  value={formData.details}
-                  onChange={handleChange}
-                  placeholder="Tell me a bit about the role or what you'd like to discuss..." 
-                  className="w-full bg-[var(--bg2)] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/20 focus:outline-none focus:border-[var(--blue)]/60 focus:ring-1 focus:ring-[var(--blue)]/60 transition-all font-light resize-none"
-                ></textarea>
-              </div>
-
-              {status === 'error' && (
-                <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-300 text-[14px]">
-                  {errorMessage}
-                </div>
-              )}
-
-              <button 
-                type="submit" 
-                disabled={status === 'submitting'}
-                className="mt-4 w-full py-5 rounded-2xl bg-white text-black font-semibold text-[16px] hover:bg-[var(--blue)] hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
-              >
-                {status === 'submitting' ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
-                  </>
-                ) : status === 'success' ? (
-                  <span className="text-emerald-600 font-bold">Sent ✓</span>
-                ) : (
-                  <>
-                    <span>Send Message</span>
-                    <Send size={16} strokeWidth={2.2} />
-                  </>
-                )}
+            </div>
+            <div className="flex flex-wrap gap-2.5 mt-8">
+              <a href={`mailto:${EMAIL}`} className={chip} style={{ borderRadius: 'var(--t-radius)' }}><Mail size={15} /> {EMAIL}</a>
+              <button type="button" onClick={copyEmail} className={chip} style={{ borderRadius: 'var(--t-radius)' }}>
+                {copied ? <><Check size={15} strokeWidth={2.6} /> Copied</> : <><Copy size={14} /> Copy email</>}
               </button>
-            </form>
+              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className={chip} style={{ borderRadius: 'var(--t-radius)' }}>LinkedIn <ArrowUpRight size={15} /></a>
+              <span className="sr-only" aria-live="polite">{copied ? 'Email address copied' : ''}</span>
+            </div>
           </FadeIn>
+        </section>
 
-        </div>
-      </section>
+        <section className="max-w-[640px]">
+          <FadeIn>
+            <h2 className="font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-6">Send a message</h2>
 
+            {status === 'success' ? (
+              <div role="status" className="bg-[var(--t-surface)] border border-[var(--t-border)]" style={{ borderRadius: 'var(--t-radius-lg)', padding: 'calc(var(--t-space) * 2)' }}>
+                <div className="w-11 h-11 rounded-full bg-emerald-500/15 text-emerald-500 flex items-center justify-center mb-4"><Check size={22} strokeWidth={2.6} /></div>
+                <h3 className="font-['DM_Sans'] text-[22px] font-medium text-[var(--t-fg)] m-0 mb-2">Message sent</h3>
+                <p className="text-[16px] leading-[1.6] text-[var(--t-muted)] m-0 mb-5">Thanks for getting in touch. I'll reply to the email address you gave.</p>
+                <button type="button" onClick={() => setStatus('idle')} className={chip} style={{ borderRadius: 'var(--t-radius)' }}>Send another message</button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="contact-name" className={label}>Full name</label>
+                    <input id="contact-name" type="text" name="name" required autoComplete="name" value={formData.name} onChange={handleChange} className={field} style={{ borderRadius: 'var(--t-radius)' }} />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="contact-email" className={label}>Email address</label>
+                    <input id="contact-email" type="email" name="email" required autoComplete="email" value={formData.email} onChange={handleChange} className={field} style={{ borderRadius: 'var(--t-radius)' }} />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="contact-details" className={label}>Message</label>
+                  <textarea id="contact-details" name="details" required rows="6" value={formData.details} onChange={handleChange} aria-describedby="contact-hint" className={`${field} resize-y`} style={{ borderRadius: 'var(--t-radius)' }}></textarea>
+                  <p id="contact-hint" className="text-[14px] text-[var(--t-faint)] m-0">A line about the role or what you'd like to discuss is plenty.</p>
+                </div>
 
+                {status === 'error' && (
+                  <div role="alert" className="px-4 py-3 border border-red-500/40 bg-red-500/10 text-[15px] leading-[1.5] text-[var(--t-fg)]" style={{ borderRadius: 'var(--t-radius)' }}>
+                    {errorMessage}
+                  </div>
+                )}
+
+                <button type="submit" disabled={status === 'submitting'}
+                  className="self-start inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--t-accent)] text-[#fff] font-semibold text-[15px] transition-all hover:brightness-110 active:scale-[0.97] disabled:opacity-60"
+                  style={{ borderRadius: 'var(--t-radius)' }}>
+                  {status === 'submitting' ? 'Sending…' : <>Send message <Send size={15} /></>}
+                </button>
+              </form>
+            )}
+          </FadeIn>
+        </section>
+
+        <div className="h-24 md:h-32" />
+      </div>
     </div>
   );
 }

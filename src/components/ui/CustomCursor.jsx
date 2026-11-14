@@ -1,79 +1,46 @@
 import { useEffect, useRef, useState } from 'react';
 
+/* The normal system pointer is used everywhere. This only adds a small
+   label beside it ("View project", "Try it") over elements that set
+   data-cursor, in the accent colour. */
 export default function CustomCursor() {
-  const dotRef  = useRef(null);
-  const ringRef = useRef(null);
-  const [hovered, setHovered] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const pillRef = useRef(null);
+  const [label, setLabel] = useState('');
 
   useEffect(() => {
-    // Hide on touch devices
-    if (window.matchMedia('(pointer: coarse)').matches) return;
-
-    const dot  = dotRef.current;
-    const ring = ringRef.current;
-    if (!dot || !ring) return;
-
-    let mouse = { x: 0, y: 0 };
-    let ringPos = { x: 0, y: 0 };
-    let raf;
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    const pill = pillRef.current;
+    if (!pill) return;
 
     const onMove = (e) => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-      dot.style.transform = `translate(${mouse.x - 4}px, ${mouse.y - 4}px)`;
-      if (!visible) setVisible(true);
+      pill.style.transform = `translate3d(${e.clientX + 16}px, ${e.clientY + 18}px, 0)`;
     };
-
-    const lerp = (a, b, t) => a + (b - a) * t;
-
-    const animate = () => {
-      ringPos.x = lerp(ringPos.x, mouse.x, 0.12);
-      ringPos.y = lerp(ringPos.y, mouse.y, 0.12);
-      ring.style.transform = `translate(${ringPos.x - 18}px, ${ringPos.y - 18}px)`;
-      raf = requestAnimationFrame(animate);
+    const onOver = (e) => {
+      const el = e.target instanceof Element ? e.target.closest('[data-cursor]') : null;
+      setLabel(el ? el.getAttribute('data-cursor') : '');
     };
-    raf = requestAnimationFrame(animate);
+    const onLeave = () => setLabel('');
 
-    const onEnter = (e) => {
-      const el = e.target.closest('a, button, [role="button"], input, textarea, select, details summary, [data-cursor-hover]');
-      if (el) setHovered(true);
-    };
-    const onLeave = (e) => {
-      const el = e.target.closest('a, button, [role="button"], input, textarea, select, details summary, [data-cursor-hover]');
-      if (el) setHovered(false);
-    };
-
-    window.addEventListener('mousemove', onMove);
-    document.addEventListener('mouseover', onEnter);
-    document.addEventListener('mouseout', onLeave);
-
+    window.addEventListener('mousemove', onMove, { passive: true });
+    document.addEventListener('mouseover', onOver);
+    document.documentElement.addEventListener('mouseleave', onLeave);
+    window.addEventListener('scroll', onLeave, { passive: true });
     return () => {
-      cancelAnimationFrame(raf);
       window.removeEventListener('mousemove', onMove);
-      document.removeEventListener('mouseover', onEnter);
-      document.removeEventListener('mouseout', onLeave);
+      document.removeEventListener('mouseover', onOver);
+      document.documentElement.removeEventListener('mouseleave', onLeave);
+      window.removeEventListener('scroll', onLeave);
     };
   }, []);
 
   return (
-    <>
-      {/* Precise dot */}
+    <div ref={pillRef} aria-hidden="true" className="hidden [@media(pointer:fine)]:block fixed top-0 left-0 z-[9999] pointer-events-none">
       <div
-        ref={dotRef}
-        style={{ opacity: visible ? 1 : 0 }}
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-white pointer-events-none z-[9999] transition-opacity duration-300 mix-blend-difference"
-      />
-      {/* Trailing ring */}
-      <div
-        ref={ringRef}
-        style={{ opacity: visible ? 1 : 0 }}
-        className={`fixed top-0 left-0 w-9 h-9 rounded-full border pointer-events-none z-[9998] transition-all duration-150 mix-blend-difference ${
-          hovered
-            ? 'border-white scale-150 bg-white/10'
-            : 'border-white/40 scale-100'
-        }`}
-      />
-    </>
+        className="px-3 py-1.5 rounded-full bg-[var(--t-accent)] text-[#fff] text-[12.5px] font-semibold whitespace-nowrap shadow-[0_8px_24px_rgba(0,0,0,0.3)] transition-[opacity,transform] duration-150 ease-out origin-top-left"
+        style={{ opacity: label ? 1 : 0, transform: label ? 'scale(1)' : 'scale(0.85)' }}
+      >
+        {label || ' '}
+      </div>
+    </div>
   );
 }

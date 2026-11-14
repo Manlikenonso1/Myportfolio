@@ -2,6 +2,9 @@
 export const allProjects = [
   {
     id: 'appsatile',
+    outcomes: ['70+ components', 'Handoffs about 50% faster'],
+    hook: 'One design system the whole design team works from.',
+    accent: '#3B82F6',
     featured: true,
     title: 'Appsatile',
     categoryLabel: 'Design System',
@@ -12,6 +15,9 @@ export const allProjects = [
   },
   {
     id: 'appsatile-workspace',
+    outcomes: ['18 Figma files into one product', 'Rebuild, not shipped'],
+    hook: 'Three years of work in 18 Figma files, rebuilt as one product.',
+    accent: '#7C5CFF',
     featured: true,
     title: 'Appsatile Workspace',
     categoryLabel: 'Business Workspace · Rebuild',
@@ -22,6 +28,9 @@ export const allProjects = [
   },
   {
     id: 'lazyzone',
+    outcomes: ['5 AI tools in one project', 'Live at lazyzonelabs.com'],
+    hook: 'Five AI tools, one project, and every cost on the button.',
+    accent: '#E5484D',
     featured: true,
     title: 'LazyZoneLabs',
     categoryLabel: 'AI Creator Suite & Web App',
@@ -32,6 +41,9 @@ export const allProjects = [
   },
   {
     id: 'keel',
+    outcomes: ['17 screens, 4 flows', 'Concept with a clickable prototype'],
+    hook: 'Staying safe at work, without the guesswork.',
+    accent: '#E8590C',
     featured: true,
     title: 'Keel',
     concept: true,
@@ -43,6 +55,8 @@ export const allProjects = [
   },
   {
     id: 'hsbc',
+    hook: 'Mobile banking that is safe by default.',
+    accent: '#DB0011',
     title: 'HSBC UK',
     concept: true,
     categoryLabel: 'Mobile Banking',
@@ -53,6 +67,8 @@ export const allProjects = [
   },
   {
     id: 'huntly',
+    hook: 'Every job application on one board.',
+    accent: '#22A06B',
     title: 'HuntlyAi',
     categoryLabel: 'AI Job Search & Workspace',
     description: 'End-to-end redesign: audit, research, a kanban board, Gmail review and a token system in light and dark.',
@@ -62,6 +78,8 @@ export const allProjects = [
   },
   {
     id: 'nikos-farm',
+    hook: 'A farm shop with a price and a buy button on every product.',
+    accent: '#4C9A2A',
     title: 'Nikos Farm',
     categoryLabel: 'E-Commerce',
     description: 'Farm shop redesign with clear prices, quick-view product details and a slide-out cart.',
@@ -71,6 +89,8 @@ export const allProjects = [
   },
   {
     id: 'cook-by-ugo',
+    hook: 'Direct ordering, without the delivery app taking up to 30%.',
+    accent: '#D4A017',
     title: 'Cook by Ugo',
     categoryLabel: 'Food & Hospitality',
     description: 'Direct ordering website with a protein & side picker and a 3-step checkout drawer.',
@@ -80,6 +100,8 @@ export const allProjects = [
   },
   {
     id: 'aerovia',
+    hook: 'Flight booking that shows every fee before checkout.',
+    accent: '#14B8A6',
     title: 'Aerovia',
     concept: true,
     categoryLabel: 'Airline & Travel UX',

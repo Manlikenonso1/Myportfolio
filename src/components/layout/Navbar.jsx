@@ -1,108 +1,146 @@
-import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sun, Moon } from 'lucide-react';
+import { useTokens } from '../../tokens/TokenProvider';
+
+const LINKS = [
+  { to: '/', label: 'Home', end: true },
+  { to: '/projects', label: 'Projects' },
+  { to: '/about', label: 'About' },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+  const [hovered, setHovered] = useState(null);
+  const lastY = useRef(0);
+  const location = useLocation();
+  const { tk, set } = useTokens();
 
+  // Compact after 40px. Slides away when scrolling down, returns when scrolling up.
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth < 768);
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 40);
+      if (Math.abs(y - lastY.current) > 6) {
+        setHidden(y > lastY.current && y > 320);
+        lastY.current = y;
+      }
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const toggleMenu = () => {
-    if (mobileOpen) {
-      setMobileOpen(false);
-      document.body.style.overflow = '';
-    } else {
-      setMobileOpen(true);
-      document.body.style.overflow = 'hidden';
-    }
-  };
+  // Close the mobile menu on navigation and with Escape
+  useEffect(() => { setMobileOpen(false); setHidden(false); }, [location.pathname]);
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    if (!mobileOpen) return;
+    const onKey = (e) => { if (e.key === 'Escape') setMobileOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [mobileOpen]);
+
+  const isActive = (l) => l.end ? location.pathname === l.to : location.pathname.startsWith(l.to);
+  const pillFor = hovered ?? LINKS.find(isActive)?.to ?? null;
+  const themeLabel = `Switch to ${tk.theme === 'dark' ? 'light' : 'dark'} theme`;
 
   return (
     <>
-      {/* Mobile Menu Overlay */}
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div 
-            initial={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-            animate={{ opacity: 1, backdropFilter: 'blur(30px)' }}
-            exit={{ opacity: 0, backdropFilter: 'blur(0px)' }}
-            className="fixed inset-0 z-[190] bg-[var(--bg)]/90 flex flex-col items-center justify-center gap-8"
-          >
-            <motion.div
-               initial={{ scale: 0.9, opacity: 0 }}
-               animate={{ scale: 1, opacity: 1 }}
-               exit={{ scale: 0.8, opacity: 0 }}
-               transition={{ delay: 0.1 }}
-               className="flex flex-col items-center gap-8 text-[32px] font-bold font-['DM_Sans']"
-            >
-              <Link to="/" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Home</Link>
-              <Link to="/about" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">About</Link>
-              <Link to="/projects" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Projects</Link>
-              <Link to="/contact" onClick={toggleMenu} className="hover:text-[var(--blue)] transition-colors">Contact</Link>
-            </motion.div>
+          <motion.div id="mobile-menu" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[190] bg-[var(--t-bg)] flex flex-col justify-between px-6 pt-28 pb-10 md:hidden">
+            <nav aria-label="Mobile" className="flex flex-col">
+              {[...LINKS, { to: '/contact', label: 'Contact' }].map((l, i) => (
+                <motion.div key={l.to} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 + i * 0.06 }}>
+                  <Link to={l.to} className="flex items-baseline justify-between py-4 border-b border-[var(--t-border)]">
+                    <span className="font-['DM_Sans'] text-[44px] font-medium tracking-[-0.04em] text-[var(--t-fg)]">{l.label}</span>
+                    <span className="font-mono text-[13px] text-[var(--t-faint)]">0{i + 1}</span>
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+            <div className="flex items-center gap-2.5 text-[14px] font-medium text-[var(--t-fg)]">
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              Open to full-time roles · Remote or North East England
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-[200] pt-3 px-4 md:pt-6 md:px-6 pointer-events-none flex justify-center">
-        <motion.div 
-          animate={{
-            width: scrolled ? '800px' : '100%',
-            maxWidth: '1200px',
-            backgroundColor: scrolled ? 'rgba(0,0,0,0.92)' : 'rgba(0,0,0,0)',
-            padding: isMobile ? '10px 18px' : (scrolled ? '12px 24px' : '20px 32px')
-          }}
-          className={`flex justify-between items-center rounded-2xl pointer-events-auto border border-white/10 `}
+      <motion.nav
+        aria-label="Main"
+        animate={{ y: hidden && !mobileOpen ? -120 : 0 }}
+        transition={{ duration: 0.35, ease: [0.21, 0.47, 0.32, 0.98] }}
+        className="fixed top-0 left-0 right-0 z-[200] pt-3 px-4 md:pt-5 md:px-6 pointer-events-none flex justify-center"
+      >
+        <motion.div
+          layout
+          transition={{ type: 'spring', stiffness: 260, damping: 30 }}
+          className={`flex justify-between items-center gap-4 pointer-events-auto border transition-[background-color,border-color,box-shadow,border-radius] duration-300 ${
+            scrolled ? 'bg-[var(--t-bg)]/85 backdrop-blur-xl border-[var(--t-border)] shadow-[0_10px_40px_rgba(0,0,0,0.18)]' : 'bg-transparent border-transparent'
+          }`}
+          style={{ borderRadius: 'var(--t-radius-lg)', width: scrolled ? 'min(100%, 760px)' : 'min(100%, 1200px)', padding: scrolled ? '8px 10px 8px 20px' : '12px 12px 12px 20px' }}
         >
-          {/* Logo & Availability Badge */}
-          <div className="flex items-center gap-3.5 z-10">
-            <Link to="/" className="font-['DM_Sans'] text-[18px] md:text-[22px] font-medium tracking-tight text-white flex items-center gap-1 hover:opacity-70 transition-opacity">
-              designbynonso.
+          {/* Logo */}
+          <motion.div layout="position" className="flex items-center gap-3.5">
+            <Link to="/" data-cursor="Home" className="font-['DM_Sans'] text-[19px] md:text-[21px] font-medium tracking-tight text-[var(--t-fg)] hover:opacity-70 transition-opacity">
+              designbynonso<span className="text-[var(--t-accent-text)] transition-colors duration-300">.</span>
             </Link>
-            <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-medium tracking-wide text-white/70">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--green)] opacity-60"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[var(--green)]"></span>
-              </span>
-              <span>Open to full-time roles</span>
-            </div>
-          </div>
+            {!scrolled && (
+              <div className="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--t-border)] text-[11.5px] font-medium tracking-wide text-[var(--t-muted)]">
+                <span className="relative flex h-2 w-2">
+                  <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Open to full-time roles
+              </div>
+            )}
+          </motion.div>
 
-          {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-7 lg:ml-6 text-[12px] font-medium tracking-[0.12em] uppercase text-white/55">
-            <li><NavLink to="/" end className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Home</NavLink></li>
-            <li><NavLink to="/about" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>About</NavLink></li>
-            <li><NavLink to="/projects" className={({isActive}) => isActive ? "text-white relative after:absolute after:bottom-[-4px] after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:rounded-full after:bg-white" : "hover:text-white transition-colors relative"}>Projects</NavLink></li>
-          </ul>
+          {/* Desktop links: a pill slides to the link you hover, and rests on the current page */}
+          <motion.ul layout="position" onMouseLeave={() => setHovered(null)} className="hidden md:flex items-center gap-1 m-0 p-1 list-none">
+            {LINKS.map((l) => (
+              <li key={l.to} className="relative">
+                {pillFor === l.to && (
+                  <motion.span layoutId="nav-pill" transition={{ type: 'spring', stiffness: 420, damping: 34 }}
+                    className="absolute inset-0 bg-[var(--t-fg)]/10" style={{ borderRadius: 'var(--t-radius)' }} />
+                )}
+                <NavLink to={l.to} end={l.end} onMouseEnter={() => setHovered(l.to)} onFocus={() => setHovered(l.to)} onBlur={() => setHovered(null)}
+                  className={`relative block px-4 py-2 text-[14px] font-medium transition-colors ${isActive(l) ? 'text-[var(--t-fg)]' : 'text-[var(--t-muted)] hover:text-[var(--t-fg)]'}`}>
+                  {l.label}
+                </NavLink>
+              </li>
+            ))}
+          </motion.ul>
 
-          {/* Desktop CTAs */}
-          <div className="hidden md:flex items-center gap-3">
-            <Link to="/contact" className="px-5 py-2.5 rounded-lg bg-[var(--white)] text-[#000000] hover:bg-white/90 text-[14px] font-semibold transition-all">
-              Connect
+          {/* Actions */}
+          <motion.div layout="position" className="flex items-center gap-2">
+            <button type="button" onClick={() => set('theme', tk.theme === 'dark' ? 'light' : 'dark')} aria-label={themeLabel} title={themeLabel}
+              className="hidden md:flex w-10 h-10 items-center justify-center border border-[var(--t-border)] text-[var(--t-fg)] hover:bg-[var(--t-fg)]/10 transition-colors" style={{ borderRadius: 'var(--t-radius)' }}>
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span key={tk.theme} initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.18 }} className="flex">
+                  {tk.theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
+                </motion.span>
+              </AnimatePresence>
+            </button>
+            <Link to="/contact" className="group hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--t-accent)] text-[#fff] text-[14px] font-semibold transition-all hover:brightness-110 active:scale-[0.97]" style={{ borderRadius: 'var(--t-radius)' }}>
+              Let's talk
+              <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
-          </div>
-          {/* Mobile Hamburger Menu icon */}
-          <button onClick={toggleMenu} className="flex md:hidden flex-col gap-1.5 w-6 z-[201] pointer-events-auto hover:opacity-70 transition-opacity">
-            <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-            <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`h-0.5 bg-white transition-all w-full ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-          </button>
+            <button type="button" onClick={() => setMobileOpen(o => !o)} aria-expanded={mobileOpen} aria-controls="mobile-menu" aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              className="flex md:hidden flex-col justify-center gap-1.5 w-10 h-10 px-2 z-[201]">
+              <span className={`h-0.5 bg-[var(--t-fg)] transition-all w-full ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`h-0.5 bg-[var(--t-fg)] transition-all w-full ${mobileOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`h-0.5 bg-[var(--t-fg)] transition-all w-full ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
+          </motion.div>
         </motion.div>
-      </nav>
+      </motion.nav>
     </>
   );
 }

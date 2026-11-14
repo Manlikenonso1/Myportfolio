@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
-import { ExternalLink, ArrowLeft, ArrowRight, Info, AlertTriangle } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
+import { allProjects } from '../data/projects';
+import { useTokens } from '../tokens/TokenProvider';
 
 export default function ProjectDetails() {
   const { id } = useParams();
@@ -10,55 +13,66 @@ export default function ProjectDetails() {
   const projectsData = {
     'appsatile': {
       id: 'appsatile',
-      glance: { problem: "Three product teams were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system for all three teams. The founder said it made the whole app easier to use." },
+      glance: { problem: "Designers were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system used by every designer on the team. The founder said it made the whole app easier to use." },
       title: "Appsatile",
       type: "Design System",
       category: "B2B SaaS · 70+ components",
-      role: "Product Designer. Co-built the system with another designer; owned the icon library, the token export to code and component naming.",
+      role: "Product Designer. Co-built the system with two other designers; owned the icon library, the token export to code and component naming.",
       heroImg: "/appsatile-thumbnail.webp",
       liveLink: null,
       sliceCount: 33,
-      overview: "Appsatile is a fast-growing SaaS suite. When I joined, three different product teams were building screens at the same time without a shared foundation. I co-built their design system with another designer, owning the icon library, the token export to code and the component naming, so both designers and engineers could move faster without breaking visual consistency.",
-      problem: "Every squad was basically creating their own buttons, modals, and input fields. Buttons had different corner radii on different pages, handoffs took hours of back-and-forth in Slack, and fixing a simple colour change meant updating dozens of disconnected code files.",
+      overview: "Appsatile is a B2B workspace product. Designers were working on different parts of it at the same time, with nothing shared between them. I co-built the design system with two other designers. My parts were the icon library, exporting tokens in a format developers could use, and naming components.",
+      problem: "Each part of the product had its own buttons, modals and input fields. Corner radii changed from page to page, handoffs took hours of back-and-forth in Slack, and one colour change meant editing dozens of unconnected files.",
       deliverables: ["Component Library", "Design Tokens Architecture", "Interactive Figma Specs", "WCAG 2.1 AA Compliance", "Documentation Guide"],
       metrics: [
         { value: "50%", label: "Faster handoffs to engineers" },
         { value: "AA", label: "Every colour pair in the system passes WCAG AA" },
-        { value: "0", label: "Mismatched components across teams" }
+        { value: "1", label: "Shared component library, used by every designer on the team" }
       ],
+      metricsNote: "Handoff speed compares how long it took to hand a design to developers before the shared system with how long it took after. It got faster because components and tokens are named in the developers' own terms, so there was far less to explain.",
       decisions: [
         {
-          pillar: "01. Tokens that match how devs actually write CSS",
-          rationale: "Instead of picking random hex values across Figma frames, we set up a layered token system for colours, spacing, and font sizes: primitives, then semantic tokens, then components. Every token mapped 1:1 to a CSS variable in code, so developers never had to guess whether a gap was 16px or 20px."
+          pillar: "01. Tokens named the way developers write CSS",
+          rationale: "We replaced loose hex values with layered tokens for colour, spacing and type: primitives, then semantic tokens, then components. Each token maps to one CSS variable, so a developer never has to guess whether a gap is 16px or 20px."
         },
         {
-          pillar: "02. Naming components to match React props",
-          rationale: "I sat down with their front-end leads to see how they structure their components. Then I named every Figma variant, boolean switch, and state (hover, active, disabled) to mirror their React props exactly. That made handoff practically self-explanatory."
+          pillar: "02. Component names that match the React props",
+          rationale: "I sat with the front-end leads to see how they structure components in code. Then I named every Figma variant, boolean and state (hover, active, disabled) to mirror their React props, so a design file reads like the component it becomes."
         },
         {
-          pillar: "03. Accessibility built in from day one",
-          rationale: "I checked colour contrast across every single text and background pair to make sure they passed WCAG AA standards. I also included clear keyboard focus outlines and large enough touch targets so no one had to come back and fix accessibility bugs later."
+          pillar: "03. Accessibility decided in the system, not on each screen",
+          rationale: "I checked every text and background pair against WCAG AA before it went into the system. Focus rings and touch target sizes are tokens too, so anyone using the components gets them without thinking about it."
         }
       ],
       process: [
         {
           title: "Research before components",
-          text: "I started with a moodboard of established design systems and SaaS UI kits, then mapped what Appsatile needed against the Material 3 structure. That gave me a six-part plan: foundations, base components, selection modules, app shell, data views and theming.",
+          text: "Before drawing a component I collected established design systems and SaaS UI kits, then mapped what Appsatile needed against the Material 3 structure. That gave a six-part plan: foundations, base components, selection modules, app shell, data views and theming.",
           before: "/appsatile-process-1-before.webp", beforeLabel: "Moodboard · reference systems",
           after: "/appsatile-process-1-after.webp", afterLabel: "Structure plan · Material 3 audit"
         },
         {
           title: "One naming rule for every token",
-          text: "Every token follows category / role / state, and never a colour name. A primitive like Primary/brand/600 is aliased to a semantic token like action/primary/default, which the button uses. Swapping a brand colour then updates every component at once.",
+          text: "Every token follows category / role / state and never a colour name. A primitive like Primary/brand/600 is aliased to a semantic token like action/primary/default, and the button uses that. Change the brand colour once and every component follows.",
           before: "/appsatile-process-2-before.webp", beforeLabel: "Token naming convention",
           after: "/appsatile-process-2-after.webp", afterLabel: "System overview"
         },
         {
           title: "Same screen, both themes",
-          text: "Because components only use semantic tokens, dark mode is a token swap, not a redesign. I tested it on a real, dense screen: the Research Planning task view with its sidebar, list, tags and detail panel.",
+          text: "Components only use semantic tokens, so dark mode is a token swap and not a redesign. I tested it on a real, dense screen: the Research Planning task view with its sidebar, list, tags and detail panel.",
           before: "/appsatile-process-3-before.webp", beforeLabel: "Light mode",
           after: "/appsatile-process-3-after.webp", afterLabel: "Dark mode · same components"
         }
+      ],
+      gallery: [
+        { title: "The system at a glance", from: 1, to: 4, caption: "The foundations file every designer works from: tokens, components, icons and size modes in one place." },
+        { title: "Colour", from: 5, to: 10, caption: "Primitives hold the raw values. Semantic tokens name the job, and components only ever point at the semantic layer, so no screen uses a raw colour." },
+        { title: "Typography", from: 11, to: 12, caption: "One typeface and a small set of text styles, each with a token, so headings and body text match across the whole product." },
+        { title: "Icons", from: 13, to: 17, caption: "The part I built and maintained: 868 icons. Stroke weight adapts to icon size, so an icon keeps the same visual weight as the text beside it at any size." },
+        { title: "Spacing and size modes", from: 18, to: 23, caption: "A 4px spacing scale, and size modes where one switch changes a component's height, padding and text together." },
+        { title: "Radius, border and shadow", from: 24, to: 27, caption: "The quieter tokens that stop corner radii and elevation drifting from page to page." },
+        { title: "Focus and accessibility", from: 28, to: 29, caption: "Focus rings are specified once, with minimum thickness and contrast, and checked in light and dark." },
+        { title: "Grid and breakpoints", from: 30, to: 33, caption: "One grid behaviour for desktop, laptop, tablet and mobile." }
       ],
       reviews: []
     },
@@ -109,6 +123,14 @@ export default function ProjectDetails() {
           before: "/appsatile-workspace-process-3-before.webp", beforeLabel: "Light mode",
           after: "/appsatile-workspace-process-3-after.webp", afterLabel: "Dark mode · same screen"
         }
+      ],
+      gallery: [
+        { title: "The story in one screen", from: 1, to: 1, caption: "Three years on one product, and the rebuild I made afterwards to finish it." },
+        { title: "Where it started", from: 2, to: 3, caption: "How I joined when it was called Alsoit, and what the product is." },
+        { title: "What I led and what I shared", from: 4, to: 6, caption: "The rebrand with a new team, the icon library and tokens, and Cabinet and the advanced filter." },
+        { title: "Why it stopped, and what I found", from: 7, to: 7, caption: "The product was paused before launch. Going back through the files, five problems stood out." },
+        { title: "The rebuild and the prototype", from: 8, to: 9, caption: "One structure, the brand colours, light and dark, and a prototype that runs like a shipped product." },
+        { title: "What I took from it", from: 10, to: 11, caption: "What I learned, what I would test next, and a note on what is and is not original work." }
       ],
       reviews: []
     },
@@ -280,16 +302,17 @@ export default function ProjectDetails() {
     },
     'lazyzone': {
       id: 'lazyzone',
-      glance: { problem: "Five AI tools that don't talk to each other, and no button says what an action costs.", did: "Audit (11 issues), research, flows, a light and dark design system, desktop, tablet and mobile screens, and handoff.", outcome: "All five tools share one project, and every action shows its credit cost before you press it." },
+      glance: { problem: "Five AI tools that don't talk to each other, and no button says what an action costs.", did: "Audit (11 issues), research, flows, a light and dark design system, desktop, tablet and mobile screens, and handoff.", outcome: "The five tools used to act like five separate apps. Now they work as one, so a project gets made in one go. Every action shows its credit cost before you press it." },
       title: "LazyZoneLabs",
       type: "Product Design",
       category: "AI Creator Suite & Web App",
       role: "Product Designer (solo)",
       heroImg: "/lazyzone-thumbnail.webp",
       liveLink: "https://www.lazyzonelabs.com/",
+      liveNote: "The redesign is live. The site has kept changing since, so it may not match these screens exactly.",
       sliceCount: 13,
-      overview: "LazyZoneLabs is an AI studio with five tools: AI Scripting, Text to Speech, Imagine, AI Clipping and Video Enhancement. I audited the live app, then redesigned it end to end so each tool works on its own and all five can share one project: research, flows, wireframes, a token design system, desktop, tablet and mobile screens, and a developer handoff.",
-      problem: "In the live app every tool is its own page and nothing passes between them, so a script has to be copied into Text to Speech by hand. Credits sit in a corner and no button says what an action will cost. A heuristic and WCAG 2.2 audit logged 11 issues, 6 of them high severity, from 3 root causes.",
+      overview: "LazyZoneLabs is an AI studio with five tools: AI Scripting, Text to Speech, Imagine, AI Clipping and Video Enhancement. I audited the app as it was, then redesigned it end to end so each tool works on its own and all five can share one project: research, flows, wireframes, a token design system, desktop, tablet and mobile screens, and a developer handoff.",
+      problem: "Before the redesign every tool was its own page and nothing passed between them, so a script had to be copied into Text to Speech by hand. Credits sat in a corner and no button said what an action would cost. A heuristic and WCAG 2.2 audit logged 11 issues, 6 of them high severity, from 3 root causes.",
       deliverables: ["Heuristic & WCAG 2.2 Audit · 11 Issues", "Personas, User Stories & Journey Map", "Sitemap & User Flows", "Wireframes", "Token Design System · Light & Dark", "Desktop, Tablet & Mobile Screens", "Clickable Prototype", "Developer Handoff & Accessibility Specs"],
       decisions: [
         {
@@ -308,8 +331,8 @@ export default function ProjectDetails() {
       process: [
         {
           title: "From ten pages to one project",
-          text: "The live app lists every AI feature as its own page beside socials and subscriptions, and the home screen is one link box. The redesign opens on what you want to make: presets, a single tool, or a new project that holds one to five tools.",
-          before: "/lazyzone-process-1-before.webp", beforeLabel: "Before · live home",
+          text: "The original app listed every AI feature as its own page beside socials and subscriptions, and the home screen was one link box. The redesign opens on what you want to make: presets, a single tool, or a new project that holds one to five tools.",
+          before: "/lazyzone-process-1-before.webp", beforeLabel: "Before · original home",
           after: "/lazyzone-process-1-after.webp", afterLabel: "After · presets, single tools, recent work"
         },
         {
@@ -324,6 +347,15 @@ export default function ProjectDetails() {
           before: "/lazyzone-process-3-before.webp", beforeLabel: "Video Enhancement · captions on",
           after: "/lazyzone-process-3-after.webp", afterLabel: "Caption editor · type my own"
         }
+      ],
+      gallery: [
+        { title: "The redesign in one screen", from: 1, to: 1, caption: "Five tools, one project, and every cost on the button." },
+        { title: "The problem and the reframe", from: 2, to: 3, caption: "What the audit of the original app found, and the decision to keep the five tools and connect them." },
+        { title: "The rules and the system", from: 4, to: 5, caption: "Three rules I designed against, and how a project holds one tool or all five." },
+        { title: "The five tools", from: 6, to: 8, caption: "Every tool shares one layout. Writing comes first and AI runs only when asked, including for captions." },
+        { title: "States, mobile and tablet", from: 9, to: 10, caption: "Where every click leads, and how the same flow works on a phone and a tablet." },
+        { title: "Handoff and accessibility", from: 11, to: 11, caption: "Colour variables, contrast, keyboard focus and an annotated screen for developers." },
+        { title: "What I would want to know next", from: 12, to: 13, caption: "The questions I would check next, and what I learned." }
       ],
       reviews: [
         { name: "Stangly Sunday", role: "Founder, LazyZoneLabs", avatar: "/lazyzonelab-logo.png", text: "Finding a designer who genuinely understands product strategy and real user needs is rare. Chinonso combines great aesthetics with practical thinking. Highly recommended." }
@@ -431,6 +463,15 @@ export default function ProjectDetails() {
           after: "/keel-process-3-after.webp", afterLabel: "Final · Home"
         }
       ],
+      gallery: [
+        { title: "The concept in one screen", from: 1, to: 1, caption: "A security app for work accounts, written in plain words." },
+        { title: "Research and audit", from: 2, to: 3, caption: "What UK data and guidance say, and the 13 issues I found auditing my own Microsoft 365 account." },
+        { title: "Structure and flows", from: 4, to: 4, caption: "Five places become one app with four tabs, and the flows for setup, sign-in, reporting and recovery." },
+        { title: "Wireframes and three directions", from: 5, to: 6, caption: "Ten screens in greyscale to settle the words, then three ways Keel could look." },
+        { title: "The design system", from: 7, to: 7, caption: "Colour, type, components and icons, in light and dark." },
+        { title: "Setup and final screens", from: 8, to: 9, caption: "A three-minute setup with no help desk, and the ten final screens." },
+        { title: "What comes next", from: 10, to: 10, caption: "The personas are assumptions, so the next step is testing with the people it is for." }
+      ],
       reviews: []
     },
     'huntly': {
@@ -491,270 +532,35 @@ export default function ProjectDetails() {
 
   const project = projectsData[id] || projectsData['appsatile'];
 
-  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'hsbc', 'nikos-farm', 'cook-by-ugo', 'aerovia'];
-  const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
-  const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
-  const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
+  // Chapters for the reading rail and the progress bar
+  const chapters = [
+    { id: 'summary', label: 'The story' },
+    project.process && { id: 'process', label: 'How I got there' },
+    project.decisions && { id: 'decisions', label: 'What I decided' },
+    { id: 'screens', label: 'Final screens' },
+    { id: 'contact', label: 'Contact' },
+  ].filter(Boolean);
+  // Hook line and accent colour are shared with the Projects page
+  const meta = allProjects.find(p => p.id === project.id) || {};
+  const accent = meta.accent || '#3B82F6';
+  const { tk } = useTokens();
+  const accentText = tk.theme === 'dark' ? `color-mix(in srgb, ${accent} 60%, white)` : `color-mix(in srgb, ${accent} 78%, black)`;
+  const rootRef = useRef(null);
+  const [activeChapter, setActiveChapter] = useState('summary');
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 140, damping: 28, mass: 0.4 });
+  useEffect(() => {
+    setActiveChapter('summary');
+    const els = rootRef.current?.querySelectorAll('[data-chapter]') || [];
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActiveChapter(e.target.dataset.chapter); });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    els.forEach(el => io.observe(el));
+    return () => io.disconnect();
+  }, [project.id]);
 
-  return (
-    <div className="w-full relative bg-[#0a0a0a] min-h-screen">
-      <SEO title={`${project.title} · Chinonso Ezeigbo`} description={project.overview.slice(0, 150) + "..."} image={`/og/${project.id}.jpg`} />
-      
-      {/* Background Flora Patterns */}
-      {/* 1. HERO HEADER + COVER */}
-      <section className="relative z-10 bg-[var(--bg)] pt-32 md:pt-36 pb-0 px-6">
-        <FadeIn className="max-w-[1200px] mx-auto">
-          <div className="flex items-center gap-2 text-[13px] text-[var(--muted)] font-['Inter_Tight'] mb-5">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="text-white/30">/</span>
-            <Link to="/projects" className="hover:text-white transition-colors">Projects</Link>
-            <span className="text-white/30">/</span>
-            <span className="text-white">{project.title}</span>
-          </div>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-            <h1 className="font-['DM_Sans'] text-[36px] md:text-[56px] font-medium text-white tracking-tight leading-[1.05] m-0">{project.title}</h1>
-            <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/60 m-0 md:text-right">{project.type} · {project.category}</p>
-          </div>
-          <img
-            src={project.heroImg}
-            alt={`${project.title} cover`}
-            fetchPriority="high"
-            decoding="async"
-            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover rounded-2xl border border-white/10 bg-[var(--card)]"
-          />
-        </FadeIn>
-      </section>
-
-      <section className="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-16">
-        {/* 2. META ROW & QUICK ACTIONS */}
-        <FadeIn delay={0.1} className="flex flex-col md:flex-row md:items-center justify-between gap-8 border-b border-white/10 pb-8 mb-12">
-           <div className="flex flex-wrap items-center gap-2.5">
-              <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-white font-medium text-[14px]">
-                {project.type}
-              </div>
-              {project.concept && (
-                <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-amber-400/10 border border-amber-400/30 text-amber-200 font-medium text-[14px]">
-                  Self-initiated concept
-                </div>
-              )}
-              {project.liveLink && (
-                <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/30 text-emerald-200 font-medium text-[14px]">
-                  Shipped · live
-                </div>
-              )}
-           </div>
-
-           <div className="flex flex-wrap items-center gap-3.5 pt-2 md:pt-0">
-             {project.liveLink && (
-                <a 
-                  href={project.liveLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white text-black font-semibold text-[14px] hover:bg-white/95 transition-all"
-                >
-                  <span className="w-2 h-2 rounded-full bg-[#10b981] animate-pulse"></span>
-                  <span>Visit Live Site</span>
-                  <ExternalLink size={15} strokeWidth={2.2} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </a>
-             )}
-
-             {project.prototypeLink && (
-                <a
-                  href={project.prototypeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all"
-                >
-                  <span>Try the prototype</span>
-                  <ExternalLink size={15} strokeWidth={2.2} />
-                </a>
-             )}
-
-             <Link 
-               to="/projects" 
-               className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/20 text-white/90 hover:text-white hover:bg-white/10 font-medium text-[14px] transition-all"
-             >
-               <ArrowLeft size={16} strokeWidth={2} />
-               <span>All Projects</span>
-             </Link>
-           </div>
-        </FadeIn>
-
-        {/* AT A GLANCE */}
-        {project.glance && (
-          <FadeIn delay={0.12} className="grid grid-cols-1 md:grid-cols-4 gap-px bg-white/10 border border-white/10 rounded-xl overflow-hidden mb-16">
-            {[['Problem', project.glance.problem], ['Role', project.role], ['What I did', project.glance.did], ['Outcome', project.glance.outcome]].map(([label, text]) => (
-              <div key={label} className="bg-[#0a0a0a] p-6">
-                <div className="text-[11px] font-bold tracking-[0.18em] uppercase text-white/40 mb-3">{label}</div>
-                <p className="font-['Inter_Tight'] text-[15px] leading-[1.6] text-white/85 m-0">{text}</p>
-              </div>
-            ))}
-          </FadeIn>
-        )}
-
-        {/* 3. CASE STUDY BRIEFING: CRITICAL THINKING & TRADE-OFFS */}
-        <div className="mb-20 flex flex-col gap-12">
-          
-          {/* Deliverables tags */}
-          {project.deliverables && (
-            <FadeIn delay={0.15}>
-              <div className="flex flex-wrap items-center gap-2.5">
-                <span className="text-[12px] font-bold tracking-widest text-[#666] uppercase mr-2">What I Delivered:</span>
-                {project.deliverables.map((item, idx) => (
-                  <span key={idx} className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-[13px] font-medium text-white/80">
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </FadeIn>
-          )}
-
-          {/* Overview & Problem Statement Cards */}
-          <FadeIn delay={0.2} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="p-8 md:p-10 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-[var(--blue)]/10 border border-[var(--blue)]/30 flex items-center justify-center text-[var(--blue)] font-bold text-[14px]">
-                    <Info size={16} strokeWidth={2} />
-                  </div>
-                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Background</span>
-                </div>
-                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white mb-4 leading-snug">
-                  Overview
-                </h3>
-                <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
-                  {project.overview}
-                </p>
-              </div>
-            </div>
-
-            <div className="p-8 md:p-10 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-[14px]">
-                    <AlertTriangle size={16} strokeWidth={2} />
-                  </div>
-                  <span className="text-[12px] font-bold tracking-widest uppercase text-white/50">The Challenge</span>
-                </div>
-                <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white mb-4 leading-snug">
-                  What Needed Fixing
-                </h3>
-                <p className="font-['Inter_Tight'] text-[15px] md:text-[16px] text-white/70 leading-[1.7]">
-                  {project.problem || project.objectives}
-                </p>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Measurable Outcomes & Credibility Stats */}
-          {project.metrics && (project.concept || project.targets) && (
-            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 -mb-6">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
-          )}
-          {project.metrics && (
-            <FadeIn delay={0.3} className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-6 md:p-8 rounded-2xl bg-white/[0.02] border border-white/10">
-              {project.metrics.map((metric, idx) => (
-                <div key={idx} className="text-center sm:text-left sm:border-r last:border-none border-white/10 sm:pr-6 sm:last:pr-0">
-                  <div className="font-['DM_Sans'] text-[36px] md:text-[44px] font-medium text-white tracking-tight leading-none mb-2">
-                    {metric.value}
-                  </div>
-                  <div className="text-[13px] md:text-[14px] text-white/50 font-medium">
-                    {metric.label}
-                  </div>
-                </div>
-              ))}
-            </FadeIn>
-          )}
-
-          {/* Design process: before & after */}
-          {project.process && (
-            <FadeIn delay={0.2} className="flex flex-col gap-10">
-              <div>
-                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Process</div>
-                <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-medium text-white">How the design evolved</h3>
-              </div>
-              {project.process.map((step, idx) => (
-                <div key={idx} className="flex flex-col gap-5 pb-10 border-b border-white/10 last:border-none last:pb-0">
-                  <div className="flex flex-col md:flex-row md:items-start gap-3 md:gap-10">
-                    <div className="font-['DM_Sans'] text-[18px] font-medium text-white md:w-[280px] shrink-0">
-                      <span className="text-[var(--blue)] mr-2">0{idx + 1}</span>{step.title}
-                    </div>
-                    <p className="font-['Inter_Tight'] text-[15px] text-white/60 leading-[1.7] max-w-[640px]">{step.text}</p>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[['before', step.before, step.beforeLabel, step.beforeVideo], ['after', step.after, step.afterLabel, step.afterVideo]].map(([k, src, label, vid]) => (
-                      <figure key={k} className="m-0">
-                        {vid ? (
-                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top rounded-xl border border-white/10 bg-black" />
-                        ) : (
-                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} rounded-xl border border-white/10`} />
-                        )}
-                        <figcaption className={`mt-2 text-[12px] font-semibold tracking-wide uppercase ${k === 'after' ? 'text-emerald-300/80' : 'text-white/40'}`}>{label}</figcaption>
-                      </figure>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </FadeIn>
-          )}
-
-          {/* Critical Thinking & Trade-Offs Deep Dive */}
-          {project.decisions && (
-            <FadeIn delay={0.25} className="flex flex-col gap-6">
-              <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pt-4 border-t border-[var(--border)]">
-                <div>
-                  <div className="text-[12px] font-bold tracking-widest uppercase text-[var(--tan)] mb-2">Design Decisions</div>
-                  <h3 className="font-['DM_Sans'] text-[28px] md:text-[34px] font-medium text-white">
-                    How I Tackled Key Challenges
-                  </h3>
-                </div>
-                <p className="text-[14px] text-white/40 max-w-[420px]">
-                  Key trade-offs and why these solutions worked best for users and engineers.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {project.decisions.map((dec, idx) => (
-                  <div key={idx} className="p-7 rounded-2xl bg-[var(--card)] border border-[var(--border)] flex flex-col justify-between hover:border-white/20 transition-all">
-                    <div>
-                      <div className="font-['DM_Sans'] text-[16px] font-medium text-[var(--blue)] mb-3">
-                        {dec.pillar}
-                      </div>
-                      <p className="font-['Inter_Tight'] text-[14px] text-white/60 leading-[1.7]">
-                        {dec.rationale}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          )}
-
-          {/* Transition to Visual Walkthrough */}
-          <div className="pt-10 border-t border-white/10 flex flex-col items-center text-center">
-            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/40 mb-2">Visual Walkthrough</div>
-            <h3 className="font-['DM_Sans'] text-[24px] md:text-[30px] font-medium text-white mb-4">
-              The final screens
-            </h3>
-            {project.liveLink && (
-              <a 
-                href={project.liveLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
-              >
-                <span>Visit Live Website</span>
-                <ExternalLink size={14} strokeWidth={2.2} />
-              </a>
-            )}
-          </div>
-
-        </div>
-
-        <FadeIn direction="up" className="w-full mb-32">
-          <div className={`w-full flex flex-col gap-0 rounded-2xl md:rounded-[40px] overflow-hidden ring-1 ring-white/10 leading-none ${
-            project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'appsatile-workspace' ? 'bg-[#F6F4EF]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]'
-          }`}>
-            {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map((num) => {
+  const sliceBg = project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'appsatile-workspace' ? 'bg-[#F6F4EF]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]';
+  const renderSlice = (num) => {
               const prefix = project.id;
               
               if (prefix === 'appsatile' && num === 10) {
@@ -825,9 +631,209 @@ export default function ProjectDetails() {
                   }} 
                 />
               );
-            })}
+  };
+
+  const goTo = (cid) => document.getElementById(cid)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+
+  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'hsbc', 'nikos-farm', 'cook-by-ugo', 'aerovia'];
+  const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
+  const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
+  const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
+
+  return (
+    <div ref={rootRef} style={{ '--acc': accent, '--acc-text': accentText }} className="w-full relative bg-[var(--t-bg)] min-h-screen transition-colors duration-300">
+      {/* Reading progress */}
+      <motion.div aria-hidden="true" className="fixed top-0 inset-x-0 h-[3px] z-[210] origin-left bg-[var(--acc)]" style={{ scaleX: progress }} />
+
+      {/* 1. HERO: one line that says what this project is, then the cover */}
+      <section className="relative z-10 pt-36 md:pt-44 pb-0 px-6 overflow-hidden">
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[720px] pointer-events-none" style={{ background: 'radial-gradient(60% 55% at 50% 0%, color-mix(in srgb, var(--acc) 30%, transparent), transparent 70%)' }} />
+        <FadeIn className="relative max-w-[1200px] mx-auto">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6 text-[13px] font-semibold tracking-[0.16em] uppercase">
+            <Link to="/projects" className="text-white/55 hover:text-white transition-colors">Projects</Link>
+            <span className="text-white/30">/</span>
+            <span className="text-[var(--acc-text)]">{project.title} · {project.type}</span>
           </div>
+          <h1 className="font-['DM_Sans'] text-[clamp(38px,6vw,88px)] font-medium text-white tracking-[-0.04em] leading-[1.0] max-w-[1000px] mb-8">
+            {meta.hook || project.title}
+          </h1>
+          <div className="flex flex-wrap items-center gap-3 mb-10">
+            {project.concept && (
+              <span className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[var(--acc)] text-[var(--acc-text)] font-medium text-[14px]">Self-initiated concept</span>
+            )}
+            {project.liveLink && (
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" data-cursor="Open live site" className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-[0.97]">
+                <span className="w-2 h-2 rounded-full bg-[#10b981] motion-safe:animate-pulse"></span>
+                {project.liveLabel || 'Visit live site'}
+                <ExternalLink size={15} strokeWidth={2.2} />
+              </a>
+            )}
+            {project.prototypeLink && (
+              <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" data-cursor="Open prototype" className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-[0.97]">
+                Try the prototype
+                <ExternalLink size={15} strokeWidth={2.2} />
+              </a>
+            )}
+            <span className="text-[15px] text-white/60">{project.category}</span>
+          </div>
+          {project.liveNote && <p className="text-[14.5px] leading-[1.55] text-white/60 max-w-[560px] m-0 -mt-5 mb-10">{project.liveNote}</p>}
+          <img
+            src={project.heroImg}
+            alt={`${project.title} cover`}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-white/10 bg-[var(--card)] transition-[border-radius] duration-300" style={{ borderRadius: 'var(--t-radius-lg)' }}
+          />
         </FadeIn>
+      </section>
+
+      <section className="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-16">
+        {/* Chapter chips */}
+        <div className="flex gap-2 overflow-x-auto pb-2 mb-10 -mx-6 px-6 [scrollbar-width:none]">
+          {chapters.slice(1).map((c) => (
+            <button key={c.id} type="button" onClick={() => goTo(c.id)} className="shrink-0 px-3.5 py-1.5 rounded-full border border-white/15 text-[13px] font-medium text-white/75 hover:text-white hover:border-white/40 transition-colors">{c.label}</button>
+          ))}
+        </div>
+
+        <div className="mb-20 flex flex-col gap-20 md:gap-28">
+
+          {/* 2. THE STORY: one paragraph on the left, the facts on the right */}
+          <div id="summary" data-chapter="summary" className="scroll-mt-28 pt-6 md:pt-10 grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-20 items-start">
+            <FadeIn>
+              <p className="font-['DM_Sans'] text-[24px] md:text-[32px] leading-[1.25] tracking-[-0.02em] text-white m-0 mb-6">
+                {project.problem || project.objectives}
+              </p>
+              <p className="font-['Inter_Tight'] text-[17px] md:text-[18px] text-white/65 leading-[1.7] m-0 max-w-[640px]">
+                {project.overview}
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <dl className="m-0 flex flex-col">
+                {[['My role', project.role], project.glance && ['What I did', project.glance.did], project.glance && ['Outcome', project.glance.outcome]].filter(Boolean).map(([label, text]) => (
+                  <div key={label} className="py-5 border-t border-white/15 first:border-t-2 first:border-[var(--acc)]">
+                    <dt className="text-[11px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-2">{label}</dt>
+                    <dd className="m-0 font-['Inter_Tight'] text-[16px] leading-[1.6] text-white/85">{text}</dd>
+                  </div>
+                ))}
+              </dl>
+            </FadeIn>
+          </div>
+
+          {/* 3. THE NUMBERS */}
+          {project.metrics && (
+            <FadeIn>
+              {(project.concept || project.targets) && (
+                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/45 mb-5">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-10">
+                {project.metrics.map((metric, idx) => (
+                  <div key={idx} className="border-t-2 border-[var(--acc)] pt-5">
+                    <div className="font-['DM_Sans'] text-[64px] md:text-[96px] font-medium text-white tracking-[-0.05em] leading-[0.9] mb-4">{metric.value}</div>
+                    <div className="text-[15px] md:text-[16px] text-white/65 leading-[1.5] max-w-[280px]">{metric.label}</div>
+                  </div>
+                ))}
+              </div>
+              {project.metricsNote && (
+                <p className="mt-8 text-[14px] leading-[1.6] text-white/55 max-w-[640px] m-0"><span className="font-semibold text-white/75">How this was measured: </span>{project.metricsNote}</p>
+              )}
+            </FadeIn>
+          )}
+
+          {/* 4. HOW I GOT THERE */}
+          {project.process && (
+            <div id="process" data-chapter="process" className="scroll-mt-28 flex flex-col gap-16 md:gap-24">
+              <FadeIn>
+                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">Process</div>
+                <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0">How I got there</h2>
+              </FadeIn>
+              {project.process.map((step, idx) => (
+                <FadeIn key={idx} className="flex flex-col gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 md:gap-10 items-start">
+                    <div aria-hidden="true" className="font-['DM_Sans'] text-[72px] md:text-[120px] font-medium leading-[0.8] tracking-[-0.06em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
+                    <div className="md:pt-2">
+                      <h3 className="font-['DM_Sans'] text-[26px] md:text-[34px] font-medium text-white tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
+                      <p className="font-['Inter_Tight'] text-[17px] text-white/65 leading-[1.7] max-w-[680px] m-0">{step.text}</p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[['before', step.before, step.beforeLabel, step.beforeVideo], ['after', step.after, step.afterLabel, step.afterVideo]].map(([k, src, label, vid]) => (
+                      <figure key={k} className="m-0">
+                        {vid ? (
+                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top border border-white/10 bg-black" style={{ borderRadius: 'var(--t-radius-lg)' }} />
+                        ) : (
+                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} border border-white/10`} style={{ borderRadius: 'var(--t-radius-lg)' }} />
+                        )}
+                        <figcaption className="mt-3 text-[12px] font-semibold tracking-[0.12em] uppercase text-white/55">{label}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          )}
+
+          {/* 5. WHAT I DECIDED */}
+          {project.decisions && (
+            <div id="decisions" data-chapter="decisions" className="scroll-mt-28">
+              <FadeIn>
+                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">Decisions</div>
+                <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
+                {project.decisions.map((dec, idx) => (
+                  <FadeIn key={idx} delay={idx * 0.08} className="border-t border-white/15 pt-6">
+                    <h3 className="font-['DM_Sans'] text-[20px] md:text-[22px] font-medium text-white leading-[1.25] m-0 mb-3">{dec.pillar.replace(/^\d+\.\s*/, '')}</h3>
+                    <p className="font-['Inter_Tight'] text-[16px] text-white/65 leading-[1.7] m-0">{dec.rationale}</p>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Transition to Visual Walkthrough */}
+          <div id="screens" data-chapter="screens" className="flex flex-col items-start scroll-mt-28">
+            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">The result</div>
+            <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0 mb-4">
+              The final screens
+            </h2>
+            {project.liveLink && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
+              >
+                <span>{project.liveLabel || 'Visit live site'}</span>
+                <ExternalLink size={14} strokeWidth={2.2} />
+              </a>
+            )}
+          </div>
+
+        </div>
+
+        {project.gallery ? (
+          <div className="flex flex-col gap-20 mb-32">
+            {project.gallery.map((sec, sIdx) => (
+              <FadeIn key={sec.title} direction="up">
+                <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-6">
+                  <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white m-0">
+                    <span className="text-[var(--acc-text)] mr-2">0{sIdx + 1}</span>{sec.title}
+                  </h3>
+                  <p className="font-['Inter_Tight'] text-[16px] text-white/65 leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
+                </div>
+                <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-white/10 leading-none ${sliceBg}`} style={{ borderRadius: 'var(--t-radius-lg)' }}>
+                  {Array.from({ length: sec.to - sec.from + 1 }, (_, i) => sec.from + i).map(renderSlice)}
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        ) : (
+          <FadeIn direction="up" className="w-full mb-32">
+            <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-white/10 leading-none ${sliceBg}`} style={{ borderRadius: 'var(--t-radius-lg)' }}>
+              {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map(renderSlice)}
+            </div>
+          </FadeIn>
+        )}
       </section>
 
       {/* 7. REVIEWS */}
@@ -851,7 +857,7 @@ export default function ProjectDetails() {
                             }`} 
                           />
                         ) : (
-                          <div className="w-12 h-12 rounded bg-[#0a0a0a] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
+                          <div className="w-12 h-12 rounded bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
                             {quote.name.split(' ').map(n=>n[0]).join('')}
                           </div>
                         )}
@@ -894,37 +900,22 @@ export default function ProjectDetails() {
         </FadeIn>
       </section>
 
-      {/* 9. BACK TO WORK & CTA */}
-      <section className="bg-[var(--bg)] py-32 text-center">
-         <FadeIn className="max-w-[800px] mx-auto px-6 mb-16">
-            <h2 className="font-['DM_Sans'] text-[36px] md:text-[48px] font-medium text-white leading-tight mb-6">
-              Hiring a product designer?
-            </h2>
-            <p className="text-[var(--muted)] text-[16px] leading-[1.6]">
-              I'm open to full-time roles, remote or in the North East. Happy to walk you through any of this work.
-            </p>
-         </FadeIn>
-
-         <FadeIn delay={0.1} className="flex flex-wrap justify-center gap-4 mt-12 pb-12">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
-               <ArrowLeft size={16} strokeWidth={2} />
-               <span>Back to All Projects</span>
+      {/* 9. CONTACT */}
+      <section id="contact" data-chapter="contact" className="bg-[var(--bg)] px-6 pt-8 pb-28 scroll-mt-28">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
+              <ArrowLeft size={16} strokeWidth={2} />
+              <span>All projects</span>
             </Link>
             {project.liveLink && (
-              <a 
-                href={project.liveLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-white text-black text-[15px] font-bold transition-all"
-              >
-                 <span>Visit Live Site</span>
-                 <ExternalLink size={15} strokeWidth={2.2} />
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-black text-[15px] font-bold transition-all">
+                <span>{project.liveLabel || 'Visit live site'}</span>
+                <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
-            <Link to="/contact" className="px-8 py-4 rounded-lg bg-[var(--blue)] hover:bg-[var(--blue-dk)] text-white text-[15px] font-semibold transition-all">
-               Get in Touch
-            </Link>
-         </FadeIn>
+          </div>
+        </div>
       </section>
 
     </div>
