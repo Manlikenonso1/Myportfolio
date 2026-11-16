@@ -3,7 +3,7 @@ export const allProjects = [
   {
     id: 'appsatile',
     outcomes: ['70+ components', 'Handoffs about 50% faster'],
-    hook: 'One design system the whole design team works from.',
+    hook: 'The design system I co-built at Appsatile with two other designers. It has more than 70 components.',
     accent: '#3B82F6',
     featured: true,
     title: 'Appsatile',
@@ -16,7 +16,7 @@ export const allProjects = [
   {
     id: 'appsatile-workspace',
     outcomes: ['18 Figma files into one product', 'Rebuild, not shipped'],
-    hook: 'Three years of work in 18 Figma files, rebuilt as one product.',
+    hook: 'My own rebuild of the Appsatile workspace, bringing three years of work from 18 Figma files into one product. It was not shipped.',
     accent: '#7C5CFF',
     featured: true,
     title: 'Appsatile Workspace',
@@ -29,7 +29,7 @@ export const allProjects = [
   {
     id: 'lazyzone',
     outcomes: ['5 AI tools in one project', 'Live at lazyzonelabs.com'],
-    hook: 'Five AI tools, one project, and every cost on the button.',
+    hook: 'A redesign of an AI video studio that has five tools. You can see it at lazyzonelabs.com.',
     accent: '#E5484D',
     featured: true,
     title: 'LazyZoneLabs',
@@ -42,7 +42,7 @@ export const allProjects = [
   {
     id: 'keel',
     outcomes: ['17 screens, 4 flows', 'Concept with a clickable prototype'],
-    hook: 'Staying safe at work, without the guesswork.',
+    hook: 'An app idea that explains work sign-in alerts in plain words. I designed 17 screens and a prototype you can click through.',
     accent: '#E8590C',
     featured: true,
     title: 'Keel',

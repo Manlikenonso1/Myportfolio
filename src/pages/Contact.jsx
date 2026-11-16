@@ -65,9 +65,9 @@ export default function Contact() {
     }
   };
 
-  const chip = "inline-flex items-center gap-2 px-4 py-2 text-[14px] font-semibold text-[var(--t-fg)] bg-[var(--t-surface)] border border-[var(--t-border)] hover:border-[var(--t-fg)] transition-[border-color,border-radius,transform] duration-200 active:scale-[0.97]";
-  const field = "w-full bg-[var(--t-surface)] border border-[var(--t-border)] px-4 py-3 text-[16px] text-[var(--t-fg)] placeholder:text-[var(--t-faint)] focus:outline-none focus:border-[var(--t-accent)] focus:ring-2 focus:ring-[var(--t-accent)]/30 transition-[border-color,box-shadow,border-radius]";
-  const label = "text-[14px] font-medium text-[var(--t-fg)]";
+  const chip = "inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[14px] font-medium text-[var(--t-fg)] bg-[var(--t-surface)] border border-[var(--t-border)] hover:border-[var(--t-fg)] transition-all duration-200 active:scale-[0.97]";
+  const field = "w-full bg-[var(--t-surface)] border border-[var(--t-border)] px-4 py-3.5 rounded-2xl text-[16px] text-[var(--t-fg)] placeholder:text-[var(--t-faint)] focus:outline-none focus:border-[var(--t-accent)] focus:ring-2 focus:ring-[var(--t-accent)]/20 transition-all";
+  const label = "text-[13.5px] font-mono uppercase tracking-[0.08em] text-[var(--t-muted)]";
 
   return (
     <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
@@ -76,13 +76,18 @@ export default function Contact() {
         description="Get in touch with Chinonso Ezeigbo, a product designer open to full-time roles, remote or in the North East."
       />
 
-      <div className="max-w-[920px] mx-auto px-6">
+      <div className="max-w-[1040px] mx-auto px-6">
         <section className="pt-36 md:pt-44 pb-12">
           <FadeIn>
-            <h1 className="font-['DM_Sans'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-4">Let's talk</h1>
-            <div className="max-w-[600px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
-              <p className="m-0">Hiring a product designer, or want to talk through any of my work? Email is quickest, or use the form below.</p>
-              <p className="m-0 flex items-start gap-2.5">
+            <p className="text-[13px] font-medium uppercase tracking-wider text-[var(--t-faint)] m-0 mb-3">
+              Direct Contact
+            </p>
+            <h1 className="font-['Fraunces'] text-[clamp(40px,5.5vw,72px)] font-normal tracking-[-0.03em] leading-[1.05] text-[var(--t-fg)] m-0 mb-5">
+              Let's <span className="italic text-[var(--t-accent)] font-normal">talk</span>
+            </h1>
+            <div className="max-w-[620px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
+              <p className="m-0">Hiring a product designer, or want to discuss design systems, SaaS workflows, or potential collaborations? Email is quickest, or leave a message below.</p>
+              <p className="m-0 flex items-start gap-2.5 text-[15px]">
                 <span className="relative flex h-2 w-2 shrink-0 mt-[0.65em]">
                   <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -90,20 +95,20 @@ export default function Contact() {
                 <span>Based in Newcastle upon Tyne. Open to full-time roles across the UK: remote, hybrid or on-site.</span>
               </p>
             </div>
-            <div className="flex flex-wrap gap-2.5 mt-8">
-              <a href={`mailto:${EMAIL}`} className={chip} style={{ borderRadius: 'var(--t-radius)' }}><Mail size={15} /> {EMAIL}</a>
-              <button type="button" onClick={copyEmail} className={chip} style={{ borderRadius: 'var(--t-radius)' }}>
-                {copied ? <><Check size={15} strokeWidth={2.6} /> Copied</> : <><Copy size={14} /> Copy email</>}
+            <div className="flex flex-wrap gap-3 mt-8">
+              <a href={`mailto:${EMAIL}`} className={chip}><Mail size={15} /> {EMAIL}</a>
+              <button type="button" onClick={copyEmail} className={chip}>
+                {copied ? <><Check size={15} strokeWidth={2.6} className="text-[var(--t-accent)]" /> Copied</> : <><Copy size={14} /> Copy email</>}
               </button>
-              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className={chip} style={{ borderRadius: 'var(--t-radius)' }}>LinkedIn <ArrowUpRight size={15} /></a>
+              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className={chip}>LinkedIn <ArrowUpRight size={15} /></a>
               <span className="sr-only" aria-live="polite">{copied ? 'Email address copied' : ''}</span>
             </div>
           </FadeIn>
         </section>
 
-        <section className="max-w-[640px]">
+        <section className="max-w-[640px] pb-24">
           <FadeIn>
-            <h2 className="font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-6">Send a message</h2>
+            <h2 className="font-['Fraunces'] text-[26px] md:text-[30px] font-normal tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-6">Send a message</h2>
 
             {status === 'success' ? (
               <div role="status" className="bg-[var(--t-surface)] border border-[var(--t-border)]" style={{ borderRadius: 'var(--t-radius-lg)', padding: 'calc(var(--t-space) * 2)' }}>

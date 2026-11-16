@@ -7,16 +7,16 @@ import { RotateCcw, Sun, Moon, X } from 'lucide-react';
    the dock changes them, and the whole site follows.
 ------------------------------------------------------------------- */
 export const ACCENTS = [
-  { id: 'blue',   label: 'Blue',   primitive: 'blue.600',   hex: '#2F5BEA' },
-  { id: 'violet', label: 'Violet', primitive: 'violet.600', hex: '#6D4AFF' },
-  { id: 'green',  label: 'Green',  primitive: 'green.700',  hex: '#0E7C4A' },
-  { id: 'orange', label: 'Orange', primitive: 'orange.700', hex: '#C2410C' },
-  { id: 'pink',   label: 'Pink',   primitive: 'pink.700',   hex: '#BE185D' },
+  { id: 'amber',   label: 'Amber',   primitive: 'amber.600',   hex: '#C26026' },
+  { id: 'forest',  label: 'Forest',  primitive: 'forest.700',  hex: '#1B4D3E' },
+  { id: 'cobalt',  label: 'Cobalt',  primitive: 'cobalt.600',  hex: '#244CE0' },
+  { id: 'violet',  label: 'Violet',  primitive: 'violet.600',  hex: '#5B2EFF' },
+  { id: 'olive',   label: 'Olive',   primitive: 'olive.700',   hex: '#57602C' },
 ];
 export const RADII = [
   { id: 'sharp', label: 'Sharp', px: 2 },
-  { id: 'soft',  label: 'Soft',  px: 10 },
-  { id: 'round', label: 'Round', px: 22 },
+  { id: 'soft',  label: 'Soft',  px: 12 },
+  { id: 'round', label: 'Round', px: 20 },
 ];
 export const DENSITIES = [
   { id: 'compact',     label: 'Compact',     px: 12 },
@@ -25,17 +25,15 @@ export const DENSITIES = [
 ];
 export const THEMES = {
   dark: {
-    bg: '#0A0A0A', surface: '#151416', fg: '#FFFFFF', muted: 'rgba(255,255,255,0.64)', faint: 'rgba(255,255,255,0.42)', border: 'rgba(255,255,255,0.14)',
-    // Values for pages built before the token system
-    legacy: { '--bg': '#000000', '--bg2': '#131114', '--bg3': '#252525', '--card': '#131114', '--white': '#ffffff', '--muted': '#b3b3b3', '--faint': '#6d6d6d', '--border': '#333333', '--tan': '#d0c9b9', '--green': '#81ffbd', '--color-white': '#ffffff', '--color-black': '#000000' },
+    bg: '#141312', surface: '#1C1B19', fg: '#F7F5F0', muted: 'rgba(247,245,240,0.68)', faint: 'rgba(247,245,240,0.44)', border: 'rgba(247,245,240,0.12)',
+    legacy: { '--bg': '#141312', '--bg2': '#1C1B19', '--bg3': '#262522', '--card': '#1C1B19', '--white': '#F7F5F0', '--muted': '#969188', '--faint': '#6E6962', '--border': 'rgba(247,245,240,0.12)', '--tan': '#D5CFC3', '--green': '#81FFBD', '--color-white': '#F7F5F0', '--color-black': '#141312' },
   },
   light: {
-    bg: '#F6F4EF', surface: '#FFFFFF', fg: '#15140F', muted: 'rgba(21,20,15,0.70)', faint: 'rgba(21,20,15,0.55)', border: 'rgba(21,20,15,0.16)',
-    // In light theme "white" and "black" swap roles, so older pages invert cleanly
-    legacy: { '--bg': '#F6F4EF', '--bg2': '#EFECE4', '--bg3': '#E4E0D6', '--card': '#FFFFFF', '--white': '#15140F', '--muted': '#55534B', '--faint': '#7A786F', '--border': '#D6D2C7', '--tan': '#6B6455', '--green': '#0E9F6E', '--color-white': '#15140F', '--color-black': '#FFFFFF' },
+    bg: '#F7F5F0', surface: '#FFFFFF', fg: '#141312', muted: '#55514B', faint: '#888278', border: 'rgba(20,19,18,0.08)',
+    legacy: { '--bg': '#F7F5F0', '--bg2': '#EDEBE5', '--bg3': '#E2DFD8', '--card': '#FFFFFF', '--white': '#141312', '--muted': '#55514B', '--faint': '#888278', '--border': 'rgba(20,19,18,0.08)', '--tan': '#55514B', '--green': '#0E9F6E', '--color-white': '#141312', '--color-black': '#F7F5F0' },
   },
 };
-export const DEFAULTS = { accent: 'blue', radius: 'soft', density: 'comfortable', theme: 'dark' };
+export const DEFAULTS = { accent: 'amber', radius: 'soft', density: 'comfortable', theme: 'light' };
 
 const TokenContext = createContext(null);
 export const useTokens = () => useContext(TokenContext);

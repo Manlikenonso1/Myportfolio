@@ -5,8 +5,7 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 import PageTransition from './components/ui/PageTransition';
-import CustomCursor from './components/ui/CustomCursor';
-import { TokenProvider, TokenDock } from './tokens/TokenProvider';
+import { TokenProvider } from './tokens/TokenProvider';
 
 // Code-splitting routes for optimal performance and near-instant initial load
 const Home = lazy(() => import('./pages/Home'));
@@ -53,14 +52,12 @@ function App() {
   return (
     <TokenProvider>
     <Router>
-      <CustomCursor />
       <ScrollToTop />
       <Navbar />
       <main>
         <AppRoutes />
       </main>
       <Footer />
-      <TokenDock />
     </Router>
     </TokenProvider>
   );

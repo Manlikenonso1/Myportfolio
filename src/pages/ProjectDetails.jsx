@@ -647,42 +647,42 @@ export default function ProjectDetails() {
 
       {/* 1. HERO: one line that says what this project is, then the cover */}
       <section className="relative z-10 pt-36 md:pt-44 pb-0 px-6 overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[720px] pointer-events-none" style={{ background: 'radial-gradient(60% 55% at 50% 0%, color-mix(in srgb, var(--acc) 30%, transparent), transparent 70%)' }} />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[720px] pointer-events-none" style={{ background: 'radial-gradient(60% 55% at 50% 0%, color-mix(in srgb, var(--acc) 15%, transparent), transparent 70%)' }} />
         <FadeIn className="relative max-w-[1200px] mx-auto">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6 text-[13px] font-semibold tracking-[0.16em] uppercase">
-            <Link to="/projects" className="text-white/55 hover:text-white transition-colors">Projects</Link>
-            <span className="text-white/30">/</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6 text-[12.5px] font-mono tracking-[0.14em] uppercase">
+            <Link to="/projects" className="text-[var(--t-muted)] hover:text-[var(--t-fg)] transition-colors">Projects</Link>
+            <span className="text-[var(--t-faint)]">/</span>
             <span className="text-[var(--acc-text)]">{project.title} · {project.type}</span>
           </div>
-          <h1 className="font-['DM_Sans'] text-[clamp(38px,6vw,88px)] font-medium text-white tracking-[-0.04em] leading-[1.0] max-w-[1000px] mb-8">
+          <h1 className="font-['Fraunces'] text-[clamp(36px,5.5vw,78px)] font-normal text-[var(--t-fg)] tracking-[-0.035em] leading-[1.0] max-w-[1000px] mb-8">
             {meta.hook || project.title}
           </h1>
           <div className="flex flex-wrap items-center gap-3 mb-10">
             {project.concept && (
-              <span className="inline-flex items-center px-3.5 py-1.5 rounded-full border border-[var(--acc)] text-[var(--acc-text)] font-medium text-[14px]">Self-initiated concept</span>
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[var(--acc)] text-[var(--acc-text)] font-medium text-[13.5px]">Self-initiated concept</span>
             )}
             {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" data-cursor="Open live site" className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-[0.97]">
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" data-cursor="Open live site" className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
                 <span className="w-2 h-2 rounded-full bg-[#10b981] motion-safe:animate-pulse"></span>
                 {project.liveLabel || 'Visit live site'}
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
             {project.prototypeLink && (
-              <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" data-cursor="Open prototype" className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white text-black font-semibold text-[14px] hover:bg-white/90 transition-all active:scale-[0.97]">
+              <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" data-cursor="Open prototype" className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
                 Try the prototype
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
-            <span className="text-[15px] text-white/60">{project.category}</span>
+            <span className="font-mono text-[12px] uppercase tracking-wider text-[var(--t-muted)]">{project.category}</span>
           </div>
-          {project.liveNote && <p className="text-[14.5px] leading-[1.55] text-white/60 max-w-[560px] m-0 -mt-5 mb-10">{project.liveNote}</p>}
+          {project.liveNote && <p className="text-[14.5px] leading-[1.55] text-[var(--t-muted)] max-w-[560px] m-0 -mt-5 mb-10">{project.liveNote}</p>}
           <img
             src={project.heroImg}
             alt={`${project.title} cover`}
             fetchPriority="high"
             decoding="async"
-            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-white/10 bg-[var(--card)] transition-[border-radius] duration-300" style={{ borderRadius: 'var(--t-radius-lg)' }}
+            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[26px] shadow-sm"
           />
         </FadeIn>
       </section>
@@ -691,7 +691,7 @@ export default function ProjectDetails() {
         {/* Chapter chips */}
         <div className="flex gap-2 overflow-x-auto pb-2 mb-10 -mx-6 px-6 [scrollbar-width:none]">
           {chapters.slice(1).map((c) => (
-            <button key={c.id} type="button" onClick={() => goTo(c.id)} className="shrink-0 px-3.5 py-1.5 rounded-full border border-white/15 text-[13px] font-medium text-white/75 hover:text-white hover:border-white/40 transition-colors">{c.label}</button>
+            <button key={c.id} type="button" onClick={() => goTo(c.id)} className="shrink-0 px-4 py-2 rounded-full border border-[var(--t-border)] bg-[var(--t-surface)] text-[13px] font-medium text-[var(--t-muted)] hover:text-[var(--t-fg)] hover:border-[var(--t-fg)]/40 transition-colors">{c.label}</button>
           ))}
         </div>
 
@@ -700,19 +700,19 @@ export default function ProjectDetails() {
           {/* 2. THE STORY: one paragraph on the left, the facts on the right */}
           <div id="summary" data-chapter="summary" className="scroll-mt-28 pt-6 md:pt-10 grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-20 items-start">
             <FadeIn>
-              <p className="font-['DM_Sans'] text-[24px] md:text-[32px] leading-[1.25] tracking-[-0.02em] text-white m-0 mb-6">
+              <p className="font-['Fraunces'] text-[24px] md:text-[32px] leading-[1.25] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-6 font-normal">
                 {project.problem || project.objectives}
               </p>
-              <p className="font-['Inter_Tight'] text-[17px] md:text-[18px] text-white/65 leading-[1.7] m-0 max-w-[640px]">
+              <p className="text-[17px] md:text-[18px] text-[var(--t-muted)] leading-[1.7] m-0 max-w-[640px]">
                 {project.overview}
               </p>
             </FadeIn>
             <FadeIn delay={0.1}>
               <dl className="m-0 flex flex-col">
                 {[['My role', project.role], project.glance && ['What I did', project.glance.did], project.glance && ['Outcome', project.glance.outcome]].filter(Boolean).map(([label, text]) => (
-                  <div key={label} className="py-5 border-t border-white/15 first:border-t-2 first:border-[var(--acc)]">
-                    <dt className="text-[11px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-2">{label}</dt>
-                    <dd className="m-0 font-['Inter_Tight'] text-[16px] leading-[1.6] text-white/85">{text}</dd>
+                  <div key={label} className="py-5 border-t border-[var(--t-border)] first:border-t-2 first:border-[var(--acc)]">
+                    <dt className="font-mono text-[11px] font-bold tracking-[0.16em] uppercase text-[var(--acc-text)] mb-2">{label}</dt>
+                    <dd className="m-0 text-[16px] leading-[1.6] text-[var(--t-fg)]">{text}</dd>
                   </div>
                 ))}
               </dl>
@@ -723,18 +723,18 @@ export default function ProjectDetails() {
           {project.metrics && (
             <FadeIn>
               {(project.concept || project.targets) && (
-                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/45 mb-5">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
+                <div className="font-mono text-[11.5px] font-bold tracking-[0.16em] uppercase text-[var(--t-faint)] mb-5">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
               )}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-10">
                 {project.metrics.map((metric, idx) => (
                   <div key={idx} className="border-t-2 border-[var(--acc)] pt-5">
-                    <div className="font-['DM_Sans'] text-[64px] md:text-[96px] font-medium text-white tracking-[-0.05em] leading-[0.9] mb-4">{metric.value}</div>
-                    <div className="text-[15px] md:text-[16px] text-white/65 leading-[1.5] max-w-[280px]">{metric.label}</div>
+                    <div className="font-['Fraunces'] text-[56px] md:text-[84px] font-normal text-[var(--t-fg)] tracking-[-0.04em] leading-[0.9] mb-4">{metric.value}</div>
+                    <div className="text-[15px] md:text-[16px] text-[var(--t-muted)] leading-[1.5] max-w-[280px]">{metric.label}</div>
                   </div>
                 ))}
               </div>
               {project.metricsNote && (
-                <p className="mt-8 text-[14px] leading-[1.6] text-white/55 max-w-[640px] m-0"><span className="font-semibold text-white/75">How this was measured: </span>{project.metricsNote}</p>
+                <p className="mt-8 text-[14px] leading-[1.6] text-[var(--t-muted)] max-w-[640px] m-0"><span className="font-semibold text-[var(--t-fg)]">How this was measured: </span>{project.metricsNote}</p>
               )}
             </FadeIn>
           )}
@@ -743,27 +743,27 @@ export default function ProjectDetails() {
           {project.process && (
             <div id="process" data-chapter="process" className="scroll-mt-28 flex flex-col gap-16 md:gap-24">
               <FadeIn>
-                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">Process</div>
-                <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0">How I got there</h2>
+                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">Process</div>
+                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">How I got there</h2>
               </FadeIn>
               {project.process.map((step, idx) => (
                 <FadeIn key={idx} className="flex flex-col gap-8">
                   <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 md:gap-10 items-start">
-                    <div aria-hidden="true" className="font-['DM_Sans'] text-[72px] md:text-[120px] font-medium leading-[0.8] tracking-[-0.06em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
+                    <div aria-hidden="true" className="font-['Fraunces'] text-[72px] md:text-[110px] font-normal leading-[0.8] tracking-[-0.05em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
                     <div className="md:pt-2">
-                      <h3 className="font-['DM_Sans'] text-[26px] md:text-[34px] font-medium text-white tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
-                      <p className="font-['Inter_Tight'] text-[17px] text-white/65 leading-[1.7] max-w-[680px] m-0">{step.text}</p>
+                      <h3 className="font-['Fraunces'] text-[26px] md:text-[34px] font-normal text-[var(--t-fg)] tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
+                      <p className="text-[17px] text-[var(--t-muted)] leading-[1.7] max-w-[680px] m-0">{step.text}</p>
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[['before', step.before, step.beforeLabel, step.beforeVideo], ['after', step.after, step.afterLabel, step.afterVideo]].map(([k, src, label, vid]) => (
                       <figure key={k} className="m-0">
                         {vid ? (
-                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top border border-white/10 bg-black" style={{ borderRadius: 'var(--t-radius-lg)' }} />
+                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top border border-[var(--t-border)] bg-black rounded-[20px]" />
                         ) : (
-                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} border border-white/10`} style={{ borderRadius: 'var(--t-radius-lg)' }} />
+                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} border border-[var(--t-border)] rounded-[20px]`} />
                         )}
-                        <figcaption className="mt-3 text-[12px] font-semibold tracking-[0.12em] uppercase text-white/55">{label}</figcaption>
+                        <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)]">{label}</figcaption>
                       </figure>
                     ))}
                   </div>
@@ -776,14 +776,14 @@ export default function ProjectDetails() {
           {project.decisions && (
             <div id="decisions" data-chapter="decisions" className="scroll-mt-28">
               <FadeIn>
-                <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">Decisions</div>
-                <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
+                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">Decisions</div>
+                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
                 {project.decisions.map((dec, idx) => (
-                  <FadeIn key={idx} delay={idx * 0.08} className="border-t border-white/15 pt-6">
-                    <h3 className="font-['DM_Sans'] text-[20px] md:text-[22px] font-medium text-white leading-[1.25] m-0 mb-3">{dec.pillar.replace(/^\d+\.\s*/, '')}</h3>
-                    <p className="font-['Inter_Tight'] text-[16px] text-white/65 leading-[1.7] m-0">{dec.rationale}</p>
+                  <FadeIn key={idx} delay={idx * 0.08} className="border-t border-[var(--t-border)] pt-6">
+                    <h3 className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal text-[var(--t-fg)] leading-[1.25] m-0 mb-3">{dec.pillar.replace(/^\d+\.\s*/, '')}</h3>
+                    <p className="text-[16px] text-[var(--t-muted)] leading-[1.7] m-0">{dec.rationale}</p>
                   </FadeIn>
                 ))}
               </div>
@@ -792,8 +792,8 @@ export default function ProjectDetails() {
 
           {/* Transition to Visual Walkthrough */}
           <div id="screens" data-chapter="screens" className="flex flex-col items-start scroll-mt-28">
-            <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-[var(--acc-text)] mb-3">The result</div>
-            <h2 className="font-['DM_Sans'] text-[clamp(32px,4.4vw,60px)] font-medium text-white tracking-[-0.03em] leading-[1.05] m-0 mb-4">
+            <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">The result</div>
+            <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-4">
               The final screens
             </h2>
             {project.liveLink && (
@@ -801,7 +801,7 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-white text-black font-semibold text-[13px] hover:bg-white/90 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[13.5px] hover:bg-[var(--t-accent)] transition-all"
               >
                 <span>{project.liveLabel || 'Visit live site'}</span>
                 <ExternalLink size={14} strokeWidth={2.2} />
@@ -816,12 +816,12 @@ export default function ProjectDetails() {
             {project.gallery.map((sec, sIdx) => (
               <FadeIn key={sec.title} direction="up">
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-6">
-                  <h3 className="font-['DM_Sans'] text-[22px] md:text-[26px] font-medium text-white m-0">
-                    <span className="text-[var(--acc-text)] mr-2">0{sIdx + 1}</span>{sec.title}
+                  <h3 className="font-['Fraunces'] text-[24px] md:text-[28px] font-normal text-[var(--t-fg)] m-0">
+                    <span className="text-[var(--acc-text)] mr-2 font-mono text-[18px]">0{sIdx + 1}</span>{sec.title}
                   </h3>
-                  <p className="font-['Inter_Tight'] text-[16px] text-white/65 leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
+                  <p className="text-[16px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
                 </div>
-                <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-white/10 leading-none ${sliceBg}`} style={{ borderRadius: 'var(--t-radius-lg)' }}>
+                <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[24px]`}>
                   {Array.from({ length: sec.to - sec.from + 1 }, (_, i) => sec.from + i).map(renderSlice)}
                 </div>
               </FadeIn>
@@ -829,7 +829,7 @@ export default function ProjectDetails() {
           </div>
         ) : (
           <FadeIn direction="up" className="w-full mb-32">
-            <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-white/10 leading-none ${sliceBg}`} style={{ borderRadius: 'var(--t-radius-lg)' }}>
+            <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[24px]`}>
               {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map(renderSlice)}
             </div>
           </FadeIn>
@@ -838,35 +838,35 @@ export default function ProjectDetails() {
 
       {/* 7. REVIEWS */}
       {project.reviews && project.reviews.length > 0 && (
-      <section className="bg-[var(--bg2)] py-20 border-y border-[var(--border)]">
+      <section className="bg-[var(--t-surface)] py-20 border-y border-[var(--t-border)]">
         <div className="max-w-[1200px] mx-auto px-6">
            <FadeIn direction="up">
-             <h2 className="font-['DM_Sans'] text-[24px] font-medium text-white mb-10">What the client said</h2>
+             <h2 className="font-['Fraunces'] text-[28px] md:text-[34px] font-normal text-[var(--t-fg)] mb-10">What the team said</h2>
            </FadeIn>
             <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
                  <FadeIn key={i} delay={i * 0.1}>
-                   <div className="bg-[var(--card)] p-8 rounded-2xl border border-[var(--border)] h-full">
+                   <div className="bg-[var(--t-bg)] p-8 rounded-[24px] border border-[var(--t-border)] h-full">
                       <div className="flex gap-4 items-center mb-6">
                         {quote.avatar ? (
                           <img 
                             src={quote.avatar} 
                             alt={quote.name} 
-                            className={`w-12 h-12 rounded-full border border-[var(--border)] ${
-                              quote.avatar.includes('logo') ? 'object-contain p-1 bg-white/5' : 'object-cover'
+                            className={`w-12 h-12 rounded-full border border-[var(--t-border)] ${
+                              quote.avatar.includes('logo') ? 'object-contain p-1 bg-[var(--t-surface)]' : 'object-cover'
                             }`} 
                           />
                         ) : (
-                          <div className="w-12 h-12 rounded bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center font-bold text-white/30 text-[14px]">
+                          <div className="w-12 h-12 rounded-full bg-[var(--t-surface)] border border-[var(--t-border)] flex items-center justify-center font-bold text-[var(--t-muted)] text-[14px]">
                             {quote.name.split(' ').map(n=>n[0]).join('')}
                           </div>
                         )}
                         <div>
-                          <div className="font-['DM_Sans'] font-medium text-white text-[16px]">{quote.name}</div>
-                          <div className="text-[12px] text-[var(--muted)] mt-1">{quote.role}</div>
+                          <div className="font-['Fraunces'] font-normal text-[var(--t-fg)] text-[18px]">{quote.name}</div>
+                          <div className="font-mono text-[11.5px] uppercase tracking-wider text-[var(--t-faint)] mt-1">{quote.role}</div>
                        </div>
                      </div>
-                     <p className="text-[14px] text-white/50 leading-[1.6]">"{quote.text}"</p>
+                     <p className="text-[15px] text-[var(--t-muted)] leading-[1.65]">"{quote.text}"</p>
                   </div>
                 </FadeIn>
               ))}
@@ -876,22 +876,22 @@ export default function ProjectDetails() {
       )}
 
       {/* 8. NEXT PROJECT PREVIEW CARD */}
-      <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-white/5">
+      <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-[var(--t-border)]">
         <FadeIn>
-          <div className="p-8 md:p-12 rounded-2xl bg-[var(--card)] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8 group hover:border-white/20 transition-all">
+          <div className="p-8 md:p-12 rounded-[28px] bg-[var(--t-surface)] border border-[var(--t-border)] flex flex-col md:flex-row items-center justify-between gap-8 group hover:shadow-lg transition-all">
             <div className="flex items-center gap-6">
-              <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
-                <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover transition-transform duration-500 opacity-80 group-hover:opacity-100" />
+              <div className="w-20 h-20 md:w-28 md:h-28 rounded-[20px] overflow-hidden bg-[#EFE9E0] border border-[var(--t-border)] shrink-0">
+                <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover transition-transform duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-105" />
               </div>
               <div>
-                <div className="text-[12px] font-bold tracking-widest text-[var(--muted)] uppercase mb-1.5">Next Case Study</div>
-                <h3 className="font-['DM_Sans'] text-[24px] md:text-[34px] font-medium text-white mb-1">{nextProject.title}</h3>
-                <p className="text-white/50 text-[14px] md:text-[15px] font-light">{nextProject.category} · {nextProject.type}</p>
+                <div className="font-mono text-[11.5px] font-bold tracking-widest text-[var(--t-faint)] uppercase mb-1.5">Next Case Study</div>
+                <h3 className="font-['Fraunces'] text-[24px] md:text-[34px] font-normal text-[var(--t-fg)] mb-1">{nextProject.title}</h3>
+                <p className="text-[var(--t-muted)] text-[14px] md:text-[15px]">{nextProject.category} · {nextProject.type}</p>
               </div>
             </div>
             <Link 
               to={`/projects/${nextProject.id}`}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-lg bg-white text-black font-semibold text-[15px] transition-all shrink-0 group-hover:shadow-white/20"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[15px] transition-all shrink-0 hover:bg-[var(--t-accent)] hover:-translate-y-0.5"
             >
               <span>View Case Study</span>
               <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
@@ -901,15 +901,15 @@ export default function ProjectDetails() {
       </section>
 
       {/* 9. CONTACT */}
-      <section id="contact" data-chapter="contact" className="bg-[var(--bg)] px-6 pt-8 pb-28 scroll-mt-28">
+      <section id="contact" data-chapter="contact" className="px-6 pt-4 pb-20 scroll-mt-28">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/20 text-white text-[15px] font-semibold transition-all hover:bg-white hover:text-black">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[var(--t-border)] text-[var(--t-fg)] text-[15px] font-medium transition-all hover:bg-[var(--t-fg)] hover:text-[var(--t-bg)]">
               <ArrowLeft size={16} strokeWidth={2} />
               <span>All projects</span>
             </Link>
             {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-black text-[15px] font-bold transition-all">
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium transition-all hover:bg-[var(--t-accent)]">
                 <span>{project.liveLabel || 'Visit live site'}</span>
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
