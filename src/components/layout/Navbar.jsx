@@ -57,13 +57,13 @@ export default function Navbar() {
                 <motion.div key={l.to} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 + i * 0.06 }}>
                   <Link to={l.to} className="flex items-baseline justify-between py-4 border-b border-[var(--t-border)]">
                     <span className="font-['Fraunces'] text-[38px] font-normal tracking-[-0.03em] text-[var(--t-fg)]">{l.label}</span>
-                    <span className="text-[13px] text-[var(--t-faint)]">0{i + 1}</span>
+                    <span className="text-[14px] text-[var(--t-faint)]">0{i + 1}</span>
                   </Link>
                 </motion.div>
               ))}
               <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="flex items-baseline justify-between py-4 border-b border-[var(--t-border)]">
                 <span className="font-['Fraunces'] text-[38px] font-normal tracking-[-0.03em] text-[var(--t-fg)]">Resume</span>
-                <span className="text-[13px] text-[var(--t-faint)]">PDF</span>
+                <span className="text-[14px] text-[var(--t-faint)]">PDF</span>
               </a>
             </nav>
             <div className="flex items-center gap-2.5 text-[14px] font-medium text-[var(--t-fg)]">
@@ -96,7 +96,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3 shrink-0">
             <Link to="/" data-cursor="Home" className="font-['Fraunces'] text-[21px] md:text-[23px] font-normal tracking-tight text-[var(--t-fg)] hover:text-[var(--t-accent)] transition-colors inline-flex items-baseline">
               Chinonso
-              <span className="hidden sm:inline-block text-[12.5px] font-normal text-[var(--t-muted)] ml-2 pl-2 border-l border-[var(--t-border)]">
+              <span className="hidden sm:inline-block text-[14px] font-normal text-[var(--t-muted)] ml-2 pl-2 border-l border-[var(--t-border)]">
                 Product Designer
               </span>
             </Link>
@@ -113,7 +113,7 @@ export default function Navbar() {
                     end={l.end}
                     className={`relative block px-4 py-2 text-[14px] font-medium rounded-full transition-all duration-200 whitespace-nowrap ${
                       active
-                        ? 'bg-[var(--t-fg)] text-[var(--t-bg)] shadow-sm'
+                        ? 'bg-[var(--t-fg)]/10 text-[var(--t-fg)]'
                         : 'text-[var(--t-muted)] hover:text-[var(--t-fg)] hover:bg-[var(--t-fg)]/5'
                     }`}
                   >
@@ -141,9 +141,6 @@ export default function Navbar() {
               className="group hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[14px] font-medium tracking-tight transition-all duration-300 hover:bg-[var(--t-accent)] hover:-translate-y-0.5 whitespace-nowrap"
             >
               Let's talk
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-[11px] transition-transform group-hover:translate-x-0.5">
-                ↗
-              </span>
             </Link>
             <button
               type="button"

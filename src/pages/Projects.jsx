@@ -27,19 +27,16 @@ export default function Projects() {
         description="Case studies in design systems, B2B SaaS, AI products and security UX by Chinonso Ezeigbo, Product Designer."
       />
 
-      <div className="max-w-[1240px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* INTRO */}
         <section className="pt-36 md:pt-44 pb-12 md:pb-16 border-b border-[var(--t-border)]">
           <FadeIn>
             <div className="max-w-[760px]">
-              <p className="text-[13px] font-medium uppercase tracking-wider text-[var(--t-faint)] m-0 mb-3">
-                All projects
-              </p>
               <h1 className="font-['Fraunces'] font-normal text-[clamp(40px,5.5vw,76px)] leading-[1.05] tracking-[-0.03em] text-[var(--t-fg)] m-0 mb-5">
-                Case studies & <span className="italic text-[var(--t-accent)] font-normal">selected work</span>
+                Projects
               </h1>
               <p className="text-[17px] md:text-[19px] leading-[1.65] text-[var(--t-muted)] m-0 mb-8">
-                {allProjects.length} selected projects spanning design systems, complex workflows, and 0-to-1 digital products. Each breakdown covers the user problem, iteration process, and measurable outcomes.
+                Four detailed case studies, then some smaller projects and concepts.
               </p>
             </div>
 
@@ -72,9 +69,9 @@ export default function Projects() {
           <section className="py-14 md:py-18">
             <div className="flex items-baseline justify-between mb-8">
               <h2 className="font-['Fraunces'] font-normal text-[clamp(28px,3.5vw,38px)] tracking-[-0.025em] text-[var(--t-fg)] m-0">
-                Primary Case Studies
+                Case studies
               </h2>
-              <span className="text-[13px] text-[var(--t-faint)]">
+              <span className="text-[14px] text-[var(--t-faint)]">
                 {featured.length} {featured.length === 1 ? 'project' : 'projects'}
               </span>
             </div>
@@ -102,10 +99,10 @@ export default function Projects() {
           <section className="pt-10 pb-16 border-t border-[var(--t-border)]">
             <div className="flex items-baseline justify-between mb-8">
               <h2 className="font-['Fraunces'] font-normal text-[clamp(28px,3.5vw,38px)] tracking-[-0.025em] text-[var(--t-fg)] m-0">
-                Additional Explorations
+                More work
               </h2>
-              <span className="text-[13px] text-[var(--t-faint)]">
-                {more.length} {more.length === 1 ? 'entry' : 'entries'}
+              <span className="text-[14px] text-[var(--t-faint)]">
+                {more.length} {more.length === 1 ? 'project' : 'projects'}
               </span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -113,36 +110,15 @@ export default function Projects() {
                 <FadeIn key={p.id} delay={Math.min(i, 4) * 0.05}>
                   <Link
                     to={`/projects/${p.id}`}
-                    className="group flex flex-col overflow-hidden rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)] text-inherit no-underline transition-all duration-400 hover:-translate-y-1 hover:shadow-lg"
+                    className="group flex flex-col h-full overflow-hidden rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)] text-inherit no-underline transition-colors duration-200 hover:border-[var(--t-fg)]"
                   >
-                    <div className="overflow-hidden bg-[#EDEAE4] dark:bg-[#1E1D1B] aspect-[4/3]">
-                      <img
-                        src={p.image}
-                        alt={`${p.title} cover`}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover transition-transform duration-600 ease-out group-hover:scale-105"
-                      />
+                    <div className="overflow-hidden bg-[var(--bg2)] aspect-[4/3] border-b border-[var(--t-border)]">
+                      <img src={p.image} alt={`${p.title} cover`} loading="lazy" decoding="async" className="w-full h-full object-cover block" />
                     </div>
-                    <div className="p-5 flex flex-col gap-1.5 flex-1 justify-between">
-                      <div>
-                        <div className="flex items-baseline justify-between gap-2">
-                          <h3 className="font-['Newsreader'] text-[20px] font-normal text-[var(--t-fg)] m-0 group-hover:text-[var(--t-accent)] transition-colors">
-                            {p.title}
-                          </h3>
-                          {p.concept && (
-                            <span className="font-mono text-[10.5px] uppercase tracking-wider text-[var(--t-faint)]">
-                              Concept
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-[14px] leading-[1.5] text-[var(--t-muted)] m-0 mt-2">
-                          {p.hook}
-                        </p>
-                      </div>
-                      <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-[var(--t-faint)] pt-3">
-                        {p.categoryLabel || 'Case Study'}
-                      </span>
+                    <div className="p-6 flex flex-col gap-1.5">
+                      <p className="text-[14px] font-medium text-[var(--t-faint)] m-0">{p.categoryLabel || 'Case study'}{p.concept ? ', concept' : ''}</p>
+                      <h3 className="font-['Fraunces'] text-[22px] font-normal tracking-[-0.02em] text-[var(--t-fg)] m-0 group-hover:text-[var(--t-accent)] transition-colors">{p.title}</h3>
+                      <p className="text-[15px] leading-[1.55] text-[var(--t-muted)] m-0">{p.hook}</p>
                     </div>
                   </Link>
                 </FadeIn>

@@ -635,8 +635,9 @@ export default function ProjectDetails() {
 
   const goTo = (cid) => document.getElementById(cid)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 
-  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'hsbc', 'nikos-farm', 'cook-by-ugo', 'aerovia'];
-  const currentIndex = projectOrder.indexOf(project.id) !== -1 ? projectOrder.indexOf(project.id) : 0;
+  // Only projects shown on the Projects page are offered as the next case study
+  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm'];
+  const currentIndex = projectOrder.indexOf(project.id);
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
 

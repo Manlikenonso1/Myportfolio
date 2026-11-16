@@ -22,7 +22,7 @@ const strengths = [
   ['Accessibility', 'WCAG AA contrast, focus and target sizes decided in the system.'],
 ];
 
-const h2 = "font-['Fraunces'] text-[28px] md:text-[32px] font-normal tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-2";
+const h2 = "font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-2";
 const inlineLink = "text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:decoration-[var(--t-accent)]";
 
 function Row({ item }) {
@@ -31,13 +31,13 @@ function Row({ item }) {
       <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-2 md:gap-10 py-6 border-t border-[var(--t-border)]">
         <div>
           <div className="text-[15px] font-medium text-[var(--t-fg)]">{item.place}</div>
-          {item.dates && <div className="text-[13.5px] text-[var(--t-faint)] mt-1">{item.dates}</div>}
+          {item.dates && <div className="text-[14px] text-[var(--t-faint)] mt-1">{item.dates}</div>}
         </div>
         <div>
-          <h3 className="font-['Fraunces'] text-[21px] md:text-[23px] font-normal leading-[1.25] text-[var(--t-fg)] m-0 mb-2">{item.role}</h3>
+          <h3 className="font-['DM_Sans'] text-[19px] md:text-[20px] font-medium leading-[1.25] text-[var(--t-fg)] m-0 mb-2">{item.role}</h3>
           <p className="text-[16px] leading-[1.65] text-[var(--t-muted)] m-0">{item.text}</p>
           {item.link && (
-            <Link to={item.link[0]} className={`inline-flex items-center gap-1.5 mt-3 text-[14.5px] font-medium ${inlineLink}`}>
+            <Link to={item.link[0]} className={`inline-flex items-center gap-1.5 mt-3 text-[15px] font-semibold ${inlineLink}`}>
               {item.link[1]} <ArrowUpRight size={15} />
             </Link>
           )}
@@ -55,32 +55,29 @@ export default function About() {
         description="Chinonso Ezeigbo is a product designer with an MSc in Cyber Security from Aston University, building design systems and security-minded products."
       />
 
-      <div className="max-w-[1040px] mx-auto px-6">
+      <div className="max-w-[920px] mx-auto px-6">
 
         {/* INTRO */}
         <section className="pt-36 md:pt-44 pb-16 md:pb-20">
-          <FadeIn className="grid grid-cols-1 md:grid-cols-[1fr_260px] gap-10 md:gap-14 items-start">
+          <FadeIn className="grid grid-cols-1 md:grid-cols-[1fr_220px] gap-10 md:gap-14 items-start">
             <div>
-              <p className="text-[13px] font-medium uppercase tracking-wider text-[var(--t-faint)] m-0 mb-3">
-                Background & Biography
-              </p>
-              <h1 className="font-['Fraunces'] text-[clamp(36px,5vw,60px)] font-normal tracking-[-0.03em] leading-[1.08] text-[var(--t-fg)] m-0 mb-6">
-                A product designer with a <span className="italic text-[var(--t-accent)] font-normal">security degree</span>.
+              <h1 className="font-['DM_Sans'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-6">
+                A product designer with a security degree.
               </h1>
-              <div className="max-w-[620px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
-                <p className="m-0">I'm Chinonso Ezeigbo. I love clean, polished interfaces, and I care just as much about data clarity, user privacy and software people can genuinely trust.</p>
+              <div className="max-w-[600px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
+                <p className="m-0">I'm Chinonso Ezeigbo. I love clean, polished interfaces, and I care just as much about data clarity, user privacy and software people can actually trust.</p>
                 <p className="m-0">Over 4+ years I've designed B2B SaaS products, <Link to="/projects/appsatile" className={inlineLink}>design systems</Link> and mobile apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.</p>
                 <p className="m-0">I'm based in Newcastle upon Tyne and open to full-time roles across the UK: remote, hybrid or on-site.</p>
               </div>
             </div>
-            <img src="/profile.jpg" alt="Chinonso Ezeigbo" className="order-first md:order-last w-[180px] h-[220px] md:w-full md:h-auto md:aspect-[4/5] object-cover object-[center_20%] border border-[var(--t-border)] bg-[var(--t-surface)] rounded-[22px] shadow-sm" />
+            <img src="/profile.jpg" alt="Chinonso Ezeigbo" className="order-first md:order-last w-[140px] h-[140px] md:w-full md:h-auto md:aspect-[4/5] object-cover object-[center_20%] border border-[var(--t-border)] bg-[var(--t-surface)] transition-[border-radius] duration-300" style={{ borderRadius: 'var(--t-radius-lg)' }} />
           </FadeIn>
 
-          <FadeIn className="grid grid-cols-3 gap-6 mt-14 pt-8 border-t border-[var(--t-border)]">
-            {[['4+', 'years designing products'], ['3', 'years on one core B2B product'], ['MSc', 'Cyber Security, Aston University']].map(([v, l]) => (
+          <FadeIn className="grid grid-cols-3 gap-5 mt-12 pt-8 border-t border-[var(--t-border)]">
+            {[['4+', 'years designing products'], ['3', 'years in-house on one B2B product'], ['MSc', 'Cyber Security, Aston University']].map(([v, l]) => (
               <div key={l}>
-                <div className="font-['Fraunces'] text-[36px] md:text-[46px] font-normal tracking-[-0.03em] leading-none text-[var(--t-fg)] mb-2">{v}</div>
-                <div className="text-[14px] leading-[1.45] text-[var(--t-muted)]">{l}</div>
+                <div className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium tracking-[-0.03em] leading-none text-[var(--t-fg)] mb-2">{v}</div>
+                <div className="text-[14px] md:text-[15px] leading-[1.45] text-[var(--t-muted)]">{l}</div>
               </div>
             ))}
           </FadeIn>

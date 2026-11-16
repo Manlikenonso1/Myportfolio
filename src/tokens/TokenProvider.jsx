@@ -8,7 +8,7 @@ import { RotateCcw, Sun, Moon, X } from 'lucide-react';
 ------------------------------------------------------------------- */
 export const ACCENTS = [
   { id: 'amber',   label: 'Amber',   primitive: 'amber.600',   hex: '#C26026' },
-  { id: 'forest',  label: 'Forest',  primitive: 'forest.700',  hex: '#1B4D3E' },
+  { id: 'forest',  label: 'Forest',  primitive: 'forest.700',  hex: '#1F6B4F' },
   { id: 'cobalt',  label: 'Cobalt',  primitive: 'cobalt.600',  hex: '#244CE0' },
   { id: 'violet',  label: 'Violet',  primitive: 'violet.600',  hex: '#5B2EFF' },
   { id: 'olive',   label: 'Olive',   primitive: 'olive.700',   hex: '#57602C' },
@@ -29,11 +29,11 @@ export const THEMES = {
     legacy: { '--bg': '#141312', '--bg2': '#1C1B19', '--bg3': '#262522', '--card': '#1C1B19', '--white': '#F7F5F0', '--muted': '#969188', '--faint': '#6E6962', '--border': 'rgba(247,245,240,0.12)', '--tan': '#D5CFC3', '--green': '#81FFBD', '--color-white': '#F7F5F0', '--color-black': '#141312' },
   },
   light: {
-    bg: '#F7F5F0', surface: '#FFFFFF', fg: '#141312', muted: '#55514B', faint: '#888278', border: 'rgba(20,19,18,0.08)',
-    legacy: { '--bg': '#F7F5F0', '--bg2': '#EDEBE5', '--bg3': '#E2DFD8', '--card': '#FFFFFF', '--white': '#141312', '--muted': '#55514B', '--faint': '#888278', '--border': 'rgba(20,19,18,0.08)', '--tan': '#55514B', '--green': '#0E9F6E', '--color-white': '#141312', '--color-black': '#F7F5F0' },
+    bg: '#F3F7F3', surface: '#FFFFFF', fg: '#14201A', muted: '#49574F', faint: '#5C6961', border: 'rgba(20,32,26,0.10)',
+    legacy: { '--bg': '#F3F7F3', '--bg2': '#E8EFE8', '--bg3': '#DBE5DC', '--card': '#FFFFFF', '--white': '#14201A', '--muted': '#49574F', '--faint': '#5C6961', '--border': 'rgba(20,32,26,0.10)', '--tan': '#49574F', '--green': '#0E9F6E', '--color-white': '#14201A', '--color-black': '#F3F7F3' },
   },
 };
-export const DEFAULTS = { accent: 'amber', radius: 'soft', density: 'comfortable', theme: 'light' };
+export const DEFAULTS = { accent: 'forest', radius: 'soft', density: 'comfortable', theme: 'light' };
 
 const TokenContext = createContext(null);
 export const useTokens = () => useContext(TokenContext);
