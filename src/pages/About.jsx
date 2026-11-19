@@ -4,14 +4,14 @@ import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 
 const experience = [
-  { role: 'UI/UX Designer', place: 'Appsatile Ltd', dates: 'Mar 2023 to Feb 2026', text: 'Full-scope UI/UX across a B2B workspace: owned Cabinet (file management), worked on Pilot, co-led Studio research, and co-built the design system and icon library.', link: ['/projects/appsatile', 'See the design system'] },
-  { role: 'Freelance UI/UX Designer (contract)', place: 'Talstrike', dates: 'Jul 2024 to Dec 2024', text: 'Mapped and redesigned athlete and scout journeys for a sports recruitment platform.' },
-  { role: 'Part-time UI/UX Designer', place: 'Modtech Ltd', dates: 'Mar 2022 to Mar 2023', text: 'Web interfaces, responsive pages and prototypes for client projects.' },
-  { role: 'User Experience Designer', place: 'Cloudnet IQ Labs', dates: 'Nov 2020 to Mar 2022', text: 'Personas, sitemaps, prototypes and usability audits for web products.' },
+  { role: 'UI/UX Designer', place: 'Appsatile Ltd', dates: 'Mar 2023 to Feb 2026', text: 'Full-scope UI/UX across a B2B workspace: owned Cabinet (file management), co-led Studio research, co-built the design system used by three squads and the 868-icon library, and cut handoff time by about 50%. Sole designer through the rebrand.', link: ['/projects/appsatile', 'See the design system'] },
+  { role: 'Freelance UI/UX Designer (contract)', place: 'Talstrike', dates: 'Jul 2024 to Dec 2024', text: 'Took a 0 to 1 sports scouting platform from prototype to launch on iOS, Android and web. Designed the AI athlete search and role-based navigation for 4 account types, and set V2 priorities that led to an 85% increase in sign-ups.' },
+  { role: 'Part-time UI/UX Designer', place: 'Modtech Ltd', dates: 'Mar 2022 to Mar 2023', text: 'Responsive web interfaces, landing pages and prototypes for client projects, with navigation simplified through heuristic evaluations.' },
+  { role: 'User Experience Designer', place: 'Cloudnet IQ Labs', dates: 'Nov 2020 to Mar 2022', text: 'Information architecture, personas, sitemaps, user interviews and usability audits for web products, with design QA alongside engineers.' },
 ];
 const education = [
   { role: 'MSc in Cyber Security', place: 'Aston University, Birmingham', text: 'Digital system security, threat modelling, authentication flows, and building secure systems people can actually use.', link: ['/projects/keel', 'See it applied in Keel'] },
-  { role: 'BSc in Computer Science', place: 'Adeleke University, Nigeria', text: 'Software engineering, computational logic, web development and human-computer interaction.' },
+  { role: 'BSc in Computer Science (2:1)', place: 'Adeleke University, Nigeria', text: 'Software engineering, computational logic, web development and human-computer interaction.' },
 ];
 const strengths = [
   ['Design systems', 'Tokens, components and icon libraries that designers and developers both trust.'],
@@ -19,7 +19,7 @@ const strengths = [
   ['Research and audits', 'I log what is broken before I draw anything new.'],
   ['Developer handoff', 'Names and specs that match the code, so handoff is not a meeting.'],
   ['Prototyping', 'Clickable prototypes that run a whole journey, not a single screen.'],
-  ['Accessibility', 'WCAG AA contrast, focus and target sizes decided in the system.'],
+  ['Accessibility', 'Designed to WCAG 2.1 AA and 2.2 from the start, with contrast, focus and target sizes decided in the system.'],
 ];
 
 const h2 = "font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-2";
@@ -66,15 +66,15 @@ export default function About() {
               </h1>
               <div className="max-w-[600px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
                 <p className="m-0">I'm Chinonso Ezeigbo. I love clean, polished interfaces, and I care just as much about data clarity, user privacy and software people can actually trust.</p>
-                <p className="m-0">Over 4+ years I've designed B2B SaaS products, <Link to="/projects/appsatile" className={inlineLink}>design systems</Link> and mobile apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.</p>
-                <p className="m-0">I'm based in Newcastle upon Tyne and open to full-time roles across the UK: remote, hybrid or on-site.</p>
+                <p className="m-0">In 5+ years I've designed B2B SaaS products, AI-powered features, <Link to="/projects/appsatile" className={inlineLink}>design systems</Link> and mobile apps, working closely with founders and developers to turn complex product ideas into simple, reliable screens.</p>
+                <p className="m-0">I'm based in Newcastle upon Tyne and open to roles across the UK: remote, hybrid or on-site.</p>
               </div>
             </div>
             <img src="/profile.jpg" alt="Chinonso Ezeigbo" className="order-first md:order-last w-[140px] h-[140px] md:w-full md:h-auto md:aspect-[4/5] object-cover object-[center_20%] border border-[var(--t-border)] bg-[var(--t-surface)] transition-[border-radius] duration-300" style={{ borderRadius: 'var(--t-radius-lg)' }} />
           </FadeIn>
 
           <FadeIn className="grid grid-cols-3 gap-5 mt-12 pt-8 border-t border-[var(--t-border)]">
-            {[['4+', 'years designing products'], ['3', 'years in-house on one B2B product'], ['MSc', 'Cyber Security, Aston University']].map(([v, l]) => (
+            {[['5+', 'years designing products'], ['3', 'years in-house on one B2B product'], ['MSc', 'Cyber Security, Aston University']].map(([v, l]) => (
               <div key={l}>
                 <div className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium tracking-[-0.03em] leading-none text-[var(--t-fg)] mb-2">{v}</div>
                 <div className="text-[14px] md:text-[15px] leading-[1.45] text-[var(--t-muted)]">{l}</div>

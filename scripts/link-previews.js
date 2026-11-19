@@ -10,7 +10,7 @@ const SITE = 'https://designbynonso.co.uk';
 const DIST = 'dist';
 const DEFAULT_IMAGE = '/og/home.jpg';
 const DEFAULT_DESCRIPTION =
-  'Product Designer in Newcastle, UK. Design systems, B2B SaaS and security UX, from research to handoff.';
+  'Product Designer in Newcastle, UK. 5+ years in B2B SaaS, AI products, design systems and security UX, from research to handoff.';
 
 const pages = [
   { path: '/', title: 'Chinonso Ezeigbo · Product Designer', description: DEFAULT_DESCRIPTION },

@@ -13,7 +13,7 @@ export default function Home() {
     <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
       <SEO
         title="Chinonso Ezeigbo · Product Designer"
-        description="Portfolio of Chinonso Ezeigbo: Product designer in Newcastle upon Tyne specialising in design systems, B2B SaaS, and accessible digital products."
+        description="Portfolio of Chinonso Ezeigbo: Product designer in Newcastle upon Tyne specialising in B2B SaaS, AI products, design systems and accessible digital products."
       />
 
       <div className="max-w-[1200px] mx-auto px-6">
@@ -22,14 +22,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-20 items-center">
             {/* Left: Warm, human intro */}
             <div>
-              <p className="text-[15px] text-[var(--t-muted)] m-0 mb-6">Based in Newcastle upon Tyne. Open to full-time roles in the UK.</p>
+              <p className="text-[15px] text-[var(--t-muted)] m-0 mb-6">Based in Newcastle upon Tyne. Open to remote, hybrid and on-site roles across the UK.</p>
 
               <h1 className="font-['Fraunces'] font-normal text-[clamp(44px,7vw,92px)] leading-[1.02] tracking-[-0.03em] text-[var(--t-fg)] m-0">
                 Hi, I'm Chinonso.
               </h1>
 
               <p className="text-[18px] md:text-[20px] leading-[1.65] text-[var(--t-muted)] max-w-[620px] m-0 mt-8 font-normal">
-                I'm a product designer with four years of experience in B2B SaaS and design systems. I like taking complicated products and making them easy for people to use. I also have an MSc in Cyber Security.
+                I'm a product designer with 5+ years of experience in B2B SaaS, AI products and design systems. I like taking complicated products and making them easy for people to use. I also have an MSc in Cyber Security.
               </p>
 
               {/* Action Deck */}
@@ -86,7 +86,7 @@ export default function Home() {
               <div>
                 <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">The design system</p>
                 <p className="font-['Fraunces'] text-[26px] md:text-[30px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Co-built a system of <span className="text-[var(--t-accent)]">70+ components</span>, with colour pairs checked against WCAG AA.
+                  Co-built a system of <span className="text-[var(--t-accent)]">70+ components</span> used by three squads, with every colour pair checked against WCAG AA.
                 </p>
               </div>
               <p className="text-[15px] text-[var(--t-muted)] m-0">1,100+ design tokens and an 868-icon library.</p>

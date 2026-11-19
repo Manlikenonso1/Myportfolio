@@ -73,7 +73,7 @@ export default function Contact() {
     <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
       <SEO
         title="Contact · Chinonso Ezeigbo"
-        description="Get in touch with Chinonso Ezeigbo, a product designer open to full-time roles, remote or in the North East."
+        description="Get in touch with Chinonso Ezeigbo, a product designer in Newcastle open to remote, hybrid and on-site roles across the UK."
       />
 
       <div className="max-w-[1040px] mx-auto px-6">
@@ -92,7 +92,7 @@ export default function Contact() {
                   <span className="motion-safe:animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                 </span>
-                <span>Based in Newcastle upon Tyne. Open to full-time roles across the UK: remote, hybrid or on-site.</span>
+                <span>Based in Newcastle upon Tyne. Open to roles across the UK: remote, hybrid or on-site.</span>
               </p>
             </div>
             <div className="flex flex-wrap gap-3 mt-8">
