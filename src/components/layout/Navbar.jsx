@@ -68,7 +68,7 @@ export default function Navbar() {
             </nav>
             <div className="flex items-center gap-2.5 text-[14px] font-medium text-[var(--t-fg)]">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              Open to full-time roles · Remote or UK
+              Open to roles · Remote, hybrid or on-site, UK
             </div>
           </motion.div>
         )}

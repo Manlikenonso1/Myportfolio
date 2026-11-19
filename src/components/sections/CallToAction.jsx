@@ -29,7 +29,7 @@ export default function CallToAction() {
         
         <FadeIn delay={0.2}>
           <p className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
-            Hiring a product designer? I'm open to full-time roles, remote or in the North East, and happy to travel for team days.
+            Hiring a product designer? I'm open to remote, hybrid and on-site roles across the UK, and happy to travel for team days.
           </p>
         </FadeIn>
 

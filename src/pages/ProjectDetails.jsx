@@ -13,7 +13,7 @@ export default function ProjectDetails() {
   const projectsData = {
     'appsatile': {
       id: 'appsatile',
-      glance: { problem: "Designers were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system used by every designer on the team. The founder said it made the whole app easier to use." },
+      glance: { problem: "Designers were building screens with no shared components, so every handoff meant back-and-forth.", did: "Design tokens, a component library named to match the React props, and WCAG AA checks on every colour pair.", outcome: "One shared system used by three squads, with 1,100+ tokens and every colour pair passing WCAG AA. The founder said it made the whole app easier to use." },
       title: "Appsatile",
       type: "Design System",
       category: "B2B SaaS · 70+ components",
@@ -27,7 +27,7 @@ export default function ProjectDetails() {
       metrics: [
         { value: "50%", label: "Faster handoffs to engineers" },
         { value: "AA", label: "Every colour pair in the system passes WCAG AA" },
-        { value: "1", label: "Shared component library, used by every designer on the team" }
+        { value: "3", label: "Squads building from one shared component library" }
       ],
       metricsNote: "Handoff speed compares how long it took to hand a design to developers before the shared system with how long it took after. It got faster because components and tokens are named in the developers' own terms, so there was far less to explain.",
       decisions: [
