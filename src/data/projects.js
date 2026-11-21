@@ -77,6 +77,18 @@ export const allProjects = [
     image: '/huntly-thumbnail.webp'
   },
   {
+    id: 'motion-system',
+    hook: 'One motion library in Figma, used by an AI copilot and a payments app.',
+    accent: '#8B5CF6',
+    title: 'Motion System',
+    concept: true,
+    categoryLabel: 'Motion Design System · AI & Fintech',
+    description: 'A published Figma Motion library of 12 tokens and 9 animation styles, applied to an AI copilot and a money app.',
+    categories: ['all', 'ai', 'design-systems'],
+    tags: ['Figma Motion', 'Motion Tokens', 'Reduced Motion'],
+    image: '/motion-system-thumbnail.webp'
+  },
+  {
     id: 'nikos-farm',
     hook: 'A farm shop with a price and a buy button on every product.',
     accent: '#4C9A2A',

@@ -7,6 +7,32 @@ import SEO from '../components/ui/SEO';
 import { allProjects } from '../data/projects';
 import { useTokens } from '../tokens/TokenProvider';
 
+// A looping clip that plays only while on screen. With reduced motion on, it shows the still poster and the person can press play.
+function MotionClip({ src, poster, label, className = '' }) {
+  const ref = useRef(null);
+  const [reduced, setReduced] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduced(mq.matches);
+    const onChange = (e) => setReduced(e.matches);
+    mq.addEventListener?.('change', onChange);
+    return () => mq.removeEventListener?.('change', onChange);
+  }, []);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || reduced) { el?.pause(); return; }
+    const io = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) el.play().catch(() => {}); else el.pause();
+    }, { threshold: 0.25 });
+    io.observe(el);
+    return () => io.disconnect();
+  }, [reduced]);
+  return (
+    <video ref={ref} src={src} poster={poster} muted loop playsInline preload="metadata" controls={reduced}
+      aria-label={label} className={className} />
+  );
+}
+
 export default function ProjectDetails() {
   const { id } = useParams();
   
@@ -523,6 +549,97 @@ export default function ProjectDetails() {
       ],
       reviews: []
     }
+    ,
+    'motion-system': {
+      id: 'motion-system',
+      glance: {
+        problem: "AI and money apps both make people wait and trust, but their motion is usually random: the same shimmer for everything, and a different timing on every screen.",
+        did: "One published Figma Motion library of tokens and animation styles, then two products built on it: an AI copilot and a payments app.",
+        outcome: "12 motion tokens and 9 shared animation styles, used by both products, with every state exported as a clip and timed for hand-off."
+      },
+      title: "Motion System",
+      concept: true,
+      type: "Motion & Interaction Design",
+      category: "AI & Fintech Motion System",
+      role: "Product Designer (solo, self-initiated)",
+      heroImg: "/motion-system-hero.webp",
+      heroVideo: "/motion-system-hero.mp4",
+      liveLink: null,
+      liveLinks: [
+        { label: "Motion Library in Figma", href: "https://www.figma.com/design/CWLT9nPB3AOP6Lv5wwLb7x" },
+        { label: "Nova in Figma", href: "https://www.figma.com/design/gfbVcpuI5UOkQmqKZHS9d1" },
+        { label: "Pulse Pay in Figma", href: "https://www.figma.com/design/fI0ndL6aFEpZHqBB05pjbn" }
+      ],
+      overview: "I built a motion system in Figma Motion: a published library of timing tokens and reusable animation styles. Then I applied it to two very different products. Nova is an AI copilot, where motion has to show what the assistant is really doing. Pulse Pay is a money app, where motion has to make a payment feel fast and safe. Both files import the same styles, so a timing change in the library updates both.",
+      problem: "When an AI is thinking or money is moving, motion is how people know what is happening. Most products leave it to chance, so the same shimmer means working, stuck and guessing, and no two screens move the same way.",
+      deliverables: ["Motion tokens · 12 variables", "9 shared animation styles", "Published team library", "Nova · 6 AI states", "Pulse Pay · 3 payment flows", "Reduced-motion version of every state", "MP4 clips for hand-off"],
+      metricsLabel: "What's in the system",
+      metrics: [
+        { value: "12", label: "Motion tokens for duration, easing and stagger" },
+        { value: "9", label: "Animation styles shared by both products" },
+        { value: "2", label: "Products built on one published library" }
+      ],
+      decisions: [
+        {
+          pillar: "01. Build the system before the screens",
+          rationale: "I started with the library, not a product: four durations (100, 200, 300 and 500ms), an easing for enter, exit, move and celebrate, and nine styles such as Fade up, Sheet up and Feedback/Pop. Nova and Pulse Pay import these styles instead of making their own, and each keeps its own colours."
+        },
+        {
+          pillar: "02. Motion shows state, not personality",
+          rationale: "In Nova every animation maps to a real state: thinking, working, answering or done. Progress only moves when a step really finishes. An uncertain answer fades in slower, over 600ms instead of 300ms, with a dashed amber border and a needs review label, and it never gets a celebration."
+        },
+        {
+          pillar: "03. Calm by default, one moment to celebrate",
+          rationale: "In Pulse Pay entrances are short and ease out, and staggers are 50 to 60ms apart, enough to show order without making anyone wait. Only payment sent gets a springy curve. Hold to pay adds friction on purpose, because a payment can't be undone. Every state also has a fade-only version for reduced motion."
+        }
+      ],
+      gallery: [
+        {
+          title: "One library, two products",
+          caption: "The same published styles drive an AI copilot and a payments app. Each product keeps its own colours and type.",
+          clipLayout: "wide",
+          clips: [
+            { src: "/motion-system-hero.mp4", poster: "/motion-system-hero.webp", label: "Nova · AI copilot" },
+            { src: "/motion-system-pulse-cover.mp4", poster: "/motion-system-pulse-cover.webp", label: "Pulse Pay · payments" }
+          ]
+        },
+        {
+          title: "The tokens",
+          caption: "Durations and easings are Figma variables in the library, shown here in the Pulse Pay file. Engineers get one name per timing, not a number per screen.",
+          clipLayout: "single",
+          clips: [
+            { src: "/motion-system-tokens.mp4", poster: "/motion-system-tokens.webp", label: "Motion tokens · durations and easings" }
+          ]
+        },
+        {
+          title: "Nova: motion for an AI copilot",
+          caption: "Six states, each with a reason and a timing. The person can always see what Nova is doing, and Stop and Undo never move or hide while it works.",
+          clips: [
+            { src: "/motion-system-nova-thinking.mp4", poster: "/motion-system-nova-thinking.webp", label: "Thinking · names what it is reading" },
+            { src: "/motion-system-nova-tool-steps.mp4", poster: "/motion-system-nova-tool-steps.webp", label: "Tool steps · real progress only" },
+            { src: "/motion-system-nova-streaming-answer.mp4", poster: "/motion-system-nova-streaming-answer.webp", label: "Streaming · read as it writes" },
+            { src: "/motion-system-nova-confidence.mp4", poster: "/motion-system-nova-confidence.webp", label: "Confidence · 300ms vs 600ms" },
+            { src: "/motion-system-nova-stop-and-undo.mp4", poster: "/motion-system-nova-stop-and-undo.webp", label: "Stop and undo · always reachable" },
+            { src: "/motion-system-nova-reduced-motion.mp4", poster: "/motion-system-nova-reduced-motion.webp", label: "Reduced motion · fade only" }
+          ]
+        },
+        {
+          title: "Pulse Pay: motion for money",
+          caption: "Content arrives in task order, the confirm sheet slides up, and Hold to pay fills as you press. The success tick draws itself so people read it worked before the details.",
+          clips: [
+            { src: "/motion-system-pulse-send-money.mp4", poster: "/motion-system-pulse-send-money.webp", label: "Send money · hold to pay" },
+            { src: "/motion-system-pulse-payment-sent.mp4", poster: "/motion-system-pulse-payment-sent.webp", label: "Payment sent · the one celebration" },
+            { src: "/motion-system-pulse-your-cards.mp4", poster: "/motion-system-pulse-your-cards.webp", label: "Your cards · stack fans out" }
+          ]
+        },
+        {
+          title: "What I'd test next",
+          caption: "Whether showing real steps makes people more willing to wait, and whether the needs review treatment leads people to check sources without distrusting confident answers.",
+          clips: []
+        }
+      ],
+      reviews: []
+    }
   };
 
   // Aliases
@@ -636,7 +753,7 @@ export default function ProjectDetails() {
   const goTo = (cid) => document.getElementById(cid)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 
   // Only projects shown on the Projects page are offered as the next case study
-  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'nikos-farm'];
+  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'motion-system', 'nikos-farm'];
   const currentIndex = projectOrder.indexOf(project.id);
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
@@ -678,6 +795,14 @@ export default function ProjectDetails() {
             <span className="font-mono text-[12px] uppercase tracking-wider text-[var(--t-muted)]">{project.category}</span>
           </div>
           {project.liveNote && <p className="text-[14.5px] leading-[1.55] text-[var(--t-muted)] max-w-[560px] m-0 -mt-5 mb-10">{project.liveNote}</p>}
+          {project.heroVideo ? (
+            <MotionClip
+              src={project.heroVideo}
+              poster={project.heroImg}
+              label={`${project.title} cover`}
+              className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[26px] shadow-sm"
+            />
+          ) : (
           <img
             src={project.heroImg}
             alt={`${project.title} cover`}
@@ -685,6 +810,17 @@ export default function ProjectDetails() {
             decoding="async"
             className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[26px] shadow-sm"
           />
+          )}
+          {project.liveLinks && (
+            <div className="flex flex-wrap gap-3 mt-6">
+              {project.liveLinks.map((l) => (
+                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--t-border)] text-[var(--t-fg)] font-medium text-[14px] hover:border-[var(--acc)] transition-colors">
+                  {l.label}
+                  <ExternalLink size={14} strokeWidth={2.2} />
+                </a>
+              ))}
+            </div>
+          )}
         </FadeIn>
       </section>
 
@@ -723,8 +859,8 @@ export default function ProjectDetails() {
           {/* 3. THE NUMBERS */}
           {project.metrics && (
             <FadeIn>
-              {(project.concept || project.targets) && (
-                <div className="font-mono text-[11.5px] font-bold tracking-[0.16em] uppercase text-[var(--t-faint)] mb-5">{project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results'}</div>
+              {(project.metricsLabel || project.concept || project.targets) && (
+                <div className="font-mono text-[11.5px] font-bold tracking-[0.16em] uppercase text-[var(--t-faint)] mb-5">{project.metricsLabel || (project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results')}</div>
               )}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-10">
                 {project.metrics.map((metric, idx) => (
@@ -822,9 +958,21 @@ export default function ProjectDetails() {
                   </h3>
                   <p className="text-[16px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
                 </div>
+                {sec.clips ? (sec.clips.length > 0 && (
+                  <div className={`grid gap-4 md:gap-6 ${sec.clipLayout === 'single' ? 'grid-cols-1' : sec.clipLayout === 'wide' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 md:grid-cols-3'}`}>
+                    {sec.clips.map((c) => (
+                      <figure key={c.src} className="m-0">
+                        <MotionClip src={c.src} poster={c.poster} label={c.label}
+                          className={`w-full h-auto block bg-[var(--t-surface)] ring-1 ring-[var(--t-border)] ${sec.clipLayout ? 'rounded-[20px]' : 'rounded-[26px]'}`} />
+                        <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)] leading-[1.5]">{c.label}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                )) : (
                 <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[24px]`}>
                   {Array.from({ length: sec.to - sec.from + 1 }, (_, i) => sec.from + i).map(renderSlice)}
                 </div>
+                )}
               </FadeIn>
             ))}
           </div>
