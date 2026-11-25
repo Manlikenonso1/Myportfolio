@@ -2,9 +2,9 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function EduExp() {
   const experience = [
-    { title: "UI/UX Designer", subtitle: "Appsatile Ltd · Mar 2023 to Feb 2026", desc: "Full-scope UI/UX across a B2B workspace: owned Cabinet (file management), co-led Studio research, and co-built the design system and icon library." },
-    { title: "Freelance UI/UX Designer (contract)", subtitle: "Talstrike · Jul 2024 to Dec 2024", desc: "Took a 0 to 1 sports scouting platform from prototype to launch on iOS, Android and web, including the AI athlete search, which led to an 85% increase in sign-ups." },
-    { title: "Part-time UI/UX Designer", subtitle: "Modtech Ltd · Mar 2022 to Mar 2023", desc: "Web interfaces, responsive pages and prototypes for client projects." },
+    { title: "Product Designer", subtitle: "Appsatile Ltd · Mar 2023 to Feb 2026", desc: "End-to-end product design across a B2B workspace: owned Cabinet (file management), co-led Studio research, and co-built the design system and icon library." },
+    { title: "Product Designer (Contract)", subtitle: "Talstrike · Jul 2024 to Dec 2024", desc: "Took a 0 to 1 sports scouting platform from prototype to launch on iOS, Android and web, including the AI athlete search, which led to an 85% increase in sign-ups." },
+    { title: "UI/UX Designer (Part-time)", subtitle: "Modtech Ltd · Mar 2022 to Mar 2023", desc: "Web interfaces, responsive pages and prototypes for client projects." },
     { title: "User Experience Designer", subtitle: "Cloudnet IQ Labs · Nov 2020 to Mar 2022", desc: "Personas, sitemaps, prototypes and usability audits for web products." }
   ];
 
