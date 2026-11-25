@@ -501,6 +501,88 @@ export default function ProjectDetails() {
       ],
       reviews: []
     },
+    'talstrike': {
+      id: 'talstrike',
+      glance: {
+        problem: "Talstrike promises athletes they will be seen, but the live app opens on a social feed and keeps discovery two taps away inside a menu.",
+        did: "An audit of 13 live screens (47 observations), flows, 18 wireframes, a token design system, 78 mobile and 13 web screens, and a prototype with motion.",
+        outcome: "A redesign proposal, not shipped. Discovery is a main tab, the profile is a sports CV, and every under-18 contact goes through a guardian."
+      },
+      title: "Talstrike",
+      type: "Product Design",
+      category: "Sports Scouting App · Redesign proposal",
+      role: "Product Designer (Contract)",
+      heroImg: "/talstrike-hero.webp",
+      phoneProcess: true,
+      liveLink: null,
+      overview: "I designed Talstrike from 0 to 1 as Product Designer (Contract). Two years on, I opened the live app as a user and asked myself an uncomfortable question: if I started again today, what would I do differently? This redesign is my answer. I had no analytics and no access to users, so the personas are proto-personas and every assumption is written down with the way I would test it.",
+      problem: "Talstrike tells an athlete: your talent, seen worldwide. I still think that is the right promise. But the app opens on a social feed, and the thing athletes came for, being found, sits inside a menu. Some of that was my doing, so I treated this as a review of my own work. I audited every live screen, measured the colours against WCAG 2.2 AA (6 of 11 pairs fell short), and read how three recruiting apps earn trust.",
+      deliverables: ["Audit · 13 Screens, 47 Observations", "Proto-personas & Assumptions", "Structure & 6 Flows", "18 Wireframes", "Design System · 156 Variables, Light & Dark", "78 Mobile Screens", "13 Web Screens", "Clickable Prototype with Motion"],
+      metricsLabel: "What's in the redesign · not measured results",
+      metrics: [
+        { value: "78", label: "Mobile screens for four roles: athlete, scout, coach and fan" },
+        { value: "46", label: "Screens wired into one prototype with three ways in" },
+        { value: "156", label: "Design variables in light and dark, all 20 colour pairs passing AA" }
+      ],
+      decisions: [
+        {
+          pillar: "01. Discovery comes first",
+          rationale: "Discover is a main tab with athlete search at its centre. A scout describes who they need in plain words, and the assistant always confirms before it changes anything. Athletes are told when a scout views or shortlists them, and that is free."
+        },
+        {
+          pillar: "02. A profile is a sports CV",
+          rationale: "The profile is structured: position, club, age group, stats and a highlight reel. Stats show who confirmed them. The player card has no overall rating, because a single number on a young player is hard to stand behind."
+        },
+        {
+          pillar: "03. Trust is a level, not a score",
+          rationale: "Many athletes are under 18, so I treated safeguarding as a launch requirement. Everyone verifies with a photo ID. Under-18s join through a guardian, who decides on every contact request, and only Licensed scouts and coaches can ask to reach them."
+        }
+      ],
+      process: [
+        {
+          title: "From a menu to a main tab",
+          text: "In the live app, finding talent sits inside a menu behind the feed. In the redesign Discover is the second tab, and it starts from the scout's brief. Results are rows with one line about each player, because big cards looked great and made comparing players slow.",
+          before: "/talstrike-process-1-before.webp", beforeLabel: "Before · live app menu",
+          after: "/talstrike-process-1-after.webp", afterLabel: "After · Discover"
+        },
+        {
+          title: "From a timeline to a sports CV",
+          text: "The old profile reads like a social timeline. The new one answers a scout's questions in order: position and age group, games, goals and assists, who confirmed the stats, then the highlights.",
+          before: "/talstrike-process-2-before.webp", beforeLabel: "Before · live app profile",
+          after: "/talstrike-process-2-after.webp", afterLabel: "After · sports CV profile"
+        },
+        {
+          title: "A Home that knows who you are",
+          text: "The old Home is one feed for everyone. The new Home is shaped by the role chosen at sign-up. My first components were still a feed in disguise, with circle avatars and a heart under every post, so I rebuilt them around sport: position codes, scoreboard stats, and a Strike in place of a like.",
+          before: "/talstrike-process-3-before.webp", beforeLabel: "Before · live app Home",
+          after: "/talstrike-process-3-after.webp", afterLabel: "After · athlete Home"
+        }
+      ],
+      gallery: [
+        {
+          title: "The prototype in motion",
+          caption: "Motion that explains, never decorates. These are recordings of the Figma prototype. Content arrives in reading order, a Strike pops once, a confirmation leaves on its own, and a clip shows how far it has played. Every timing comes from the motion tokens.",
+          clips: [
+            { src: "/talstrike-motion-welcome.mp4", poster: "/talstrike-motion-welcome-poster.webp", label: "Welcome · arrives in reading order" },
+            { src: "/talstrike-motion-first-home.mp4", poster: "/talstrike-motion-first-home-poster.webp", label: "First Home · next steps, one by one" },
+            { src: "/talstrike-motion-strike.mp4", poster: "/talstrike-motion-strike-poster.webp", label: "Strike · one pop, no confetti" },
+            { src: "/talstrike-motion-toast.mp4", poster: "/talstrike-motion-toast-poster.webp", label: "Confirmation · in, then out on its own" },
+            { src: "/talstrike-motion-clip.mp4", poster: "/talstrike-motion-clip-poster.webp", label: "Highlight · progress you can read" }
+          ]
+        },
+        { title: "One app, four people", from: 1, to: 1, caption: "The role chosen at sign-up decides what Home and Discover show, and what each person is allowed to do. Sport changes the vocabulary. It never changes the layout." },
+        { title: "From a brief to a safe first contact", from: 2, to: 2, caption: "Describe who you need, preview without leaving the list, read the sports CV, request contact. For an under-18, the request goes to the guardian." },
+        { title: "Trust and safety", from: 3, to: 3, caption: "Guided ID checks, three trust levels shown on every profile, guardian consent, and privacy controls in plain words." },
+        { title: "The design system", from: 4, to: 5, caption: "Built before the screens: 156 variables in five collections, sixteen component sets, and light and dark from the same tokens. Every variable carries its web, iOS and Android name." },
+        { title: "Web is a workspace", from: 6, to: 7, caption: "Athletes and fans live on their phones. Scouts and coaches sort at a desk. My first web version was a bigger phone, so I cut it down to a workspace for those two roles: search, compare, shortlist and reply." },
+        {
+          title: "What I'd test first",
+          caption: "This is a proposal, so I am not claiming results. Before any of it ships I would want to know three things: whether athletes join to be discovered or to socialise, whether a trust level beats a follower count when a scout picks a profile to open, and whether scouts really do this work at a desk.",
+          clips: []
+        }
+      ],
+      reviews: []
+    },
     'huntly': {
       id: 'huntly',
       glance: { problem: "No pipeline view, an Add Job form missing company and title, and a cluttered sidebar.", did: "Audit (12 issues), research, flows, wireframes, a light and dark design system and handoff.", outcome: "A board for every application, an Add Job form that fills in from a link, and 12 desktop plus 6 mobile screens." },
@@ -677,7 +759,7 @@ export default function ProjectDetails() {
     return () => io.disconnect();
   }, [project.id]);
 
-  const sliceBg = project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : project.id === 'keel' ? 'bg-[#F7F5F0]' : project.id === 'appsatile-workspace' ? 'bg-[#F6F4EF]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]';
+  const sliceBg = project.id === 'appsatile' ? 'bg-[#f8f9fa]' : project.id === 'hsbc' ? 'bg-[#F5F2EC]' : (project.id === 'keel' || project.id === 'talstrike') ? 'bg-[#F7F5F0]' : project.id === 'appsatile-workspace' ? 'bg-[#F6F4EF]' : project.id === 'cook-by-ugo' ? 'bg-[#1b4332]' : project.id === 'lazyzone' ? 'bg-[#0e0e10]' : project.id === 'huntly' ? 'bg-[#102219]' : project.id === 'aerovia' ? 'bg-[#07241f]' : 'bg-[#0d0f0d]';
   const renderSlice = (num) => {
               const prefix = project.id;
               
@@ -754,7 +836,7 @@ export default function ProjectDetails() {
   const goTo = (cid) => document.getElementById(cid)?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
 
   // Only projects shown on the Projects page are offered as the next case study
-  const projectOrder = ['appsatile-workspace', 'keel', 'lazyzone', 'huntly', 'appsatile', 'motion-system', 'nikos-farm'];
+  const projectOrder = ['appsatile-workspace', 'talstrike', 'keel', 'lazyzone', 'huntly', 'appsatile', 'motion-system', 'nikos-farm'];
   const currentIndex = projectOrder.indexOf(project.id);
   const nextProjectKey = projectOrder[(currentIndex + 1) % projectOrder.length];
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
