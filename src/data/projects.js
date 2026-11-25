@@ -14,17 +14,17 @@ export const allProjects = [
     image: '/appsatile-thumbnail.webp'
   },
   {
-    id: 'appsatile-workspace',
-    outcomes: ['18 Figma files into one product', 'Rebuild, not shipped'],
-    hook: 'My own rebuild of the Appsatile workspace, bringing three years of work from 18 Figma files into one product. It was not shipped.',
-    accent: '#7C5CFF',
+    id: 'talstrike',
+    outcomes: ['78 mobile and 13 web screens', 'Redesign proposal with a clickable prototype'],
+    hook: 'The sports scouting app I designed from 0 to 1, redesigned two years on. It is a proposal with a prototype that moves, not a shipped update.',
+    accent: '#4169E1',
     featured: true,
-    title: 'Appsatile Workspace',
-    categoryLabel: 'Business Workspace · Rebuild',
-    description: 'Three years on one product, a rebrand, and the rebuild I made to finish it: one workspace for tasks, files, email and leave.',
-    categories: ['all', 'saas', 'design-systems'],
-    tags: ['Product Design', 'Design System', 'Prototype'],
-    image: '/appsatile-workspace-thumbnail.webp'
+    title: 'Talstrike',
+    categoryLabel: 'Sports Scouting App · Redesign',
+    description: 'I reviewed my own 0 to 1 product two years later and redesigned it: discovery first, a sports CV profile, visible trust levels and a web workspace for scouts.',
+    categories: ['all', 'ai', 'design-systems'],
+    tags: ['Mobile App', 'Design System', 'Prototype & Motion'],
+    image: '/talstrike-thumbnail.webp'
   },
   {
     id: 'lazyzone',
@@ -40,18 +40,6 @@ export const allProjects = [
     image: '/lazyzone-thumbnail.webp'
   },
   {
-    id: 'talstrike',
-    outcomes: ['78 mobile and 13 web screens', 'Redesign proposal with a clickable prototype'],
-    hook: 'The sports scouting app I designed from 0 to 1, redesigned two years on. It is a proposal with a prototype that moves, not a shipped update.',
-    accent: '#4169E1',
-    title: 'Talstrike',
-    categoryLabel: 'Sports Scouting App · Redesign',
-    description: 'I reviewed my own 0 to 1 product two years later and redesigned it: discovery first, a sports CV profile, visible trust levels and a web workspace for scouts.',
-    categories: ['all', 'ai', 'design-systems'],
-    tags: ['Mobile App', 'Design System', 'Prototype & Motion'],
-    image: '/talstrike-thumbnail.webp'
-  },
-  {
     id: 'keel',
     outcomes: ['17 screens, 4 flows', 'Concept with a clickable prototype'],
     hook: 'An app idea that explains work sign-in alerts in plain words. I designed 17 screens and a prototype you can click through.',
@@ -64,6 +52,18 @@ export const allProjects = [
     categories: ['all', 'design-systems'],
     tags: ['Security UX', 'Mobile App', 'Design System'],
     image: '/keel-thumbnail.webp'
+  },
+  {
+    id: 'appsatile-workspace',
+    outcomes: ['18 Figma files into one product', 'Rebuild, not shipped'],
+    hook: 'My own rebuild of the Appsatile workspace, bringing three years of work from 18 Figma files into one product. It was not shipped.',
+    accent: '#7C5CFF',
+    title: 'Appsatile Workspace',
+    categoryLabel: 'Business Workspace · Rebuild',
+    description: 'Three years on one product, a rebrand, and the rebuild I made to finish it: one workspace for tasks, files, email and leave.',
+    categories: ['all', 'saas', 'design-systems'],
+    tags: ['Product Design', 'Design System', 'Prototype'],
+    image: '/appsatile-workspace-thumbnail.webp'
   },
   {
     id: 'hsbc',
