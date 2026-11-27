@@ -512,7 +512,7 @@ export default function ProjectDetails() {
       type: "Product Design",
       category: "Sports Scouting App · Shipped 0 to 1, then redesigned",
       role: "Product Designer (Contract)",
-      heroImg: "/talstrike-hero.webp",
+      heroImg: "/shots/talstrike.webp",
       phoneProcess: true,
       liveLink: null,
       overview: "I worked on Talstrike as Product Designer (Contract) from July to December 2024 and guided four designers. The shipped mobile app comes first on this page. After it comes a redesign I did on my own two years later, asking what I would do differently today. The app has kept changing since my contract ended, so I do not claim results for the redesign.",
@@ -857,13 +857,12 @@ export default function ProjectDetails() {
       <motion.div aria-hidden="true" className="fixed top-0 inset-x-0 h-[3px] z-[210] origin-left bg-[var(--acc)]" style={{ scaleX: progress }} />
 
       {/* 1. HERO: one line that says what this project is, then the cover */}
-      <section className="relative z-10 pt-36 md:pt-44 pb-0 px-6 overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-[720px] pointer-events-none" style={{ background: 'radial-gradient(60% 55% at 50% 0%, color-mix(in srgb, var(--acc) 15%, transparent), transparent 70%)' }} />
-        <FadeIn className="relative max-w-[1200px] mx-auto">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6 text-[12.5px] font-mono tracking-[0.14em] uppercase">
+      <section className="relative z-10 pt-32 md:pt-40 pb-0 px-5 md:px-10 overflow-hidden">
+        <FadeIn className="relative max-w-[1320px] mx-auto">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mb-6 text-[13.5px]">
             <Link to="/projects" className="text-[var(--t-muted)] hover:text-[var(--t-fg)] transition-colors">Projects</Link>
             <span className="text-[var(--t-faint)]">/</span>
-            <span className="text-[var(--acc-text)]">{project.title} · {project.type}</span>
+            <span className="text-[var(--t-faint)]">{project.title} · {project.type}</span>
           </div>
           <h1 className="font-['Geist'] text-[clamp(28px,3.5vw,46px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.16] max-w-[900px] mb-8">
             {project.title}.{' '}
@@ -871,22 +870,22 @@ export default function ProjectDetails() {
           </h1>
           <div className="flex flex-wrap items-center gap-3 mb-10">
             {project.concept && (
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[var(--acc)] text-[var(--acc-text)] font-medium text-[13.5px]">Self-initiated concept</span>
+              <span className="inline-flex items-center px-4 py-1.5 rounded-[6px] border border-[var(--acc)] text-[var(--acc-text)] font-medium text-[13.5px]">Self-initiated concept</span>
             )}
             {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" data-cursor="Open live site" className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" data-cursor="Open live site" className="group inline-flex items-center gap-2.5 px-5 py-2.5 rounded-[6px] bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
                 <span className="w-2 h-2 rounded-full bg-[#10b981] motion-safe:animate-pulse"></span>
                 {project.liveLabel || 'Visit live site'}
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
             {project.prototypeLink && (
-              <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" data-cursor="Open prototype" className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
+              <a href={project.prototypeLink} target="_blank" rel="noopener noreferrer" data-cursor="Open prototype" className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-[6px] bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[14px] hover:bg-[var(--t-accent)] transition-all active:scale-[0.97]">
                 Try the prototype
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
             )}
-            <span className="font-mono text-[12px] uppercase tracking-wider text-[var(--t-muted)]">{project.category}</span>
+            <span className="text-[13.5px] text-[var(--t-muted)]">{project.category}</span>
           </div>
           {project.liveNote && <p className="text-[14.5px] leading-[1.55] text-[var(--t-muted)] max-w-[560px] m-0 -mt-5 mb-10">{project.liveNote}</p>}
           {project.heroVideo ? (
@@ -894,7 +893,7 @@ export default function ProjectDetails() {
               src={project.heroVideo}
               poster={project.heroImg}
               label={`${project.title} cover`}
-              className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[26px] shadow-sm"
+              className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[6px] shadow-sm"
             />
           ) : (
           <img
@@ -902,13 +901,13 @@ export default function ProjectDetails() {
             alt={`${project.title} cover`}
             fetchPriority="high"
             decoding="async"
-            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[26px] shadow-sm"
+            className="w-full aspect-[4/3] md:aspect-[16/9] object-cover border border-[var(--t-border)] bg-[var(--card)] rounded-[6px] shadow-sm"
           />
           )}
           {project.liveLinks && (
             <div className="flex flex-wrap gap-3 mt-6">
               {project.liveLinks.map((l) => (
-                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--t-border)] text-[var(--t-fg)] font-medium text-[14px] hover:border-[var(--acc)] transition-colors">
+                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[6px] border border-[var(--t-border)] text-[var(--t-fg)] font-medium text-[14px] hover:border-[var(--acc)] transition-colors">
                   {l.label}
                   <ExternalLink size={14} strokeWidth={2.2} />
                 </a>
@@ -918,11 +917,11 @@ export default function ProjectDetails() {
         </FadeIn>
       </section>
 
-      <section className="relative z-10 max-w-[1200px] mx-auto px-6 pt-10 pb-16">
+      <section className="relative z-10 max-w-[1320px] mx-auto px-5 md:px-10 pt-10 pb-16">
         {/* Chapter chips */}
         <div className="flex gap-2 overflow-x-auto pb-2 mb-10 -mx-6 px-6 [scrollbar-width:none]">
           {chapters.slice(1).map((c) => (
-            <button key={c.id} type="button" onClick={() => goTo(c.id)} className="shrink-0 px-4 py-2 rounded-full border border-[var(--t-border)] bg-[var(--t-surface)] text-[13px] font-medium text-[var(--t-muted)] hover:text-[var(--t-fg)] hover:border-[var(--t-fg)]/40 transition-colors">{c.label}</button>
+            <button key={c.id} type="button" onClick={() => goTo(c.id)} className="shrink-0 p-0 mr-6 bg-transparent border-0 cursor-pointer text-[15px] text-[var(--t-muted)] hover:text-[var(--t-fg)] underline underline-offset-[6px] decoration-1 decoration-[var(--t-border)] hover:decoration-[var(--t-fg)] transition-colors">{c.label}</button>
           ))}
         </div>
 
@@ -941,8 +940,8 @@ export default function ProjectDetails() {
             <FadeIn delay={0.1}>
               <dl className="m-0 flex flex-col">
                 {[['My role', project.role], project.glance && ['What I did', project.glance.did], project.glance && ['Outcome', project.glance.outcome]].filter(Boolean).map(([label, text]) => (
-                  <div key={label} className="py-5 border-t border-[var(--t-border)] first:border-t-2 first:border-[var(--acc)]">
-                    <dt className="font-mono text-[11px] font-bold tracking-[0.16em] uppercase text-[var(--acc-text)] mb-2">{label}</dt>
+                  <div key={label} className="py-5 border-t border-[var(--t-border)] ">
+                    <dt className="text-[13.5px] text-[var(--t-faint)] mb-2">{label}</dt>
                     <dd className="m-0 text-[16px] leading-[1.6] text-[var(--t-fg)]">{text}</dd>
                   </div>
                 ))}
@@ -954,12 +953,12 @@ export default function ProjectDetails() {
           {project.metrics && (
             <FadeIn>
               {(project.metricsLabel || project.concept || project.targets) && (
-                <div className="font-mono text-[11.5px] font-bold tracking-[0.16em] uppercase text-[var(--t-faint)] mb-5">{project.metricsLabel || (project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results')}</div>
+                <div className="text-[13.5px] text-[var(--t-faint)] mb-5">{project.metricsLabel || (project.targets ? 'Design targets · site not live yet' : 'Design targets · not measured results')}</div>
               )}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-10">
                 {project.metrics.map((metric, idx) => (
-                  <div key={idx} className="border-t-2 border-[var(--acc)] pt-5">
-                    <div className="font-['Geist'] text-[56px] md:text-[84px] font-normal text-[var(--t-fg)] tracking-[-0.04em] leading-[0.9] mb-4">{metric.value}</div>
+                  <div key={idx} className="border-t border-[var(--t-border)] pt-5">
+                    <div className="font-['Geist'] text-[40px] md:text-[52px] font-normal text-[var(--t-fg)] tracking-[-0.035em] leading-[1] mb-3">{metric.value}</div>
                     <div className="text-[15px] md:text-[16px] text-[var(--t-muted)] leading-[1.5] max-w-[280px]">{metric.label}</div>
                   </div>
                 ))}
@@ -978,8 +977,8 @@ export default function ProjectDetails() {
                 <p className="text-[16px] md:text-[17px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{project.shipped.text}</p>
               </div>
               <figure className="m-0">
-                <img src={project.shipped.image} alt={project.shipped.alt} loading="lazy" decoding="async" className="block w-full h-auto rounded-[24px] ring-1 ring-[var(--t-border)]" />
-                <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)] leading-[1.5]">{project.shipped.caption}</figcaption>
+                <img src={project.shipped.image} alt={project.shipped.alt} loading="lazy" decoding="async" className="block w-full h-auto rounded-[6px] ring-1 ring-[var(--t-border)]" />
+                <figcaption className="mt-3 text-[13.5px] text-[var(--t-faint)] leading-[1.5]">{project.shipped.caption}</figcaption>
               </figure>
             </FadeIn>
           )}
@@ -988,7 +987,7 @@ export default function ProjectDetails() {
           {project.process && (
             <div id="process" data-chapter="process" className="scroll-mt-28 flex flex-col gap-16 md:gap-24">
               <FadeIn>
-                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">{project.processLabel || 'Process'}</div>
+                <div className="text-[13.5px] text-[var(--t-faint)] mb-3">{project.processLabel || 'Process'}</div>
                 <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">{project.processTitle || 'How I got there'}</h2>
                 {project.processIntro && (
                   <p className="text-[17px] md:text-[18px] text-[var(--t-muted)] leading-[1.7] m-0 mt-6 max-w-[720px]">{project.processIntro}</p>
@@ -997,7 +996,7 @@ export default function ProjectDetails() {
               {project.process.map((step, idx) => (
                 <FadeIn key={idx} className="flex flex-col gap-8">
                   <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 md:gap-10 items-start">
-                    <div aria-hidden="true" className="font-['Geist'] text-[72px] md:text-[110px] font-normal leading-[0.8] tracking-[-0.05em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
+                    <div aria-hidden="true" className="text-[15px] tabular-nums text-[var(--t-faint)] md:pt-2 md:w-[72px]">0{idx + 1}</div>
                     <div className="md:pt-2">
                       <h3 className="font-['Geist'] text-[26px] md:text-[34px] font-normal text-[var(--t-fg)] tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
                       <p className="text-[17px] text-[var(--t-muted)] leading-[1.7] max-w-[680px] m-0">{step.text}</p>
@@ -1007,11 +1006,11 @@ export default function ProjectDetails() {
                     {[['before', step.before, step.beforeLabel, step.beforeVideo], ['after', step.after, step.afterLabel, step.afterVideo]].map(([k, src, label, vid]) => (
                       <figure key={k} className="m-0">
                         {vid ? (
-                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top border border-[var(--t-border)] bg-black rounded-[20px]" />
+                          <video src={vid} poster={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full aspect-[4/3] object-cover object-top border border-[var(--t-border)] bg-black rounded-[6px]" />
                         ) : (
-                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} border border-[var(--t-border)] rounded-[20px]`} />
+                          <img src={src} alt={label} loading="lazy" decoding="async" className={`w-full ${project.phoneProcess ? 'aspect-square md:aspect-[4/3] object-cover object-center' : 'aspect-[4/3] object-cover object-top'} border border-[var(--t-border)] rounded-[6px]`} />
                         )}
-                        <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)]">{label}</figcaption>
+                        <figcaption className="mt-3 text-[13.5px] text-[var(--t-faint)]">{label}</figcaption>
                       </figure>
                     ))}
                   </div>
@@ -1024,7 +1023,7 @@ export default function ProjectDetails() {
           {project.decisions && (
             <div id="decisions" data-chapter="decisions" className="scroll-mt-28">
               <FadeIn>
-                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">Decisions</div>
+                <div className="text-[13.5px] text-[var(--t-faint)] mb-3">Decisions</div>
                 <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
@@ -1040,7 +1039,7 @@ export default function ProjectDetails() {
 
           {/* Transition to Visual Walkthrough */}
           <div id="screens" data-chapter="screens" className="flex flex-col items-start scroll-mt-28">
-            <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">The result</div>
+            <div className="text-[13.5px] text-[var(--t-faint)] mb-3">The result</div>
             <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-4">
               The final screens
             </h2>
@@ -1049,7 +1048,7 @@ export default function ProjectDetails() {
                 href={project.liveLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[13.5px] hover:bg-[var(--t-accent)] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-[6px] bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[13.5px] hover:bg-[var(--t-accent)] transition-all"
               >
                 <span>{project.liveLabel || 'Visit live site'}</span>
                 <ExternalLink size={14} strokeWidth={2.2} />
@@ -1065,7 +1064,7 @@ export default function ProjectDetails() {
               <FadeIn key={sec.title} direction="up">
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-6">
                   <h3 className="font-['Geist'] text-[24px] md:text-[28px] font-normal text-[var(--t-fg)] m-0">
-                    <span className="text-[var(--acc-text)] mr-2 font-mono text-[18px]">0{sIdx + 1}</span>{sec.title}
+                    <span className="text-[var(--t-faint)] mr-2 text-[18px]">0{sIdx + 1}</span>{sec.title}
                   </h3>
                   <p className="text-[16px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
                 </div>
@@ -1074,13 +1073,13 @@ export default function ProjectDetails() {
                     {sec.clips.map((c) => (
                       <figure key={c.src} className="m-0">
                         <MotionClip src={c.src} poster={c.poster} label={c.label}
-                          className={`w-full h-auto block bg-[var(--t-surface)] ring-1 ring-[var(--t-border)] ${sec.clipLayout ? 'rounded-[20px]' : 'rounded-[26px]'}`} />
-                        <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)] leading-[1.5]">{c.label}</figcaption>
+                          className={`w-full h-auto block bg-[var(--t-surface)] ring-1 ring-[var(--t-border)] ${sec.clipLayout ? 'rounded-[6px]' : 'rounded-[6px]'}`} />
+                        <figcaption className="mt-3 text-[13.5px] text-[var(--t-faint)] leading-[1.5]">{c.label}</figcaption>
                       </figure>
                     ))}
                   </div>
                 )) : (
-                <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[24px]`}>
+                <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[6px]`}>
                   {Array.from({ length: sec.to - sec.from + 1 }, (_, i) => sec.from + i).map(renderSlice)}
                 </div>
                 )}
@@ -1089,7 +1088,7 @@ export default function ProjectDetails() {
           </div>
         ) : (
           <FadeIn direction="up" className="w-full mb-32">
-            <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[24px]`}>
+            <div className={`w-full flex flex-col gap-0 overflow-hidden ring-1 ring-[var(--t-border)] leading-none ${sliceBg} rounded-[6px]`}>
               {Array.from({ length: project.sliceCount || 50 }, (_, i) => i + 1).map(renderSlice)}
             </div>
           </FadeIn>
@@ -1099,14 +1098,14 @@ export default function ProjectDetails() {
       {/* 7. REVIEWS */}
       {project.reviews && project.reviews.length > 0 && (
       <section className="bg-[var(--t-surface)] py-20 border-y border-[var(--t-border)]">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1320px] mx-auto px-5 md:px-10">
            <FadeIn direction="up">
              <h2 className="font-['Geist'] text-[28px] md:text-[34px] font-normal text-[var(--t-fg)] mb-10">What the team said</h2>
            </FadeIn>
             <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
                  <FadeIn key={i} delay={i * 0.1}>
-                   <div className="bg-[var(--t-bg)] p-8 rounded-[24px] border border-[var(--t-border)] h-full">
+                   <div className="bg-[var(--t-bg)] p-8 rounded-[6px] border border-[var(--t-border)] h-full">
                       <div className="flex gap-4 items-center mb-6">
                         {quote.avatar ? (
                           <img 
@@ -1123,7 +1122,7 @@ export default function ProjectDetails() {
                         )}
                         <div>
                           <div className="font-['Geist'] font-normal text-[var(--t-fg)] text-[18px]">{quote.name}</div>
-                          <div className="font-mono text-[11.5px] uppercase tracking-wider text-[var(--t-faint)] mt-1">{quote.role}</div>
+                          <div className="text-[13.5px] text-[var(--t-faint)] mt-1">{quote.role}</div>
                        </div>
                      </div>
                      <p className="text-[15px] text-[var(--t-muted)] leading-[1.65]">"{quote.text}"</p>
@@ -1136,22 +1135,22 @@ export default function ProjectDetails() {
       )}
 
       {/* 8. NEXT PROJECT PREVIEW CARD */}
-      <section className="px-6 py-16 max-w-[1200px] mx-auto border-t border-[var(--t-border)]">
+      <section className="px-5 md:px-10 py-16 max-w-[1320px] mx-auto border-t border-[var(--t-border)]">
         <FadeIn>
-          <div className="p-8 md:p-12 rounded-[28px] bg-[var(--t-surface)] border border-[var(--t-border)] flex flex-col md:flex-row items-center justify-between gap-8 group hover:shadow-lg transition-all">
+          <div className="p-8 md:p-12 rounded-[6px] bg-[var(--t-surface)] border border-[var(--t-border)] flex flex-col md:flex-row items-center justify-between gap-8 group hover:shadow-lg transition-all">
             <div className="flex items-center gap-6">
-              <div className="w-20 h-20 md:w-28 md:h-28 rounded-[20px] overflow-hidden bg-[#EFE9E0] border border-[var(--t-border)] shrink-0">
+              <div className="w-20 h-20 md:w-28 md:h-28 rounded-[6px] overflow-hidden bg-[#EFE9E0] border border-[var(--t-border)] shrink-0">
                 <img src={nextProject.heroImg} alt={nextProject.title} className="w-full h-full object-cover transition-transform duration-500 opacity-90 group-hover:opacity-100 group-hover:scale-105" />
               </div>
               <div>
-                <div className="font-mono text-[11.5px] font-bold tracking-widest text-[var(--t-faint)] uppercase mb-1.5">Next Case Study</div>
+                <div className="text-[13.5px] text-[var(--t-faint)] mb-1.5">Next Case Study</div>
                 <h3 className="font-['Geist'] text-[24px] md:text-[34px] font-normal text-[var(--t-fg)] mb-1">{nextProject.title}</h3>
                 <p className="text-[var(--t-muted)] text-[14px] md:text-[15px]">{nextProject.category} · {nextProject.type}</p>
               </div>
             </div>
             <Link 
               to={`/projects/${nextProject.id}`}
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[15px] transition-all shrink-0 hover:bg-[var(--t-accent)] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 px-8 py-4 rounded-[6px] bg-[var(--t-fg)] text-[var(--t-bg)] font-medium text-[15px] transition-all shrink-0 hover:bg-[var(--t-accent)] hover:-translate-y-0.5"
             >
               <span>View Case Study</span>
               <ArrowRight size={16} strokeWidth={2.5} className="group-hover:translate-x-1 transition-transform" />
@@ -1161,15 +1160,15 @@ export default function ProjectDetails() {
       </section>
 
       {/* 9. CONTACT */}
-      <section id="contact" data-chapter="contact" className="px-6 pt-4 pb-20 scroll-mt-28">
-        <div className="max-w-[1200px] mx-auto">
+      <section id="contact" data-chapter="contact" className="px-5 md:px-10 pt-4 pb-20 scroll-mt-28">
+        <div className="max-w-[1320px] mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/projects" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-[var(--t-border)] text-[var(--t-fg)] text-[15px] font-medium transition-all hover:bg-[var(--t-fg)] hover:text-[var(--t-bg)]">
+            <Link to="/projects" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[6px] border border-[var(--t-border)] text-[var(--t-fg)] text-[15px] font-medium transition-all hover:bg-[var(--t-fg)] hover:text-[var(--t-bg)]">
               <ArrowLeft size={16} strokeWidth={2} />
               <span>All projects</span>
             </Link>
             {project.liveLink && (
-              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium transition-all hover:bg-[var(--t-accent)]">
+              <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-[6px] bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium transition-all hover:bg-[var(--t-accent)]">
                 <span>{project.liveLabel || 'Visit live site'}</span>
                 <ExternalLink size={15} strokeWidth={2.2} />
               </a>
