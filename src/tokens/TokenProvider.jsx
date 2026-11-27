@@ -7,7 +7,7 @@ import { RotateCcw, Sun, Moon, X } from 'lucide-react';
    the dock changes them, and the whole site follows.
 ------------------------------------------------------------------- */
 export const ACCENTS = [
-  { id: 'volt',    label: 'Volt',    primitive: 'volt.300',    hex: '#DDFB52' },
+  { id: 'volt',    label: 'Volt',    primitive: 'volt.300',    hex: '#CFE88A' },
   { id: 'amber',   label: 'Amber',   primitive: 'amber.600',   hex: '#C26026' },
   { id: 'forest',  label: 'Forest',  primitive: 'forest.700',  hex: '#1F6B4F' },
   { id: 'cobalt',  label: 'Cobalt',  primitive: 'cobalt.600',  hex: '#244CE0' },
@@ -30,8 +30,8 @@ export const THEMES = {
     legacy: { '--bg': '#141312', '--bg2': '#1C1B19', '--bg3': '#262522', '--card': '#1C1B19', '--white': '#F7F5F0', '--muted': '#969188', '--faint': '#6E6962', '--border': 'rgba(247,245,240,0.12)', '--tan': '#D5CFC3', '--green': '#81FFBD', '--color-white': '#F7F5F0', '--color-black': '#141312' },
   },
   light: {
-    bg: '#1F3BF2', surface: '#2B47FA', fg: '#FFFFFF', muted: '#DCE1FF', faint: '#BAC3FF', border: 'rgba(255,255,255,0.26)',
-    legacy: { '--bg': '#1F3BF2', '--bg2': '#1933DB', '--bg3': '#152BBF', '--card': '#2B47FA', '--white': '#FFFFFF', '--muted': '#DCE1FF', '--faint': '#BAC3FF', '--border': 'rgba(255,255,255,0.26)', '--tan': '#DCE1FF', '--green': '#DDFB52', '--color-white': '#FFFFFF', '--color-black': '#1F3BF2' },
+    bg: '#111110', surface: '#1A1A18', fg: '#ECEAE4', muted: '#B3B0A8', faint: '#85827A', border: 'rgba(236,234,228,0.14)',
+    legacy: { '--bg': '#111110', '--bg2': '#1A1A18', '--bg3': '#242422', '--card': '#1A1A18', '--white': '#ECEAE4', '--muted': '#B3B0A8', '--faint': '#85827A', '--border': 'rgba(236,234,228,0.14)', '--tan': '#B3B0A8', '--green': '#CFE88A', '--color-white': '#ECEAE4', '--color-black': '#111110' },
   },
 };
 export const DEFAULTS = { accent: 'volt', radius: 'soft', density: 'comfortable', theme: 'light' };
@@ -72,7 +72,7 @@ export function TokenProvider({ children }) {
     const root = document.documentElement;
     Object.entries(vars).forEach(([k, v]) => root.style.setProperty(k, v));
     root.dataset.theme = tk.theme;
-    root.style.colorScheme = tk.theme;
+    root.style.colorScheme = 'dark';
   }, [value, tk.theme]);
 
   return <TokenContext.Provider value={value}>{children}</TokenContext.Provider>;

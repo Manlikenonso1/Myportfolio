@@ -56,7 +56,7 @@ export function WorkIndex({ projects }) {
       <div
         ref={preview}
         aria-hidden="true"
-        className={`hidden md:block fixed top-0 left-0 z-[150] w-[320px] aspect-[4/3] overflow-hidden rounded-[6px] pointer-events-none shadow-[0_24px_60px_rgba(5,10,60,0.45)] transition-opacity duration-200 ${active ? 'opacity-100' : 'opacity-0'}`}
+        className={`hidden md:block fixed top-0 left-0 z-[150] w-[320px] aspect-[4/3] overflow-hidden rounded-[6px] pointer-events-none shadow-[0_24px_60px_rgba(0,0,0,0.6)] transition-opacity duration-200 ${active ? 'opacity-100' : 'opacity-0'}`}
       >
         {active && <img src={active.image} alt="" className="block w-full h-full object-cover" />}
       </div>
