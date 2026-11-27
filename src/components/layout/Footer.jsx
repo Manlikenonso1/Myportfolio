@@ -8,12 +8,12 @@ export default function Footer() {
   return (
     <footer className="mt-20 md:mt-28 bg-[var(--t-bg)] text-[var(--t-fg)]">
       <div className="max-w-[1320px] mx-auto px-5 md:px-10">
-        <div className="border-t border-[var(--t-border)] pt-12 md:pt-16 pb-12 grid grid-cols-1 md:grid-cols-[1.55fr_1fr] gap-10 md:gap-24">
+        <div className="border-t border-[var(--t-border)] pt-12 md:pt-16 pb-12 grid grid-cols-1 lg:grid-cols-[2.2fr_1fr] gap-10 lg:gap-16">
           <div>
             <p className="m-0 text-[15px] text-[var(--t-faint)] mb-3">Hiring a product designer?</p>
             <a
               href={`mailto:${EMAIL}`}
-              className="text-[clamp(26px,3.5vw,46px)] leading-[1.1] tracking-[-0.03em] text-[var(--t-fg)] underline underline-offset-[6px] decoration-1 decoration-[var(--t-faint)] hover:decoration-[var(--t-fg)] transition-colors break-all"
+              className="font-['Bricolage_Grotesque'] font-medium text-[clamp(28px,5.2vw,76px)] leading-[1.04] tracking-[-0.032em] text-[var(--t-fg)] underline underline-offset-[6px] decoration-1 decoration-[var(--t-faint)] hover:decoration-[var(--t-fg)] transition-colors break-all"
             >
               {EMAIL}
             </a>

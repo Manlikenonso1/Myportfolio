@@ -26,7 +26,7 @@ export default function Projects() {
 
       <div className="max-w-[1320px] mx-auto px-5 md:px-10">
         <section className="pt-32 md:pt-44 pb-10 md:pb-14">
-          <h1 className="m-0 font-normal text-[clamp(28px,3.5vw,46px)] leading-[1.16] tracking-[-0.03em] text-[var(--t-fg)] max-w-[820px]">
+          <h1 className="m-0 font-['Bricolage_Grotesque'] font-medium text-[clamp(30px,4.2vw,60px)] leading-[1.06] tracking-[-0.035em] text-[var(--t-fg)] max-w-[820px]">
             Projects.{' '}
             <span className="text-[var(--t-faint)]">Four detailed case studies, then smaller projects and concepts.</span>
           </h1>

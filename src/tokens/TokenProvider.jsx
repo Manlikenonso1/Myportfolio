@@ -7,6 +7,7 @@ import { RotateCcw, Sun, Moon, X } from 'lucide-react';
    the dock changes them, and the whole site follows.
 ------------------------------------------------------------------- */
 export const ACCENTS = [
+  { id: 'volt',    label: 'Volt',    primitive: 'volt.300',    hex: '#DDFB52' },
   { id: 'amber',   label: 'Amber',   primitive: 'amber.600',   hex: '#C26026' },
   { id: 'forest',  label: 'Forest',  primitive: 'forest.700',  hex: '#1F6B4F' },
   { id: 'cobalt',  label: 'Cobalt',  primitive: 'cobalt.600',  hex: '#244CE0' },
@@ -29,11 +30,11 @@ export const THEMES = {
     legacy: { '--bg': '#141312', '--bg2': '#1C1B19', '--bg3': '#262522', '--card': '#1C1B19', '--white': '#F7F5F0', '--muted': '#969188', '--faint': '#6E6962', '--border': 'rgba(247,245,240,0.12)', '--tan': '#D5CFC3', '--green': '#81FFBD', '--color-white': '#F7F5F0', '--color-black': '#141312' },
   },
   light: {
-    bg: '#FAFAF8', surface: '#FFFFFF', fg: '#121211', muted: '#55544F', faint: '#73726C', border: 'rgba(18,18,17,0.12)',
-    legacy: { '--bg': '#FAFAF8', '--bg2': '#F0EFEB', '--bg3': '#E5E4DF', '--card': '#FFFFFF', '--white': '#121211', '--muted': '#55544F', '--faint': '#73726C', '--border': 'rgba(18,18,17,0.12)', '--tan': '#55544F', '--green': '#0E9F6E', '--color-white': '#121211', '--color-black': '#FAFAF8' },
+    bg: '#1F3BF2', surface: '#2B47FA', fg: '#FFFFFF', muted: '#DCE1FF', faint: '#BAC3FF', border: 'rgba(255,255,255,0.26)',
+    legacy: { '--bg': '#1F3BF2', '--bg2': '#1933DB', '--bg3': '#152BBF', '--card': '#2B47FA', '--white': '#FFFFFF', '--muted': '#DCE1FF', '--faint': '#BAC3FF', '--border': 'rgba(255,255,255,0.26)', '--tan': '#DCE1FF', '--green': '#DDFB52', '--color-white': '#FFFFFF', '--color-black': '#1F3BF2' },
   },
 };
-export const DEFAULTS = { accent: 'cobalt', radius: 'soft', density: 'comfortable', theme: 'light' };
+export const DEFAULTS = { accent: 'volt', radius: 'soft', density: 'comfortable', theme: 'light' };
 
 const TokenContext = createContext(null);
 export const useTokens = () => useContext(TokenContext);
@@ -60,7 +61,7 @@ export function TokenProvider({ children }) {
     const { accent, radius, density, theme } = value;
     const vars = {
       '--t-accent': accent.hex,
-      '--t-accent-text': tk.theme === 'dark' ? `color-mix(in srgb, ${accent.hex} 55%, white)` : accent.hex,
+      '--t-accent-text': accent.hex,
       '--t-bg': theme.bg, '--t-surface': theme.surface, '--t-fg': theme.fg,
       '--t-muted': theme.muted, '--t-faint': theme.faint, '--t-border': theme.border,
       '--t-radius': `${radius.px}px`, '--t-radius-lg': `${Math.round(radius.px * 1.8)}px`,

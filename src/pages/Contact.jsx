@@ -142,7 +142,7 @@ export default function Contact() {
                 )}
 
                 <button type="submit" disabled={status === 'submitting'}
-                  className="self-start inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--t-accent)] text-[#fff] font-semibold text-[15px] transition-all hover:brightness-110 active:scale-[0.97] disabled:opacity-60"
+                  className="self-start inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--t-accent)] text-[var(--t-bg)] font-semibold text-[15px] transition-all hover:brightness-110 active:scale-[0.97] disabled:opacity-60"
                   style={{ borderRadius: 'var(--t-radius)' }}>
                   {status === 'submitting' ? 'Sending…' : <>Send message <Send size={15} /></>}
                 </button>

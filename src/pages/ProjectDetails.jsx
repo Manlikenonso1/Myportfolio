@@ -852,7 +852,7 @@ export default function ProjectDetails() {
   const nextProject = projectsData[nextProjectKey] || projectsData['lazyzone'];
 
   return (
-    <div ref={rootRef} style={{ '--acc': accent, '--acc-text': accentText }} className="w-full relative bg-[var(--t-bg)] min-h-screen transition-colors duration-300">
+    <div ref={rootRef} style={{ '--acc': 'var(--t-accent)', '--acc-text': 'var(--t-accent)' }} className="w-full relative bg-[var(--t-bg)] min-h-screen transition-colors duration-300">
       {/* Reading progress */}
       <motion.div aria-hidden="true" className="fixed top-0 inset-x-0 h-[3px] z-[210] origin-left bg-[var(--acc)]" style={{ scaleX: progress }} />
 
@@ -864,7 +864,7 @@ export default function ProjectDetails() {
             <span className="text-[var(--t-faint)]">/</span>
             <span className="text-[var(--t-faint)]">{project.title} · {project.type}</span>
           </div>
-          <h1 className="font-['Geist'] text-[clamp(28px,3.5vw,46px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.16] max-w-[900px] mb-8">
+          <h1 className="font-['Bricolage_Grotesque'] font-medium text-[clamp(30px,4.2vw,60px)] text-[var(--t-fg)] tracking-[-0.035em] leading-[1.06] max-w-[1000px] mb-8">
             {project.title}.{' '}
             <span className="text-[var(--t-faint)]">{meta.line || meta.hook}</span>
           </h1>
