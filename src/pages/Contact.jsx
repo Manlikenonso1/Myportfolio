@@ -82,7 +82,7 @@ export default function Contact() {
             <p className="text-[13px] font-medium uppercase tracking-wider text-[var(--t-faint)] m-0 mb-3">
               Direct Contact
             </p>
-            <h1 className="font-['Fraunces'] text-[clamp(40px,5.5vw,72px)] font-normal tracking-[-0.03em] leading-[1.05] text-[var(--t-fg)] m-0 mb-5">
+            <h1 className="font-['Geist'] text-[clamp(40px,5.5vw,72px)] font-normal tracking-[-0.03em] leading-[1.05] text-[var(--t-fg)] m-0 mb-5">
               Let's <span className="italic text-[var(--t-accent)] font-normal">talk</span>
             </h1>
             <div className="max-w-[620px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
@@ -108,12 +108,12 @@ export default function Contact() {
 
         <section className="max-w-[640px] pb-24">
           <FadeIn>
-            <h2 className="font-['Fraunces'] text-[26px] md:text-[30px] font-normal tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-6">Send a message</h2>
+            <h2 className="font-['Geist'] text-[26px] md:text-[30px] font-normal tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-6">Send a message</h2>
 
             {status === 'success' ? (
               <div role="status" className="bg-[var(--t-surface)] border border-[var(--t-border)]" style={{ borderRadius: 'var(--t-radius-lg)', padding: 'calc(var(--t-space) * 2)' }}>
                 <div className="w-11 h-11 rounded-full bg-emerald-500/15 text-emerald-500 flex items-center justify-center mb-4"><Check size={22} strokeWidth={2.6} /></div>
-                <h3 className="font-['DM_Sans'] text-[22px] font-medium text-[var(--t-fg)] m-0 mb-2">Message sent</h3>
+                <h3 className="font-['Geist'] text-[22px] font-medium text-[var(--t-fg)] m-0 mb-2">Message sent</h3>
                 <p className="text-[16px] leading-[1.6] text-[var(--t-muted)] m-0 mb-5">Thanks for getting in touch. I'll reply to the email address you gave.</p>
                 <button type="button" onClick={() => setStatus('idle')} className={chip} style={{ borderRadius: 'var(--t-radius)' }}>Send another message</button>
               </div>

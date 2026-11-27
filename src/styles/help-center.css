@@ -38,7 +38,7 @@
   padding-bottom: 0;
 }
 .faq-item summary {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: var(--white);
@@ -184,7 +184,7 @@ a.ca-info-val:hover {
   border: none;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   padding: 12px 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 15px; color: var(--white);
   outline: none; transition: border-color 0.3s;
 }

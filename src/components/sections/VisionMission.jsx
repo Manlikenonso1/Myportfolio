@@ -9,7 +9,7 @@ export default function VisionMission() {
           <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             Design Philosophy
           </div>
-          <p className="font-['DM_Sans'] font-normal text-[24px] md:text-[32px] leading-[1.3] text-[var(--white)] w-full lg:w-[530px] mb-[44px] tracking-tight">
+          <p className="font-['Geist'] font-normal text-[24px] md:text-[32px] leading-[1.3] text-[var(--white)] w-full lg:w-[530px] mb-[44px] tracking-tight">
             Great design balances what users need with what engineering can realistically build.
           </p>
 
@@ -17,13 +17,13 @@ export default function VisionMission() {
             How I Work
           </div>
           <div className="flex flex-col gap-4">
-            <div className="rounded-[10px] py-[21px] px-[24px] font-['Inter_Tight'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--tan)] text-black">
+            <div className="rounded-[10px] py-[21px] px-[24px] font-['Geist'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--tan)] text-black">
               Find and fix user drop-offs so people can reach their goals easily without feeling frustrated.
             </div>
-            <div className="rounded-[10px] py-[21px] px-[24px] font-['Inter_Tight'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--card)] text-[var(--muted)]">
+            <div className="rounded-[10px] py-[21px] px-[24px] font-['Geist'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--card)] text-[var(--muted)]">
               Build clean, reusable component libraries so developers don't have to guess or rebuild styles.
             </div>
-            <div className="rounded-[10px] py-[21px] px-[24px] font-['Inter_Tight'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--card)] text-[var(--muted)]">
+            <div className="rounded-[10px] py-[21px] px-[24px] font-['Geist'] text-[16px] leading-[1.6] w-full lg:w-[560px] bg-[var(--card)] text-[var(--muted)]">
               Test ideas with clickable prototypes early to catch questions and issues before writing code.
             </div>
           </div>

@@ -29,11 +29,11 @@ export const THEMES = {
     legacy: { '--bg': '#141312', '--bg2': '#1C1B19', '--bg3': '#262522', '--card': '#1C1B19', '--white': '#F7F5F0', '--muted': '#969188', '--faint': '#6E6962', '--border': 'rgba(247,245,240,0.12)', '--tan': '#D5CFC3', '--green': '#81FFBD', '--color-white': '#F7F5F0', '--color-black': '#141312' },
   },
   light: {
-    bg: '#F3F7F3', surface: '#FFFFFF', fg: '#14201A', muted: '#49574F', faint: '#5C6961', border: 'rgba(20,32,26,0.10)',
-    legacy: { '--bg': '#F3F7F3', '--bg2': '#E8EFE8', '--bg3': '#DBE5DC', '--card': '#FFFFFF', '--white': '#14201A', '--muted': '#49574F', '--faint': '#5C6961', '--border': 'rgba(20,32,26,0.10)', '--tan': '#49574F', '--green': '#0E9F6E', '--color-white': '#14201A', '--color-black': '#F3F7F3' },
+    bg: '#FAFAF8', surface: '#FFFFFF', fg: '#121211', muted: '#55544F', faint: '#73726C', border: 'rgba(18,18,17,0.12)',
+    legacy: { '--bg': '#FAFAF8', '--bg2': '#F0EFEB', '--bg3': '#E5E4DF', '--card': '#FFFFFF', '--white': '#121211', '--muted': '#55544F', '--faint': '#73726C', '--border': 'rgba(18,18,17,0.12)', '--tan': '#55544F', '--green': '#0E9F6E', '--color-white': '#121211', '--color-black': '#FAFAF8' },
   },
 };
-export const DEFAULTS = { accent: 'forest', radius: 'soft', density: 'comfortable', theme: 'light' };
+export const DEFAULTS = { accent: 'cobalt', radius: 'soft', density: 'comfortable', theme: 'light' };
 
 const TokenContext = createContext(null);
 export const useTokens = () => useContext(TokenContext);

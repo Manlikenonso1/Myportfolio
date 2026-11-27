@@ -22,13 +22,13 @@ export default function CallToAction() {
         </FadeIn>
         
         <FadeIn delay={0.1}>
-          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5 tracking-tight">
+          <h2 className="font-['Geist'] font-normal text-[36px] md:text-[48px] leading-[1.3] text-[var(--white)] mb-5 tracking-tight">
             Let's Work Together
           </h2>
         </FadeIn>
         
         <FadeIn delay={0.2}>
-          <p className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
+          <p className="font-['Geist'] text-[16px] text-[var(--muted)] leading-[1.6] mb-[60px]">
             Hiring a product designer? I'm open to remote, hybrid and on-site roles across the UK, and happy to travel for team days.
           </p>
         </FadeIn>
@@ -41,8 +41,8 @@ export default function CallToAction() {
                   <Check size={14} strokeWidth={3} className="text-black" />
                 </div>
                 <div className="text-left">
-                  <div className="font-['DM_Sans'] text-[24px] font-normal text-[var(--white)] leading-[1.3] mb-1">{stat.num}</div>
-                  <div className="font-['Inter_Tight'] text-[16px] text-[var(--muted)] leading-[1.6] w-[146px]">{stat.label}</div>
+                  <div className="font-['Geist'] text-[24px] font-normal text-[var(--white)] leading-[1.3] mb-1">{stat.num}</div>
+                  <div className="font-['Geist'] text-[16px] text-[var(--muted)] leading-[1.6] w-[146px]">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -51,7 +51,7 @@ export default function CallToAction() {
 
         <FadeIn delay={0.4}>
           <div className="flex justify-center gap-[18px] flex-wrap mb-[24px]">
-            <Link to="/contact" className="font-['DM_Sans'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] no-underline">
+            <Link to="/contact" className="font-['Geist'] font-medium text-[16px] md:text-[18px] py-4 px-[30px] bg-[var(--blue)] text-[var(--white)] border-none rounded-[6px] cursor-pointer inline-block transition-all hover:bg-[var(--blue-dk)] no-underline">
               Contact Me
             </Link>
           </div>

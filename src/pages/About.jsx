@@ -23,7 +23,7 @@ const strengths = [
   ['Accessibility', 'Designed to WCAG 2.1 AA and 2.2 from the start, with contrast, focus and target sizes decided in the system.'],
 ];
 
-const h2 = "font-['DM_Sans'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-2";
+const h2 = "font-['Geist'] text-[24px] md:text-[28px] font-medium tracking-[-0.02em] text-[var(--t-fg)] m-0 mb-2";
 const inlineLink = "text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:decoration-[var(--t-accent)]";
 
 function Row({ item }) {
@@ -35,7 +35,7 @@ function Row({ item }) {
           {item.dates && <div className="text-[14px] text-[var(--t-faint)] mt-1">{item.dates}</div>}
         </div>
         <div>
-          <h3 className="font-['DM_Sans'] text-[19px] md:text-[20px] font-medium leading-[1.25] text-[var(--t-fg)] m-0 mb-2">{item.role}</h3>
+          <h3 className="font-['Geist'] text-[19px] md:text-[20px] font-medium leading-[1.25] text-[var(--t-fg)] m-0 mb-2">{item.role}</h3>
           <p className="text-[16px] leading-[1.65] text-[var(--t-muted)] m-0">{item.text}</p>
           {item.link && (
             <Link to={item.link[0]} className={`inline-flex items-center gap-1.5 mt-3 text-[15px] font-semibold ${inlineLink}`}>
@@ -62,7 +62,7 @@ export default function About() {
         <section className="pt-36 md:pt-44 pb-16 md:pb-20">
           <FadeIn className="grid grid-cols-1 md:grid-cols-[1fr_220px] gap-10 md:gap-14 items-start">
             <div>
-              <h1 className="font-['DM_Sans'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-6">
+              <h1 className="font-['Geist'] text-[30px] md:text-[40px] font-medium tracking-[-0.03em] leading-[1.1] text-[var(--t-fg)] m-0 mb-6">
                 A product designer with a security degree.
               </h1>
               <div className="max-w-[600px] flex flex-col gap-4 text-[17px] md:text-[18px] leading-[1.65] text-[var(--t-muted)]">
@@ -77,7 +77,7 @@ export default function About() {
           <FadeIn className="grid grid-cols-3 gap-5 mt-12 pt-8 border-t border-[var(--t-border)]">
             {[['5+', 'years designing products'], ['3', 'years in-house on one B2B product'], ['MSc', 'Cyber Security, Aston University']].map(([v, l]) => (
               <div key={l}>
-                <div className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium tracking-[-0.03em] leading-none text-[var(--t-fg)] mb-2">{v}</div>
+                <div className="font-['Geist'] text-[32px] md:text-[44px] font-medium tracking-[-0.03em] leading-none text-[var(--t-fg)] mb-2">{v}</div>
                 <div className="text-[14px] md:text-[15px] leading-[1.45] text-[var(--t-muted)]">{l}</div>
               </div>
             ))}
@@ -103,7 +103,7 @@ export default function About() {
             {strengths.map(([title, text], i) => (
               <FadeIn key={title} delay={Math.min(i, 5) * 0.04}>
                 <div className="py-5 border-t border-[var(--t-border)] h-full">
-                  <h3 className="font-['DM_Sans'] text-[18px] font-medium text-[var(--t-fg)] m-0 mb-1.5">{title}</h3>
+                  <h3 className="font-['Geist'] text-[18px] font-medium text-[var(--t-fg)] m-0 mb-1.5">{title}</h3>
                   <p className="text-[15.5px] leading-[1.6] text-[var(--t-muted)] m-0">{text}</p>
                 </div>
               </FadeIn>

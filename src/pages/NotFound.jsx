@@ -15,15 +15,15 @@ export default function NotFound() {
           Error 404
         </span>
         
-        <h1 className="font-['DM_Sans'] text-[clamp(60px,10vw,120px)] font-medium tracking-tighter text-white leading-none mb-4">
+        <h1 className="font-['Geist'] text-[clamp(60px,10vw,120px)] font-medium tracking-tighter text-white leading-none mb-4">
           404
         </h1>
         
-        <h2 className="font-['DM_Sans'] text-[24px] md:text-[32px] font-medium text-white mb-4">
+        <h2 className="font-['Geist'] text-[24px] md:text-[32px] font-medium text-white mb-4">
           Page Not Found
         </h2>
         
-        <p className="font-['Inter_Tight'] text-[16px] text-white/50 leading-[1.7] mb-10 max-w-[480px]">
+        <p className="font-['Geist'] text-[16px] text-white/50 leading-[1.7] mb-10 max-w-[480px]">
           The screen you're looking for might have been moved, renamed, or is temporarily unavailable. Let's get you back to the portfolio.
         </p>
         

@@ -20,7 +20,7 @@ export default function ClientsPartners() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h2 className="font-['DM_Sans'] font-normal text-[32px] md:text-[36px] leading-[1.3] text-[var(--white)] max-w-[728px] mx-auto mb-[60px] tracking-tight">
+          <h2 className="font-['Geist'] font-normal text-[32px] md:text-[36px] leading-[1.3] text-[var(--white)] max-w-[728px] mx-auto mb-[60px] tracking-tight">
             Teams and businesses I've designed for
           </h2>
         </FadeIn>
@@ -32,14 +32,14 @@ export default function ClientsPartners() {
                 <Link
                   key={idx}
                   to={logo.route}
-                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight transition-all duration-300 hover:text-white"
+                  className="font-['Geist'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight transition-all duration-300 hover:text-white"
                 >
                   {logo.name}
                 </Link>
               ) : (
                 <span
                   key={idx}
-                  className="font-['DM_Sans'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight cursor-default"
+                  className="font-['Geist'] font-medium text-[22px] md:text-[24px] text-white/60 tracking-tight cursor-default"
                 >
                   {logo.name}
                 </span>

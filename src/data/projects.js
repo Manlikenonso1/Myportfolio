@@ -2,6 +2,7 @@
 export const allProjects = [
   {
     id: 'appsatile',
+    shot: '/shots/appsatile.webp', kind: 'Design system', year: '2023–26', status: 'Shipped', line: 'A design system of 70+ components used by three product squads. Handoff to engineers got about 50% faster.',
     outcomes: ['70+ components', 'Handoffs about 50% faster'],
     hook: 'The design system I co-built at Appsatile with two other designers. It has more than 70 components.',
     accent: '#3B82F6',
@@ -15,6 +16,7 @@ export const allProjects = [
   },
   {
     id: 'talstrike',
+    shot: '/shots/talstrike.webp', kind: 'Mobile app', year: '2024', status: 'Shipped', line: 'A sports scouting app I designed from 0 to 1 and launched on iOS, Android and web. Sign-ups grew 85% after V2.',
     outcomes: ['85% more sign-ups after the V2 launch', 'Launched on iOS, Android and web'],
     hook: 'The sports scouting app I designed from 0 to 1 and launched on iOS, Android and web. Sign-ups grew 85% after V2. It also shows the redesign I would propose today.',
     accent: '#4169E1',
@@ -28,6 +30,7 @@ export const allProjects = [
   },
   {
     id: 'lazyzone',
+    shot: '/shots/lazyzone.webp', kind: 'AI web app', year: '2026', status: 'Live', line: 'Five AI video tools redesigned to work as one project, with the credit cost shown on every button.',
     outcomes: ['5 AI tools in one project', 'Live at lazyzonelabs.com'],
     hook: 'A redesign of an AI video studio that has five tools. You can see it at lazyzonelabs.com.',
     accent: '#E5484D',
@@ -41,6 +44,7 @@ export const allProjects = [
   },
   {
     id: 'keel',
+    shot: '/shots/keel.webp', kind: 'Security app', year: '2026', status: 'Concept', line: 'An app that explains work sign-in alerts in plain words. 17 screens and a prototype you can click through.',
     outcomes: ['17 screens, 4 flows', 'Concept with a clickable prototype'],
     hook: 'An app idea that explains work sign-in alerts in plain words. I designed 17 screens and a prototype you can click through.',
     accent: '#E8590C',
@@ -55,6 +59,7 @@ export const allProjects = [
   },
   {
     id: 'appsatile-workspace',
+    kind: 'B2B workspace', status: 'Rebuild',
     outcomes: ['18 Figma files into one product', 'Rebuild, not shipped'],
     hook: 'My own rebuild of the Appsatile workspace, bringing three years of work from 18 Figma files into one product. It was not shipped.',
     accent: '#7C5CFF',
@@ -67,6 +72,7 @@ export const allProjects = [
   },
   {
     id: 'hsbc',
+    kind: 'Mobile banking', status: 'Concept',
     hook: 'Mobile banking that is safe by default.',
     accent: '#DB0011',
     title: 'HSBC UK',
@@ -79,6 +85,7 @@ export const allProjects = [
   },
   {
     id: 'huntly',
+    kind: 'AI job tracker', status: 'Client work',
     hook: 'Every job application on one board.',
     accent: '#22A06B',
     title: 'HuntlyAi',
@@ -90,6 +97,7 @@ export const allProjects = [
   },
   {
     id: 'motion-system',
+    kind: 'Motion system', status: 'Concept',
     hook: 'One motion library in Figma, used by an AI copilot and a payments app.',
     accent: '#8B5CF6',
     title: 'Motion System',
@@ -102,6 +110,7 @@ export const allProjects = [
   },
   {
     id: 'nikos-farm',
+    kind: 'E-commerce', status: 'Live',
     hook: 'A farm shop with a price and a buy button on every product.',
     accent: '#4C9A2A',
     title: 'Nikos Farm',
@@ -113,6 +122,7 @@ export const allProjects = [
   },
   {
     id: 'cook-by-ugo',
+    kind: 'Food ordering', status: 'Live',
     hook: 'Direct ordering, without the delivery app taking up to 30%.',
     accent: '#D4A017',
     title: 'Cook by Ugo',
@@ -124,6 +134,7 @@ export const allProjects = [
   },
   {
     id: 'aerovia',
+    kind: 'Travel booking', status: 'Concept',
     hook: 'Flight booking that shows every fee before checkout.',
     accent: '#14B8A6',
     title: 'Aerovia',

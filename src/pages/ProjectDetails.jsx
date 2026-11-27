@@ -865,8 +865,9 @@ export default function ProjectDetails() {
             <span className="text-[var(--t-faint)]">/</span>
             <span className="text-[var(--acc-text)]">{project.title} · {project.type}</span>
           </div>
-          <h1 className="font-['Fraunces'] text-[clamp(36px,5.5vw,78px)] font-normal text-[var(--t-fg)] tracking-[-0.035em] leading-[1.0] max-w-[1000px] mb-8">
-            {meta.hook || project.title}
+          <h1 className="font-['Geist'] text-[clamp(28px,3.5vw,46px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.16] max-w-[900px] mb-8">
+            {project.title}.{' '}
+            <span className="text-[var(--t-faint)]">{meta.line || meta.hook}</span>
           </h1>
           <div className="flex flex-wrap items-center gap-3 mb-10">
             {project.concept && (
@@ -930,7 +931,7 @@ export default function ProjectDetails() {
           {/* 2. THE STORY: one paragraph on the left, the facts on the right */}
           <div id="summary" data-chapter="summary" className="scroll-mt-28 pt-6 md:pt-10 grid grid-cols-1 lg:grid-cols-[1.35fr_1fr] gap-12 lg:gap-20 items-start">
             <FadeIn>
-              <p className="font-['Fraunces'] text-[24px] md:text-[32px] leading-[1.25] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-6 font-normal">
+              <p className="font-['Geist'] text-[24px] md:text-[32px] leading-[1.25] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-6 font-normal">
                 {project.problem || project.objectives}
               </p>
               <p className="text-[17px] md:text-[18px] text-[var(--t-muted)] leading-[1.7] m-0 max-w-[640px]">
@@ -958,7 +959,7 @@ export default function ProjectDetails() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-10 gap-x-10">
                 {project.metrics.map((metric, idx) => (
                   <div key={idx} className="border-t-2 border-[var(--acc)] pt-5">
-                    <div className="font-['Fraunces'] text-[56px] md:text-[84px] font-normal text-[var(--t-fg)] tracking-[-0.04em] leading-[0.9] mb-4">{metric.value}</div>
+                    <div className="font-['Geist'] text-[56px] md:text-[84px] font-normal text-[var(--t-fg)] tracking-[-0.04em] leading-[0.9] mb-4">{metric.value}</div>
                     <div className="text-[15px] md:text-[16px] text-[var(--t-muted)] leading-[1.5] max-w-[280px]">{metric.label}</div>
                   </div>
                 ))}
@@ -973,7 +974,7 @@ export default function ProjectDetails() {
           {project.shipped && (
             <FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-8">
-                <h2 className="font-['Fraunces'] text-[clamp(28px,3.4vw,40px)] font-normal text-[var(--t-fg)] tracking-[-0.025em] leading-[1.1] m-0">{project.shipped.title}</h2>
+                <h2 className="font-['Geist'] text-[clamp(28px,3.4vw,40px)] font-normal text-[var(--t-fg)] tracking-[-0.025em] leading-[1.1] m-0">{project.shipped.title}</h2>
                 <p className="text-[16px] md:text-[17px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{project.shipped.text}</p>
               </div>
               <figure className="m-0">
@@ -988,7 +989,7 @@ export default function ProjectDetails() {
             <div id="process" data-chapter="process" className="scroll-mt-28 flex flex-col gap-16 md:gap-24">
               <FadeIn>
                 <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">{project.processLabel || 'Process'}</div>
-                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">{project.processTitle || 'How I got there'}</h2>
+                <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">{project.processTitle || 'How I got there'}</h2>
                 {project.processIntro && (
                   <p className="text-[17px] md:text-[18px] text-[var(--t-muted)] leading-[1.7] m-0 mt-6 max-w-[720px]">{project.processIntro}</p>
                 )}
@@ -996,9 +997,9 @@ export default function ProjectDetails() {
               {project.process.map((step, idx) => (
                 <FadeIn key={idx} className="flex flex-col gap-8">
                   <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-4 md:gap-10 items-start">
-                    <div aria-hidden="true" className="font-['Fraunces'] text-[72px] md:text-[110px] font-normal leading-[0.8] tracking-[-0.05em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
+                    <div aria-hidden="true" className="font-['Geist'] text-[72px] md:text-[110px] font-normal leading-[0.8] tracking-[-0.05em] text-transparent" style={{ WebkitTextStroke: '1.5px var(--acc)' }}>0{idx + 1}</div>
                     <div className="md:pt-2">
-                      <h3 className="font-['Fraunces'] text-[26px] md:text-[34px] font-normal text-[var(--t-fg)] tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
+                      <h3 className="font-['Geist'] text-[26px] md:text-[34px] font-normal text-[var(--t-fg)] tracking-[-0.02em] leading-[1.1] m-0 mb-4">{step.title}</h3>
                       <p className="text-[17px] text-[var(--t-muted)] leading-[1.7] max-w-[680px] m-0">{step.text}</p>
                     </div>
                   </div>
@@ -1024,12 +1025,12 @@ export default function ProjectDetails() {
             <div id="decisions" data-chapter="decisions" className="scroll-mt-28">
               <FadeIn>
                 <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">Decisions</div>
-                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
+                <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-12">What I decided, and why</h2>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
                 {project.decisions.map((dec, idx) => (
                   <FadeIn key={idx} delay={idx * 0.08} className="border-t border-[var(--t-border)] pt-6">
-                    <h3 className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal text-[var(--t-fg)] leading-[1.25] m-0 mb-3">{dec.pillar.replace(/^\d+\.\s*/, '')}</h3>
+                    <h3 className="font-['Geist'] text-[22px] md:text-[24px] font-normal text-[var(--t-fg)] leading-[1.25] m-0 mb-3">{dec.pillar.replace(/^\d+\.\s*/, '')}</h3>
                     <p className="text-[16px] text-[var(--t-muted)] leading-[1.7] m-0">{dec.rationale}</p>
                   </FadeIn>
                 ))}
@@ -1040,7 +1041,7 @@ export default function ProjectDetails() {
           {/* Transition to Visual Walkthrough */}
           <div id="screens" data-chapter="screens" className="flex flex-col items-start scroll-mt-28">
             <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">The result</div>
-            <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-4">
+            <h2 className="font-['Geist'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0 mb-4">
               The final screens
             </h2>
             {project.liveLink && (
@@ -1063,7 +1064,7 @@ export default function ProjectDetails() {
             {project.gallery.map((sec, sIdx) => (
               <FadeIn key={sec.title} direction="up">
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-6">
-                  <h3 className="font-['Fraunces'] text-[24px] md:text-[28px] font-normal text-[var(--t-fg)] m-0">
+                  <h3 className="font-['Geist'] text-[24px] md:text-[28px] font-normal text-[var(--t-fg)] m-0">
                     <span className="text-[var(--acc-text)] mr-2 font-mono text-[18px]">0{sIdx + 1}</span>{sec.title}
                   </h3>
                   <p className="text-[16px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{sec.caption}</p>
@@ -1100,7 +1101,7 @@ export default function ProjectDetails() {
       <section className="bg-[var(--t-surface)] py-20 border-y border-[var(--t-border)]">
         <div className="max-w-[1200px] mx-auto px-6">
            <FadeIn direction="up">
-             <h2 className="font-['Fraunces'] text-[28px] md:text-[34px] font-normal text-[var(--t-fg)] mb-10">What the team said</h2>
+             <h2 className="font-['Geist'] text-[28px] md:text-[34px] font-normal text-[var(--t-fg)] mb-10">What the team said</h2>
            </FadeIn>
             <div className={`grid grid-cols-1 gap-6 ${project.reviews.length === 1 ? 'max-w-[720px]' : 'md:grid-cols-3'}`}>
                {project.reviews.map((quote, i) => (
@@ -1121,7 +1122,7 @@ export default function ProjectDetails() {
                           </div>
                         )}
                         <div>
-                          <div className="font-['Fraunces'] font-normal text-[var(--t-fg)] text-[18px]">{quote.name}</div>
+                          <div className="font-['Geist'] font-normal text-[var(--t-fg)] text-[18px]">{quote.name}</div>
                           <div className="font-mono text-[11.5px] uppercase tracking-wider text-[var(--t-faint)] mt-1">{quote.role}</div>
                        </div>
                      </div>
@@ -1144,7 +1145,7 @@ export default function ProjectDetails() {
               </div>
               <div>
                 <div className="font-mono text-[11.5px] font-bold tracking-widest text-[var(--t-faint)] uppercase mb-1.5">Next Case Study</div>
-                <h3 className="font-['Fraunces'] text-[24px] md:text-[34px] font-normal text-[var(--t-fg)] mb-1">{nextProject.title}</h3>
+                <h3 className="font-['Geist'] text-[24px] md:text-[34px] font-normal text-[var(--t-fg)] mb-1">{nextProject.title}</h3>
                 <p className="text-[var(--t-muted)] text-[14px] md:text-[15px]">{nextProject.category} · {nextProject.type}</p>
               </div>
             </div>

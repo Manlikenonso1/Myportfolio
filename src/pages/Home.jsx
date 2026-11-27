@@ -1,150 +1,83 @@
 import { Link } from 'react-router-dom';
 import SEO from '../components/ui/SEO';
 import { allProjects } from '../data/projects';
-import CaseStudyCard from '../components/sections/CaseStudyCard';
+import WorkBlock, { WorkIndex } from '../components/sections/WorkBlock';
 
 const EMAIL = 'cezeigbo4@gmail.com';
 const LINKEDIN = 'https://www.linkedin.com/in/ezeigbochinonso';
 
+const facts = [
+  ['Now', 'Freelance product designer, open to full-time roles'],
+  ['Before', 'Appsatile, Talstrike, Modtech'],
+  ['Based', 'Newcastle upon Tyne. Remote, hybrid or on-site'],
+];
+
+const link = 'text-[var(--t-fg)] underline underline-offset-4 decoration-1 decoration-[var(--t-faint)] hover:decoration-[var(--t-fg)] transition-colors';
+
 export default function Home() {
-  const featured = allProjects.filter((p) => p.featured);
+  // Shipped work leads: Talstrike, Appsatile, LazyZoneLabs, then the concept
+  const order = ['talstrike', 'appsatile', 'lazyzone', 'keel'];
+  const featured = order.map((id) => allProjects.find((p) => p.id === id)).filter(Boolean);
+  const rest = allProjects.filter((p) => !order.includes(p.id));
 
   return (
-    <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)] transition-colors duration-300">
+    <div className="w-full bg-[var(--t-bg)] text-[var(--t-fg)]">
       <SEO
         title="Chinonso Ezeigbo · Product Designer"
         description="Portfolio of Chinonso Ezeigbo: Product designer in Newcastle upon Tyne specialising in B2B SaaS, AI products, design systems and accessible digital products."
       />
 
-      <div className="max-w-[1200px] mx-auto px-6">
-        {/* HERO SECTION: the work sits beside the intro, the photo is small */}
-        <section className="pt-28 sm:pt-32 md:pt-36 pb-14 md:pb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_440px] gap-10 lg:gap-16 items-center">
-            <div>
-              <div className="flex items-center gap-4 mb-7">
-                <img
-                  src="/profile.jpg"
-                  alt="Chinonso Ezeigbo"
-                  className="w-14 h-14 rounded-full object-cover object-[center_18%] border border-[var(--t-border)] shrink-0"
-                />
-                <p className="text-[15px] leading-[1.5] text-[var(--t-muted)] m-0">Based in Newcastle upon Tyne. Open to remote, hybrid and on-site roles across the UK.</p>
-              </div>
+      <div className="max-w-[1320px] mx-auto px-5 md:px-10">
+        {/* INTRO: who I am in two sentences, the facts beside it */}
+        <section className="pt-32 md:pt-44 pb-14 md:pb-20 grid grid-cols-1 lg:grid-cols-[1.55fr_1fr] gap-10 lg:gap-24 items-end">
+          <h1 className="m-0 font-normal text-[clamp(28px,3.5vw,46px)] leading-[1.16] tracking-[-0.03em] text-[var(--t-fg)] max-w-[820px]">
+            Chinonso Ezeigbo is a product designer.{' '}
+            <span className="text-[var(--t-faint)]">
+              For five years I have designed B2B software, AI tools and the design systems that hold them together.
+            </span>
+          </h1>
 
-              <h1 className="font-['Fraunces'] font-normal text-[clamp(40px,5.6vw,72px)] leading-[1.04] tracking-[-0.03em] text-[var(--t-fg)] m-0">
-                Hi, I'm Chinonso.
-              </h1>
-
-              <p className="text-[18px] md:text-[20px] leading-[1.65] text-[var(--t-muted)] max-w-[620px] m-0 mt-7 font-normal">
-                I'm a product designer with 5+ years of experience in B2B SaaS, AI products and design systems. I like taking complicated products and making them easy for people to use. I also have an MSc in Cyber Security.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-4 mt-9">
-                <a
-                  href="#work"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium tracking-tight transition-all duration-300 hover:bg-[var(--t-accent)] hover:-translate-y-0.5 shadow-sm"
-                >
-                  See my work
-                </a>
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-1.5 px-4 py-3.5 text-[15px] font-medium text-[var(--t-muted)] hover:text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:decoration-[var(--t-accent)] transition-colors"
-                >
-                  Let's talk
-                </a>
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-3.5 text-[15px] font-medium text-[var(--t-muted)] hover:text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:decoration-[var(--t-accent)] transition-colors"
-                >
-                  Resume (PDF)
-                </a>
-              </div>
-            </div>
-
-            {/* Right: two pieces of work, visible before any scrolling */}
-            <div className="hidden lg:flex flex-col gap-5">
-              {featured.slice(0, 2).map((p) => (
-                <Link key={p.id} to={`/projects/${p.id}`} className="group block">
-                  <img
-                    src={p.image}
-                    alt={`${p.title} cover`}
-                    loading="eager"
-                    decoding="async"
-                    className="block w-full aspect-[16/9] object-cover object-top rounded-[16px] border border-[var(--t-border)] bg-[var(--t-surface)] transition-transform duration-300 group-hover:-translate-y-0.5"
-                  />
-                  <p className="text-[14px] text-[var(--t-muted)] m-0 mt-2.5">
-                    <span className="font-medium text-[var(--t-fg)] group-hover:underline underline-offset-4">{p.title}</span> · {p.outcomes[0]}
-                  </p>
-                </Link>
+          <div>
+            <dl className="m-0 border-t border-[var(--t-border)]">
+              {facts.map(([k, v]) => (
+                <div key={k} className="grid grid-cols-[72px_1fr] gap-4 py-3 border-b border-[var(--t-border)] text-[15px] leading-[1.45]">
+                  <dt className="text-[var(--t-faint)]">{k}</dt>
+                  <dd className="m-0 text-[var(--t-fg)]">{v}</dd>
+                </div>
               ))}
+            </dl>
+            <p className="m-0 mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[15px]">
+              <a href={`mailto:${EMAIL}`} className={link}>{EMAIL}</a>
+              <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className={link}>LinkedIn</a>
+              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className={link}>CV</a>
+            </p>
+          </div>
+        </section>
+
+        {/* SELECTED WORK */}
+        <section id="work" className="scroll-mt-24">
+          <div className="flex items-baseline justify-between pb-4 text-[14px] text-[var(--t-faint)]">
+            <h2 className="m-0 text-[14px] font-normal text-[var(--t-faint)]">Selected work</h2>
+            <span className="tabular-nums">{String(featured.length).padStart(2, '0')}</span>
+          </div>
+
+          <div className="flex flex-col gap-14 md:gap-20">
+            {featured[0] && <WorkBlock project={featured[0]} index={1} wide eager />}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-14">
+              {featured.slice(1, 3).map((p, i) => <WorkBlock key={p.id} project={p} index={i + 2} />)}
             </div>
+            {featured[3] && <WorkBlock project={featured[3]} index={4} wide />}
           </div>
         </section>
 
-        {/* CASE STUDIES */}
-        <section id="work" className="scroll-mt-24 py-14 md:py-16 border-t border-[var(--t-border)]">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-            <h2 className="font-['Fraunces'] font-normal text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.025em] text-[var(--t-fg)] m-0">
-              Case studies
-            </h2>
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] transition-colors"
-            >
-              View all {allProjects.length} projects
-            </Link>
+        {/* EVERYTHING ELSE */}
+        <section className="pt-24 md:pt-32 pb-8">
+          <div className="flex items-baseline justify-between pb-4 text-[14px] text-[var(--t-faint)]">
+            <h2 className="m-0 text-[14px] font-normal text-[var(--t-faint)]">More work</h2>
+            <Link to="/projects" className={`${link} text-[14px]`}>All {allProjects.length} projects</Link>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            {featured.map((p, i) => (
-              <CaseStudyCard key={p.id} project={p} eager={i < 2} />
-            ))}
-          </div>
+          <WorkIndex projects={rest} />
         </section>
-        {/* WHAT THE WORK DELIVERED */}
-        <section className="pt-16 md:pt-20 pb-8 border-t border-[var(--t-border)]">
-          <h2 className="font-['Fraunces'] font-normal text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-10">
-            Results
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
-              <div>
-                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">A 0 to 1 launch</p>
-                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Took Talstrike from prototype to launch on iOS, Android and web, with <span className="text-[var(--t-accent)]">85% more sign-ups</span> after V2.
-                </p>
-              </div>
-              <Link to="/projects/talstrike" className="text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] self-start">
-                Read the case study
-              </Link>
-            </article>
-
-            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
-              <div>
-                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">Developer handoff</p>
-                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Cut handoff time to engineers by <span className="text-[var(--t-accent)]">about 50%</span> by naming Figma variants and tokens to match their React props.
-                </p>
-              </div>
-              <Link to="/projects/appsatile" className="text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] self-start">
-                Read the case study
-              </Link>
-            </article>
-
-            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
-              <div>
-                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">The design system</p>
-                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Co-built a system of <span className="text-[var(--t-accent)]">70+ components</span> used by three squads, with every colour pair checked against WCAG AA.
-                </p>
-              </div>
-              <p className="text-[15px] text-[var(--t-muted)] m-0">1,100+ design tokens and an 868-icon library.</p>
-            </article>
-          </div>
-        </section>
-
       </div>
     </div>
   );

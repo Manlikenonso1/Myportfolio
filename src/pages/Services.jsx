@@ -16,7 +16,7 @@ export default function Services() {
         <div className="max-w-[1200px] mx-auto relative z-10 text-center">
           <FadeIn>
             <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">Services</div>
-            <h1 className="font-['DM_Sans'] font-light text-[40px] md:text-[56px] leading-[1.2] text-[var(--white)] mx-auto mb-8 max-w-[1000px] tracking-tight">
+            <h1 className="font-['Geist'] font-light text-[40px] md:text-[56px] leading-[1.2] text-[var(--white)] mx-auto mb-8 max-w-[1000px] tracking-tight">
               Thoughtful design that helps your product grow.
             </h1>
             <p className="text-[18px] text-white/50 leading-[1.8] max-w-[640px] mx-auto font-light">
@@ -35,7 +35,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">01</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">Product Strategy & Interface Design</h3>
+                  <h3 className="font-['Geist'] text-[32px] md:text-[40px] font-medium text-white mb-6">Product Strategy & Interface Design</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     I turn complicated workflows into clean, straightforward interfaces. By mapping out how users move through your app and testing key flows early, I build layouts that help people get things done without getting confused.
                   </p>
@@ -55,7 +55,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">02</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">Design Systems & Brand Standards</h3>
+                  <h3 className="font-['Geist'] text-[32px] md:text-[40px] font-medium text-white mb-6">Design Systems & Brand Standards</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Inconsistent designs slow your engineering team down. I create organized Figma component libraries with clear colours, fonts, and responsive components, giving your team a reliable blueprint that saves hours of development time.
                   </p>
@@ -75,7 +75,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">03</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">Interactive Prototyping & Motion</h3>
+                  <h3 className="font-['Geist'] text-[32px] md:text-[40px] font-medium text-white mb-6">Interactive Prototyping & Motion</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Static mockups don't show how an app actually feels to use. I design smooth transitions and realistic, clickable prototypes so your team can test the actual flow and get everyone aligned before building.
                   </p>
@@ -95,7 +95,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row-reverse items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">04</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">User Research & Usability Audits</h3>
+                  <h3 className="font-['Geist'] text-[32px] md:text-[40px] font-medium text-white mb-6">User Research & Usability Audits</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Good design starts with knowing what's actually broken. I conduct user interviews, heuristic evaluations, and usability audits to pinpoint friction in your flows so every design decision is grounded in real evidence, not guesswork.
                   </p>
@@ -120,7 +120,7 @@ export default function Services() {
               <div className="bg-[var(--card)] rounded-[10px] p-8 md:p-12 h-full relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-20">
                 <div className="flex-1">
                   <div className="text-[14px] font-medium text-white/40 mb-4">05</div>
-                  <h3 className="font-['DM_Sans'] text-[32px] md:text-[40px] font-medium text-white mb-6">Developer Handoff & Accessibility</h3>
+                  <h3 className="font-['Geist'] text-[32px] md:text-[40px] font-medium text-white mb-6">Developer Handoff & Accessibility</h3>
                   <p className="text-[18px] text-white/50 leading-[1.7] mb-10 font-light">
                     Pretty designs that engineers can't build are worthless. I deliver pixel-perfect Figma specs with documented tokens, interaction notes, and WCAG accessibility guidelines baked in, so your dev team builds exactly what was designed, first time.
                   </p>

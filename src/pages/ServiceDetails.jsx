@@ -175,7 +175,7 @@ export default function ServiceDetails() {
               <div className="w-1 h-1 rounded-full bg-white/20"></div>
               <span className="text-white">{activeService.title}</span>
             </div>
-            <h1 className="font-['DM_Sans'] text-[clamp(40px,5vw,64px)] font-medium leading-[1.2] tracking-tight text-white mb-8">
+            <h1 className="font-['Geist'] text-[clamp(40px,5vw,64px)] font-medium leading-[1.2] tracking-tight text-white mb-8">
               {activeService.headline}
             </h1>
           </FadeIn>
@@ -186,7 +186,7 @@ export default function ServiceDetails() {
       <section className="px-6 py-20 lg:py-32">
         <div className="max-w-[1000px] mx-auto">
           <FadeIn className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 lg:gap-24 mb-32">
-            <h2 className="font-['DM_Sans'] text-[24px] lg:text-[32px] font-medium text-white">The Method</h2>
+            <h2 className="font-['Geist'] text-[24px] lg:text-[32px] font-medium text-white">The Method</h2>
             <div className="flex flex-col gap-8 text-[18px] lg:text-[20px] text-white/60 leading-[1.7] font-light">
               <p>{activeService.overview}</p>
               <p>{activeService.description}</p>
@@ -206,9 +206,9 @@ export default function ServiceDetails() {
               <FadeInStaggerItem key={idx} className="bg-[var(--card)] p-8 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-[var(--blue)]/30 hover:bg-white/5 transition-all duration-300">
                 <div>
                   <div className="w-12 h-12 rounded-lg bg-[var(--blue)]/15 border border-[var(--blue)]/30 flex items-center justify-center mb-6">
-                     <span className="font-['DM_Sans'] text-[16px] font-semibold text-[var(--blue)]">{phase.num}</span>
+                     <span className="font-['Geist'] text-[16px] font-semibold text-[var(--blue)]">{phase.num}</span>
                   </div>
-                  <h3 className="font-['DM_Sans'] text-[24px] font-medium mb-4 text-white group-hover:text-[var(--blue)] transition-colors">{phase.title}</h3>
+                  <h3 className="font-['Geist'] text-[24px] font-medium mb-4 text-white group-hover:text-[var(--blue)] transition-colors">{phase.title}</h3>
                   <p className="text-white/50 leading-[1.6] font-light">{phase.desc}</p>
                 </div>
               </FadeInStaggerItem>
@@ -244,7 +244,7 @@ export default function ServiceDetails() {
           {/* Dynamic Footer CTA */}
           <FadeIn className="p-8 md:p-16 rounded-2xl bg-[var(--card)] border border-white/10 text-center relative overflow-hidden">
             <div className="relative z-10 max-w-[600px] mx-auto flex flex-col items-center">
-              <h3 className="font-['DM_Sans'] text-[32px] md:text-[44px] font-medium text-white mb-6 leading-tight">
+              <h3 className="font-['Geist'] text-[32px] md:text-[44px] font-medium text-white mb-6 leading-tight">
                 Ready to work together?
               </h3>
               <p className="text-[16px] md:text-[18px] text-white/50 leading-[1.6] mb-10 font-light">

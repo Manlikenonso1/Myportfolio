@@ -19,10 +19,10 @@ export default function SkillsSection() {
           <div className="text-[12px] font-bold tracking-[0.2em] uppercase text-white/50 mb-4">
             Core Skills
           </div>
-          <h2 className="font-['DM_Sans'] font-normal text-[36px] md:text-[56px] leading-[1.2] text-[var(--white)] max-w-[686px] mx-auto mb-5 tracking-tight">
+          <h2 className="font-['Geist'] font-normal text-[36px] md:text-[56px] leading-[1.2] text-[var(--white)] max-w-[686px] mx-auto mb-5 tracking-tight">
             What I bring to your team
           </h2>
-          <p className="font-['Inter_Tight'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[760px] mx-auto">
+          <p className="font-['Geist'] text-[16px] md:text-[18px] text-[var(--muted)] leading-[1.6] max-w-[760px] mx-auto">
             I take products from early concepts to launch-ready interfaces, covering user research, wireframes, design systems, and interactive prototypes.
           </p>
         </div>
@@ -30,7 +30,7 @@ export default function SkillsSection() {
 
       <FadeIn className="max-w-[var(--max)] mx-auto flex flex-wrap justify-center gap-3">
         {[...col1, ...col2].map((skill) => (
-          <span key={skill.name} className="font-['DM_Sans'] text-[16px] sm:text-[18px] text-[var(--white)] px-5 py-3 rounded-full border border-white/15 bg-white/5">
+          <span key={skill.name} className="font-['Geist'] text-[16px] sm:text-[18px] text-[var(--white)] px-5 py-3 rounded-full border border-white/15 bg-white/5">
             {skill.name}
           </span>
         ))}

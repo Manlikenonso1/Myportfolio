@@ -2,7 +2,7 @@ import { FadeIn, FadeInStagger, FadeInStaggerItem } from '../ui/FadeIn';
 
 export default function AppsatileCaseStudy() {
   return (
-    <div className="w-full bg-[#050505] text-white font-['DM_Sans'] rounded-[40px] border border-white/10 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] mb-32 relative">
+    <div className="w-full bg-[#050505] text-white font-['Geist'] rounded-[40px] border border-white/10 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.8)] mb-32 relative">
       
       {/* Background Graphic Elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[var(--blue)]/5 blur-[120px] rounded-full pointer-events-none"></div>

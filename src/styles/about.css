@@ -14,7 +14,7 @@
   pointer-events: none;
 }
 .page-header-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-weight: 300; font-size: 64px;
   line-height: 1.3; color: var(--white);
   position: relative; z-index: 1;
@@ -55,7 +55,7 @@
   display: flex; align-items: center; justify-content: center;
 }
 .about-photo-initials {
-  font-family: 'DM Sans', sans-serif; font-weight: 600;
+  font-family: 'Geist', sans-serif; font-weight: 600;
   font-size: 80px; color: rgba(255,255,255,.06);
 }
 .about-photo-hint {
@@ -66,7 +66,7 @@
 
 .about-col {}
 .about-h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-weight: 400; font-size: 56px;
   line-height: 1.3; color: var(--white);
   margin-bottom: 20px;
@@ -123,7 +123,7 @@
 }
 .ee-row:last-child { border-bottom: 1px solid var(--border); }
 .ee-label {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 24px; font-weight: 400;
   color: var(--white); padding-top: 4px;
 }
@@ -148,7 +148,7 @@
 
 .ee-text {}
 .ee-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 20px; font-weight: 400;
   color: var(--white); margin-bottom: 6px; line-height: 1.3;
 }
@@ -171,13 +171,13 @@
   text-align: center; margin-bottom: 80px;
 }
 .skills-eyebrow {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 18px; font-weight: 400;
   letter-spacing: .08em; text-transform: uppercase;
   color: var(--muted); margin-bottom: 20px;
 }
 .skills-h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-weight: 400; font-size: 56px;
   line-height: 1.3; color: var(--white);
   max-width: 686px; margin: 0 auto 20px;
@@ -199,11 +199,11 @@
   display: flex; justify-content: space-between; align-items: center;
 }
 .skill-name {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 20px; font-weight: 400; color: var(--white);
 }
 .skill-pct {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 20px; font-weight: 400; color: var(--green);
 }
 .skill-track {
@@ -228,20 +228,20 @@
 }
 .vision-col {}
 .vision-eyebrow {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 18px; letter-spacing: .08em;
   text-transform: uppercase; color: var(--muted);
   margin-bottom: 20px;
 }
 .vision-statement {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-weight: 400; font-size: 32px;
   line-height: 1.3; color: var(--white);
   width: 530px; margin-bottom: 44px;
 }
 
 .missions-label {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 18px; letter-spacing: .08em;
   text-transform: uppercase; color: var(--muted);
   margin-bottom: 16px;
@@ -271,7 +271,7 @@
   display: flex; align-items: center; justify-content: center;
 }
 .vision-photo-initials {
-  font-family: 'DM Sans', sans-serif; font-weight: 600;
+  font-family: 'Geist', sans-serif; font-weight: 600;
   font-size: 80px; color: rgba(255,255,255,.05);
 }
 
@@ -293,7 +293,7 @@
 }
 .cta-stat-icon svg { width: 12px; height: 12px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 .cta-stat-num {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Geist', sans-serif;
   font-size: 24px; font-weight: 400; color: var(--white);
   line-height: 1.3; margin-bottom: 4px;
 }
@@ -307,7 +307,7 @@
   flex-wrap: wrap; margin-bottom: 24px;
 }
 .btn-blue {
-  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 18px;
+  font-family: 'Geist', sans-serif; font-weight: 500; font-size: 18px;
   padding: 16px 30px; background: var(--blue); color: var(--white);
   border: none; border-radius: 6px; cursor: pointer;
   text-decoration: none; display: inline-block;
@@ -315,7 +315,7 @@
 }
 .btn-blue:hover { background: var(--blue-dk); }
 .btn-ghost-dark {
-  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 18px;
+  font-family: 'Geist', sans-serif; font-weight: 500; font-size: 18px;
   padding: 16px 30px; background: transparent; color: var(--white);
   border: 1px solid rgba(255,255,255,.2); border-radius: 6px; cursor: pointer;
   text-decoration: none; display: inline-block;
