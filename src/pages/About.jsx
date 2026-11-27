@@ -4,6 +4,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 import SEO from '../components/ui/SEO';
 
 const experience = [
+  { role: 'Freelance Product Designer', place: 'Self-employed', dates: 'Feb 2026 to present', text: 'Product design for small businesses and start-ups. Redesigned LazyZoneLabs, an AI video studio with five tools, and designed two live sites: the Nikos Farm online shop and the Cook by Ugo ordering site.' },
   { role: 'Product Designer', place: 'Appsatile Ltd', dates: 'Mar 2023 to Feb 2026', text: 'Contract until Nov 2025, then part-time. End-to-end product design across a B2B workspace: owned Cabinet (file management), co-led Studio research, co-built the design system used by three squads and the 868-icon library, and cut handoff time by about 50%. Sole designer through the rebrand.', link: ['/projects/appsatile', 'See the design system'] },
   { role: 'Product Designer (Contract)', place: 'Talstrike', dates: 'Jul 2024 to Dec 2024', text: 'Took a 0 to 1 sports scouting platform from prototype to launch on iOS, Android and web. Designed the AI athlete search and role-based navigation for 4 account types, and set V2 priorities that led to an 85% increase in sign-ups.' },
   { role: 'UI/UX Designer (Part-time)', place: 'Modtech Ltd', dates: 'Mar 2022 to Mar 2023', text: 'Responsive web interfaces, landing pages and prototypes for client projects, with navigation simplified through heuristic evaluations.' },

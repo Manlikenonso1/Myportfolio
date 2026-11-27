@@ -504,26 +504,36 @@ export default function ProjectDetails() {
     'talstrike': {
       id: 'talstrike',
       glance: {
-        problem: "Talstrike promises athletes they will be seen, but the live app opens on a social feed and keeps discovery two taps away inside a menu.",
-        did: "An audit of 13 live screens (47 observations), flows, 18 wireframes, a token design system, 78 mobile and 13 web screens, and a prototype with motion.",
-        outcome: "A redesign proposal, not shipped. Discovery is a main tab, the profile is a sports CV, and every under-18 contact goes through a guardian."
+        problem: "Athletes had no single place to be found by scouts. Talstrike needed a product for four kinds of people, on iOS, Android and web.",
+        did: "Designed the product from 0 to 1 for iOS, Android and web: research, flows, navigation for four account types, athlete search and the design system. Two years later I redesigned it on my own: 78 mobile and 13 web screens with a prototype.",
+        outcome: "Launched on iOS, Android and web. Sign-ups grew 85% after the V2 launch. The redesign further down is a proposal and has not shipped."
       },
       title: "Talstrike",
       type: "Product Design",
-      category: "Sports Scouting App · Redesign proposal",
+      category: "Sports Scouting App · Shipped 0 to 1, then redesigned",
       role: "Product Designer (Contract)",
       heroImg: "/talstrike-hero.webp",
       phoneProcess: true,
       liveLink: null,
-      overview: "I designed Talstrike from 0 to 1 as Product Designer (Contract). Two years on, I opened the live app as a user and asked myself an uncomfortable question: if I started again today, what would I do differently? This redesign is my answer. I had no analytics and no access to users, so the personas are proto-personas and every assumption is written down with the way I would test it.",
-      problem: "Talstrike tells an athlete: your talent, seen worldwide. I still think that is the right promise. But the app opens on a social feed, and the thing athletes came for, being found, sits inside a menu. Some of that was my doing, so I treated this as a review of my own work. I audited every live screen, measured the colours against WCAG 2.2 AA (6 of 11 pairs fell short), and read how three recruiting apps earn trust.",
+      overview: "I worked on Talstrike as Product Designer (Contract) from July to December 2024 and guided four designers. The shipped mobile app comes first on this page. After it comes a redesign I did on my own two years later, asking what I would do differently today. The app has kept changing since my contract ended, so I do not claim results for the redesign.",
+      problem: "I designed Talstrike from 0 to 1 and took it from an early prototype to launch on iOS, Android and web. The priorities I set for V2, from user research and business goals, led to an 85% increase in sign-ups after launch.",
       deliverables: ["Audit · 13 Screens, 47 Observations", "Proto-personas & Assumptions", "Structure & 6 Flows", "18 Wireframes", "Design System · 156 Variables, Light & Dark", "78 Mobile Screens", "13 Web Screens", "Clickable Prototype with Motion"],
-      metricsLabel: "What's in the redesign · not measured results",
+      metricsLabel: "The shipped product · 2024",
       metrics: [
-        { value: "78", label: "Mobile screens for four roles: athlete, scout, coach and fan" },
-        { value: "46", label: "Screens wired into one prototype with three ways in" },
-        { value: "156", label: "Design variables in light and dark, all 20 colour pairs passing AA" }
+        { value: "85%", label: "Increase in sign-ups after the V2 launch" },
+        { value: "3", label: "Platforms at launch: iOS, Android and web" },
+        { value: "4", label: "Account types with their own navigation and permissions: athlete, scout, coach and fan" }
       ],
+      shipped: {
+        title: "The app I shipped",
+        text: "This is the live iOS app. My work on it covered the four account types and their role-based navigation, the athlete search and the design system. I scaled the design system with Figma variables and tokens, which automated dark mode and made front-end handoff twice as fast, according to the founder. Some screens have changed since my contract ended.",
+        image: "/talstrike-shipped.webp",
+        alt: "Six screens of the live Talstrike iOS app: welcome, sign in, talent roles, home feed, create post and profile",
+        caption: "The live iOS app, captured in 2026. Other people's posts are blurred."
+      },
+      processLabel: "The redesign · a proposal, not shipped",
+      processTitle: "What I would do next",
+      processIntro: "Two years on, I opened the live app as a user and reviewed it as if it were someone else's work. I audited 13 screens and wrote down 47 observations, measured the colours against WCAG 2.2 AA (6 of 11 pairs fell short), and read how three recruiting apps earn trust. I had no analytics and no access to users, so the personas are proto-personas and every assumption is written down with the way I would test it. The result is 78 mobile and 13 web screens, a design system of 156 variables in light and dark, and a prototype with motion.",
       decisions: [
         {
           pillar: "01. Discovery comes first",
@@ -577,7 +587,7 @@ export default function ProjectDetails() {
         { title: "Web is a workspace", from: 6, to: 7, caption: "Athletes and fans live on their phones. Scouts and coaches sort at a desk. My first web version was a bigger phone, so I cut it down to a workspace for those two roles: search, compare, shortlist and reply." },
         {
           title: "What I'd test first",
-          caption: "This is a proposal, so I am not claiming results. Before any of it ships I would want to know three things: whether athletes join to be discovered or to socialise, whether a trust level beats a follower count when a scout picks a profile to open, and whether scouts really do this work at a desk.",
+          caption: "The redesign is a proposal, so I am not claiming results for it. Before any of it ships I would want to know three things: whether athletes join to be discovered or to socialise, whether a trust level beats a follower count when a scout picks a profile to open, and whether scouts really do this work at a desk.",
           clips: []
         }
       ],
@@ -735,7 +745,7 @@ export default function ProjectDetails() {
   // Chapters for the reading rail and the progress bar
   const chapters = [
     { id: 'summary', label: 'The story' },
-    project.process && { id: 'process', label: 'How I got there' },
+    project.process && { id: 'process', label: project.processTitle || 'How I got there' },
     project.decisions && { id: 'decisions', label: 'What I decided' },
     { id: 'screens', label: 'Final screens' },
     { id: 'contact', label: 'Contact' },
@@ -959,12 +969,29 @@ export default function ProjectDetails() {
             </FadeIn>
           )}
 
+          {/* 3b. THE SHIPPED WORK */}
+          {project.shipped && (
+            <FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-3 md:gap-10 items-start mb-8">
+                <h2 className="font-['Fraunces'] text-[clamp(28px,3.4vw,40px)] font-normal text-[var(--t-fg)] tracking-[-0.025em] leading-[1.1] m-0">{project.shipped.title}</h2>
+                <p className="text-[16px] md:text-[17px] text-[var(--t-muted)] leading-[1.65] max-w-[640px] m-0">{project.shipped.text}</p>
+              </div>
+              <figure className="m-0">
+                <img src={project.shipped.image} alt={project.shipped.alt} loading="lazy" decoding="async" className="block w-full h-auto rounded-[24px] ring-1 ring-[var(--t-border)]" />
+                <figcaption className="mt-3 font-mono text-[11.5px] uppercase tracking-[0.1em] text-[var(--t-faint)] leading-[1.5]">{project.shipped.caption}</figcaption>
+              </figure>
+            </FadeIn>
+          )}
+
           {/* 4. HOW I GOT THERE */}
           {project.process && (
             <div id="process" data-chapter="process" className="scroll-mt-28 flex flex-col gap-16 md:gap-24">
               <FadeIn>
-                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">Process</div>
-                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">How I got there</h2>
+                <div className="font-mono text-[11.5px] font-bold tracking-[0.18em] uppercase text-[var(--acc-text)] mb-3">{project.processLabel || 'Process'}</div>
+                <h2 className="font-['Fraunces'] text-[clamp(32px,4.4vw,56px)] font-normal text-[var(--t-fg)] tracking-[-0.03em] leading-[1.05] m-0">{project.processTitle || 'How I got there'}</h2>
+                {project.processIntro && (
+                  <p className="text-[17px] md:text-[18px] text-[var(--t-muted)] leading-[1.7] m-0 mt-6 max-w-[720px]">{project.processIntro}</p>
+                )}
               </FadeIn>
               {project.process.map((step, idx) => (
                 <FadeIn key={idx} className="flex flex-col gap-8">

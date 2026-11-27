@@ -17,30 +17,40 @@ export default function Home() {
       />
 
       <div className="max-w-[1200px] mx-auto px-6">
-        {/* HERO SECTION */}
-        <section className="pt-32 sm:pt-40 md:pt-44 pb-16 md:pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-20 items-center">
-            {/* Left: Warm, human intro */}
+        {/* HERO SECTION: the work sits beside the intro, the photo is small */}
+        <section className="pt-28 sm:pt-32 md:pt-36 pb-14 md:pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_440px] gap-10 lg:gap-16 items-center">
             <div>
-              <p className="text-[15px] text-[var(--t-muted)] m-0 mb-6">Based in Newcastle upon Tyne. Open to remote, hybrid and on-site roles across the UK.</p>
+              <div className="flex items-center gap-4 mb-7">
+                <img
+                  src="/profile.jpg"
+                  alt="Chinonso Ezeigbo"
+                  className="w-14 h-14 rounded-full object-cover object-[center_18%] border border-[var(--t-border)] shrink-0"
+                />
+                <p className="text-[15px] leading-[1.5] text-[var(--t-muted)] m-0">Based in Newcastle upon Tyne. Open to remote, hybrid and on-site roles across the UK.</p>
+              </div>
 
-              <h1 className="font-['Fraunces'] font-normal text-[clamp(44px,7vw,92px)] leading-[1.02] tracking-[-0.03em] text-[var(--t-fg)] m-0">
+              <h1 className="font-['Fraunces'] font-normal text-[clamp(40px,5.6vw,72px)] leading-[1.04] tracking-[-0.03em] text-[var(--t-fg)] m-0">
                 Hi, I'm Chinonso.
               </h1>
 
-              <p className="text-[18px] md:text-[20px] leading-[1.65] text-[var(--t-muted)] max-w-[620px] m-0 mt-8 font-normal">
+              <p className="text-[18px] md:text-[20px] leading-[1.65] text-[var(--t-muted)] max-w-[620px] m-0 mt-7 font-normal">
                 I'm a product designer with 5+ years of experience in B2B SaaS, AI products and design systems. I like taking complicated products and making them easy for people to use. I also have an MSc in Cyber Security.
               </p>
 
-              {/* Action Deck */}
-              <div className="flex flex-wrap items-center gap-4 mt-10">
+              <div className="flex flex-wrap items-center gap-4 mt-9">
+                <a
+                  href="#work"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium tracking-tight transition-all duration-300 hover:bg-[var(--t-accent)] hover:-translate-y-0.5 shadow-sm"
+                >
+                  See my work
+                </a>
                 <a
                   href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[var(--t-fg)] text-[var(--t-bg)] text-[15px] font-medium tracking-tight transition-all duration-300 hover:bg-[var(--t-accent)] hover:-translate-y-0.5 shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-4 py-3.5 text-[15px] font-medium text-[var(--t-muted)] hover:text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:decoration-[var(--t-accent)] transition-colors"
                 >
                   Let's talk
                 </a>
-
                 <a
                   href="/resume.pdf"
                   target="_blank"
@@ -52,50 +62,28 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Profile portrait alone (Balanced baseline) */}
-            <div className="order-first lg:order-none w-[132px] lg:w-auto">
-              <img
-                src="/profile.jpg"
-                alt="Chinonso Ezeigbo"
-                className="w-full aspect-square lg:aspect-[4/5] object-cover object-[center_18%] block rounded-[20px] lg:rounded-[26px] border border-[var(--t-border)]"
-              />
+            {/* Right: two pieces of work, visible before any scrolling */}
+            <div className="hidden lg:flex flex-col gap-5">
+              {featured.slice(0, 2).map((p) => (
+                <Link key={p.id} to={`/projects/${p.id}`} className="group block">
+                  <img
+                    src={p.image}
+                    alt={`${p.title} cover`}
+                    loading="eager"
+                    decoding="async"
+                    className="block w-full aspect-[16/9] object-cover object-top rounded-[16px] border border-[var(--t-border)] bg-[var(--t-surface)] transition-transform duration-300 group-hover:-translate-y-0.5"
+                  />
+                  <p className="text-[14px] text-[var(--t-muted)] m-0 mt-2.5">
+                    <span className="font-medium text-[var(--t-fg)] group-hover:underline underline-offset-4">{p.title}</span> · {p.outcomes[0]}
+                  </p>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* WHAT THE WORK DELIVERED */}
-        <section className="py-16 md:py-20 border-t border-[var(--t-border)]">
-          <h2 className="font-['Fraunces'] font-normal text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-10">
-            Results
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
-              <div>
-                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">Developer handoff</p>
-                <p className="font-['Fraunces'] text-[26px] md:text-[30px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Cut handoff time to engineers by <span className="text-[var(--t-accent)]">about 50%</span> by naming Figma variants and tokens to match their React props.
-                </p>
-              </div>
-              <Link to="/projects/appsatile" className="text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] self-start">
-                Read the case study
-              </Link>
-            </article>
-
-            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
-              <div>
-                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">The design system</p>
-                <p className="font-['Fraunces'] text-[26px] md:text-[30px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
-                  Co-built a system of <span className="text-[var(--t-accent)]">70+ components</span> used by three squads, with every colour pair checked against WCAG AA.
-                </p>
-              </div>
-              <p className="text-[15px] text-[var(--t-muted)] m-0">1,100+ design tokens and an 868-icon library.</p>
-            </article>
-          </div>
-        </section>
-
         {/* CASE STUDIES */}
-        <section id="work" className="pt-16 md:pt-20 pb-4 border-t border-[var(--t-border)]">
+        <section id="work" className="scroll-mt-24 py-14 md:py-16 border-t border-[var(--t-border)]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
             <h2 className="font-['Fraunces'] font-normal text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.025em] text-[var(--t-fg)] m-0">
               Case studies
@@ -114,6 +102,49 @@ export default function Home() {
             ))}
           </div>
         </section>
+        {/* WHAT THE WORK DELIVERED */}
+        <section className="pt-16 md:pt-20 pb-8 border-t border-[var(--t-border)]">
+          <h2 className="font-['Fraunces'] font-normal text-[clamp(32px,4.5vw,52px)] leading-[1.1] tracking-[-0.025em] text-[var(--t-fg)] m-0 mb-10">
+            Results
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
+              <div>
+                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">A 0 to 1 launch</p>
+                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
+                  Took Talstrike from prototype to launch on iOS, Android and web, with <span className="text-[var(--t-accent)]">85% more sign-ups</span> after V2.
+                </p>
+              </div>
+              <Link to="/projects/talstrike" className="text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] self-start">
+                Read the case study
+              </Link>
+            </article>
+
+            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
+              <div>
+                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">Developer handoff</p>
+                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
+                  Cut handoff time to engineers by <span className="text-[var(--t-accent)]">about 50%</span> by naming Figma variants and tokens to match their React props.
+                </p>
+              </div>
+              <Link to="/projects/appsatile" className="text-[15px] font-medium text-[var(--t-fg)] underline underline-offset-4 decoration-[var(--t-border)] hover:text-[var(--t-accent)] self-start">
+                Read the case study
+              </Link>
+            </article>
+
+            <article className="flex flex-col justify-between gap-8 p-7 md:p-9 rounded-[22px] bg-[var(--t-surface)] border border-[var(--t-border)]">
+              <div>
+                <p className="text-[14px] font-medium text-[var(--t-faint)] m-0 mb-4">The design system</p>
+                <p className="font-['Fraunces'] text-[22px] md:text-[24px] font-normal leading-[1.25] tracking-[-0.02em] text-[var(--t-fg)] m-0">
+                  Co-built a system of <span className="text-[var(--t-accent)]">70+ components</span> used by three squads, with every colour pair checked against WCAG AA.
+                </p>
+              </div>
+              <p className="text-[15px] text-[var(--t-muted)] m-0">1,100+ design tokens and an 868-icon library.</p>
+            </article>
+          </div>
+        </section>
+
       </div>
     </div>
   );

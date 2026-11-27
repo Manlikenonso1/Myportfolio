@@ -15,13 +15,13 @@ export const allProjects = [
   },
   {
     id: 'talstrike',
-    outcomes: ['78 mobile and 13 web screens', 'Redesign proposal with a clickable prototype'],
-    hook: 'The sports scouting app I designed from 0 to 1, redesigned two years on. It is a proposal with a prototype that moves, not a shipped update.',
+    outcomes: ['85% more sign-ups after the V2 launch', 'Launched on iOS, Android and web'],
+    hook: 'The sports scouting app I designed from 0 to 1 and launched on iOS, Android and web. Sign-ups grew 85% after V2. It also shows the redesign I would propose today.',
     accent: '#4169E1',
     featured: true,
     title: 'Talstrike',
-    categoryLabel: 'Sports Scouting App · Redesign',
-    description: 'I reviewed my own 0 to 1 product two years later and redesigned it: discovery first, a sports CV profile, visible trust levels and a web workspace for scouts.',
+    categoryLabel: 'Sports Scouting App · Shipped 0 to 1',
+    description: 'I designed Talstrike from 0 to 1 and launched it on iOS, Android and web, with 85% more sign-ups after V2. Two years later I redesigned it as a proposal.',
     categories: ['all', 'ai', 'design-systems'],
     tags: ['Mobile App', 'Design System', 'Prototype & Motion'],
     image: '/talstrike-thumbnail.webp'

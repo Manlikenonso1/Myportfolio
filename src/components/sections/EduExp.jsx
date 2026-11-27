@@ -2,6 +2,7 @@ import { FadeIn } from '../ui/FadeIn';
 
 export default function EduExp() {
   const experience = [
+    { title: "Freelance Product Designer", subtitle: "Self-employed · Feb 2026 to present", desc: "Product design for small businesses and start-ups: the LazyZoneLabs AI video studio redesign, the Nikos Farm online shop and the Cook by Ugo ordering site." },
     { title: "Product Designer", subtitle: "Appsatile Ltd · Mar 2023 to Feb 2026", desc: "End-to-end product design across a B2B workspace: owned Cabinet (file management), co-led Studio research, and co-built the design system and icon library." },
     { title: "Product Designer (Contract)", subtitle: "Talstrike · Jul 2024 to Dec 2024", desc: "Took a 0 to 1 sports scouting platform from prototype to launch on iOS, Android and web, including the AI athlete search, which led to an 85% increase in sign-ups." },
     { title: "UI/UX Designer (Part-time)", subtitle: "Modtech Ltd · Mar 2022 to Mar 2023", desc: "Web interfaces, responsive pages and prototypes for client projects." },
